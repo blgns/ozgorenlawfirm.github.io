@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knowledge Bank — Ozgoren Law Firm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F7F3EE;
+    --dark: #1A1A18;
+    --gold: #B8955A;
+    --gold-light: #D4B483;
+    --muted: #6B6558;
+    --line: rgba(184,149,90,0.25);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.4rem 4rem;
+    background: rgba(247,243,238,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+  /* HERO BANNER */
+  .blog-hero {
+    padding: 10rem 4rem 5rem;
+    background: var(--dark);
+    position: relative;
+    overflow: hidden;
+  }
+  .blog-hero::before {
+    content: 'Knowledge\ABank';
+    white-space: pre;
+    position: absolute;
+    right: -2rem; top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(6rem, 14vw, 16rem);
+    font-weight: 300;
+    color: rgba(184,149,90,0.06);
+    line-height: 0.9;
+    pointer-events: none;
+    letter-spacing: -0.02em;
+  }
+  .blog-hero-label {
+    font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.5rem;
+  }
+  .blog-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+  .blog-hero p {
+    font-size: 0.95rem;
+    color: rgba(247,243,238,0.55);
+    max-width: 480px;
+    line-height: 1.8;
+  }
+
+  /* FILTER BAR */
+  .filter-bar {
+    display: flex; gap: 0.5rem; align-items: center;
+    padding: 1.5rem 4rem;
+    border-bottom: 1px solid var(--line);
+    background: var(--cream);
+    position: sticky; top: 64px; z-index: 50;
+    flex-wrap: wrap;
+  }
+  .filter-label {
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); margin-right: 1rem;
+  }
+  .filter-btn {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted);
+    background: none; border: 1px solid var(--line);
+    padding: 0.4rem 1rem; cursor: pointer;
+    transition: all 0.25s;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(184,149,90,0.05);
+  }
+
+  /* MAIN LAYOUT */
+  .blog-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 4rem;
+    min-height: 60vh;
+  }
+
+  /* POSTS GRID */
+  .posts-area {}
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  .post-card {
+    background: var(--cream);
+    padding: 2.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .post-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: width 0.4s ease;
+  }
+  .post-card:hover::before { width: 100%; }
+  .post-card:hover { background: #F0EBE3; }
+
+  .post-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 3.5rem;
+  }
+
+  .post-tag {
+    display: inline-block;
+    font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .post-date {
+    font-size: 0.7rem; letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+  }
+  .post-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem; font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--dark);
+  }
+  .post-card.featured .post-title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+  }
+  .post-excerpt {
+    font-size: 0.83rem; line-height: 1.75;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+  }
+  .post-read-more {
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold-light);
+    padding-bottom: 0.1rem;
+    transition: border-color 0.3s;
+  }
+  .post-read-more:hover { border-color: var(--gold); }
+
+  .featured-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .featured-visual-box {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .featured-visual-box::after {
+    content: attr(data-topic);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 300;
+    color: rgba(184,149,90,0.15);
+    text-align: center;
+    line-height: 1;
+    padding: 2rem;
+  }
+  .featured-num {
+    position: absolute;
+    bottom: 1.5rem; right: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem; font-weight: 300;
+    color: rgba(184,149,90,0.12);
+    line-height: 1;
+  }
+
+  /* EMPTY STATE */
+  .empty-card {
+    background: var(--cream);
+    padding: 4rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px dashed var(--line);
+    opacity: 0.6;
+  }
+  .empty-card p {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    padding-left: 3rem;
+    border-left: 1px solid var(--line);
+  }
+
+  .sidebar-section {
+    margin-bottom: 3rem;
+  }
+  .sidebar-title {
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .topic-list { list-style: none; }
+  .topic-list li {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--line);
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .topic-list li:last-child { border-bottom: none; }
+  .topic-list li:hover { color: var(--gold); }
+  .topic-list li span:first-child {
+    font-size: 0.82rem;
+  }
+  .topic-list li span:last-child {
+    font-size: 0.7rem;
+    color: var(--muted);
+  }
+
+  .newsletter-box {
+    background: var(--dark);
+    padding: 2rem;
+  }
+  .newsletter-box p {
+    font-size: 0.82rem; line-height: 1.7;
+    color: rgba(247,243,238,0.6);
+    margin-bottom: 1.5rem;
+  }
+  .newsletter-box h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+  .newsletter-input {
+    width: 100%;
+    background: rgba(247,243,238,0.08);
+    border: 1px solid rgba(184,149,90,0.3);
+    color: var(--cream);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem; font-weight: 300;
+    padding: 0.75rem 1rem;
+    outline: none;
+    margin-bottom: 0.75rem;
+    transition: border-color 0.3s;
+  }
+  .newsletter-input::placeholder { color: rgba(247,243,238,0.3); }
+  .newsletter-input:focus { border-color: var(--gold); }
+  .newsletter-btn {
+    width: 100%;
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 0.85rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .newsletter-btn:hover { background: var(--gold-light); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .blog-layout { grid-template-columns: 1fr; padding: 3rem 2rem; }
+    .sidebar { padding-left: 0; border-left: none; border-top: 1px solid var(--line); padding-top: 3rem; margin-top: 3rem; }
+    .posts-grid { grid-template-columns: 1fr; }
+    .post-card.featured { grid-column: 1; grid-template-columns: 1fr; }
+    .featured-visual { display: none; }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { display: none; }
+    .blog-hero { padding: 8rem 1.5rem 4rem; }
+    .filter-bar { padding: 1rem 1.5rem; top: 56px; }
+    .blog-layout { padding: 2rem 1.5rem; }
+    footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Ozgoren Law Firm</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#practice">Practice</a></li>
+    <li><a href="blog.html" class="active">Knowledge Bank</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <p class="blog-hero-label">Ozgoren Law Firm</p>
+  <h1>Knowledge<br>Bank</h1>
+  <p>Insights and analysis on international arbitration, investment law, and cross-border disputes — written for practitioners and clients navigating complex legal terrain.</p>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <span class="filter-label">Filter by</span>
+  <button class="filter-btn active" onclick="filterPosts('all', this)">All</button>
+  <button class="filter-btn" onclick="filterPosts('arbitration', this)">Arbitration</button>
+  <button class="filter-btn" onclick="filterPosts('investment', this)">Investment Law</button>
+  <button class="filter-btn" onclick="filterPosts('trade', this)">Trade Law</button>
+  <button class="filter-btn" onclick="filterPosts('procedure', this)">Procedure</button>
+</div>
+
+<!-- MAIN -->
+<div class="blog-layout">
+  <div class="posts-area">
+    <div class="posts-grid reveal" id="postsGrid">
+
+      <!-- FEATURED POST PLACEHOLDER -->
+      <div class="post-card featured" data-category="arbitration">
+        <div class="post-content">
+          <span class="post-tag">Arbitration · Featured</span>
+          <div class="post-date">Coming Soon</div>
+          <h2 class="post-title">The Evolving Standard of Transparency in Investment Treaty Arbitration</h2>
+          <p class="post-excerpt">A look at how transparency obligations under UNCITRAL Rules on Transparency have reshaped the relationship between investor-state disputes and the public interest — and what this means for practitioners advising clients today.</p>
+          <span class="post-read-more">Read Article →</span>
+        </div>
+        <div class="featured-visual">
+          <div class="featured-visual-box" data-topic="Arbitration">
+            <div class="featured-num">01</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POST PLACEHOLDER 2 -->
+      <div class="post-card" data-category="investment">
+        <span class="post-tag">Investment Law</span>
+        <div class="post-date">Coming Soon</div>
+        <h3 class="post-title">Drafting Effective Arbitration Clauses in Cross-Border Contracts</h3>
+        <p class="post-excerpt">A practical guide to avoiding the most common drafting pitfalls that lead to jurisdictional disputes — before the substantive dispute even begins.</p>
+        <span class="post-read-more">Read Article →</span>
+      </div>
+
+      <!-- POST PLACEHOLDER 3 -->
+      <div class="post-card" data-category="trade">
+        <span class="post-tag">Trade Law</span>
+        <div class="post-date">Coming Soon</div>
+        <h3 class="post-title">Sanctions Compliance for Turkish Exporters: What You Need to Know</h3>
+        <p class="post-excerpt">An overview of the key sanctions regimes affecting Turkish companies engaged in cross-border trade and the legal steps to manage exposure effectively.</p>
+        <span class="post-read-more">Read Article →</span>
+      </div>
+
+      <!-- POST PLACEHOLDER 4 -->
+      <div class="post-card" data-category="procedure">
+        <span class="post-tag">Procedure</span>
+        <div class="post-date">Coming Soon</div>
+        <h3 class="post-title">Recognition and Enforcement of Foreign Arbitral Awards in Türkiye</h3>
+        <p class="post-excerpt">A step-by-step breakdown of the New York Convention framework as applied by Turkish courts, including common grounds for refusal and how to anticipate them.</p>
+        <span class="post-read-more">Read Article →</span>
+      </div>
+
+    </div>
+
+    <p style="font-size:0.75rem; color:var(--muted); margin-top:2rem; letter-spacing:0.05em;">
+      Articles are being prepared and will be published shortly.
+    </p>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <p class="sidebar-title">Topics</p>
+      <ul class="topic-list">
+        <li><span>Arbitration</span><span>—</span></li>
+        <li><span>Investment Law</span><span>—</span></li>
+        <li><span>Trade Law</span><span>—</span></li>
+        <li><span>Procedure</span><span>—</span></li>
+        <li><span>Dispute Prevention</span><span>—</span></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="newsletter-box">
+        <h4>Stay Informed</h4>
+        <p>Receive new articles and legal updates directly to your inbox.</p>
+        <input type="email" class="newsletter-input" placeholder="Your email address">
+        <button class="newsletter-btn">Subscribe</button>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <p class="sidebar-title">About the Author</p>
+      <p style="font-size:0.82rem; line-height:1.75; color:var(--muted);">
+        Selin Özgören is an international lawyer focusing on arbitration and investment law, admitted to the Izmir Bar. She holds an LL.M. from Bocconi University and has worked with HKIAC, UNCITRAL, and leading international law firms.
+      </p>
+      <br>
+      <a href="index.html#about" style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-light); padding-bottom:0.1rem;">Full Profile →</a>
+    </div>
+
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2025 Ozgoren Law Firm. All rights reserved.</span>
+  <span><a href="index.html">← Back to Main Site</a></span>
+</footer>
+
+<script>
+  // Reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.05 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Filter
+  function filterPosts(category, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.post-card').forEach(card => {
+      if (category === 'all' || card.dataset.category === category) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
