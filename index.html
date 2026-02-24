@@ -127,11 +127,6 @@
     justify-content: center;
     gap: 1.5rem;
   }
-  @media (max-width: 900px) {
-     .hero-right {
-         height: 85vw;
-     }
- }
   .hero-right::before {
     content: '';
     position: absolute; inset: 0;
@@ -149,6 +144,11 @@
     opacity: 0.95;
     position: relative; z-index: 2;
   }
+   @media (max-width: 900px) {
+     .hero-right {
+         height: 85vw;
+     }
+ }
   .hero-badge { 
    border: 1px
    solid rgba(184,149,90,0.4); 
