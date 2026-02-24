@@ -144,11 +144,14 @@
     opacity: 0.95;
     position: relative; z-index: 2;
   }
-  .hero-badge {
-    border: 1px solid rgba(184,149,90,0.4);
-    padding: 0.8rem 1.2rem;
-    display: inline-block;
-    width: 200px;
+  .hero-badge {  position: fixed;
+   top: 20px;
+   right: 20px;
+   border: 1px solid rgba(184,149,90,0.4);
+   padding: 0.8rem 1.2rem;
+   width: 200px;
+   background: white; /* arka plan eklemen iyi olur */
+   z-index: 1000;
   }
   .hero-badge p { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
   .hero-badge strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; color: var(--dark); margin-top: 0.2rem; }
