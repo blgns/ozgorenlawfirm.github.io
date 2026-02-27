@@ -205,10 +205,12 @@ nav {
     opacity: 0.95;
     position: relative; z-index: 2;
   }
- @media (max-width: 900px) {
+@media (max-width: 900px) {
   .hero-right {
     height: auto;
-  }
+    overflow: visible;
+    padding: 3rem 0;
+
  }
   .hero-badge { 
    border: 1px
@@ -498,7 +500,7 @@ nav {
     nav { padding: 1.2rem 2rem; }
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 6rem 2rem 3rem; }
-    .hero-right { height: 60vw; }
+   .hero-right { height: auto; overflow: visible; padding: 3rem 0; }
     section { padding: 4rem 2rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     .practice-grid { grid-template-columns: 1fr; }
