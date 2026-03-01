@@ -231,8 +231,7 @@ nav {
   .hero-badge p { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
   .hero-badge strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; color: var(--dark); margin-top: 0.2rem; }
 }
-  /* SECTION SHARED */
-  section { padding: 6rem 6rem; }
+  
   .section-label {
     font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase;
     color: var(--gold); margin-bottom: 1rem;
@@ -652,7 +651,6 @@ transition: padding-left 0.3s;
       </ul>
     </div>
 
-    </div>
     <div class="service-card">
       <div class="service-letter">C</div>
       <h3>Cross-Border Advisory for SMEs</h3>
@@ -708,14 +706,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
         observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  });
-
-  reveals.forEach(el => observer.observe(el));
+  
         }
       });
     }, { threshold: 0.1 });
