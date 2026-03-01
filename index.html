@@ -83,13 +83,15 @@
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   /* Nav links — masaüstünde yatay */
-  .nav-links {
+ .nav-links {
   position: fixed;
-  top: 0; right: -100%;
+  top: 0;
+  right: -300px;
   width: 260px;
   height: 100vh;
   background: rgba(247,243,238,0.97);
   backdrop-filter: blur(16px);
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -97,9 +99,8 @@
   padding: 4rem 3rem;
   border-left: 1px solid var(--line);
   transition: right 0.4s ease;
-  z-index: 100;
+  z-index: 150;
   list-style: none;
-  display: flex;
 }
 
 .nav-links.open { right: 0; }
@@ -557,6 +558,7 @@ section {
 </style>
 </head>
 <body>
+ <div class="nav-overlay" id="navOverlay" style="display:none;position:fixed;inset:0;background:rgba(26,26,24,0.4);z-index:140;"></div>
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">Özgören Law Firm</a>
@@ -741,6 +743,31 @@ section {
     });
   });
 </script>
-</body>
+ <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  const navOverlay = document.getElementById('navOverlay');
+
+  function openMenu() {
+    hamburger.classList.add('open');
+    navLinks.classList.add('open');
+    navOverlay.style.display = 'block';
+  }
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+    navOverlay.style.display = 'none';
+  }
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  navOverlay.addEventListener('click', closeMenu);
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>
 </body>
 </html>
