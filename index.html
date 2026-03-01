@@ -109,8 +109,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 80px;
-    max-width: 1600px;
-    margin: 0 auto;
+    
   }
 
   .hero-left {
@@ -530,6 +529,24 @@
     .contact { padding: 4rem 2rem; }
     footer { padding: 1.5rem 2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
   }
+ /* GLOBAL CONTAINER */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 clamp(2rem, 5vw, 6rem);
+}
+
+/* DESKTOP SECTION SPACING */
+ /* DESKTOP SPACING FIX */
+section {
+  padding: 6rem clamp(2rem, 5vw, 6rem);
+}
+
+/* IMAGE FIX */
+.hero-right img {
+  width: 60%;
+  max-width: 420px;
+}
 </style>
 </head>
 <body>
