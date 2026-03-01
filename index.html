@@ -640,7 +640,6 @@ section {
 
 <!-- PRACTICE AREAS -->
 <section class="practice" id="practice">
-
   <!-- SERVICE OFFERINGS -->
   <p class="services-label">Structured Service Offerings</p>
   <h2 class="services-title">Services</h2>
@@ -656,16 +655,15 @@ section {
       </ul>
     </div>
     <div class="service-card">
-     <div class="service-letter">B</div>
-<h3>Tribunal Secretary Services</h3>
-<div class="service-meta">For Arbitral Tribunals</div>
-<ul>
-  <li>Procedural assistance under the direction of arbitral tribunals</li>
-  <li>Drafting support for procedural orders and decisions</li>
-  <li>Case management and hearing coordination</li>
-</ul>
+      <div class="service-letter">B</div>
+      <h3>Tribunal Secretary Services</h3>
+      <div class="service-meta">For Arbitral Tribunals</div>
+      <ul>
+        <li>Procedural assistance under the direction of arbitral tribunals</li>
+        <li>Drafting support for procedural orders and decisions</li>
+        <li>Case management and hearing coordination</li>
+      </ul>
     </div>
-
     <div class="service-card">
       <div class="service-letter">C</div>
       <h3>Cross-Border Advisory</h3>
@@ -678,15 +676,16 @@ section {
     </div>
     <div class="service-card">
       <div class="service-letter">D</div>
-     <h3>Pre-Dispute &amp; Risk Advisory</h3>
+      <h3>Pre-Dispute &amp; Risk Advisory</h3>
       <div class="service-meta">For Startups, Companies and SMEs</div>
       <ul>
-  <li>Pre-dispute advisory in cross-border commercial relationships</li>
-  <li>Early-stage dispute assessment and prevention</li>
-  <li>Contractual risk mapping</li>
-</ul>
+        <li>Pre-dispute advisory in cross-border commercial relationships</li>
+        <li>Early-stage dispute assessment and prevention</li>
+        <li>Contractual risk mapping</li>
+      </ul>
     </div>
   </div>
+</section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
@@ -694,7 +693,7 @@ section {
   <h2 class="section-title">Let's Work Together</h2>
   <p class="contact-sub">Available for international matters, arbitration co-counsel, and legal translation engagements.</p>
   <div class="contact-links">
-    <a href="mailto:your@email.com" class="contact-link">
+    <a href="mailto:selinozgoren0@gmail.com" class="contact-link">
       ✉ &nbsp; selinozgoren0@gmail.com
     </a>
     <a href="tel:+905431465266" class="contact-link">
@@ -713,49 +712,35 @@ section {
 </footer>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Reveal animation
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-  
+  document.addEventListener('DOMContentLoaded', () => {
+    // Reveal animation
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
     reveals.forEach(el => observer.observe(el));
 
     // Hamburger menu
-</footer>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
 
-    <script>
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
 
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        navLinks.classList.toggle('open');
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
       });
-
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('open');
-          navLinks.classList.remove('open');
-        });
-      });
-    </script>
-  </body>
-</html>
-}
-
-      document.querySelectorAll('#navLinks a').forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('open');
-          navLinks.classList.remove('open');
-        });
-      });
-    }
+    });
   });
 </script>
+</body>
+</html>
