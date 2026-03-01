@@ -563,7 +563,7 @@ transition: padding-left 0.3s;
   <h2 class="section-title">A Global Legal Practice<br>Rooted in Integrity</h2>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>Selin Özgören is the founder of Özgören Law Firm and focuses on international commercial and investment arbitration, as well as cross-border disputes involving international trade law, and public international law. She is admitted to the  Bar and has experience across both common law and civil law jurisdictions.</p>
+      <p>Selin Özgören is the founder of Özgören Law Firm and focuses on international commercial and investment arbitration, as well as cross-border disputes involving international trade law, and public international law. She is admitted to the  Izmir Bar Association and has experience across both common law and civil law jurisdictions.</p>
       <p>She holds an LL.M. from Bocconi University, completed on a full scholarship, where she wrote her thesis on the intersection of sustainable development and international investment arbitration. She obtained her law degree from Ankara University Faculty of Law, including an Erasmus Exchange year at University of Bologna.</p>
       <p>Her professional experience includes internship work with the Secretariat of UNCITRAL in Vienna, contributing to Working Group III on ISDS reform, and case administration support at the Hong Kong International Arbitration Centre. She has also been involved in arbitration cases at a Milan-based law firm and has gained experience in cross-border regulatory and sanctions-related matters at international law firms, including Allen &amp; Overy and Baker McKenzie. In the United States, she has worked on legal proceedings before federal authorities in New York and California.</p>
       <p>She is bilingual in English and Turkish and is a sworn Turkish–English translator certified by the Ministry of Justice. Selin Özgören remains actively engaged in the international arbitration community as a former participant, coach, and arbitrator in the Willem C. Vis International Commercial Arbitration Moot, and currently serves as Co-Chair of the International Liaisons Team of the Vienna based Moot Alumni Association.</p>
@@ -627,11 +627,11 @@ transition: padding-left 0.3s;
   <!-- SERVICE OFFERINGS -->
   <p class="services-label">Structured Service Offerings</p>
   <h2 class="services-title">Services</h2>
-
   <div class="services-grid reveal">
     <div class="service-card">
       <div class="service-letter">A</div>
       <h3>Counsel &amp; Co-Counsel Support</h3>
+      <div class="service-meta">For International Arbitration Proceedings</div>
       <ul>
         <li>Counsel and co-counsel roles in international arbitration proceedings</li>
         <li>Preparation of written submissions and legal memoranda</li>
@@ -640,12 +640,14 @@ transition: padding-left 0.3s;
     </div>
     <div class="service-card">
       <div class="service-letter">B</div>
-      <h3>Pre-Dispute & Risk Advisory</h3>
+      <h3>Pre-Dispute &amp; Risk Advisory</h3>
+      <div class="service-meta">For Cross-Border Commercial Relationships</div>
       <ul>
         <li>Pre-dispute advisory in cross-border commercial relationships</li>
         <li>Early-stage dispute assessment and prevention</li>
         <li>Contractual risk mapping</li>
       </ul>
+    </div>
 
     </div>
     <div class="service-card">
@@ -661,6 +663,7 @@ transition: padding-left 0.3s;
     <div class="service-card">
       <div class="service-letter">D</div>
       <h3>Tribunal Secretary Services</h3>
+      <div class="service-meta">For Arbitral Tribunals</div>
       <ul>
         <li>Procedural assistance under the direction of arbitral tribunals</li>
         <li>Drafting support for procedural orders and decisions</li>
@@ -675,13 +678,13 @@ transition: padding-left 0.3s;
   <h2 class="section-title">Let's Work Together</h2>
   <p class="contact-sub">Available for international matters, arbitration co-counsel, and legal translation engagements.</p>
   <div class="contact-links">
-    <a href="/cdn-cgi/l/email-protection#5b283e37323534213c34293e356b1b3c363a323775383436" class="contact-link">
-      ✉ &nbsp; <span class="__cf_email__" data-cfemail="592a3c35303736233e362b3c3769193e34383035773a3634">[email&#160;protected]</span>
+    <a href="mailto:your@email.com" class="contact-link">
+      ✉ &nbsp; selinozgoren0@gmail.com
     </a>
     <a href="tel:+905431465266" class="contact-link">
       ☎ &nbsp; +90 543 146 52 66
     </a>
-    <a href="https://www.linkedin.com/in/selinozgoren/" target="_blank" class="contact-link">
+    <a href="https://www.linkedin.com/in/selinozgoren/" target="_blank" rel="noopener noreferrer" class="contact-link">
       ↗ &nbsp; LinkedIn
     </a>
   </div>
@@ -693,31 +696,35 @@ transition: padding-left 0.3s;
   <p>İzmir, Türkiye</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Reveal animation
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
 
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navLinks.classList.toggle('open');
-  });
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
 
-  document.querySelectorAll('#navLinks a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navLinks.classList.remove('open');
-    });
+      document.querySelectorAll('#navLinks a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('open');
+        });
+      });
+    }
   });
 </script>
-</body>
-</html>
