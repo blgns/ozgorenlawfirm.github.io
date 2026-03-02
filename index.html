@@ -124,11 +124,14 @@
     }
     .nav-links.open { right: 0; }
     .nav-links a {
-      font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase;
-      text-decoration: none; color: var(--dark);
-      transition: color 0.3s;
-      display: block; padding: 0.25rem 0;
-    }
+  font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase;
+  text-decoration: none; color: var(--dark);
+  transition: color 0.3s;
+  display: block; padding: 0.25rem 0;
+  position: relative;
+  z-index: 1400;
+  pointer-events: auto;
+}
     .nav-links a:hover { color: var(--gold); }
 
     .nav-overlay {
