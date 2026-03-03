@@ -21,7 +21,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --cream: #F7F3EE;
       --dark: #1A1A18;
@@ -30,9 +29,7 @@
       --muted: #6B6558;
       --line: rgba(184,149,90,0.25);
     }
-
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--cream);
       color: var(--dark);
@@ -40,7 +37,6 @@
       font-weight: 300;
       overflow-x: hidden;
     }
-
     /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0;
@@ -53,7 +49,6 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
-
     .nav-logo {
       position: absolute;
       left: 50%;
@@ -66,8 +61,6 @@
       width: auto;
       display: block;
     }
-
-    /* Dil butonu - solda */
     .lang-switcher {
       display: flex;
       align-items: center;
@@ -92,7 +85,6 @@
       border-color: var(--gold-light);
       color: var(--dark);
     }
-
     .hamburger {
       margin-left: auto;
       display: flex; flex-direction: column; gap: 5px;
@@ -107,12 +99,11 @@
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
     .nav-links {
       position: fixed;
       top: 0; right: -300px;
       width: 260px; height: 100vh;
-      background: rgba(247,243,238,0.99); 
+      background: rgba(247,243,238,0.99);
       display: flex; flex-direction: column;
       justify-content: center; align-items: flex-start;
       gap: 2rem; padding: 4rem 3rem;
@@ -123,16 +114,15 @@
     }
     .nav-links.open { right: 0; }
     .nav-links a {
-  font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase;
-  text-decoration: none; color: var(--dark);
-  transition: color 0.3s;
-  display: block; padding: 0.25rem 0;
-  position: relative;
-  z-index: 1400;
-  pointer-events: auto;
-}
+      font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase;
+      text-decoration: none; color: var(--dark);
+      transition: color 0.3s;
+      display: block; padding: 0.25rem 0;
+      position: relative;
+      z-index: 1400;
+      pointer-events: auto;
+    }
     .nav-links a:hover { color: var(--gold); }
-
     .nav-overlay {
       display: none;
       position: fixed; inset: 0;
@@ -140,14 +130,12 @@
       z-index: 1100;
     }
     .nav-overlay.open { display: block; }
-
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
       display: grid; grid-template-columns: 1fr 1fr;
       padding-top: 110px;
     }
-
     .hero-left {
       display: flex; flex-direction: column; justify-content: center;
       padding: 5rem 4rem 5rem 6rem;
@@ -159,7 +147,6 @@
       width: 1px; height: 100%;
       background: linear-gradient(to bottom, transparent, var(--gold), transparent);
     }
-
     .hero-name {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(3rem, 5vw, 5rem);
@@ -168,19 +155,16 @@
       animation: fadeUp 0.8s 0.1s ease both;
     }
     .hero-name em { font-style: italic; color: var(--gold); }
-
     .hero-title {
       font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
       color: var(--muted); margin-bottom: 2.5rem;
       animation: fadeUp 0.8s 0.2s ease both;
     }
-
     .hero-desc {
       font-size: 1rem; line-height: 1.75;
       color: var(--muted); max-width: 420px; margin-bottom: 3rem;
       animation: fadeUp 0.8s 0.3s ease both;
     }
-
     .hero-cta {
       display: inline-block;
       padding: 0.85rem 2.5rem;
@@ -192,7 +176,6 @@
       align-self: center;
     }
     .hero-cta:hover { background: var(--gold); color: var(--cream); }
-
     .hero-right {
       position: relative; overflow: hidden;
       background: var(--dark);
@@ -214,7 +197,6 @@
       box-shadow: 0 0 60px rgba(184,149,90,0.2);
       display: block; position: relative;
     }
-
     .hero-badge {
       display: inline-block; width: fit-content;
       padding: 0.75rem 1.5rem;
@@ -229,9 +211,7 @@
       font-family: 'Cormorant Garamond', serif; font-size: 1rem;
       font-weight: 400; color: var(--dark); letter-spacing: 0.05em;
     }
-
     section { padding: 6rem clamp(2rem, 5vw, 6rem); }
-
     .section-label {
       font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase;
       color: var(--gold); margin-bottom: 1rem;
@@ -246,10 +226,8 @@
       font-size: clamp(2rem, 3.5vw, 3rem);
       font-weight: 300; line-height: 1.15; margin-bottom: 3rem;
     }
-
     .about { background: var(--dark); color: var(--cream); }
     .about .section-title { color: var(--cream); }
-
     .about-grid {
       display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
       align-items: start; max-width: 1300px; margin: 0 auto;
@@ -271,7 +249,6 @@
       font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
       color: rgba(247,243,238,0.5); margin-top: 0.4rem;
     }
-
     .services-label {
       font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
       color: var(--gold); margin-bottom: 1rem;
@@ -317,7 +294,6 @@
       content: '—'; position: absolute; left: 0;
       color: var(--gold-light); font-size: 0.75rem;
     }
-
     .contact {
       background: var(--dark); color: var(--cream);
       text-align: center; padding: 6rem 2rem;
@@ -340,14 +316,12 @@
       transition: border-color 0.3s, background 0.3s;
     }
     .contact-link:hover { border-color: var(--gold); background: rgba(184,149,90,0.1); }
-
     footer {
       background: var(--dark); border-top: 1px solid rgba(184,149,90,0.15);
       padding: 1.5rem clamp(2rem, 5vw, 6rem);
       display: flex; justify-content: space-between; align-items: center;
     }
     footer p { font-size: 0.65rem; color: rgba(247,243,238,0.3); letter-spacing: 0.1em; }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -357,7 +331,6 @@
     }
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-
     @media (max-width: 900px) {
       nav { padding: 1rem 2rem; }
       .nav-logo img { height: 65px; }
@@ -373,24 +346,18 @@
   </style>
 </head>
 <body>
-
   <div class="nav-overlay" id="navOverlay"></div>
-
   <nav>
-    <!-- Dil seçici solda -->
     <div class="lang-switcher">
       <a href="index.html" class="active">EN</a>
       <a href="index-tr.html">TR</a>
     </div>
-
     <a class="nav-logo" href="#">
       <img src="logo.png" alt="Özgören Law Firm">
     </a>
-
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
-
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#practice">Services</a></li>
@@ -398,7 +365,6 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
   <div class="hero">
     <div class="hero-left">
       <h1 class="hero-name">Selin<br><em>Özgören</em></h1>
@@ -414,7 +380,6 @@
       <a href="#contact" class="hero-cta">Get in Touch</a>
     </div>
   </div>
-
   <section class="about" id="about">
     <p class="section-label">About</p>
     <h2 class="section-title">A Global Legal Practice<br>Rooted in Integrity</h2>
@@ -445,7 +410,6 @@
       </div>
     </div>
   </section>
-
   <section class="practice" id="practice">
     <p class="services-label">Core Competencies</p>
     <h2 class="services-title">Services</h2>
@@ -492,7 +456,6 @@
       </div>
     </div>
   </section>
-
   <section class="contact" id="contact">
     <p class="section-label">Contact</p>
     <h2 class="section-title">Let's Work Together</h2>
@@ -503,12 +466,10 @@
       <a href="https://www.linkedin.com/in/selinozgoren/" target="_blank" rel="noopener noreferrer" class="contact-link">↗ &nbsp; LinkedIn</a>
     </div>
   </section>
-
   <footer>
     <p>© 2026 Özgören Law Firm. All rights reserved.</p>
     <p>İzmir, Türkiye</p>
   </footer>
-
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
@@ -525,6 +486,7 @@
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
+
     function closeMenu() {
       hamburger.classList.remove('open');
       navLinks.classList.remove('open');
@@ -534,8 +496,22 @@
 
     hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
     overlay.addEventListener('click', closeMenu);
-    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-  </script>
 
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          closeMenu();
+          setTimeout(() => {
+            const target = document.querySelector(href);
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+          }, 420);
+        } else {
+          closeMenu();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
