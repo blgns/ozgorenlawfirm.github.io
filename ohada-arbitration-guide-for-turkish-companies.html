@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>OHADA Arbitration: A Practical Guide for Turkish Companies | Özgören Law Firm</title>
+  <meta name="description" content="A practical guide to OHADA arbitration for Turkish companies operating in West and Central Africa. Covers the CCJA, the Uniform Act, enforcement, and what to put in your contracts. By Selin Özgören, Özgören Law Firm." />
+  <meta name="keywords" content="OHADA arbitration Turkish companies, CCJA arbitration guide, OHADA West Africa dispute resolution, Turkish investors West Africa, CCJA vs ICC arbitration, OHADA Uniform Act arbitration" />
+  <meta name="author" content="Selin Özgören, Özgören Law Firm" />
+  <link rel="canonical" href="https://www.ozgorenlawfirm.com/insights/ohada-arbitration-guide-for-turkish-companies" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="OHADA Arbitration: A Practical Guide for Turkish Companies" />
+  <meta property="og:description" content="Turkish companies operating in OHADA member states face a dual arbitration framework. This guide explains the CCJA, the Uniform Act, enforcement, and how to draft a clause that actually works." />
+  <meta property="og:image" content="https://ozgorenlawfirm.com/logo.png" />
+  <meta property="og:url" content="https://www.ozgorenlawfirm.com/insights/ohada-arbitration-guide-for-turkish-companies" />
+  <meta property="og:site_name" content="Özgören Law Firm" />
+  <meta property="article:author" content="Selin Özgören" />
+  <meta property="article:published_time" content="2026-03-09" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "OHADA Arbitration: A Practical Guide for Turkish Companies",
+    "author": { "@type": "Person", "name": "Selin Özgören", "url": "https://www.ozgorenlawfirm.com" },
+    "publisher": { "@type": "Organization", "name": "Özgören Law Firm", "url": "https://www.ozgorenlawfirm.com" },
+    "datePublished": "2026-03-09",
+    "mainEntityOfPage": "https://www.ozgorenlawfirm.com/insights/ohada-arbitration-guide-for-turkish-companies"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:      #F7F3EE;
+      --dark:       #1A1A18;
+      --gold:       #B8955A;
+      --gold-light: #D4B483;
+      --muted:      #6B6558;
+      --line:       rgba(184,149,90,0.25);
+      --warm:       #F0EBE3;
+      --nav-h:      124px;
+    }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      background: var(--cream); color: var(--dark);
+      font-family: 'Jost', sans-serif; font-weight: 300;
+      font-size: 16px; line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; justify-content: center; align-items: center;
+      padding: 1.2rem clamp(2rem, 5vw, 6rem);
+      background: rgba(247,243,238,0.97); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; }
+    .nav-logo img { height: 85px; width: auto; display: block; }
+    .lang-switcher { display: flex; align-items: center; gap: 0.3rem; z-index: 1200; }
+    .lang-switcher a { font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none; padding: 0.3rem 0.55rem; border: 1px solid var(--line); transition: all 0.25s; color: var(--muted); }
+    .lang-switcher a.active { border-color: var(--gold); color: var(--gold); background: rgba(184,149,90,0.08); }
+    .hamburger { margin-left: auto; display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; position: relative; z-index: 1200; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.35s ease; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-links { position: fixed; top: 0; right: -300px; width: 260px; height: 100vh; background: rgba(247,243,238,0.99); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 2rem; padding: 4rem 3rem; border-left: 1px solid var(--line); transition: right 0.4s ease; z-index: 1200; list-style: none; }
+    .nav-links.open { right: 0; }
+    .nav-links a { font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; color: var(--dark); transition: color 0.3s; display: block; padding: 0.25rem 0; z-index: 1400; pointer-events: auto; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(26,26,24,0.5); z-index: 1100; }
+    .nav-overlay.open { display: block; }
+
+    /* ── HERO ── */
+    .post-hero {
+      background: var(--dark);
+      padding: var(--nav-h) clamp(2rem, 7vw, 8rem) 0;
+      position: relative; overflow: hidden;
+      min-height: 62vh; display: flex; align-items: flex-end;
+    }
+    .post-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 55% 70% at 100% 0%, rgba(184,149,90,0.10) 0%, transparent 65%), radial-gradient(ellipse 30% 40% at 0% 100%, rgba(184,149,90,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .post-hero::after {
+      content: 'O';
+      position: absolute; right: 5vw; top: 50%; transform: translateY(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(14rem, 22vw, 22rem); font-weight: 300; line-height: 1;
+      color: rgba(184,149,90,0.05); pointer-events: none; user-select: none;
+    }
+    .post-hero-inner { max-width: 780px; padding-bottom: 5rem; position: relative; z-index: 1; }
+    .post-category { display: inline-flex; align-items: center; gap: 0.8rem; font-size: 0.6rem; font-weight: 400; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+    .post-category::before { content: ''; display: block; width: 36px; height: 1px; background: var(--gold); opacity: 0.6; }
+    .post-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 300; line-height: 1.1; color: var(--cream); letter-spacing: -0.01em; margin-bottom: 2rem; }
+    .post-hero h1 em { font-style: italic; color: var(--gold-light); }
+    .post-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 1.5rem; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(247,243,238,0.4); }
+    .post-meta strong { color: rgba(247,243,238,0.75); font-weight: 400; }
+    .post-meta-dot { width: 3px; height: 3px; background: rgba(184,149,90,0.5); border-radius: 50%; }
+
+    /* ── LAYOUT ── */
+    .post-layout { max-width: 1160px; margin: 0 auto; padding: 5rem clamp(2rem, 7vw, 8rem) 8rem; display: grid; grid-template-columns: 1fr 260px; gap: 0 5rem; align-items: start; }
+
+    /* ── ARTICLE BODY ── */
+    .post-body { min-width: 0; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); text-decoration: none; margin-bottom: 2.5rem; transition: gap 0.2s; }
+    .back-link:hover { gap: 0.9rem; }
+
+    .intro-box { background: var(--dark); border-left: 3px solid var(--gold); padding: 1.8rem 2rem; margin-bottom: 3.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: rgba(247,243,238,0.85); line-height: 1.75; }
+    .intro-box strong { font-style: normal; color: var(--gold-light); font-weight: 600; }
+
+    .post-body section { margin-bottom: 3.5rem; }
+    .post-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 400; color: var(--dark); line-height: 1.2; margin-bottom: 1.2rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--line); position: relative; }
+    .post-body h2::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 48px; height: 2px; background: var(--gold); }
+    .post-body h3 { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin: 2.2rem 0 0.9rem; display: flex; align-items: center; gap: 0.8rem; }
+    .post-body h3::after { content: ''; display: block; height: 1px; flex: 1; background: var(--line); }
+    .post-body p { margin-bottom: 1.2rem; font-weight: 300; line-height: 1.8; }
+    .post-body p strong { font-weight: 500; color: var(--dark); }
+
+    .takeaway { background: var(--warm); border-left: 3px solid var(--dark); padding: 1.1rem 1.4rem; margin: 1.8rem 0; font-size: 0.85rem; line-height: 1.7; color: var(--dark); }
+    .takeaway::before { content: '▸ KEY POINT'; display: block; font-size: 0.58rem; font-weight: 500; letter-spacing: 0.18em; color: var(--gold); margin-bottom: 0.5rem; }
+
+    /* member states grid */
+    .members-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 1.2rem 0 1.8rem; }
+    .member-cell { background: var(--cream); padding: 0.7rem 0.9rem; font-size: 0.75rem; font-weight: 300; color: var(--muted); text-align: center; transition: background 0.2s, color 0.2s; }
+    .member-cell:hover { background: var(--warm); color: var(--dark); }
+    .member-cell.header { background: var(--dark); color: rgba(247,243,238,0.7); font-size: 0.6rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+
+    /* comparison grid */
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 1.2rem 0 1.8rem; }
+    .compare-col { background: var(--cream); }
+    .compare-head { padding: 1rem 1.4rem; background: var(--dark); color: var(--gold-light); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+    .compare-body { padding: 1.2rem 1.4rem; }
+    .compare-body ul { list-style: none; }
+    .compare-body ul li { font-size: 0.82rem; font-weight: 300; line-height: 1.7; padding: 0.5rem 0 0.5rem 1.2rem; border-bottom: 1px solid rgba(184,149,90,0.1); position: relative; color: var(--dark); }
+    .compare-body ul li:last-child { border-bottom: none; }
+    .compare-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold-light); }
+
+    /* process steps */
+    .steps-list { list-style: none; margin: 1rem 0 1.8rem; counter-reset: step-counter; }
+    .steps-list li { padding: 1.1rem 1.1rem 1.1rem 3.5rem; border-bottom: 1px solid var(--line); position: relative; font-size: 0.88rem; font-weight: 300; line-height: 1.7; counter-increment: step-counter; }
+    .steps-list li:first-child { border-top: 1px solid var(--line); }
+    .steps-list li::before { content: counter(step-counter, decimal-leading-zero); position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: rgba(184,149,90,0.2); line-height: 1; width: 2.8rem; text-align: right; }
+    .steps-list li strong { display: block; font-weight: 500; color: var(--dark); font-size: 0.78rem; letter-spacing: 0.04em; margin-bottom: 3px; }
+
+    /* clause sample */
+    .clause-box { background: var(--dark); border-left: 3px solid var(--gold); padding: 1.6rem 1.8rem; margin: 1.5rem 0 1.8rem; position: relative; }
+    .clause-box::before { content: 'SAMPLE CLAUSE'; display: block; font-size: 0.55rem; font-weight: 500; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 1rem; }
+    .clause-box p { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; color: rgba(247,243,238,0.8); line-height: 1.75; margin: 0; }
+    .clause-box p em { font-style: normal; color: var(--gold-light); }
+
+    /* checklist */
+    .checklist { list-style: none; margin: 1rem 0 1.8rem; }
+    .checklist li { padding: 0.9rem 0 0.9rem 1.8rem; border-bottom: 1px solid var(--line); font-weight: 300; font-size: 0.88rem; position: relative; }
+    .checklist li:first-child { border-top: 1px solid var(--line); }
+    .checklist li::before { content: '—'; position: absolute; left: 0; color: var(--gold-light); }
+    .checklist li strong { display: block; font-weight: 500; color: var(--dark); font-size: 0.78rem; letter-spacing: 0.04em; margin-bottom: 3px; }
+
+    .pullquote { background: var(--dark); padding: 2.2rem 2.5rem; margin: 2.5rem 0; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; color: rgba(247,243,238,0.88); line-height: 1.6; text-align: center; position: relative; }
+    .pullquote::before { content: '"'; position: absolute; top: -0.5rem; left: 1.5rem; font-size: 6rem; line-height: 1; color: var(--gold); opacity: 0.2; }
+
+    /* CTA */
+    .cta-block { background: var(--dark); padding: 2.5rem 2.5rem 2.2rem; margin-top: 3.5rem; position: relative; overflow: hidden; }
+    .cta-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--gold), transparent); }
+    .cta-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--cream); margin-bottom: 0.8rem; }
+    .cta-block p { font-size: 0.82rem; color: rgba(247,243,238,0.55); margin-bottom: 1.6rem; font-weight: 300; }
+    .cta-btn { display: inline-block; border: 1px solid rgba(184,149,90,0.5); color: var(--gold); font-size: 0.65rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.75rem 2rem; text-decoration: none; transition: background 0.25s, border-color 0.25s; }
+    .cta-btn:hover { background: rgba(184,149,90,0.1); border-color: var(--gold); }
+
+    .disclaimer { font-size: 0.72rem; color: var(--muted); line-height: 1.7; border-top: 1px solid var(--line); padding-top: 1.5rem; margin-top: 3rem; }
+
+    /* ── SIDEBAR ── */
+    .post-sidebar { position: sticky; top: calc(var(--nav-h) + 2rem); }
+    .sb-card { border: 1px solid var(--line); position: relative; overflow: hidden; margin-bottom: 1.2rem; }
+    .sb-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--gold), transparent); }
+    .sb-card-head { padding: 1.2rem 1.4rem 1rem; border-bottom: 1px solid var(--line); }
+    .sb-card-head h4 { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: var(--dark); }
+    .sb-card-body { padding: 1rem 1.4rem 1.3rem; }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a { font-size: 0.75rem; color: var(--muted); text-decoration: none; display: block; padding: 0.45rem 0 0.45rem 0.9rem; border-left: 2px solid transparent; line-height: 1.45; transition: all 0.15s; }
+    .toc-list a:hover, .toc-list a.active { color: var(--dark); border-left-color: var(--gold); padding-left: 1.2rem; }
+    .sb-author-row { display: flex; gap: 0.9rem; align-items: center; margin-bottom: 0.9rem; }
+    .sb-author-initials { width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0; border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; color: var(--gold); }
+    .sb-author-name strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-weight: 400; color: var(--dark); }
+    .sb-author-name span { font-size: 0.62rem; letter-spacing: 0.06em; color: var(--muted); text-transform: uppercase; }
+    .sb-bio { font-size: 0.74rem; font-weight: 300; color: var(--muted); line-height: 1.65; margin-bottom: 0.9rem; }
+    .sb-link { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; transition: gap 0.2s; }
+    .sb-link:hover { gap: 0.7rem; }
+    .related-list { list-style: none; }
+    .related-list li { padding: 0.6rem 0; border-bottom: 1px solid rgba(184,149,90,0.1); }
+    .related-list li:last-child { border-bottom: none; }
+    .related-list a { font-size: 0.76rem; color: var(--muted); text-decoration: none; display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.45; transition: color 0.2s; }
+    .related-list a::before { content: '—'; color: var(--gold-light); flex-shrink: 0; }
+    .related-list a:hover { color: var(--dark); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--dark); border-top: 1px solid rgba(184,149,90,0.15); padding: 1.5rem clamp(2rem, 5vw, 6rem); display: flex; justify-content: space-between; align-items: center; }
+    footer p { font-size: 0.65rem; color: rgba(247,243,238,0.3); letter-spacing: 0.1em; }
+    footer a { color: rgba(247,243,238,0.4); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--gold-light); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .post-layout { grid-template-columns: 1fr; max-width: 760px; }
+      .post-sidebar { display: none; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .members-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      :root { --nav-h: 97px; }
+      nav { padding: 1rem 2rem; }
+      .nav-logo img { height: 65px; }
+      .post-hero h1 { font-size: 2rem; }
+      .members-grid { grid-template-columns: repeat(2, 1fr); }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  </style>
+</head>
+<body>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+  <nav>
+    <div class="lang-switcher"><a href="#" class="active">EN</a></div>
+    <a class="nav-logo" href="index.html"><img src="logo.png" alt="Özgören Law Firm"></a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#practice">Services</a></li>
+    <li><a href="blog.html">Knowledge Bank</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+
+  <header class="post-hero">
+    <div class="post-hero-inner">
+      <p class="post-category">Dispute Resolution in Africa</p>
+      <h1>OHADA Arbitration: <em>A Practical Guide for Turkish Companies</em></h1>
+      <div class="post-meta">
+        <strong>Selin Özgören</strong>
+        <span class="post-meta-dot"></span>
+        <span>Özgören Law Firm</span>
+        <span class="post-meta-dot"></span>
+        <span>March 2026</span>
+        <span class="post-meta-dot"></span>
+        <span>14 min read</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="post-layout">
+    <article class="post-body">
+
+      <a href="blog.html" class="back-link">← Back to Knowledge Bank</a>
+
+      <div class="intro-box">
+        Turkish companies are deepening their footprint across West and Central Africa — in construction, energy, textiles, and defence. But most enter these markets without understanding the legal system that governs disputes there. <strong>OHADA</strong> — the Organisation for the Harmonisation of Business Law in Africa — operates across 17 mostly francophone states and provides its own arbitration framework. <strong>Not knowing how it works can cost you your entire claim.</strong>
+      </div>
+
+      <section id="what">
+        <h2>What Is OHADA and Why Does It Matter?</h2>
+        <p>OHADA (Organisation pour l'Harmonisation en Afrique du Droit des Affaires) was established by treaty in 1993 with a single ambition: to replace the fragmented post-colonial legal systems of its member states with a single, modern body of business law. Today it covers <strong>17 member states</strong> — almost all francophone — and its Uniform Acts are directly applicable across every one of them, superseding conflicting national legislation.</p>
+        <p>For a Turkish contractor building a highway in Senegal, or a Turkish energy company operating under a concession in Cameroon, OHADA is not optional reading. <strong>It is the governing legal system for your contracts, your company, and your disputes.</strong></p>
+
+        <h3>The 17 OHADA member states</h3>
+        <div class="members-grid">
+          <div class="member-cell header">West Africa</div>
+          <div class="member-cell header">Central Africa</div>
+          <div class="member-cell header">Other</div>
+          <div class="member-cell header">Note</div>
+          <div class="member-cell">Senegal · Côte d'Ivoire · Mali · Burkina Faso · Guinea · Guinea-Bissau · Niger · Togo · Benin</div>
+          <div class="member-cell">Cameroon · Chad · Central African Republic · Republic of Congo · Gabon · Equatorial Guinea · DRC</div>
+          <div class="member-cell">Comoros</div>
+          <div class="member-cell" style="font-size:0.7rem;color:var(--muted);">Cameroon has a bijural system (civil + common law). DRC joined in 2012.</div>
+        </div>
+
+        <div class="takeaway">
+          Turkey has signed BITs with several OHADA member states — including Senegal, Cameroon, Guinea, and Côte d'Ivoire. Understanding OHADA arbitration is therefore not just useful for commercial contracts; it is directly relevant to how investment disputes in these countries may be resolved.
+        </div>
+      </section>
+
+      <section id="framework">
+        <h2>The Dual Arbitration Framework: CCJA vs. Uniform Act</h2>
+        <p>This is the most common source of confusion for foreign investors. OHADA does not have one arbitration regime — it has two, operating in parallel. Understanding which one applies to your dispute is critical before you draft a single clause.</p>
+
+        <div class="compare-grid">
+          <div class="compare-col">
+            <div class="compare-head">CCJA Arbitration Rules</div>
+            <div class="compare-body">
+              <ul>
+                <li>Administered by the Common Court of Justice and Arbitration (CCJA), based in Abidjan</li>
+                <li>Applies when at least one party is domiciled in an OHADA state, <em>or</em> the contract is performed (wholly or partly) in OHADA territory</li>
+                <li>Similar in structure to ICC Rules — modern, internationally recognised framework</li>
+                <li>CCJA scrutinises awards before they are rendered (like the ICC Court)</li>
+                <li>Exequatur (enforcement order) issued by the CCJA — valid and enforceable across <strong>all 17 member states automatically</strong></li>
+                <li>CCJA can also set aside its own awards — a unique dual judicial/administrative role</li>
+              </ul>
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-head">Uniform Act on Arbitration (UAA)</div>
+            <div class="compare-body">
+              <ul>
+                <li>Governs ad hoc and institutional arbitration (other than CCJA) where the <em>seat</em> is in an OHADA member state</li>
+                <li>Similar in philosophy to the UNCITRAL Model Law — and comparable to Turkish Law No. 4686 of 2001</li>
+                <li>Enforcement requires an exequatur from a national court in each state where enforcement is sought separately</li>
+                <li>Not all OHADA states have designated a "competent judge" for exequatur — creating enforcement uncertainty</li>
+                <li>Better suited for disputes where parties want an established institution (ICC, LCIA) with an OHADA seat</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="takeaway">
+          For Turkish companies, the <strong>CCJA regime is generally preferable</strong> when operating in OHADA states: its automatic pan-OHADA enforcement is a decisive practical advantage. If an ICC clause is preferred, consider specifying an OHADA member state as the seat to benefit from the UAA's modern framework — but be aware enforcement will require separate applications in each state.
+        </div>
+
+        <div class="pullquote">
+          The coexistence of two arbitration regimes within OHADA is sometimes confusing for foreign investors — but the distinction matters enormously when it comes to enforcing an award.
+        </div>
+      </section>
+
+      <section id="ccja">
+        <h2>The CCJA: Ten Things Turkish Companies Should Know</h2>
+        <p>The Common Court of Justice and Arbitration is a genuinely unique institution. It functions simultaneously as a supranational supreme court (hearing appeals from national courts on OHADA law) and as an arbitration institution. Understanding both roles is essential for Turkish companies considering or facing CCJA proceedings.</p>
+
+        <h3>Institutional features</h3>
+        <ul class="checklist">
+          <li>
+            <strong>Dual role — court and institution</strong>
+            The CCJA is both the final appellate court for commercial disputes under OHADA law and an arbitration administrator. This means the same institution that administers your case can later rule on challenges to the award. This is unique in international arbitration.
+          </li>
+          <li>
+            <strong>Scrutiny of awards</strong>
+            Like the ICC, the CCJA reviews the form of draft awards before they are finalised. This adds a layer of quality control but also extends timelines.
+          </li>
+          <li>
+            <strong>Arbitrator selection</strong>
+            Parties may appoint one or three arbitrators. The CCJA maintains a list of approved arbitrators — predominantly African nationals. Parties may nominate arbitrators from outside the list, but this requires CCJA confirmation. For Turkish companies, nominating a neutral arbitrator familiar with both civil law and international practice is advisable.
+          </li>
+          <li>
+            <strong>Language</strong>
+            Proceedings are typically conducted in French. English, Spanish, or Portuguese may be used where relevant. Turkish companies should factor in the cost and complexity of translation from the outset.
+          </li>
+          <li>
+            <strong>Pan-OHADA enforcement</strong>
+            A CCJA exequatur is valid and enforceable in all 17 member states without further national court proceedings. This is the single most powerful feature of CCJA arbitration for creditors operating across multiple OHADA jurisdictions.
+          </li>
+          <li>
+            <strong>Investment arbitration</strong>
+            The 2017 revised CCJA Rules expressly authorise the CCJA to administer arbitration based on BITs and national investment laws — a significant expansion. Turkish investors in OHADA states with an applicable BIT may therefore consider the CCJA as an alternative to ICSID.
+          </li>
+          <li>
+            <strong>No emergency arbitration</strong>
+            Unlike the ICC or LCIA, the CCJA Rules do not currently provide for emergency arbitrator proceedings. If you need urgent interim relief, you must apply to national courts — which may be slow or unpredictable.
+          </li>
+          <li>
+            <strong>Preliminary meeting</strong>
+            A distinctive feature of CCJA proceedings is the preliminary meeting, at which the tribunal and parties agree on the procedural timetable. This is broadly comparable to a first procedural conference under ICC Rules.
+          </li>
+        </ul>
+      </section>
+
+      <section id="process">
+        <h2>How a CCJA Arbitration Proceeds: Step by Step</h2>
+
+        <ol class="steps-list">
+          <li>
+            <strong>Request for Arbitration</strong>
+            The claimant files a Request with the CCJA Secretariat in Abidjan, including the arbitration agreement, a brief summary of the dispute, and the relief sought. The CCJA notifies the respondent.
+          </li>
+          <li>
+            <strong>Answer to the Request</strong>
+            The respondent has 45 days to file its Answer, including any counterclaims. Failure to answer does not prevent the arbitration from proceeding.
+          </li>
+          <li>
+            <strong>Arbitral Tribunal Constitution</strong>
+            The parties nominate arbitrators (or the CCJA appoints them). The CCJA confirms all appointments and can refuse nominees who lack independence or impartiality.
+          </li>
+          <li>
+            <strong>Preliminary Meeting and Terms of Reference</strong>
+            The tribunal holds a preliminary meeting to agree the procedural timetable, language, seat, and key issues in dispute. Minutes are signed by the parties and the tribunal.
+          </li>
+          <li>
+            <strong>Written Submissions</strong>
+            Typically two rounds of written submissions (memorials and counter-memorials), with document production. Turkish companies should ensure all contemporaneous records — contracts, correspondence with state entities, licences — are preserved from day one.
+          </li>
+          <li>
+            <strong>Hearing</strong>
+            An oral hearing is held at which witnesses and experts are examined. The seat is usually in an OHADA member state, though this can be varied by agreement.
+          </li>
+          <li>
+            <strong>Award Scrutiny and Rendering</strong>
+            The CCJA reviews the draft award in form before it is signed. The tribunal then renders the final award.
+          </li>
+          <li>
+            <strong>Exequatur and Enforcement</strong>
+            The winning party applies to the CCJA for exequatur. Once granted, the award is enforceable across all 17 OHADA member states as if it were a national court judgment.
+          </li>
+        </ol>
+      </section>
+
+      <section id="clauses">
+        <h2>Drafting the Right Arbitration Clause for OHADA Contracts</h2>
+        <p>The arbitration clause is the most consequential provision in any contract involving an OHADA party. A poorly drafted clause can render the entire dispute resolution mechanism unworkable — either by creating ambiguity about which regime applies, or by failing to constitute a valid agreement to arbitrate under OHADA law.</p>
+
+        <h3>Recommended CCJA clause for Turkish companies</h3>
+        <div class="clause-box">
+          <p>"Any dispute arising out of or in connection with this Agreement, including any question regarding its existence, validity, or termination, shall be referred to and finally resolved by arbitration under the <em>Rules of Arbitration of the Common Court of Justice and Arbitration (CCJA)</em>. The number of arbitrators shall be [one / three]. The seat of arbitration shall be [Abidjan, Côte d'Ivoire / Paris, France]. The language of the arbitration shall be [French / English]."</p>
+        </div>
+
+        <div class="takeaway">
+          <strong>Avoid "pathological" clauses.</strong> Clauses that name non-existent institutions, combine incompatible rules, or create ambiguity about the seat are regularly held invalid by CCJA and OHADA national courts. Have any arbitration clause reviewed by counsel familiar with both Turkish and OHADA law before the contract is signed.
+        </div>
+
+        <h3>What to include beyond the clause</h3>
+        <ul class="checklist">
+          <li>
+            <strong>Governing law</strong>
+            Specify the substantive law governing the contract — typically the law of an OHADA member state or a neutral jurisdiction. OHADA Uniform Acts will apply to commercial matters regardless of the chosen governing law if the contract is performed in OHADA territory.
+          </li>
+          <li>
+            <strong>Language</strong>
+            French is the primary language of CCJA proceedings. If your commercial team does not operate in French, specify English or Turkish as the language of proceedings and factor in translation costs.
+          </li>
+          <li>
+            <strong>Number of arbitrators</strong>
+            For contracts above USD 1 million in value, a three-member tribunal is standard. For smaller commercial disputes, a sole arbitrator reduces cost and timeline significantly.
+          </li>
+          <li>
+            <strong>Interim measures</strong>
+            Since the CCJA has no emergency arbitration procedure, consider whether the clause should expressly preserve the right to seek urgent interim relief from competent national courts pending constitution of the tribunal.
+          </li>
+        </ul>
+      </section>
+
+      <section id="practical">
+        <h2>Practical Recommendations for Turkish Companies</h2>
+
+        <h3>Before you invest or contract</h3>
+        <ul class="checklist">
+          <li>
+            <strong>Verify whether Turkey has a BIT with the host OHADA state</strong>
+            Turkey has signed BITs with Senegal, Cameroon, Guinea, Côte d'Ivoire, and others. A BIT provides treaty-level protections (FET, expropriation, FPS) that contractual clauses cannot replicate. Check the UNCTAD Investment Policy Hub and the Turkish Official Gazette before structuring your investment.
+          </li>
+          <li>
+            <strong>Structure your corporate vehicle to qualify as a protected investor</strong>
+            The BIT will define which entities qualify as "investors." A Turkish company investing through a third-country holding entity may or may not benefit from the BIT. Verify before structuring.
+          </li>
+          <li>
+            <strong>Include a CCJA clause — not just an ICC clause — for contracts with state entities</strong>
+            Several OHADA governments have expressed preference for CCJA arbitration in public contracts. A CCJA clause can also give you automatic enforcement across the region, which an ICC award cannot.
+          </li>
+          <li>
+            <strong>Engage French-speaking or bilingual legal counsel early</strong>
+            OHADA proceedings are predominantly in French. Engaging counsel familiar with both Turkish commercial law and OHADA practice — at the contract stage, not only after a dispute arises — is a structural advantage.
+          </li>
+          <li>
+            <strong>Document everything with state counterparties</strong>
+            Communications with government ministries, regulatory approvals, and changes to contractual terms should be meticulously documented. In investor-state disputes under CCJA Rules, this evidence is what establishes the factual record.
+          </li>
+        </ul>
+
+        <h3>If a dispute is already developing</h3>
+        <p>Before filing any formal legal proceeding, review the applicable contract's arbitration clause and any applicable BIT <strong>carefully</strong>. Initiating proceedings in national courts may trigger a fork-in-the-road clause or constitute a waiver of arbitration rights. Engage arbitration counsel before sending any formal demand letter or notice of dispute.</p>
+        <p>The 2017 revised OHADA UAA also introduced <strong>mediation as a recognised step</strong> before arbitration — and some contracts and investment codes now make a mediation attempt a mandatory pre-condition to arbitration. Failure to comply with these steps can affect admissibility.</p>
+      </section>
+
+      <section id="conclusion">
+        <h2>The Bottom Line</h2>
+        <p>OHADA is not a niche regional system — it is the governing legal framework for business in 17 African countries representing over <strong>350 million people and a combined GDP of approximately USD 1.2 trillion</strong>. Any Turkish company operating in this region is subject to it, whether or not they know it.</p>
+        <p>The good news is that OHADA's arbitration framework — particularly the CCJA — is modern, internationally aligned, and offers a distinctive enforcement advantage that no other African institution can match. The CCJA's 2017 reform explicitly extended its reach to investor-state disputes, making it a credible alternative to ICSID for disputes involving OHADA member states.</p>
+        <p><strong>The companies that understand this system before a dispute arises are the ones that recover when one does.</strong></p>
+      </section>
+
+      <div class="cta-block">
+        <h3>Operating in West or Central Africa? Let's Talk.</h3>
+        <p>Özgören Law Firm advises Turkish companies on dispute resolution structuring, arbitration clause drafting, and pre-dispute risk advisory for investments in OHADA member states and across Africa.</p>
+        <a class="cta-btn" href="index.html#contact">Get in Touch →</a>
+      </div>
+
+      <p class="disclaimer">
+        This article is published for informational purposes only and does not constitute legal advice. OHADA law and CCJA procedural rules are subject to change; readers should verify current texts and obtain independent legal counsel. © Özgören Law Firm 2026. All rights reserved.
+      </p>
+
+    </article>
+
+    <aside class="post-sidebar">
+
+      <div class="sb-card">
+        <div class="sb-card-head"><h4>Contents</h4></div>
+        <div class="sb-card-body">
+          <ul class="toc-list">
+            <li><a href="#what">What Is OHADA?</a></li>
+            <li><a href="#framework">CCJA vs. Uniform Act</a></li>
+            <li><a href="#ccja">10 Things to Know About CCJA</a></li>
+            <li><a href="#process">How a CCJA Arbitration Proceeds</a></li>
+            <li><a href="#clauses">Drafting the Right Clause</a></li>
+            <li><a href="#practical">Practical Recommendations</a></li>
+            <li><a href="#conclusion">The Bottom Line</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-card-head"><h4>About the Author</h4></div>
+        <div class="sb-card-body">
+          <div class="sb-author-row">
+            <div class="sb-author-initials">SÖ</div>
+            <div class="sb-author-name">
+              <strong>Selin Özgören</strong>
+              <span>International Arbitration Lawyer</span>
+            </div>
+          </div>
+          <p class="sb-bio">LL.M. Bocconi University (full scholarship). Former UNCITRAL Secretariat, HKIAC, Allen &amp; Overy, and Baker McKenzie. Specialist in cross-border arbitration involving Turkish and African parties.</p>
+          <a class="sb-link" href="index.html#about">Full Profile →</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-card-head"><h4>Related Articles</h4></div>
+        <div class="sb-card-body">
+          <ul class="related-list">
+            <li><a href="turkey-africa-bilateral-investment-treaties.html">Turkey–Africa BITs: What Investors Need to Know</a></li>
+            <li><a href="how-investment-arbitration-protects-turkish-investors-in-africa.html">How Investment Arbitration Protects Turkish Investors in Africa</a></li>
+            <li><a href="#">Choosing Your Arbitration Seat for Africa Disputes</a></li>
+            <li><a href="#">Enforcing Awards Against African States</a></li>
+            <li><a href="#">Drafting Arbitration Clauses for Africa Contracts</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <footer>
+    <p>© 2026 Özgören Law Firm · <a href="index.html">ozgorenlawfirm.com</a> · International Arbitration · İzmir, Turkey</p>
+    <a href="blog.html" style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;">← Knowledge Bank</a>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const overlay   = document.getElementById('navOverlay');
+    function openMenu()  { hamburger.classList.add('open'); navLinks.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { hamburger.classList.remove('open'); navLinks.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
+    overlay.addEventListener('click', closeMenu);
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault(); closeMenu();
+          setTimeout(() => { const t = document.querySelector(href); if (t) t.scrollIntoView({ behavior: 'smooth' }); }, 420);
+        } else { closeMenu(); }
+      });
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const tocObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+    sections.forEach(s => tocObserver.observe(s));
+  </script>
+
+</body>
+</html>
