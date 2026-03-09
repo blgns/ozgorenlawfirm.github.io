@@ -82,6 +82,588 @@
       min-height: 72vh;
       background: var(--dark);
       display: flex; align-items: flex-end;
+      padding: 110px clamp(2rem, 7vw, 8rem) 0;
+      position: relative; overflow: hidden;
+    }
+    .kb-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 70% at 100% 0%, rgba(184,149,90,0.12) 0%, transparent 65%),
+        radial-gradient(ellipse 30% 40% at 0% 100%, rgba(184,149,90,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    /* decorative large numeral */
+    .kb-hero::after {
+      content: 'K';
+      position: absolute; right: 6vw; top: 50%; transform: translateY(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(16rem, 28vw, 26rem);
+      font-weight: 300; line-height: 1;
+      color: rgba(184,149,90,0.06);
+      pointer-events: none; user-select: none;
+      letter-spacing: -0.05em;
+    }
+    .kb-hero-inner {
+      max-width: 760px;
+      padding-bottom: 6rem;
+      position: relative; z-index: 1;
+    }
+    .kb-hero-label {
+      font-size: 0.6rem; letter-spacing: 0.38em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+    .kb-hero-label::before { content: ''; display: block; height: 1px; width: 40px; background: var(--gold); opacity: 0.6; }
+    .kb-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 300; line-height: 1.05;
+      color: var(--cream); letter-spacing: -0.01em;
+      margin-bottom: 1.75rem;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+    .kb-hero h1 em { font-style: italic; color: var(--gold); }
+    .kb-hero-desc {
+      font-size: 0.95rem; line-height: 1.8;
+      color: rgba(247,243,238,0.55);
+      max-width: 500px;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+    /* scroll indicator */
+    .scroll-hint {
+      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      animation: fadeUp 0.8s 0.6s ease both;
+    }
+    .scroll-hint span { font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(247,243,238,0.3); }
+    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: scrollPulse 2s ease infinite; }
+    @keyframes scrollPulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+    /* ── FILTER STRIP ── */
+    .filter-strip {
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+      position: sticky; top: 110px; z-index: 90;
+    }
+    .filter-inner {
+      max-width: 1300px; margin: 0 auto;
+      padding: 0 clamp(2rem, 7vw, 8rem);
+      display: flex; align-items: center; gap: 0; overflow-x: auto; scrollbar-width: none;
+    }
+    .filter-inner::-webkit-scrollbar { display: none; }
+    .filter-sep { width: 1px; height: 18px; background: var(--line); margin: 0 6px; flex-shrink: 0; }
+    .filter-tag {
+      background: none; border: none; cursor: pointer;
+      font-family: 'Jost', sans-serif; font-size: 0.65rem; font-weight: 400;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--muted); padding: 1.1rem 1.2rem;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s; white-space: nowrap;
+    }
+    .filter-tag:hover { color: var(--dark); }
+    .filter-tag.active { color: var(--dark); border-bottom-color: var(--gold); font-weight: 500; }
+
+    /* ── CONTENT AREA ── */
+    .kb-body {
+      max-width: 1300px; margin: 0 auto;
+      padding: 5rem clamp(2rem, 7vw, 8rem) 8rem;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 5rem; align-items: start;
+    }
+
+    /* ── FEATURED ── */
+    .featured-wrap { margin-bottom: 4rem; }
+    .featured-article {
+      display: grid; grid-template-columns: 1fr 1fr;
+      background: var(--dark); position: relative; overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .featured-article:hover { transform: translateY(-4px); box-shadow: 0 24px 64px rgba(26,26,24,0.25); }
+    .featured-article::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(to right, var(--gold), transparent);
+    }
+    .featured-visual {
+      background: linear-gradient(135deg, #2a2a26 0%, #1A1A18 100%);
+      min-height: 340px; position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .featured-visual::after {
+      content: '§';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14rem; font-weight: 300;
+      color: rgba(184,149,90,0.08);
+      line-height: 1; user-select: none;
+    }
+    .featured-visual .feat-num {
+      position: absolute; bottom: 1.5rem; left: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem; font-weight: 300; line-height: 1;
+      color: rgba(184,149,90,0.12); letter-spacing: -0.04em;
+    }
+    .featured-content { padding: 3rem 3rem 2.5rem; display: flex; flex-direction: column; }
+    .feat-tags { display: flex; gap: 0.6rem; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .feat-tag {
+      font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 0.3rem 0.75rem; border: 1px solid rgba(184,149,90,0.3);
+      color: var(--gold-light);
+    }
+    .feat-tag.is-featured { background: var(--gold); color: var(--dark); border-color: var(--gold); font-weight: 500; }
+    .feat-date { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(247,243,238,0.3); margin-left: auto; }
+    .featured-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 2.5vw, 2.1rem); font-weight: 400;
+      color: var(--cream); line-height: 1.2; margin-bottom: 1.2rem;
+    }
+    .featured-content p { font-size: 0.85rem; line-height: 1.8; color: rgba(247,243,238,0.55); margin-bottom: 2.5rem; flex: 1; }
+    .read-more {
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); text-decoration: none;
+      border: 1px solid rgba(184,149,90,0.35); padding: 0.7rem 1.5rem;
+      align-self: flex-start; transition: background 0.3s, border-color 0.3s;
+    }
+    .read-more:hover { background: rgba(184,149,90,0.1); border-color: var(--gold); }
+    .read-more .arrow { transition: transform 0.25s; }
+    .read-more:hover .arrow { transform: translateX(5px); }
+
+    /* ── ARTICLES GRID ── */
+    .articles-label {
+      font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 2rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .articles-label::after { content: ''; display: block; height: 1px; flex: 1; background: var(--line); }
+    .articles-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: var(--line); border: 1px solid var(--line);
+    }
+    .article-card {
+      background: var(--cream); padding: 2.2rem 2.2rem 2rem;
+      display: flex; flex-direction: column;
+      cursor: pointer; position: relative; overflow: hidden;
+      transition: background 0.3s;
+    }
+    .article-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 0; height: 2px; background: var(--gold); transition: width 0.4s ease;
+    }
+    .article-card:hover::before { width: 100%; }
+    .article-card:hover { background: #F0EBE3; }
+    .card-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem; font-weight: 300; line-height: 1;
+      color: rgba(184,149,90,0.1); margin-bottom: -0.5rem;
+      letter-spacing: -0.04em;
+    }
+    .card-meta { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .card-tag {
+      font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 0.25rem 0.65rem; border: 1px solid var(--line); color: var(--gold);
+    }
+    .card-date { font-size: 0.6rem; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; margin-left: auto; }
+    .article-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 400; color: var(--dark);
+      line-height: 1.3; margin-bottom: 0.9rem;
+    }
+    .article-card p { font-size: 0.8rem; line-height: 1.75; color: var(--muted); flex: 1; margin-bottom: 1.8rem; }
+    .card-read {
+      font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); display: inline-flex; align-items: center; gap: 0.5rem;
+      text-decoration: none; align-self: flex-start; transition: gap 0.2s;
+    }
+    .card-read:hover { gap: 0.9rem; }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .sb-block {
+      border: 1px solid var(--line); padding: 0;
+      position: relative; overflow: hidden;
+    }
+    .sb-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--gold), transparent); }
+
+    .sb-head {
+      padding: 1.4rem 1.6rem 1.2rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .sb-head h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 400; color: var(--dark);
+    }
+    .sb-body { padding: 1.2rem 1.6rem 1.4rem; }
+
+    /* topics */
+    .topic-list { list-style: none; }
+    .topic-list li {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.65rem 0; border-bottom: 1px solid rgba(184,149,90,0.1);
+      font-size: 0.75rem; letter-spacing: 0.08em; cursor: pointer;
+      color: var(--muted); transition: color 0.2s;
+    }
+    .topic-list li:last-child { border-bottom: none; }
+    .topic-list li:hover { color: var(--dark); }
+    .t-count {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem; color: var(--gold-light); font-weight: 300;
+    }
+
+    /* newsletter */
+    .sb-newsletter { background: var(--dark); border-color: transparent; }
+    .sb-newsletter::before { background: linear-gradient(to right, var(--gold), rgba(184,149,90,0.3)); }
+    .sb-newsletter .sb-head { border-bottom-color: rgba(184,149,90,0.15); }
+    .sb-newsletter .sb-head h4 { color: var(--cream); }
+    .sb-newsletter .sb-body p { font-size: 0.78rem; color: rgba(247,243,238,0.45); line-height: 1.65; margin-bottom: 1.2rem; }
+    .nl-field {
+      width: 100%; padding: 0.75rem 1rem;
+      background: rgba(247,243,238,0.06); border: 1px solid rgba(184,149,90,0.2);
+      font-family: 'Jost', sans-serif; font-size: 0.78rem; font-weight: 300;
+      color: var(--cream); outline: none; margin-bottom: 0.7rem;
+      transition: border-color 0.2s;
+    }
+    .nl-field::placeholder { color: rgba(247,243,238,0.25); }
+    .nl-field:focus { border-color: rgba(184,149,90,0.5); }
+    .nl-btn {
+      width: 100%; padding: 0.8rem;
+      background: var(--gold); border: none; cursor: pointer;
+      font-family: 'Jost', sans-serif; font-size: 0.62rem; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase; color: var(--dark);
+      transition: background 0.25s;
+    }
+    .nl-btn:hover { background: var(--gold-light); }
+    .nl-ok { display: none; font-size: 0.75rem; color: var(--gold-light); text-align: center; padding: 0.5rem 0; }
+
+    /* author */
+    .author-row { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+    .author-initials {
+      width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0;
+      border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--gold); font-weight: 400;
+    }
+    .author-name { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 400; color: var(--dark); margin-bottom: 0.2rem; }
+    .author-role { font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+    .sb-body .author-bio { font-size: 0.77rem; line-height: 1.7; color: var(--muted); margin-bottom: 1.1rem; }
+    .profile-link {
+      font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.5rem; transition: gap 0.2s;
+    }
+    .profile-link:hover { gap: 0.9rem; }
+
+    /* ── FOOTER (identical to homepage) ── */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(184,149,90,0.15);
+      padding: 1.5rem clamp(2rem, 5vw, 6rem);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    footer p { font-size: 0.65rem; color: rgba(247,243,238,0.3); letter-spacing: 0.1em; }
+    .footer-back {
+      font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.5rem; transition: gap 0.2s;
+    }
+    .footer-back:hover { gap: 0.9rem; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: 0.1s; }
+    .reveal-d2 { transition-delay: 0.2s; }
+    .reveal-d3 { transition-delay: 0.3s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .kb-body { grid-template-columns: 1fr; gap: 4rem; }
+      .sidebar { position: static; }
+      .featured-article { grid-template-columns: 1fr; }
+      .featured-visual { min-height: 200px; }
+    }
+    @media (max-width: 700px) {
+      nav { padding: 1rem 2rem; }
+      .nav-logo img { height: 65px; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .kb-hero { min-height: 60vh; }
+      .kb-hero::after { display: none; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+  <nav>
+    <div class="lang-switcher">
+      <a href="blog.html" class="active">EN</a>
+      <a href="blog-tr.html">TR</a>
+    </div>
+    <a class="nav-logo" href="index.html">
+      <img src="logo.png" alt="Özgören Law Firm">
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#practice">Services</a></li>
+    <li><a href="blog.html" class="current">Knowledge Bank</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+
+  <!-- ── HERO ── -->
+  <header class="kb-hero">
+    <div class="kb-hero-inner">
+      <p class="kb-hero-label">Knowledge Bank</p>
+      <h1>Insights on <em>International</em><br>Arbitration &amp; Disputes</h1>
+      <p class="kb-hero-desc">Analysis, guidance, and commentary on cross-border disputes — written for businesses navigating complex legal terrain.</p>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </header>
+
+  <!-- ── FILTER STRIP ── -->
+  <div class="filter-strip">
+    <div class="filter-inner">
+      <button class="filter-tag active" data-filter="all">All Articles</button>
+      <div class="filter-sep"></div>
+      <button class="filter-tag" data-filter="Arbitration">Arbitration</button>
+      <div class="filter-sep"></div>
+      <button class="filter-tag" data-filter="Investment Law">Investment Law</button>
+      <div class="filter-sep"></div>
+      <button class="filter-tag" data-filter="Trade Law">Trade Law</button>
+      <div class="filter-sep"></div>
+      <button class="filter-tag" data-filter="Procedure">Procedure</button>
+    </div>
+  </div>
+
+  <!-- ── BODY ── -->
+  <div class="kb-body">
+    <main>
+
+      <!-- FEATURED -->
+      <div class="featured-wrap reveal">
+        <article class="featured-article" data-category="Procedure">
+          <div class="featured-visual">
+            <div class="feat-num">01</div>
+          </div>
+          <div class="featured-content">
+            <div class="feat-tags">
+              <span class="feat-tag">Procedure</span>
+              <span class="feat-tag is-featured">Featured</span>
+              <span class="feat-date">June 2025</span>
+            </div>
+            <h2>How to Enforce a Foreign Arbitral Award: A Practical Guide for Businesses</h2>
+            <p>You won your arbitration. Now what? Enforcing an award across borders is a process many businesses don't anticipate — but understanding it in advance can save you significant time and money.</p>
+            <a href="#" class="read-more">Read Article <span class="arrow">→</span></a>
+          </div>
+        </article>
+      </div>
+
+      <!-- ARTICLES -->
+      <p class="articles-label">Recent Articles</p>
+      <div class="articles-grid" id="articles-grid">
+
+        <article class="article-card reveal reveal-d1" data-category="Arbitration">
+          <div class="card-num">02</div>
+          <div class="card-meta">
+            <span class="card-tag">Arbitration</span>
+            <span class="card-date">May 2025</span>
+          </div>
+          <h3>What Is International Arbitration — And Why Should Your Business Care?</h3>
+          <p>If your company does business across borders, disputes are inevitable. International arbitration offers a private, neutral, and enforceable way to resolve them.</p>
+          <a href="#" class="card-read">Read Article →</a>
+        </article>
+
+        <article class="article-card reveal reveal-d2" data-category="Investment Law">
+          <div class="card-num">03</div>
+          <div class="card-meta">
+            <span class="card-tag">Investment Law</span>
+            <span class="card-date">April 2025</span>
+          </div>
+          <h3>Drafting Effective Arbitration Clauses: Mistakes That Cost Businesses Millions</h3>
+          <p>A poorly drafted arbitration clause can make your entire dispute resolution strategy worthless. Here's what to include — and what to avoid.</p>
+          <a href="#" class="card-read">Read Article →</a>
+        </article>
+
+        <article class="article-card reveal reveal-d3" data-category="Trade Law">
+          <div class="card-num">04</div>
+          <div class="card-meta">
+            <span class="card-tag">Trade Law</span>
+            <span class="card-date">March 2025</span>
+          </div>
+          <h3>Sanctions Compliance for Turkish Exporters: What You Need to Know</h3>
+          <p>Turkish companies operating internationally face growing sanctions exposure. A plain-language overview of key risks and how to manage them effectively.</p>
+          <a href="#" class="card-read">Read Article →</a>
+        </article>
+
+      </div>
+    </main>
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="sidebar">
+
+      <!-- Topics -->
+      <div class="sb-block reveal">
+        <div class="sb-head"><h4>Browse Topics</h4></div>
+        <div class="sb-body">
+          <ul class="topic-list">
+            <li><span>Procedure</span><span class="t-count">1</span></li>
+            <li><span>Arbitration</span><span class="t-count">1</span></li>
+            <li><span>Investment Law</span><span class="t-count">1</span></li>
+            <li><span>Trade Law</span><span class="t-count">1</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="sb-block sb-newsletter reveal reveal-d1">
+        <div class="sb-head"><h4>Stay Informed</h4></div>
+        <div class="sb-body">
+          <p>Receive new articles and legal updates directly to your inbox.</p>
+          <input class="nl-field" type="email" id="nl-email" placeholder="Your email address" />
+          <button class="nl-btn" id="nl-btn">Subscribe</button>
+          <p class="nl-ok" id="nl-ok">✓ Thank you — you'll hear from us soon.</p>
+        </div>
+      </div>
+
+      <!-- Author -->
+      <div class="sb-block reveal reveal-d2">
+        <div class="sb-head"><h4>About the Author</h4></div>
+        <div class="sb-body">
+          <div class="author-row">
+            <div class="author-initials">SÖ</div>
+            <div>
+              <div class="author-name">Selin Özgören</div>
+              <div class="author-role">International Arbitration Lawyer</div>
+            </div>
+          </div>
+          <p class="author-bio">LL.M. Bocconi University (full scholarship). Former HKIAC &amp; UNCITRAL Secretariat. Admitted to the İzmir Bar. Bilingual in English and Turkish.</p>
+          <a href="index.html#about" class="profile-link">Full Profile →</a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>© 2025 Özgören Law Firm. All rights reserved.</p>
+    <a href="index.html" class="footer-back">← Back to Main Site</a>
+  </footer>
+
+  <script>
+    // Nav hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const overlay   = document.getElementById('navOverlay');
+    function openMenu()  { hamburger.classList.add('open'); navLinks.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { hamburger.classList.remove('open'); navLinks.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
+    overlay.addEventListener('click', closeMenu);
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          closeMenu();
+          setTimeout(() => { const t = document.querySelector(href); if (t) t.scrollIntoView({ behavior: 'smooth' }); }, 420);
+        } else {
+          closeMenu();
+        }
+      });
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Filter
+    document.querySelectorAll('.filter-tag').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tag').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        document.querySelectorAll('[data-category]').forEach(a => {
+          a.style.display = (f === 'all' || a.dataset.category === f) ? '' : 'none';
+        });
+      });
+    });
+
+    // Newsletter
+    document.getElementById('nl-btn').addEventListener('click', () => {
+      const e = document.getElementById('nl-email');
+      if (e.value.includes('@')) {
+        e.style.display = 'none';
+        document.getElementById('nl-btn').style.display = 'none';
+        document.getElementById('nl-ok').style.display = 'block';
+      } else {
+        e.style.borderColor = 'rgba(220,80,80,0.5)';
+        setTimeout(() => e.style.borderColor = '', 1500);
+      }
+    });
+  </script>
+</body>
+</html>      display: flex; justify-content: center; align-items: center;
+      padding: 1.2rem clamp(2rem, 5vw, 6rem);
+      background: rgba(247,243,238,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; }
+    .nav-logo img { height: 85px; width: auto; display: block; }
+    .lang-switcher { display: flex; align-items: center; gap: 0.3rem; z-index: 1200; }
+    .lang-switcher a {
+      font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none;
+      padding: 0.3rem 0.55rem; border: 1px solid var(--line);
+      transition: all 0.25s; color: var(--muted);
+    }
+    .lang-switcher a.active { border-color: var(--gold); color: var(--gold); background: rgba(184,149,90,0.08); }
+    .lang-switcher a:hover:not(.active) { border-color: var(--gold-light); color: var(--dark); }
+    .hamburger {
+      margin-left: auto; display: flex; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+      position: relative; z-index: 1200;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.35s ease; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-links {
+      position: fixed; top: 0; right: -300px; width: 260px; height: 100vh;
+      background: rgba(247,243,238,0.99);
+      display: flex; flex-direction: column; justify-content: center;
+      align-items: flex-start; gap: 2rem; padding: 4rem 3rem;
+      border-left: 1px solid var(--line); transition: right 0.4s ease;
+      z-index: 1200; list-style: none;
+    }
+    .nav-links.open { right: 0; }
+    .nav-links a {
+      font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase;
+      text-decoration: none; color: var(--dark); transition: color 0.3s;
+      display: block; padding: 0.25rem 0; z-index: 1400; pointer-events: auto;
+    }
+    .nav-links a:hover, .nav-links a.current { color: var(--gold); }
+    .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(26,26,24,0.5); z-index: 1100; }
+    .nav-overlay.open { display: block; }
+
+    /* ── HERO ── */
+    .kb-hero {
+      min-height: 72vh;
+      background: var(--dark);
+      display: flex; align-items: flex-end;
       padding: 0 clamp(2rem, 7vw, 8rem) 0;
       padding-top: 110px;
       position: relative; overflow: hidden;
