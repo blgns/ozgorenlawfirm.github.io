@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta property="og:title" content="Knowledge Bank — Özgören Law Firm" />
+  <meta property="og:description" content="Insights and analysis on international arbitration, investment law, and cross-border disputes." />
+  <meta property="og:image" content="https://ozgorenlawfirm.com/logo.png" />
+  <meta property="og:url" content="https://ozgorenlawfirm.com/blog.html" />
+  <meta name="description" content="Insights and analysis on international arbitration, investment law, and cross-border disputes — written for businesses navigating complex legal terrain.">
+  <meta name="google-site-verification" content="HhIhGjowuPCRylRGpeJ0fkZorgzY927UELmiQh5g9ps" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Bank — Özgören Law Firm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream:      #F7F3EE;
+    --cream-2:    #EEE8DF;
+    --dark:       #1A1A18;
+    --dark-2:     #252520;
+    --gold:       #B8955A;
+    --gold-light: #D4B07A;
+    --gold-dim:   rgba(184,149,90,0.22);
+    --gold-faint: rgba(184,149,90,0.08);
+    --muted:      #6B6558;
+    --line:       rgba(184,149,90,0.2);
+    --nav-h:      124px;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans:  'Jost', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--dark); font-family: var(--sans); font-weight: 300; overflow-x: hidden; }
+
+  /* ─── TOPBAR (nav + filter fixed together) ─── */
+  #topbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(247,243,238,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav {
+    display: flex; justify-content: center; align-items: center;
+    padding: 1.2rem clamp(2rem,5vw,6rem);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; }
+  .nav-logo img { height: 85px; width: auto; display: block; }
+  .lang-switcher { display: flex; align-items: center; gap: 0.3rem; z-index: 1200; }
+  .lang-switcher a {
+    font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none;
+    padding: 0.3rem 0.55rem; border: 1px solid var(--line);
+    transition: all 0.25s; color: var(--muted);
+  }
+  .lang-switcher a.active { border-color: var(--gold); color: var(--gold); background: rgba(184,149,90,0.08); }
+  .lang-switcher a:hover:not(.active) { border-color: var(--gold-light); color: var(--dark); }
+  .hamburger {
+    margin-left: auto; display: flex; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 4px;
+    position: relative; z-index: 1200;
+  }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.35s ease; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-links {
+    position: fixed; top: 0; right: -300px; width: 260px; height: 100vh;
+    background: rgba(247,243,238,0.99);
+    display: flex; flex-direction: column; justify-content: center;
+    align-items: flex-start; gap: 2rem; padding: 4rem 3rem;
+    border-left: 1px solid var(--line); transition: right 0.4s ease;
+    z-index: 1200; list-style: none;
+  }
+  .nav-links.open { right: 0; }
+  .nav-links a {
+    font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase;
+    text-decoration: none; color: var(--dark); transition: color 0.3s;
+    display: block; padding: 0.25rem 0; pointer-events: auto;
+  }
+  .nav-links a:hover, .nav-links a.current { color: var(--gold); }
+  .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(26,26,24,0.5); z-index: 1100; }
+  .nav-overlay.open { display: block; }
+
+  /* ─── FILTER (inside topbar) ─── */
+  .filter-strip {
+    background: transparent;
+    border-top: none;
+    border-bottom: none;
+  }
+  .filter-inner {
+    max-width: 1320px; margin: 0 auto; padding: 0 clamp(2rem,7vw,8rem);
+    display: flex; align-items: stretch; overflow-x: auto; scrollbar-width: none;
+  }
+  .filter-inner::-webkit-scrollbar { display: none; }
+  .filter-sep { width: 1px; background: var(--line); flex-shrink: 0; margin: 0.5rem 0; }
+  .filter-tag {
+    background: none; border: none; cursor: pointer;
+    font-family: var(--sans); font-size: 0.62rem; font-weight: 300;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--muted); padding: 1.15rem 1.3rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s; white-space: nowrap;
+  }
+  .filter-tag:hover { color: var(--dark); }
+  .filter-tag.active { color: var(--dark); border-bottom-color: var(--gold); font-weight: 400; }
+
+  /* ─── HERO ─── */
+  .kb-hero {
+    background: var(--dark);
+    min-height: 80vh;
+    padding-top: 172px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    position: relative;
+  }
+  .hero-glow {
+    position: absolute; top: -10%; right: -5%; z-index: 0; pointer-events: none;
+    width: 60vw; height: 70vh;
+    background: radial-gradient(ellipse at center, rgba(184,149,90,0.09) 0%, transparent 68%);
+  }
+  .hero-inner {
+    position: relative; z-index: 1;
+    padding: 4rem clamp(2rem,7vw,8rem) 4rem;
+    display: flex; flex-direction: column; justify-content: flex-end;
+  }
+  .hero-overline {
+    display: flex; align-items: center; gap: 1.2rem; margin-bottom: 2.5rem;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+  .hero-overline-tick { width: 32px; height: 1px; background: var(--gold); opacity: 0.7; }
+  .hero-overline-text { font-size: 0.58rem; letter-spacing: 0.45em; text-transform: uppercase; color: var(--gold); }
+  .hero-heading {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem;
+    align-items: end; margin-bottom: 4rem;
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+  .hero-heading-left h1 {
+    font-family: var(--serif); font-weight: 300;
+    font-size: clamp(4.5rem, 9vw, 8.5rem);
+    line-height: 0.88; letter-spacing: -0.025em; color: var(--cream);
+  }
+  .hero-heading-left h1 em { font-style: italic; color: var(--gold); display: block; }
+  .hero-heading-right {
+    padding-bottom: 0.6rem;
+    border-left: 1px solid rgba(184,149,90,0.2);
+    padding-left: 3rem;
+  }
+  .hero-heading-right p {
+    font-size: 0.88rem; line-height: 1.85;
+    color: rgba(247,243,238,0.45); font-weight: 300; margin-bottom: 2rem;
+  }
+  .hero-stats { display: flex; gap: 2.5rem; }
+  .hero-stat-val {
+    font-family: var(--serif); font-size: 2.8rem; font-weight: 300;
+    color: var(--cream); line-height: 1; display: block;
+  }
+  .hero-stat-key {
+    font-size: 0.5rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(247,243,238,0.3); display: block; margin-top: 0.3rem;
+  }
+  .hero-strip {
+    position: relative; z-index: 1;
+    border-top: 1px solid rgba(184,149,90,0.12);
+    display: flex; align-items: stretch; overflow-x: auto; scrollbar-width: none;
+    animation: fadeIn 0.8s 0.4s ease both;
+    margin-bottom: 0;
+  }
+  .hero-strip::-webkit-scrollbar { display: none; }
+  .hero-strip-item {
+    flex: 1; min-width: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 1.4rem 2rem;
+    border-right: 1px solid rgba(184,149,90,0.1);
+    white-space: nowrap;
+  }
+  .hero-strip-item:last-child { border-right: none; }
+  .strip-label {
+    font-size: 0.52rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: rgba(247,243,238,0.3); margin-bottom: 0.3rem; display: block;
+  }
+  .strip-val {
+    font-family: var(--serif); font-size: 1.2rem; font-weight: 300;
+    color: rgba(247,243,238,0.55); line-height: 1.2; display: block;
+  }
+  .strip-val.active { color: var(--gold); }
+
+  /* ─── PAGE BODY ─── */
+  .kb-body {
+    max-width: 1320px; margin: 0 auto;
+    padding: 3rem clamp(2rem,7vw,8rem) 10rem;
+    display: grid; grid-template-columns: 1fr 296px; gap: 5rem; align-items: start;
+  }
+
+  /* ─── FEATURED ─── */
+  .featured-wrap { margin-bottom: 5rem; }
+  .section-eyebrow {
+    font-size: 0.55rem; letter-spacing: 0.42em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.6rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+
+  .featured-card {
+    display: grid; grid-template-columns: 2fr 3fr;
+    background: var(--dark-2); overflow: hidden; position: relative;
+    box-shadow: 0 2px 0 var(--gold), 0 30px 60px rgba(26,26,24,0.14);
+    transition: box-shadow 0.4s, transform 0.4s;
+    text-decoration: none;
+  }
+  .featured-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 0 var(--gold-light), 0 40px 80px rgba(26,26,24,0.22);
+  }
+  .fc-panel {
+    background: linear-gradient(160deg, #222220 0%, #1a1a18 100%);
+    border-right: 1px solid rgba(184,149,90,0.12);
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 3rem 2.5rem; position: relative; overflow: hidden; min-height: 360px;
+  }
+  .fc-panel-glyph {
+    position: absolute; bottom: -3rem; right: -1.5rem;
+    font-family: var(--serif); font-size: 13rem; font-weight: 300; font-style: italic;
+    line-height: 1; color: transparent;
+    -webkit-text-stroke: 1px rgba(184,149,90,0.07);
+    user-select: none; pointer-events: none; letter-spacing: -0.05em;
+  }
+  .fc-panel-top { position: relative; z-index: 1; }
+  .fc-issue {
+    font-family: var(--serif); font-size: 4.5rem; font-weight: 300; line-height: 1;
+    color: rgba(184,149,90,0.15); letter-spacing: -0.04em; display: block;
+  }
+  .fc-tag-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  .fc-tag {
+    font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 0.25rem 0.7rem; border: 1px solid rgba(184,149,90,0.2); color: rgba(184,149,90,0.7);
+  }
+  .fc-tag.pinned { background: var(--gold); border-color: var(--gold); color: var(--dark); font-weight: 500; }
+  .fc-panel-date {
+    font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(247,243,238,0.22); position: relative; z-index: 1; display: block;
+  }
+  .fc-content { padding: 3rem 3rem 2.8rem; display: flex; flex-direction: column; }
+  .fc-content h2 {
+    font-family: var(--serif); font-size: clamp(1.5rem,2.3vw,2rem); font-weight: 400;
+    color: var(--cream); line-height: 1.22; margin-bottom: 1.3rem; letter-spacing: -0.01em;
+  }
+  .fc-content p {
+    font-size: 0.82rem; line-height: 1.9; color: rgba(247,243,238,0.48);
+    font-weight: 300; flex: 1; margin-bottom: 2.5rem;
+  }
+  .fc-link {
+    align-self: flex-start;
+    display: inline-flex; align-items: center; gap: 0.8rem;
+    font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); text-decoration: none;
+    border: 1px solid rgba(184,149,90,0.3); padding: 0.7rem 1.5rem;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .fc-link:hover { background: rgba(184,149,90,0.1); border-color: var(--gold); }
+  .fc-link .arr { transition: transform 0.3s; }
+  .fc-link:hover .arr { transform: translateX(6px); }
+
+  /* ─── ARTICLES (timeline format) ─── */
+  .updates-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 0; padding-bottom: 1rem;
+    border-bottom: 1px solid var(--dark);
+    margin-top: 0;
+  }
+  .updates-title { font-size: 0.55rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); }
+  .updates-count { font-size: 0.55rem; letter-spacing: 0.15em; color: var(--muted); }
+
+  .update-item {
+    display: grid; grid-template-columns: 72px 1px 1fr;
+    gap: 0 2.4rem; padding: 2.4rem 0;
+    border-bottom: 1px solid rgba(184,149,90,0.1);
+    position: relative; cursor: pointer; transition: background 0.25s;
+  }
+  .update-item::before {
+    content: ''; position: absolute; inset: 0 -1rem;
+    background: linear-gradient(90deg, transparent, var(--gold-faint), transparent);
+    opacity: 0; transition: opacity 0.35s; pointer-events: none;
+  }
+  .update-item:hover::before { opacity: 1; }
+
+  .item-date-col { text-align: right; padding-top: 3px; }
+  .item-d {
+    font-family: var(--serif); font-size: 2.6rem; font-weight: 300;
+    color: rgba(184,149,90,0.2); line-height: 1; display: block; transition: color 0.3s;
+  }
+  .update-item:hover .item-d { color: var(--gold); }
+  .item-m {
+    font-size: 0.46rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); display: block; margin-top: 0.2rem;
+  }
+  .item-rule {
+    width: 1px; background: rgba(184,149,90,0.15); position: relative; transition: background 0.3s;
+  }
+  .item-rule::before {
+    content: ''; position: absolute; top: 0; left: -2px;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--cream-2); border: 1px solid rgba(184,149,90,0.25);
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .update-item:hover .item-rule { background: rgba(184,149,90,0.35); }
+  .update-item:hover .item-rule::before { background: var(--gold); border-color: var(--gold); }
+
+  .item-body { }
+  .item-tags { display: flex; gap: 0.5rem; margin-bottom: 0.7rem; flex-wrap: wrap; }
+  .item-tag {
+    font-size: 0.5rem; letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 0.22rem 0.65rem; border: 1px solid var(--line); color: var(--gold);
+  }
+  .item-body h3 {
+    font-family: var(--serif); font-size: clamp(1.05rem,1.6vw,1.35rem); font-weight: 400;
+    color: var(--dark); line-height: 1.28; margin-bottom: 0.65rem;
+    letter-spacing: -0.01em; transition: color 0.3s;
+  }
+  .update-item:hover .item-body h3 { color: var(--gold); }
+  .item-body p {
+    font-size: 0.78rem; line-height: 1.8; color: var(--muted); font-weight: 300; margin-bottom: 0.9rem;
+  }
+  .item-link {
+    font-size: 0.56rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    opacity: 0; transform: translateY(4px);
+    transition: opacity 0.3s, transform 0.3s, gap 0.2s;
+  }
+  .update-item:hover .item-link { opacity: 1; transform: translateY(0); }
+  .item-link:hover { gap: 0.8rem; }
+
+  /* ─── SIDEBAR ─── */
+  .sidebar { position: sticky; top: calc(var(--nav-h) + 2rem); display: flex; flex-direction: column; gap: 2px; }
+  .sb-block { background: var(--cream); border: 1px solid var(--line); position: relative; overflow: hidden; }
+  .sb-block::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+  }
+  .sb-block + .sb-block { margin-top: 2px; }
+  .sb-head { padding: 1.5rem 1.8rem 1.3rem; border-bottom: 1px solid var(--line); }
+  .sb-head h4 { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; color: var(--dark); }
+  .sb-body { padding: 1.3rem 1.8rem 1.5rem; }
+  .topic-list { list-style: none; }
+  .topic-list li {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.62rem 0; border-bottom: 1px solid rgba(184,149,90,0.1);
+    font-size: 0.72rem; letter-spacing: 0.07em; cursor: pointer;
+    color: var(--muted); transition: color 0.2s, padding-left 0.3s;
+  }
+  .topic-list li:last-child { border-bottom: none; }
+  .topic-list li:hover { color: var(--dark); padding-left: 0.3rem; }
+  .t-count { font-family: var(--serif); font-size: 1rem; color: rgba(184,149,90,0.4); font-weight: 300; }
+  .sb-newsletter { background: var(--dark); }
+  .sb-newsletter::before { background: linear-gradient(to right, var(--gold), rgba(184,149,90,0.3)); }
+  .sb-newsletter .sb-head { border-bottom-color: rgba(184,149,90,0.12); }
+  .sb-newsletter .sb-head h4 { color: var(--cream); }
+  .sb-newsletter .sb-body p { font-size: 0.75rem; color: rgba(247,243,238,0.4); line-height: 1.75; margin-bottom: 1.2rem; }
+  .nl-field {
+    width: 100%; padding: 0.78rem 1rem;
+    background: rgba(247,243,238,0.05); border: 1px solid rgba(184,149,90,0.18);
+    font-family: var(--sans); font-size: 0.75rem; font-weight: 300;
+    color: var(--cream); outline: none; margin-bottom: 0.6rem;
+    transition: border-color 0.25s; letter-spacing: 0.03em;
+  }
+  .nl-field::placeholder { color: rgba(247,243,238,0.22); }
+  .nl-field:focus { border-color: rgba(184,149,90,0.5); }
+  .nl-btn {
+    width: 100%; padding: 0.82rem;
+    background: transparent; border: 1px solid var(--gold); cursor: pointer;
+    font-family: var(--sans); font-size: 0.56rem; font-weight: 400;
+    letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold);
+    transition: background 0.3s, color 0.3s;
+  }
+  .nl-btn:hover { background: var(--gold); color: var(--dark); }
+  .nl-ok { display: none; font-size: 0.72rem; color: rgba(184,149,90,0.8); text-align: center; padding: 0.5rem 0; letter-spacing: 0.08em; }
+  .author-row { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+  .author-initials {
+    width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+    border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 0.9rem; color: var(--gold);
+  }
+  .author-name { font-family: var(--serif); font-size: 1rem; font-weight: 400; color: var(--dark); }
+  .author-role { font-size: 0.58rem; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+  .author-bio { font-size: 0.72rem; line-height: 1.75; color: var(--muted); margin-bottom: 1.1rem; }
+  .profile-link {
+    font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.5rem; transition: gap 0.3s;
+  }
+  .profile-link:hover { gap: 1rem; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--dark); border-top: 1px solid rgba(184,149,90,0.12);
+    padding: 1.6rem clamp(2rem,5vw,6rem);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  footer p { font-size: 0.62rem; color: rgba(247,243,238,0.25); letter-spacing: 0.1em; }
+  footer a { color: var(--gold); text-decoration: none; }
+  .footer-links { display: flex; gap: 1.5rem; align-items: center; }
+  .footer-link {
+    font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.4rem; transition: gap 0.25s;
+  }
+  .footer-link:hover { gap: 0.8rem; }
+  .footer-dim { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(247,243,238,0.2); text-decoration: none; }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.75s ease, transform 0.75s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-d1 { transition-delay: 0.1s; }
+  .reveal-d2 { transition-delay: 0.2s; }
+  .reveal-d3 { transition-delay: 0.3s; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+  @media (max-width: 1100px) {
+    .kb-body { grid-template-columns: 1fr; gap: 4rem; }
+    .sidebar { position: static; }
+    .featured-card { grid-template-columns: 1fr; }
+    .fc-panel { min-height: 180px; }
+    .hero-heading { grid-template-columns: 1fr; gap: 2.5rem; }
+    .hero-heading-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(184,149,90,0.15); padding-top: 2rem; }
+  }
+  @media (max-width: 700px) {
+    :root { --nav-h: 97px; }
+    nav { padding: 1rem 2rem; }
+    .nav-logo img { height: 65px; }
+    .kb-hero { padding-top: 145px; }
+    .hero-strip { flex-wrap: wrap; }
+    .hero-strip-item { flex: none; width: 50%; }
+    footer { flex-direction: column; gap: 0.6rem; text-align: center; padding: 1.5rem 2rem; }
+    .update-item { grid-template-columns: 52px 1px 1fr; gap: 0 1.4rem; }
+  }
+  </style>
+</head>
+<body>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- TOPBAR: nav + filter fixed together -->
+  <div id="topbar">
+    <nav>
+      <div class="lang-switcher">
+        <a href="blog.html" class="active">EN</a>
+      </div>
+      <a class="nav-logo" href="index.html">
+        <img src="logo.png" alt="Özgören Law Firm">
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="filter-strip">
+      <div class="filter-inner">
+        <button class="filter-tag active" data-filter="all">All Articles</button>
+        <div class="filter-sep"></div>
+        <button class="filter-tag" data-filter="Arbitration">Arbitration</button>
+        <div class="filter-sep"></div>
+        <button class="filter-tag" data-filter="Investment Law">Investment Law</button>
+        <div class="filter-sep"></div>
+        <button class="filter-tag" data-filter="Trade Law">Trade Law</button>
+        <div class="filter-sep"></div>
+        <button class="filter-tag" data-filter="Procedure">Procedure</button>
+      </div>
+    </div>
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#practice">Services</a></li>
+    <li><a href="blog.html" class="current">Knowledge Bank</a></li>
+    <li><a href="updates.html">Updates</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+
+  <!-- HERO -->
+  <header class="kb-hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-overline">
+        <div class="hero-overline-tick"></div>
+        <span class="hero-overline-text">Knowledge Bank · 2026</span>
+      </div>
+      <div class="hero-heading">
+        <div class="hero-heading-left">
+          <h1>Insights on<br><em>Arbitration</em></h1>
+        </div>
+        <div class="hero-heading-right">
+          <p>Analysis, guidance, and commentary on cross-border disputes written for businesses navigating complex international legal terrain.</p>
+          <div class="hero-stats">
+            <div>
+              <span class="hero-stat-val">4</span>
+              <span class="hero-stat-key">Articles</span>
+            </div>
+            <div>
+              <span class="hero-stat-val">2026</span>
+              <span class="hero-stat-key">Year</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-strip">
+      <div class="hero-strip-item">
+        <span class="strip-label">Latest</span>
+        <span class="strip-val active">Award Enforcement Guide</span>
+      </div>
+      <div class="hero-strip-item">
+        <span class="strip-label">Topic</span>
+        <span class="strip-val">Investment Law</span>
+      </div>
+      <div class="hero-strip-item">
+        <span class="strip-label">Focus</span>
+        <span class="strip-val">Turkey · Africa</span>
+      </div>
+      <div class="hero-strip-item">
+        <span class="strip-label">Coverage</span>
+        <span class="strip-val">OHADA · BITs · ICC</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="kb-body">
+    <main>
+
+      <!-- ARTICLES LIST -->
+      <div class="updates-header">
+        <span class="updates-title">All Articles</span>
+        <span class="updates-count">4 articles</span>
+      </div>
+
+      <div id="articles-list">
+
+        <article class="update-item reveal" data-category="Procedure">
+          <div class="item-date-col">
+            <span class="item-d">—</span>
+            <span class="item-m">Mar · 26</span>
+          </div>
+          <div class="item-rule"></div>
+          <div class="item-body">
+            <div class="item-tags">
+              <span class="item-tag">Procedure</span>
+            </div>
+            <h3>How to Enforce a Foreign Arbitral Award in Türkiye (2026 Guide)</h3>
+            <p>You won your arbitration. Now what? Enforcing an award across borders is a process many businesses don't anticipate — but understanding it in advance can save you significant time and money.</p>
+            <a href="blog-enforce-foreign-arbitral-award-turkey.html" class="item-link">Read Article →</a>
+          </div>
+        </article>
+
+        <article class="update-item reveal" data-category="Investment Law">
+          <div class="item-date-col">
+            <span class="item-d">—</span>
+            <span class="item-m">Mar · 26</span>
+          </div>
+          <div class="item-rule"></div>
+          <div class="item-body">
+            <div class="item-tags">
+              <span class="item-tag">Investment Law</span>
+            </div>
+            <h3>Turkey–Africa Bilateral Investment Treaties: What Investors on Both Sides Need to Know</h3>
+            <p>Turkey's bilateral investment treaties with African states offer substantial protections to investors on both sides of the relationship — but only to those who understand how they work.</p>
+            <a href="turkey-africa-bilateral-investment-treaties.html" class="item-link">Read Article →</a>
+          </div>
+        </article>
+
+        <article class="update-item reveal reveal-d1" data-category="Investment Law">
+          <div class="item-date-col">
+            <span class="item-d">—</span>
+            <span class="item-m">Mar · 26</span>
+          </div>
+          <div class="item-rule"></div>
+          <div class="item-body">
+            <div class="item-tags">
+              <span class="item-tag">Investment Law</span>
+            </div>
+            <h3>How Investment Arbitration Protects Turkish Investors in Africa</h3>
+            <p>With 15–20 known Turkish investor–African state cases, structuring your investment before a dispute arises is what separates recoverable losses from total write-offs.</p>
+            <a href="how-investment-arbitration-protects-turkish-investors-in-africa.html" class="item-link">Read Article →</a>
+          </div>
+        </article>
+
+        <article class="update-item reveal reveal-d2" data-category="Arbitration">
+          <div class="item-date-col">
+            <span class="item-d">—</span>
+            <span class="item-m">Mar · 26</span>
+          </div>
+          <div class="item-rule"></div>
+          <div class="item-body">
+            <div class="item-tags">
+              <span class="item-tag">Arbitration</span>
+            </div>
+            <h3>OHADA Arbitration: A Practical Guide for Turkish Companies</h3>
+            <p>Operating in West or Central Africa? OHADA governs disputes across 17 countries. This guide explains the CCJA, what it means for your contracts, and how to protect yourself.</p>
+            <a href="ohada-arbitration-guide-for-turkish-companies.html" class="item-link">Read Article →</a>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sb-block reveal">
+        <div class="sb-head"><h4>Browse Topics</h4></div>
+        <div class="sb-body">
+          <ul class="topic-list">
+            <li><span>Procedure</span><span class="t-count">1</span></li>
+            <li><span>Investment Law</span><span class="t-count">2</span></li>
+            <li><span>Arbitration</span><span class="t-count">1</span></li>
+            <li><span>Trade Law</span><span class="t-count">0</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sb-block sb-newsletter reveal reveal-d1">
+        <div class="sb-head"><h4>Stay Informed</h4></div>
+        <div class="sb-body">
+          <p>Receive new articles and legal updates directly to your inbox.</p>
+          <input class="nl-field" type="email" id="nl-email" placeholder="Your email address" />
+          <button class="nl-btn" id="nl-btn">Subscribe</button>
+          <p class="nl-ok" id="nl-ok">✓ Thank you — you'll hear from us soon.</p>
+        </div>
+      </div>
+
+      <div class="sb-block reveal reveal-d2">
+        <div class="sb-head"><h4>About the Author</h4></div>
+        <div class="sb-body">
+          <div class="author-row">
+            <div class="author-initials">SÖ</div>
+            <div>
+              <div class="author-name">Selin Özgören</div>
+              <div class="author-role">International Arbitration</div>
+            </div>
+          </div>
+          <p class="author-bio">LL.M. Bocconi University, LL.B. Ankara University. Former HKIAC &amp; UNCITRAL Secretariat. Admitted to the İzmir Bar. Bilingual in English and Turkish.</p>
+          <a href="index.html#about" class="profile-link">Full Profile →</a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Özgören Law Firm · <a href="index.html">ozgorenlawfirm.com</a> · International Arbitration · İzmir, Turkey</p>
+    <div class="footer-links">
+      <a href="updates.html" class="footer-link">Office Updates →</a>
+      <a href="arbitration-lawyer-izmir.html" class="footer-dim">Arbitration Lawyer Izmir</a>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const overlay   = document.getElementById('navOverlay');
+    function openMenu()  { hamburger.classList.add('open'); navLinks.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { hamburger.classList.remove('open'); navLinks.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
+    overlay.addEventListener('click', closeMenu);
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault(); closeMenu();
+          setTimeout(() => { const t = document.querySelector(href); if (t) t.scrollIntoView({ behavior: 'smooth' }); }, 420);
+        } else { closeMenu(); }
+      });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0 });
+    requestAnimationFrame(() => document.querySelectorAll('.reveal').forEach(el => observer.observe(el)));
+
+    document.querySelectorAll('.filter-tag').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tag').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        const fw = document.getElementById('featured');
+        if (fw) fw.style.display = (f === 'all' || fw.dataset.category === f) ? '' : 'none';
+        document.querySelectorAll('#articles-list [data-category]').forEach(a => {
+          a.style.display = (f === 'all' || a.dataset.category === f) ? '' : 'none';
+        });
+      });
+    });
+
+    document.getElementById('nl-btn').addEventListener('click', () => {
+      const e = document.getElementById('nl-email');
+      if (e.value.includes('@')) {
+        e.style.display = 'none';
+        document.getElementById('nl-btn').style.display = 'none';
+        document.getElementById('nl-ok').style.display = 'block';
+      } else {
+        e.style.borderColor = 'rgba(220,80,80,0.5)';
+        setTimeout(() => e.style.borderColor = '', 1500);
+      }
+    });
+  </script>
+</body>
+</html>
