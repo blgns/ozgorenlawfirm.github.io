@@ -462,13 +462,13 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navLinks.classList.contains('open')) closeMenu();
     });
-    navLinks.querySelectorAll('a').forEach(a => {
+   navLinks.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', (e) => {
         const href = a.getAttribute('href');
         if (href && href.startsWith('#')) {
           e.preventDefault(); closeMenu();
           setTimeout(() => { const t = document.querySelector(href); if (t) t.scrollIntoView({ behavior: 'smooth' }); }, 420);
-        } else { closeMenu(); }
+        } else { closeMenu(); window.location.href = href; }
       });
     });
   </script>
