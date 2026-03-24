@@ -9,10 +9,10 @@
   <meta name="google-site-verification" content="HhIhGjowuPCRylRGpeJ0fkZorgzY927UELmiQh5g9ps" />
   <meta charset="UTF-8">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Knowledge Bank — Özgören Law Firm</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,6 @@
   html { scroll-behavior: smooth; }
   body { background: var(--cream); color: var(--dark); font-family: var(--sans); font-weight: 300; overflow-x: hidden; }
 
-  /* ─── TOPBAR (nav + filter fixed together) ─── */
   #topbar {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     background: rgba(247,243,238,0.97);
@@ -89,12 +88,7 @@
   .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(26,26,24,0.5); z-index: 1100; }
   .nav-overlay.open { display: block; }
 
-  /* ─── FILTER (inside topbar) ─── */
-  .filter-strip {
-    background: transparent;
-    border-top: none;
-    border-bottom: none;
-  }
+  .filter-strip { background: transparent; border-top: none; border-bottom: none; }
   .filter-inner {
     max-width: 1320px; margin: 0 auto; padding: 0 clamp(2rem,7vw,8rem);
     display: flex; align-items: stretch; overflow-x: auto; scrollbar-width: none;
@@ -112,7 +106,6 @@
   .filter-tag:hover { color: var(--dark); }
   .filter-tag.active { color: var(--dark); border-bottom-color: var(--gold); font-weight: 400; }
 
-  /* ─── HERO ─── */
   .kb-hero {
     background: var(--dark);
     min-height: 80vh;
@@ -192,83 +185,12 @@
   }
   .strip-val.active { color: var(--gold); }
 
-  /* ─── PAGE BODY ─── */
   .kb-body {
     max-width: 1320px; margin: 0 auto;
     padding: 3rem clamp(2rem,7vw,8rem) 10rem;
     display: grid; grid-template-columns: 1fr 296px; gap: 5rem; align-items: start;
   }
 
-  /* ─── FEATURED ─── */
-  .featured-wrap { margin-bottom: 5rem; }
-  .section-eyebrow {
-    font-size: 0.55rem; letter-spacing: 0.42em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 1.6rem;
-    display: flex; align-items: center; gap: 1rem;
-  }
-  .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--line); }
-
-  .featured-card {
-    display: grid; grid-template-columns: 2fr 3fr;
-    background: var(--dark-2); overflow: hidden; position: relative;
-    box-shadow: 0 2px 0 var(--gold), 0 30px 60px rgba(26,26,24,0.14);
-    transition: box-shadow 0.4s, transform 0.4s;
-    text-decoration: none;
-  }
-  .featured-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 2px 0 var(--gold-light), 0 40px 80px rgba(26,26,24,0.22);
-  }
-  .fc-panel {
-    background: linear-gradient(160deg, #222220 0%, #1a1a18 100%);
-    border-right: 1px solid rgba(184,149,90,0.12);
-    display: flex; flex-direction: column; justify-content: space-between;
-    padding: 3rem 2.5rem; position: relative; overflow: hidden; min-height: 360px;
-  }
-  .fc-panel-glyph {
-    position: absolute; bottom: -3rem; right: -1.5rem;
-    font-family: var(--serif); font-size: 13rem; font-weight: 300; font-style: italic;
-    line-height: 1; color: transparent;
-    -webkit-text-stroke: 1px rgba(184,149,90,0.07);
-    user-select: none; pointer-events: none; letter-spacing: -0.05em;
-  }
-  .fc-panel-top { position: relative; z-index: 1; }
-  .fc-issue {
-    font-family: var(--serif); font-size: 4.5rem; font-weight: 300; line-height: 1;
-    color: rgba(184,149,90,0.15); letter-spacing: -0.04em; display: block;
-  }
-  .fc-tag-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
-  .fc-tag {
-    font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase;
-    padding: 0.25rem 0.7rem; border: 1px solid rgba(184,149,90,0.2); color: rgba(184,149,90,0.7);
-  }
-  .fc-tag.pinned { background: var(--gold); border-color: var(--gold); color: var(--dark); font-weight: 500; }
-  .fc-panel-date {
-    font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: rgba(247,243,238,0.22); position: relative; z-index: 1; display: block;
-  }
-  .fc-content { padding: 3rem 3rem 2.8rem; display: flex; flex-direction: column; }
-  .fc-content h2 {
-    font-family: var(--serif); font-size: clamp(1.5rem,2.3vw,2rem); font-weight: 400;
-    color: var(--cream); line-height: 1.22; margin-bottom: 1.3rem; letter-spacing: -0.01em;
-  }
-  .fc-content p {
-    font-size: 0.82rem; line-height: 1.9; color: rgba(247,243,238,0.48);
-    font-weight: 300; flex: 1; margin-bottom: 2.5rem;
-  }
-  .fc-link {
-    align-self: flex-start;
-    display: inline-flex; align-items: center; gap: 0.8rem;
-    font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold); text-decoration: none;
-    border: 1px solid rgba(184,149,90,0.3); padding: 0.7rem 1.5rem;
-    transition: background 0.3s, border-color 0.3s;
-  }
-  .fc-link:hover { background: rgba(184,149,90,0.1); border-color: var(--gold); }
-  .fc-link .arr { transition: transform 0.3s; }
-  .fc-link:hover .arr { transform: translateX(6px); }
-
-  /* ─── ARTICLES (timeline format) ─── */
   .updates-header {
     display: flex; align-items: baseline; justify-content: space-between;
     margin-bottom: 0; padding-bottom: 1rem;
@@ -313,7 +235,6 @@
   .update-item:hover .item-rule { background: rgba(184,149,90,0.35); }
   .update-item:hover .item-rule::before { background: var(--gold); border-color: var(--gold); }
 
-  .item-body { }
   .item-tags { display: flex; gap: 0.5rem; margin-bottom: 0.7rem; flex-wrap: wrap; }
   .item-tag {
     font-size: 0.5rem; letter-spacing: 0.18em; text-transform: uppercase;
@@ -338,7 +259,18 @@
   .update-item:hover .item-link { opacity: 1; transform: translateY(0); }
   .item-link:hover { gap: 0.8rem; }
 
-  /* ─── SIDEBAR ─── */
+  .articles-loading {
+    padding: 4rem 0; text-align: center;
+    font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .articles-loading::after {
+    content: ''; display: block; width: 32px; height: 1px;
+    background: var(--gold); margin: 1rem auto 0; opacity: 0.4;
+    animation: loadPulse 1.2s ease-in-out infinite alternate;
+  }
+  @keyframes loadPulse { from { opacity: 0.2; width: 16px; } to { opacity: 0.7; width: 48px; } }
+
   .sidebar { position: sticky; top: calc(var(--nav-h) + 2rem); display: flex; flex-direction: column; gap: 2px; }
   .sb-block { background: var(--cream); border: 1px solid var(--line); position: relative; overflow: hidden; }
   .sb-block::before {
@@ -398,7 +330,6 @@
   }
   .profile-link:hover { gap: 1rem; }
 
-  /* ─── FOOTER ─── */
   footer {
     background: var(--dark); border-top: 1px solid rgba(184,149,90,0.12);
     padding: 1.6rem clamp(2rem,5vw,6rem);
@@ -415,7 +346,6 @@
   .footer-link:hover { gap: 0.8rem; }
   .footer-dim { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(247,243,238,0.2); text-decoration: none; }
 
-  /* ─── ANIMATIONS ─── */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
   .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.75s ease, transform 0.75s ease; }
@@ -428,8 +358,6 @@
   @media (max-width: 1100px) {
     .kb-body { grid-template-columns: 1fr; gap: 4rem; }
     .sidebar { position: static; }
-    .featured-card { grid-template-columns: 1fr; }
-    .fc-panel { min-height: 180px; }
     .hero-heading { grid-template-columns: 1fr; gap: 2.5rem; }
     .hero-heading-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(184,149,90,0.15); padding-top: 2rem; }
   }
@@ -449,7 +377,6 @@
 
   <div class="nav-overlay" id="navOverlay"></div>
 
-  <!-- TOPBAR: nav + filter fixed together -->
   <div id="topbar">
     <nav>
       <div class="lang-switcher">
@@ -485,7 +412,6 @@
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
 
-  <!-- HERO -->
   <header class="kb-hero">
     <div class="hero-glow"></div>
     <div class="hero-inner">
@@ -501,7 +427,7 @@
           <p>Analysis, guidance, and commentary on cross-border disputes written for businesses navigating complex international legal terrain.</p>
           <div class="hero-stats">
             <div>
-              <span class="hero-stat-val">4</span>
+              <span class="hero-stat-val" id="hero-count">—</span>
               <span class="hero-stat-key">Articles</span>
             </div>
             <div>
@@ -512,116 +438,32 @@
         </div>
       </div>
     </div>
-    <div class="hero-strip">
+    <div class="hero-strip" id="hero-strip">
       <div class="hero-strip-item">
-        <span class="strip-label">Latest</span>
-        <span class="strip-val active">Award Enforcement Guide</span>
-      </div>
-      <div class="hero-strip-item">
-        <span class="strip-label">Topic</span>
-        <span class="strip-val">Investment Law</span>
-      </div>
-      <div class="hero-strip-item">
-        <span class="strip-label">Focus</span>
-        <span class="strip-val">Turkey · Africa</span>
-      </div>
-      <div class="hero-strip-item">
-        <span class="strip-label">Coverage</span>
-        <span class="strip-val">OHADA · BITs · ICC</span>
+        <span class="strip-label">Loading</span>
+        <span class="strip-val active">Fetching articles…</span>
       </div>
     </div>
   </header>
 
-  <!-- BODY -->
   <div class="kb-body">
     <main>
-
-      <!-- ARTICLES LIST -->
       <div class="updates-header">
         <span class="updates-title">All Articles</span>
-        <span class="updates-count">4 articles</span>
+        <span class="updates-count" id="articles-count">Loading…</span>
       </div>
-
       <div id="articles-list">
-
-        <article class="update-item reveal" data-category="Procedure">
-          <div class="item-date-col">
-            <span class="item-d">—</span>
-            <span class="item-m">Mar · 26</span>
-          </div>
-          <div class="item-rule"></div>
-          <div class="item-body">
-            <div class="item-tags">
-              <span class="item-tag">Procedure</span>
-            </div>
-            <h3>How to Enforce a Foreign Arbitral Award in Türkiye (2026 Guide)</h3>
-            <p>You won your arbitration. Now what? Enforcing an award across borders is a process many businesses don't anticipate — but understanding it in advance can save you significant time and money.</p>
-            <a href="blog-enforce-foreign-arbitral-award-turkey.html" class="item-link">Read Article →</a>
-          </div>
-        </article>
-
-        <article class="update-item reveal" data-category="Investment Law">
-          <div class="item-date-col">
-            <span class="item-d">—</span>
-            <span class="item-m">Mar · 26</span>
-          </div>
-          <div class="item-rule"></div>
-          <div class="item-body">
-            <div class="item-tags">
-              <span class="item-tag">Investment Law</span>
-            </div>
-            <h3>Turkey–Africa Bilateral Investment Treaties: What Investors on Both Sides Need to Know</h3>
-            <p>Turkey's bilateral investment treaties with African states offer substantial protections to investors on both sides of the relationship — but only to those who understand how they work.</p>
-            <a href="turkey-africa-bilateral-investment-treaties.html" class="item-link">Read Article →</a>
-          </div>
-        </article>
-
-        <article class="update-item reveal reveal-d1" data-category="Investment Law">
-          <div class="item-date-col">
-            <span class="item-d">—</span>
-            <span class="item-m">Mar · 26</span>
-          </div>
-          <div class="item-rule"></div>
-          <div class="item-body">
-            <div class="item-tags">
-              <span class="item-tag">Investment Law</span>
-            </div>
-            <h3>How Investment Arbitration Protects Turkish Investors in Africa</h3>
-            <p>With 15–20 known Turkish investor–African state cases, structuring your investment before a dispute arises is what separates recoverable losses from total write-offs.</p>
-            <a href="how-investment-arbitration-protects-turkish-investors-in-africa.html" class="item-link">Read Article →</a>
-          </div>
-        </article>
-
-        <article class="update-item reveal reveal-d2" data-category="Arbitration">
-          <div class="item-date-col">
-            <span class="item-d">—</span>
-            <span class="item-m">Mar · 26</span>
-          </div>
-          <div class="item-rule"></div>
-          <div class="item-body">
-            <div class="item-tags">
-              <span class="item-tag">Arbitration</span>
-            </div>
-            <h3>OHADA Arbitration: A Practical Guide for Turkish Companies</h3>
-            <p>Operating in West or Central Africa? OHADA governs disputes across 17 countries. This guide explains the CCJA, what it means for your contracts, and how to protect yourself.</p>
-            <a href="ohada-arbitration-guide-for-turkish-companies.html" class="item-link">Read Article →</a>
-          </div>
-        </article>
-
+        <div class="articles-loading">Loading articles</div>
       </div>
     </main>
 
-    <!-- SIDEBAR -->
     <aside class="sidebar">
 
       <div class="sb-block reveal">
         <div class="sb-head"><h4>Browse Topics</h4></div>
         <div class="sb-body">
-          <ul class="topic-list">
-            <li><span>Procedure</span><span class="t-count">1</span></li>
-            <li><span>Investment Law</span><span class="t-count">2</span></li>
-            <li><span>Arbitration</span><span class="t-count">1</span></li>
-            <li><span>Trade Law</span><span class="t-count">0</span></li>
+          <ul class="topic-list" id="topic-list">
+            <li><span>Loading…</span></li>
           </ul>
         </div>
       </div>
@@ -654,9 +496,8 @@
     </aside>
   </div>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Özgören Law Firm · <a href="index.html">ozgorenlawfirm.com</a> · International Arbitration · İzmir, Turkey</p>
+    <p>© <span id="footer-year">2026</span> Özgören Law Firm · <a href="index.html">ozgorenlawfirm.com</a> · International Arbitration · İzmir, Turkey</p>
     <div class="footer-links">
       <a href="updates.html" class="footer-link">Office Updates →</a>
       <a href="arbitration-lawyer-izmir.html" class="footer-dim">Arbitration Lawyer Izmir</a>
@@ -664,6 +505,110 @@
   </footer>
 
   <script>
+    // ─── CONFIG — sadece bu satırı değiştir ──────────────────────────────────
+    const WORKER_URL = 'https://notion-blog-proxy.SENIN-ADIN.workers.dev';
+    // ─────────────────────────────────────────────────────────────────────────
+
+    function formatDate(dateStr) {
+      if (!dateStr) return { day: '—', month: '' };
+      const d = new Date(dateStr);
+      const day = String(d.getDate()).padStart(2, '0');
+      const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const month = monthNames[d.getMonth()];
+      const year = String(d.getFullYear()).slice(2);
+      return { day, month: `${month} · ${year}` };
+    }
+
+    function renderArticles(articles) {
+      const list = document.getElementById('articles-list');
+
+      if (!articles.length) {
+        list.innerHTML = '<div class="articles-loading">No articles yet</div>';
+        return;
+      }
+
+      document.getElementById('hero-count').textContent = articles.length;
+      document.getElementById('articles-count').textContent = `${articles.length} article${articles.length === 1 ? '' : 's'}`;
+
+      // Hero strip — ilk 4 makale
+      const strip = document.getElementById('hero-strip');
+      strip.innerHTML = articles.slice(0, 4).map((a, i) => `
+        <div class="hero-strip-item">
+          <span class="strip-label">${i === 0 ? 'Latest' : (a.category || 'Article')}</span>
+          <span class="strip-val ${i === 0 ? 'active' : ''}">${a.title.length > 32 ? a.title.slice(0, 32) + '…' : a.title}</span>
+        </div>
+      `).join('');
+
+      // Sidebar topic listesi
+      const cats = {};
+      articles.forEach(a => { if (a.category) cats[a.category] = (cats[a.category] || 0) + 1; });
+      const topicList = document.getElementById('topic-list');
+      topicList.innerHTML = Object.entries(cats)
+        .sort((a, b) => b[1] - a[1])
+        .map(([cat, count]) => `
+          <li data-filter="${cat}">
+            <span>${cat}</span>
+            <span class="t-count">${count}</span>
+          </li>
+        `).join('');
+
+      topicList.querySelectorAll('li').forEach(li => {
+        li.addEventListener('click', () => {
+          const f = li.dataset.filter;
+          document.querySelectorAll('.filter-tag').forEach(b => b.classList.remove('active'));
+          document.querySelectorAll(`[data-filter="${f}"]`).forEach(b => b.classList.add('active'));
+          applyFilter(f);
+        });
+      });
+
+      // Kartları render et
+      list.innerHTML = articles.map((a, i) => {
+        const { day, month } = formatDate(a.date);
+        const delay = i % 3 === 1 ? 'reveal-d1' : i % 3 === 2 ? 'reveal-d2' : '';
+        return `
+          <article class="update-item reveal ${delay}" data-category="${a.category || ''}">
+            <div class="item-date-col">
+              <span class="item-d">${day}</span>
+              <span class="item-m">${month}</span>
+            </div>
+            <div class="item-rule"></div>
+            <div class="item-body">
+              <div class="item-tags">
+                ${a.category ? `<span class="item-tag">${a.category}</span>` : ''}
+              </div>
+              <h3>${a.title}</h3>
+              ${a.excerpt ? `<p>${a.excerpt}</p>` : ''}
+              ${a.slug ? `<a href="${a.slug}" class="item-link">Read Article →</a>` : ''}
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      requestAnimationFrame(() => {
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      });
+    }
+
+    async function loadFromNotion() {
+      try {
+        const res = await fetch(WORKER_URL);
+        if (!res.ok) throw new Error('Worker error');
+        const articles = await res.json();
+        renderArticles(articles);
+      } catch (err) {
+        document.getElementById('articles-list').innerHTML =
+          '<div class="articles-loading">Could not load articles</div>';
+        console.error('Notion fetch error:', err);
+      }
+    }
+
+    function applyFilter(f) {
+      document.querySelectorAll('#articles-list [data-category]').forEach(a => {
+        a.style.display = (f === 'all' || a.dataset.category === f) ? '' : 'none';
+      });
+    }
+
+    // Nav hamburger
     const hamburger = document.getElementById('hamburger');
     const navLinks  = document.getElementById('navLinks');
     const overlay   = document.getElementById('navOverlay');
@@ -681,24 +626,22 @@
       });
     });
 
+    // Scroll reveal
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0 });
     requestAnimationFrame(() => document.querySelectorAll('.reveal').forEach(el => observer.observe(el)));
 
+    // Filter butonları
     document.querySelectorAll('.filter-tag').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-tag').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        const f = btn.dataset.filter;
-        const fw = document.getElementById('featured');
-        if (fw) fw.style.display = (f === 'all' || fw.dataset.category === f) ? '' : 'none';
-        document.querySelectorAll('#articles-list [data-category]').forEach(a => {
-          a.style.display = (f === 'all' || a.dataset.category === f) ? '' : 'none';
-        });
+        applyFilter(btn.dataset.filter);
       });
     });
 
+    // Newsletter
     document.getElementById('nl-btn').addEventListener('click', () => {
       const e = document.getElementById('nl-email');
       if (e.value.includes('@')) {
@@ -710,6 +653,10 @@
         setTimeout(() => e.style.borderColor = '', 1500);
       }
     });
+
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    loadFromNotion();
   </script>
 </body>
 </html>
