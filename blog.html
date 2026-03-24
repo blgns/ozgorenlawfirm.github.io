@@ -504,9 +504,10 @@
     </div>
   </footer>
 
-  <script>
-    // ─── CONFIG — sadece bu satırı değiştir ──────────────────────────────────
-    const WORKER_URL = 'https://notion-blog-proxy.SENIN-ADIN.workers.dev';
+  
+ <script>
+    // ─── CONFIG ──────────────────────────────────────────────────────────────
+    const WORKER_URL = 'https://notion-blog-proxy.selinozgoren0.workers.dev';
     // ─────────────────────────────────────────────────────────────────────────
 
     function formatDate(dateStr) {
@@ -522,7 +523,7 @@
     function renderArticles(articles) {
       const list = document.getElementById('articles-list');
 
-      if (!articles.length) {
+      if (!articles || !articles.length) {
         list.innerHTML = '<div class="articles-loading">No articles yet</div>';
         return;
       }
@@ -565,6 +566,9 @@
       list.innerHTML = articles.map((a, i) => {
         const { day, month } = formatDate(a.date);
         const delay = i % 3 === 1 ? 'reveal-d1' : i % 3 === 2 ? 'reveal-d2' : '';
+        // Link yapısını slug'a göre kuruyoruz
+        const articleLink = a.slug ? `blog/${a.slug}.html` : '#';
+        
         return `
           <article class="update-item reveal ${delay}" data-category="${a.category || ''}">
             <div class="item-date-col">
@@ -576,39 +580,41 @@
               <div class="item-tags">
                 ${a.category ? `<span class="item-tag">${a.category}</span>` : ''}
               </div>
-              <h3>${a.title}</h3>
+              <h3 onclick="window.location.href='${articleLink}'">${a.title}</h3>
               ${a.excerpt ? `<p>${a.excerpt}</p>` : ''}
-              ${a.slug ? `<a href="${a.slug}" class="item-link">Read Article →</a>` : ''}
+              ${a.slug ? `<a href="${articleLink}" class="item-link">Read Article →</a>` : ''}
             </div>
           </article>
         `;
       }).join('');
 
-      requestAnimationFrame(() => {
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-      });
+      // Observer'ı yeniden başlat
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+      }, { threshold: 0 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     }
 
     async function loadFromNotion() {
       try {
-        const res = await fetch(notion-blog-proxy.selinozgoren0.workers.dev);
+        const res = await fetch(WORKER_URL); // Tırnak hatası giderildi, değişken kullanıldı
         if (!res.ok) throw new Error('Worker error');
         const articles = await res.json();
         renderArticles(articles);
       } catch (err) {
         document.getElementById('articles-list').innerHTML =
-          '<div class="articles-loading">Could not load articles</div>';
+          '<div class="articles-loading">Could not load articles. Check your connection.</div>';
         console.error('Notion fetch error:', err);
       }
     }
 
     function applyFilter(f) {
-      document.querySelectorAll('#articles-list [data-category]').forEach(a => {
-        a.style.display = (f === 'all' || a.dataset.category === f) ? '' : 'none';
+      document.querySelectorAll('#articles-list .update-item').forEach(a => {
+        a.style.display = (f === 'all' || a.dataset.category === f) ? 'grid' : 'none';
       });
     }
 
-    // Nav hamburger
+    // Nav & Scroll Logic
     const hamburger = document.getElementById('hamburger');
     const navLinks  = document.getElementById('navLinks');
     const overlay   = document.getElementById('navOverlay');
@@ -616,23 +622,7 @@
     function closeMenu() { hamburger.classList.remove('open'); navLinks.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
     hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
     overlay.addEventListener('click', closeMenu);
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', e => {
-        const href = a.getAttribute('href');
-        if (href && href.startsWith('#')) {
-          e.preventDefault(); closeMenu();
-          setTimeout(() => { const t = document.querySelector(href); if (t) t.scrollIntoView({ behavior: 'smooth' }); }, 420);
-        } else { closeMenu(); }
-      });
-    });
 
-    // Scroll reveal
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0 });
-    requestAnimationFrame(() => document.querySelectorAll('.reveal').forEach(el => observer.observe(el)));
-
-    // Filter butonları
     document.querySelectorAll('.filter-tag').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-tag').forEach(b => b.classList.remove('active'));
@@ -641,22 +631,8 @@
       });
     });
 
-    // Newsletter
-    document.getElementById('nl-btn').addEventListener('click', () => {
-      const e = document.getElementById('nl-email');
-      if (e.value.includes('@')) {
-        e.style.display = 'none';
-        document.getElementById('nl-btn').style.display = 'none';
-        document.getElementById('nl-ok').style.display = 'block';
-      } else {
-        e.style.borderColor = 'rgba(220,80,80,0.5)';
-        setTimeout(() => e.style.borderColor = '', 1500);
-      }
-    });
-
     document.getElementById('footer-year').textContent = new Date().getFullYear();
-
     loadFromNotion();
-  </script>
+</script>
 </body>
 </html>
