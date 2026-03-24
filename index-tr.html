@@ -645,66 +645,65 @@
   </footer>
 
   <!-- ══ SCRIPTS ════════════════════════════════════════════════════════════ -->
-  <script>
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Nav drawer
-    const hamburger = document.getElementById('hamburger');
-    const navLinks  = document.getElementById('navLinks');
-    const overlay   = document.getElementById('navOverlay');
-
-    function openMenu() {
-      hamburger.classList.add('open');
-      navLinks.classList.add('open');
-      overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      hamburger.setAttribute('aria-expanded', 'true');
-      hamburger.setAttribute('aria-label', 'Navigasyon menüsünü kapat');
-    }
-
-    function closeMenu() {
-      hamburger.classList.remove('open');
-      navLinks.classList.remove('open');
-      overlay.classList.remove('open');
-      document.body.style.overflow = '';
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.setAttribute('aria-label', 'Navigasyon menüsünü aç');
-    }
-
-    hamburger.addEventListener('click', () =>
-      navLinks.classList.contains('open') ? closeMenu() : openMenu()
-    );
-    overlay.addEventListener('click', closeMenu);
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && navLinks.classList.contains('open')) closeMenu();
+<script>
+  // Scroll reveal animasyonu
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
     });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const href = a.getAttribute('href');
-        if (href && href.startsWith('#')) {
-          e.preventDefault();
-          closeMenu();
-          setTimeout(() => {
-            const target = document.querySelector(href);
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
-          }, 420);
-        } else {
-          closeMenu();
-        }
-      });
+  // Hamburger Menü Kontrolleri
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks'); // ID'nin HTML ile aynı olduğundan emin olduk
+  const overlay   = document.getElementById('navOverlay');
+
+  function toggleMenu() {
+    const isOpen = navLinks.classList.contains('open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  function openMenu() {
+    hamburger.classList.add('open');
+    navLinks.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden'; // Arka plan kaymasını engeller
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = ''; // Kaydırmayı tekrar açar
+  }
+
+  // Tıklama olayları
+  hamburger.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', closeMenu);
+
+  // Menü linklerine tıklandığında menüyü kapat ve ilgili bölüme git
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const href = a.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        closeMenu();
+        // Yumuşak geçiş için kısa bir gecikme (opsiyonel)
+        setTimeout(() => {
+          const target = document.querySelector(href);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+      }
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>      "url": "https://ozgorenlawfirm.com",
