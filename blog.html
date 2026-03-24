@@ -595,16 +595,23 @@
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     }
 
-    async function loadFromNotion() {
+   async function loadFromNotion() {
       try {
-        const res = await fetch(WORKER_URL); // Tırnak hatası giderildi, değişken kullanıldı
+        // fetch içindeki URL tırnak içinde ve tam olmalı
+        const res = await fetch('https://notion-blog-proxy.selinozgoren0.workers.dev');
+        
         if (!res.ok) throw new Error('Worker error');
+        
         const articles = await res.json();
+        
+        // Gelen veriyi render fonksiyonuna gönder
         renderArticles(articles);
+        
       } catch (err) {
         document.getElementById('articles-list').innerHTML =
-          '<div class="articles-loading">Could not load articles. Check your connection.</div>';
+          '<div class="articles-loading">Could not load articles. Please check your connection.</div>';
         console.error('Notion fetch error:', err);
+      
       }
     }
 
