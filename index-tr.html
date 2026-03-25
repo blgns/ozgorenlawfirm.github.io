@@ -2,12 +2,14 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ══ FAVICON ══════════════════════════════════════════════════════════ -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- ══ PRIMARY META ══════════════════════════════════════════════════════ -->
   <title>Selin Özgören | Uluslararası Tahkim Avukatı – İzmir</title>
@@ -38,7 +40,7 @@
   <link rel="alternate" hreflang="zh-HK"     href="https://ozgorenlawfirm.com/index-hk.html">
   <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/index.html">
 
-  <!-- ══ JSON-LD SCHEMA (tek blok, @graph) ════════════════════════════════ -->
+  <!-- ══ JSON-LD SCHEMA ═══════════════════════════════════════════════════ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -110,7 +112,8 @@
   <!-- ══ FONTS ═════════════════════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"></noscript>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -150,35 +153,21 @@
       display: flex;
       align-items: center;
     }
-    .nav-logo img {
-      height: 85px;
-      width: auto;
-      display: block;
-    }
+    .nav-logo img { height: 85px; width: auto; display: block; }
     .lang-switcher {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-      z-index: 1200;
+      display: flex; align-items: center; gap: 0.3rem;
+      z-index: 1200; flex-wrap: wrap; max-width: 260px;
     }
     .lang-switcher a {
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-decoration: none;
-      padding: 0.3rem 0.55rem;
-      border: 1px solid var(--line);
-      transition: all 0.25s;
-      color: var(--muted);
+      font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none;
+      padding: 0.3rem 0.55rem; border: 1px solid var(--line);
+      transition: all 0.25s; color: var(--muted);
     }
     .lang-switcher a.active {
-      border-color: var(--gold);
-      color: var(--gold);
+      border-color: var(--gold); color: var(--gold);
       background: rgba(184,149,90,0.08);
     }
-    .lang-switcher a:hover:not(.active) {
-      border-color: var(--gold-light);
-      color: var(--dark);
-    }
+    .lang-switcher a:hover:not(.active) { border-color: var(--gold-light); color: var(--dark); }
     .hamburger {
       margin-left: auto;
       display: flex; flex-direction: column; gap: 5px;
@@ -194,48 +183,40 @@
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .nav-overlay {
-      display: none;
-      position: fixed; inset: 0;
-      background: rgba(26,26,24,0.5);
-      z-index: 1100;
+      display: none; position: fixed; inset: 0;
+      background: rgba(26,26,24,0.5); z-index: 1100;
     }
     .nav-overlay.open { display: block; }
     .nav-links {
-      position: fixed;
-      top: 0; right: -300px;
+      position: fixed; top: 0; right: -300px;
       width: 260px; height: 100vh;
       background: rgba(247,243,238,0.99);
       display: flex; flex-direction: column;
       justify-content: center; align-items: flex-start;
       gap: 2rem; padding: 4rem 3rem;
       border-left: 1px solid var(--line);
-      transition: right 0.4s ease;
-      z-index: 1200;
-      list-style: none;
+      transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1200; list-style: none;
     }
     .nav-links.open { right: 0; }
     .nav-links a {
       font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase;
       text-decoration: none; color: var(--dark);
-      transition: color 0.3s;
-      display: block; padding: 0.25rem 0;
+      transition: color 0.3s; display: block; padding: 0.25rem 0;
     }
     .nav-links a:hover { color: var(--gold); }
 
     /* ── HERO ── */
     .hero {
-      min-height: 100vh;
-      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
       padding-top: 110px;
     }
     .hero-left {
       display: flex; flex-direction: column; justify-content: center;
-      padding: 5rem 4rem 5rem 6rem;
-      position: relative;
+      padding: 5rem 4rem 5rem 6rem; position: relative;
     }
     .hero-left::before {
-      content: '';
-      position: absolute; top: 0; right: 0;
+      content: ''; position: absolute; top: 0; right: 0;
       width: 1px; height: 100%;
       background: linear-gradient(to bottom, transparent, var(--gold), transparent);
     }
@@ -258,42 +239,35 @@
       animation: fadeUp 0.8s 0.3s ease both;
     }
     .hero-cta {
-      display: inline-block;
-      padding: 0.85rem 2.5rem;
+      display: inline-block; padding: 0.85rem 2.5rem;
       border: 1px solid var(--gold); color: var(--gold);
       text-decoration: none; font-size: 0.7rem;
       letter-spacing: 0.2em; text-transform: uppercase;
       transition: background 0.3s, color 0.3s;
-      animation: fadeUp 0.8s 0.4s ease both;
-      align-self: center;
+      animation: fadeUp 0.8s 0.4s ease both; align-self: center;
     }
     .hero-cta:hover { background: var(--gold); color: var(--cream); }
     .hero-right {
-      position: relative; overflow: hidden;
-      background: var(--dark);
+      position: relative; overflow: hidden; background: var(--dark);
       animation: fadeIn 1s 0.2s ease both;
       display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 1.5rem;
-      padding-bottom: 3rem;
+      align-items: center; justify-content: center; gap: 1.5rem; padding-bottom: 3rem;
     }
     .hero-right::before {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background: linear-gradient(135deg, rgba(184,149,90,0.15) 0%, transparent 60%);
       pointer-events: none;
     }
     .hero-right img {
-      width: 60%; max-width: 420px;
-      aspect-ratio: 1/1; object-fit: cover; object-position: center top;
+      width: 60%; max-width: 420px; aspect-ratio: 1/1;
+      object-fit: cover; object-position: center top;
       border-radius: 50%; border: 3px solid var(--gold);
       box-shadow: 0 0 60px rgba(184,149,90,0.2);
       display: block; position: relative;
     }
     .hero-badge {
-      display: inline-block; width: fit-content;
-      padding: 0.75rem 1.5rem;
-      border: 1px solid var(--line); border-left: 3px solid var(--gold);
-      margin-top: 2rem;
+      display: inline-block; width: fit-content; padding: 0.75rem 1.5rem;
+      border: 1px solid var(--line); border-left: 3px solid var(--gold); margin-top: 2rem;
     }
     .hero-badge p {
       font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
@@ -333,10 +307,8 @@
       color: rgba(247,243,238,0.7); margin-bottom: 1.25rem;
     }
     .about-text a {
-      color: var(--gold-light);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(212,180,131,0.3);
-      transition: border-color 0.2s;
+      color: var(--gold-light); text-decoration: none;
+      border-bottom: 1px solid rgba(212,180,131,0.3); transition: border-color 0.2s;
     }
     .about-text a:hover { border-color: var(--gold-light); }
     .about-stats { display: flex; flex-direction: column; gap: 1.5rem; }
@@ -409,12 +381,9 @@
       text-align: center;
     }
     .legal-notice p {
-      font-size: 0.68rem;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 0 auto;
+      font-size: 0.68rem; color: var(--muted);
+      letter-spacing: 0.04em; line-height: 1.6;
+      max-width: 900px; margin: 0 auto;
     }
 
     /* ── CONTACT ── */
@@ -425,9 +394,7 @@
     .contact .section-label { justify-content: center; }
     .contact .section-label::after { display: none; }
     .contact .section-title { color: var(--cream); margin-bottom: 1.5rem; }
-    .contact-sub {
-      font-size: 0.9rem; color: rgba(247,243,238,0.55); margin-bottom: 3rem;
-    }
+    .contact-sub { font-size: 0.9rem; color: rgba(247,243,238,0.55); margin-bottom: 3rem; }
     .contact-links {
       display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
       max-width: 1300px; margin: 0 auto;
@@ -448,15 +415,14 @@
       display: flex; justify-content: space-between; align-items: center;
     }
     footer p { font-size: 0.65rem; color: rgba(247,243,238,0.3); letter-spacing: 0.1em; }
+    footer a { color: rgba(247,243,238,0.3); text-decoration: none; letter-spacing: 0.1em; }
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    @keyframes fadeIn {
-      from { opacity: 0; } to { opacity: 1; }
-    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
@@ -472,19 +438,24 @@
       .services-grid { grid-template-columns: 1fr; }
       .contact { padding: 4rem 2rem; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 2rem; }
+      .lang-switcher { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ── OVERLAY ── -->
+  <!-- ── NAV OVERLAY ── -->
   <div class="nav-overlay" id="navOverlay"></div>
 
-  <!-- ── NAV ── -->
+  <!-- ── NAV BAR ── -->
   <nav>
     <div class="lang-switcher">
       <a href="index.html">EN</a>
       <a href="index-tr.html" class="active">TR</a>
+      <a href="index-ar.html">AR</a>
+      <a href="index-de.html">DE</a>
+      <a href="index-fr.html">FR</a>
+      <a href="index-es.html">ES</a>
     </div>
     <a class="nav-logo" href="/index-tr.html">
       <img src="logo.png" alt="Özgören Hukuk Bürosu – Uluslararası Tahkim, İzmir">
@@ -609,10 +580,7 @@
     </div>
   </section>
 
-  <!-- ══ YASAL UYARI BANDI ═══════════════════════════════════════════════════
-       Türkiye Barolar Birliği Meslek Kuralları gereği bilgilendirme notu.
-       Bu bant reklam yasağı uyumunu destekler.
-  ════════════════════════════════════════════════════════════════════════════ -->
+  <!-- ══ YASAL UYARI BANDI ══════════════════════════════════════════════════ -->
   <div class="legal-notice">
     <p>
       Bu web sitesi, 1136 sayılı Avukatlık Kanunu ile Türkiye Barolar Birliği Meslek Kuralları çerçevesinde yalnızca bilgilendirme amacıyla hazırlanmıştır.
@@ -637,577 +605,25 @@
   <footer>
     <p>© 2026 Özgören Hukuk Bürosu. Tüm hakları saklıdır.</p>
     <p>
-      <a href="arbitration-lawyer-izmir.html" style="color:rgba(247,243,238,0.3); text-decoration:none; letter-spacing:0.1em;">
-        Tahkim Avukatı İzmir
-      </a>
+      <a href="arbitration-lawyer-izmir.html">Tahkim Avukatı İzmir</a>
       &nbsp;·&nbsp; İzmir, Türkiye
     </p>
   </footer>
 
   <!-- ══ SCRIPTS ════════════════════════════════════════════════════════════ -->
-<script>
-  // Scroll reveal animasyonu
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Hamburger Menü Kontrolleri
-  const hamburger = document.getElementById('hamburger');
-  const navLinks  = document.getElementById('navLinks'); // ID'nin HTML ile aynı olduğundan emin olduk
-  const overlay   = document.getElementById('navOverlay');
-
-  function toggleMenu() {
-    const isOpen = navLinks.classList.contains('open');
-    if (isOpen) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  }
-
-  function openMenu() {
-    hamburger.classList.add('open');
-    navLinks.classList.add('open');
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden'; // Arka plan kaymasını engeller
-  }
-
-  function closeMenu() {
-    hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
-    overlay.classList.remove('open');
-    document.body.style.overflow = ''; // Kaydırmayı tekrar açar
-  }
-
-  // Tıklama olayları
-  hamburger.addEventListener('click', toggleMenu);
-  overlay.addEventListener('click', closeMenu);
-
-  // Menü linklerine tıklandığında menüyü kapat ve ilgili bölüme git
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const href = a.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        closeMenu();
-        // Yumuşak geçiş için kısa bir gecikme (opsiyonel)
-        setTimeout(() => {
-          const target = document.querySelector(href);
-          if (target) target.scrollIntoView({ behavior: 'smooth' });
-        }, 300);
-      }
-    });
-  });
-</script>
-
-</body>
-</html>      "url": "https://ozgorenlawfirm.com",
-      "image": "https://ozgorenlawfirm.com/selin.jpg",
-      "sameAs": "https://www.linkedin.com/in/selinozgoren/",
-      "worksFor": {
-        "@type": "LegalService",
-        "name": "Özgören Law Firm"
-      },
-      "alumniOf": [
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Bocconi University"
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Ankara University"
-        }
-      ],
-      "knowsLanguage": ["Turkish", "English"],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "İzmir",
-        "addressCountry": "TR"
-      }
-    }
-  ]
-}
-</script>
-  <!-- Primary Meta Tags -->
-<title>Selin Özgören | Uluslararası Tahkim Avukatı – İzmir, Türkiye</title>
-<meta name="description" content="Özgören Hukuk Bürosu; uluslararası ticari ve yatırım tahkiminde avukatlık, hakem heyeti sekreterliği ve sınır ötesi danışmanlık hizmetleri sunmaktadır. İzmir merkezli, küresel alanda faaliyet göstermektedir.">
-<meta name="keywords" content="uluslararası tahkim avukatı Türkiye, hakem heyeti sekreteri, UNCITRAL, yatırım tahkimi, sınır ötesi uyuşmazlık, İzmir tahkim">
-<meta name="author" content="Selin Özgören">
-<link rel="canonical" href="https://ozgorenlawfirm.com/index-tr.html">
-
-<!-- Hreflang -->
-<link rel="alternate" hreflang="en" href="https://ozgorenlawfirm.com/index.html">
-<link rel="alternate" hreflang="tr" href="https://ozgorenlawfirm.com/index-tr.html">
-<link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/index.html">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Selin Özgören | Uluslararası Tahkim Avukatı">
-<meta property="og:description" content="Uluslararası ticari ve yatırım tahkiminde avukatlık, hakem heyeti sekreterliği, sınır ötesi danışmanlık. İzmir merkezli, küresel ölçekte faaliyet.">
-<meta property="og:url" content="https://ozgorenlawfirm.com/index-tr.html">
-<meta property="og:image" content="https://ozgorenlawfirm.com/selin.jpg">
-<meta property="og:locale" content="tr_TR">
-<meta property="og:site_name" content="Özgören Hukuk Bürosu">
-  <meta property="og:title" content="Özgören Hukuk Bürosu" />
-  <meta property="og:description" content="Selin Özgören – İzmir merkezli Uluslararası Tahkim Avukatı" />
-  <meta property="og:image" content="https://ozgorenlawfirm.com/logo.png" />
-  <meta property="og:url" content="https://ozgorenlawfirm.com/tr" />
-  <meta name="description" content="Selin Özgören – İzmir merkezli Uluslararası Tahkim Avukatı.">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVN14SDR0X"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WVN14SDR0X');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Özgören Hukuk Bürosu</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="alternate" hreflang="en"      href="https://ozgorenlawfirm.com/index.html"/>
-<link rel="alternate" hreflang="tr"      href="https://ozgorenlawfirm.com/index-tr.html"/>
-<link rel="alternate" hreflang="ar"      href="https://ozgorenlawfirm.com/index-ar.html"/>
-<link rel="alternate" hreflang="de"      href="https://ozgorenlawfirm.com/index-de.html"/>
-<link rel="alternate" hreflang="es"      href="https://ozgorenlawfirm.com/index-es.html"/>
-<link rel="alternate" hreflang="fr"      href="https://ozgorenlawfirm.com/index-fr.html"/>
-<link rel="alternate" hreflang="it"      href="https://ozgorenlawfirm.com/index-it.html"/>
-<link rel="alternate" hreflang="zh-CN"   href="https://ozgorenlawfirm.com/index-zh.html"/>
-<link rel="alternate" hreflang="zh-HK"   href="https://ozgorenlawfirm.com/index-hk.html"/>
-<link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/index.html"/>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F3EE;
-      --dark: #1A1A18;
-      --gold: #B8955A;
-      --gold-light: #D4B483;
-      --muted: #6B6558;
-      --line: rgba(184,149,90,0.25);
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--cream);
-      color: var(--dark);
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      overflow-x: hidden;
-    }
-    nav {
-      position: fixed; top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1.2rem clamp(2rem, 5vw, 6rem);
-      background: rgba(247,243,238,0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav-logo {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      align-items: center;
-    }
-    .nav-logo img { height: 85px; width: auto; display: block; }
-    .lang-switcher { display: flex; align-items: center; gap: 0.3rem; }
-    .lang-switcher a {
-      font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none;
-      padding: 0.3rem 0.55rem; border: 1px solid var(--line);
-      transition: all 0.25s; color: var(--muted);
-    }
-    .lang-switcher a.active { border-color: var(--gold); color: var(--gold); background: rgba(184,149,90,0.08); }
-    .lang-switcher a:hover:not(.active) { border-color: var(--gold-light); color: var(--dark); }
-    .hamburger {
-      margin-left: auto;
-      display: flex; flex-direction: column; gap: 5px;
-      background: none; border: none; cursor: pointer; padding: 4px;
-      position: relative; z-index: 300;
-    }
-    .hamburger span {
-      display: block; width: 22px; height: 2px;
-      background: var(--dark); border-radius: 2px;
-      transition: all 0.35s ease;
-    }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    /* OVERLAY: z-index 50 — nav ve nav-links altında */
-    .nav-overlay {
-      display: none; position: fixed; inset: 0;
-      background: rgba(26,26,24,0.5); z-index: 50;
-    }
-    .nav-overlay.open { display: block; }
-    /* NAV-LINKS: nav DIŞINDA, z-index: 200 */
-    .nav-links {
-      position: fixed; top: 0; right: -300px;
-      width: 260px; height: 100vh;
-      background: rgba(247,243,238,0.99);
-      display: flex; flex-direction: column;
-      justify-content: center; align-items: flex-start;
-      gap: 2rem; padding: 4rem 3rem;
-      border-left: 1px solid var(--line);
-      transition: right 0.4s ease;
-      z-index: 200; list-style: none;
-    }
-    .nav-links.open { right: 0; }
-    .nav-links a {
-      font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase;
-      text-decoration: none; color: var(--dark);
-      transition: color 0.3s; display: block; padding: 0.25rem 0;
-    }
-    .nav-links a:hover { color: var(--gold); }
-    .hero {
-      min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
-      padding-top: 110px;
-    }
-    .hero-left {
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 5rem 4rem 5rem 6rem; position: relative;
-    }
-    .hero-left::before {
-      content: ''; position: absolute; top: 0; right: 0;
-      width: 1px; height: 100%;
-      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
-    }
-    .hero-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3rem, 5vw, 5rem);
-      font-weight: 300; line-height: 1.05;
-      letter-spacing: -0.01em; margin-bottom: 1.2rem;
-      animation: fadeUp 0.8s 0.1s ease both;
-    }
-    .hero-name em { font-style: italic; color: var(--gold); }
-    .hero-title {
-      font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 2.5rem;
-      animation: fadeUp 0.8s 0.2s ease both;
-    }
-    .hero-desc {
-      font-size: 1rem; line-height: 1.75;
-      color: var(--muted); max-width: 420px; margin-bottom: 3rem;
-      animation: fadeUp 0.8s 0.3s ease both;
-    }
-    .hero-cta {
-      display: inline-block; padding: 0.85rem 2.5rem;
-      border: 1px solid var(--gold); color: var(--gold);
-      text-decoration: none; font-size: 0.7rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      transition: background 0.3s, color 0.3s;
-      animation: fadeUp 0.8s 0.4s ease both; align-self: center;
-    }
-    .hero-cta:hover { background: var(--gold); color: var(--cream); }
-    .hero-right {
-      position: relative; overflow: hidden; background: var(--dark);
-      animation: fadeIn 1s 0.2s ease both;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 1.5rem; padding-bottom: 3rem;
-    }
-    .hero-right::before {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(184,149,90,0.15) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .hero-right img {
-      width: 60%; max-width: 420px; aspect-ratio: 1/1;
-      object-fit: cover; object-position: center top;
-      border-radius: 50%; border: 3px solid var(--gold);
-      box-shadow: 0 0 60px rgba(184,149,90,0.2);
-      display: block; position: relative;
-    }
-    .hero-badge {
-      display: inline-block; width: fit-content; padding: 0.75rem 1.5rem;
-      border: 1px solid var(--line); border-left: 3px solid var(--gold); margin-top: 2rem;
-    }
-    .hero-badge p {
-      font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 0.3rem;
-    }
-    .hero-badge strong {
-      font-family: 'Cormorant Garamond', serif; font-size: 1rem;
-      font-weight: 400; color: var(--dark); letter-spacing: 0.05em;
-    }
-    section { padding: 6rem clamp(2rem, 5vw, 6rem); }
-    .section-label {
-      font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1rem;
-      display: flex; align-items: center; gap: 1rem;
-    }
-    .section-label::after {
-      content: ''; display: block; height: 1px; width: 50px;
-      background: var(--gold); opacity: 0.5;
-    }
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      font-weight: 300; line-height: 1.15; margin-bottom: 3rem;
-    }
-    .about { background: var(--dark); color: var(--cream); }
-    .about .section-title { color: var(--cream); }
-    .about-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
-      align-items: start; max-width: 1300px; margin: 0 auto;
-    }
-    .about-text p {
-      font-size: 1rem; line-height: 1.85;
-      color: rgba(247,243,238,0.7); margin-bottom: 1.25rem;
-    }
-    .about-stats { display: flex; flex-direction: column; gap: 1.5rem; }
-    .stat-item {
-      padding: 1.5rem;
-      border: 1px solid rgba(184,149,90,0.2); border-left: 3px solid var(--gold);
-    }
-    .stat-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.5rem; font-weight: 300; color: var(--gold); line-height: 1;
-    }
-    .stat-label {
-      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(247,243,238,0.5); margin-top: 0.4rem;
-    }
-    .practice-label {
-      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1rem;
-    }
-    .practice-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 400; margin-bottom: 3rem; color: var(--dark);
-    }
-    .practice-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 1px; background: var(--line); border: 1px solid var(--line);
-      max-width: 1300px; margin: 0 auto;
-    }
-    .service-card {
-      background: var(--cream); padding: 2.5rem;
-      position: relative; overflow: hidden; transition: background 0.3s;
-    }
-    .service-card::before {
-      content: ''; position: absolute; top: 0; left: 0;
-      width: 0; height: 2px; background: var(--gold); transition: width 0.4s ease;
-    }
-    .service-card:hover::before { width: 100%; }
-    .service-card:hover { background: #F0EBE3; }
-    .service-letter {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.85rem; color: var(--gold-light); margin-bottom: 0.5rem;
-    }
-    .service-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem; font-weight: 400; margin-bottom: 0.5rem; line-height: 1.3;
-    }
-    .service-meta {
-      font-size: 0.75rem; color: var(--gold);
-      letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem;
-    }
-    .service-card ul { list-style: none; padding: 0; margin: 0; }
-    .service-card ul li {
-      font-size: 0.83rem; line-height: 1.7; color: var(--muted);
-      padding-left: 1rem; position: relative; margin-bottom: 0.3rem;
-    }
-    .service-card ul li::before {
-      content: '—'; position: absolute; left: 0;
-      color: var(--gold-light); font-size: 0.75rem;
-    }
-    .contact {
-      background: var(--dark); color: var(--cream);
-      text-align: center; padding: 6rem 2rem;
-    }
-    .contact .section-label { justify-content: center; }
-    .contact .section-label::after { display: none; }
-    .contact .section-title { color: var(--cream); margin-bottom: 1.5rem; }
-    .contact-sub { font-size: 0.9rem; color: rgba(247,243,238,0.55); margin-bottom: 3rem; }
-    .contact-links {
-      display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
-      max-width: 1300px; margin: 0 auto;
-    }
-    .contact-link {
-      display: flex; align-items: center; gap: 0.6rem;
-      font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--gold); text-decoration: none;
-      border: 1px solid rgba(184,149,90,0.3); padding: 0.85rem 2rem;
-      transition: border-color 0.3s, background 0.3s;
-    }
-    .contact-link:hover { border-color: var(--gold); background: rgba(184,149,90,0.1); }
-    footer {
-      background: var(--dark); border-top: 1px solid rgba(184,149,90,0.15);
-      padding: 1.5rem clamp(2rem, 5vw, 6rem);
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    footer p { font-size: 0.65rem; color: rgba(247,243,238,0.3); letter-spacing: 0.1em; }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    @media (max-width: 900px) {
-      nav { padding: 1rem 2rem; }
-      .nav-logo img { height: 65px; }
-      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 90px; }
-      .hero-left { padding: 4rem 2rem 3rem; }
-      .hero-right { height: auto; min-height: 400px; padding: 3rem 2rem; }
-      section { padding: 4rem 2rem; }
-      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .practice-grid { grid-template-columns: 1fr; }
-      .contact { padding: 4rem 2rem; }
-      footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 2rem; }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="nav-overlay" id="navOverlay"></div>
-
-  <nav>
-    <div class="lang-switcher">
-      <a href="index.html">EN</a>
-      <a href="index-tr.html" class="active">TR</a>
-    </div>
-    <a class="nav-logo" href="#">
-      <img src="logo.png" alt="Özgören Hukuk Bürosu">
-    </a>
-    <button class="hamburger" id="hamburger" aria-label="Menü">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- nav-links nav DIŞINDA -->
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#about">Hakkımda</a></li>
-    <li><a href="#practice">Tahkim Hizmetleri</a></li>
-    <li><a href="blog.html">Bilgi Bankası</a></li>
-    <li><a href="#contact">İletişim</a></li>
-  </ul>
-
-  <div class="hero">
-    <div class="hero-left">
-      <h1 class="hero-name">Selin<br><em>Özgören</em></h1>
-      <p class="hero-title">Uluslararası Tahkim Avukatı</p>
-      <p class="hero-desc">Uluslararası ticari tahkim, yatırım hukuku ve uluslararası ticaret konularında müvekkillere sınır ötesi danışmanlık sağlıyor. Müvekkillerin hem mevcut uyuşmazlıklarının çözümünde hem de gelecekteki anlaşmazlıkların önlenmesinde, özenli sözleşme yapılandırması ve sözleşme tasarımı yoluyla destek oluyor. İngilizce ve Türkçe'ye akıcı şekilde hakim ve Avrupa, Asya, Afrika ile Kuzey Amerika'da deneyimli.</p>
-      <div class="hero-badge">
-        <p>Merkez</p>
-        <strong>İzmir · Küresel Bağlantı</strong>
-      </div>
-    </div>
-    <div class="hero-right">
-      <img src="selin.jpg" alt="Selin Özgören">
-      <a href="#contact" class="hero-cta">İletişime Geçin</a>
-    </div>
-  </div>
-
-  <section class="about" id="about">
-    <p class="section-label">Hakkımda</p>
-    <h2 class="section-title">Güven ve Dürüstlük Temelli<br>Küresel Hukuk Danışmanlığı</h2>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>Selin Özgören, uluslararası ticari ve yatırım tahkimine, uluslararası ticaret hukuku ve uluslararası kamu hukuku ile ilgili sınır ötesi uyuşmazlıklara odaklanmaktadır. İzmir Barosu'na kayıtlıdır ve hem Anglo-Sakson hukuku hem de Kıta Avrupası hukuku sistemlerinde deneyim sahibidir.</p>
-        <p>Tam burslu olarak tamamladığı Bocconi Üniversitesi'nden (İtalya) hukuk yüksek lisansı derecesine sahiptir ve tezini sürdürülebilir kalkınma ile uluslararası yatırım tahkimi kesişimi üzerine yazmıştır. Lisans eğitimini Ankara Üniversitesi Hukuk Fakültesi'nde tamamlamış, Erasmus değişim programı kapsamında Bologna Üniversitesi'nde bir yıl eğitim almıştır.</p>
-        <p>Profesyonel deneyimi arasında, Birleşmiş Milletler Viyana yerleşkesinde Uluslararası Ticaret Hukuku Komisyonu bünyesinde görev almak ve Hong Kong Uluslararası Tahkim Merkezi'nde dava yönetimi desteği sağlamak yer almaktadır. Cenevre'de bulunan Birleşmiş Milletler İnsan Hakları Yüksek Komiserliği Ofisi bünyesinde yayımlanan bir kitapta editörlük yapmış, ayrıca Milano merkezli bir hukuk bürosunda tahkim davalarına katılmış ve uluslararası hukuk bürolarında, özellikle Allen &amp; Overy ve Baker McKenzie bünyesinde uluslararası dosyalar ve yaptırım konularında deneyim kazanmıştır. Amerika Birleşik Devletleri'nde çalıştığı süreçte ise New York ve Kaliforniya federal mahkemelerinde hukuki süreçler yürütmüştür.</p>
-        <p>İngilizce ve Türkçe dillerine anadil seviyesinde konuşmanın yanı sıra Adalet Bakanlığı tarafından onaylı resmî yeminli Türkçe–İngilizce çevirmendir. Ayrıca İtalyanca bilmektedir. Uluslararası tahkim topluluğunda aktif rol oynamaya devam etmekte olup, Willem C. Vis Uluslararası Ticari Tahkim Moot'unda eski katılımcı, koç ve hakem olarak görev almıştır. Halen Viyana merkezli Moot Alumni Association'ın Uluslararası İletişim Ekibi Eş-Başkanı olarak çalışmaktadır.</p>
-      </div>
-      <div class="about-stats reveal">
-        <div class="stat-item">
-          <div class="stat-num" style="font-size:1.5rem;">HKIAC · ICC · UNCITRAL · OHCHR</div>
-          <div class="stat-label">Uluslararası Kurum Deneyimleri</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">2</div>
-          <div class="stat-label">Dil — Türkçe · İngilizce</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">Hukuk Yüksek Lisansı</div>
-          <div class="stat-label">Bocconi Üniversitesi · Tam Burs</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">Hukuk Lisansı</div>
-          <div class="stat-label">Ankara Üniversitesi</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="practice" id="practice">
-    <p class="practice-label">Uzmanlık Alanları</p>
-    <h2 class="practice-title">Sunulan Çözümler</h2>
-    <div class="practice-grid reveal">
-      <div class="service-card">
-        <div class="service-letter">A</div>
-        <h3>Avukat ve Ortak Avukat Desteği</h3>
-        <div class="service-meta">KARMAŞIK ULUSLARARASI TAHKIM DAVALARINDA TEMSIL VE STRATEJIK DESTEK.</div>
-        <ul>
-          <li>Vaka teorisi ve prosedürel stratejinin geliştirilmesi</li>
-          <li>Başvuruların, anıtların ve hukuki görüşlerin hazırlanması</li>
-          <li>Yabancı avukat ve uzman ekiplerle koordinasyon</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-letter">B</div>
-        <h3>Hakem Sekreterliği Hizmetleri</h3>
-        <div class="service-meta">Karmaşık tahkimlerde bağımsız ve gizli usuli yardım.</div>
-        <ul>
-          <li>Prosedürel koordinasyon ve zaman çizelgesi yönetimi</li>
-          <li>İdari ve kurumsal irtibat</li>
-          <li>Delil ve duruşma süreçlerinin yönetimi</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-letter">C</div>
-        <h3>Sınır Ötesi Danışmanlık</h3>
-        <div class="service-meta">Sınır ötesi operasyonlar için hukuki yapılandırma ve risk analizi.</div>
-        <ul>
-          <li>Tahkim maddesi tasarımı ve uyuşmazlık çözüm düzenlenmesi</li>
-          <li>Uluslararası sözleşme düzenlenmesi</li>
-          <li>Yaptırım ve risk değerlendirmeleri</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-letter">D</div>
-        <h3>Uyuşmazlık Öncesi ve Stratejik Risk Danışmanlığı</h3>
-        <div class="service-meta">Uyuşmazlıklar ortaya çıkmadan hukuki risk değerlendirmesi.</div>
-        <ul>
-          <li>Erken aşama uyuşmazlık değerlendirmesi</li>
-          <li>Sözleşmesel güvenlik açığı haritalama</li>
-          <li>Sınır ötesi icrai riski analizi</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <p class="section-label">İletişim</p>
-    <h2 class="section-title">Birlikte Çalışalım</h2>
-    <p class="contact-sub">Uluslararası davalar, tahkim ortak avukatlığı ve hukuki çeviri görevleri için ulaşabilirsiniz.</p>
-    <div class="contact-links">
-      <a href="mailto:info@ozgorenlawfirm.com" class="contact-link">✉ &nbsp; info@ozgorenlawfirm.com</a>
-      <a href="tel:+905431465266" class="contact-link">☎ &nbsp; +90 543 146 52 66</a>
-      <a href="https://www.linkedin.com/in/selinozgoren/" target="_blank" rel="noopener noreferrer" class="contact-link">↗ &nbsp; LinkedIn</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Özgören Hukuk Bürosu. Tüm hakları saklıdır.</p>
-    <p>İzmir, Türkiye</p>
-  </footer>
-
-  <script>
+    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+    // Nav drawer
     const hamburger = document.getElementById('hamburger');
     const navLinks  = document.getElementById('navLinks');
     const overlay   = document.getElementById('navOverlay');
@@ -1217,6 +633,8 @@
       navLinks.classList.add('open');
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
+      hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.setAttribute('aria-label', 'Navigasyon menüsünü kapat');
     }
 
     function closeMenu() {
@@ -1224,10 +642,18 @@
       navLinks.classList.remove('open');
       overlay.classList.remove('open');
       document.body.style.overflow = '';
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Navigasyon menüsünü aç');
     }
 
-    hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
+    hamburger.addEventListener('click', () =>
+      navLinks.classList.contains('open') ? closeMenu() : openMenu()
+    );
     overlay.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) closeMenu();
+    });
 
     navLinks.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', (e) => {
@@ -1245,5 +671,6 @@
       });
     });
   </script>
+
 </body>
 </html>
