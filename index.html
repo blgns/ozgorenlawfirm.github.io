@@ -646,12 +646,14 @@
 
   <!-- ══ SCRIPTS ════════════════════════════════════════════════════════════ -->
   <script>
-    // Auto-redirect by browser language (only on root/index)
+    /// Akıllı Dil Yönlendirmesi (Sadece ilk girişte ve ana sayfada çalışır)
     (function() {
-      const userLang = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
       const path = window.location.pathname;
       const isRoot = path === '/' || path === '/index.html' || path === '';
-      if (isRoot) {
+      
+      // Kullanıcı bu oturumda (browser sekmesi açıkken) bir kez yönlendirildiyse tekrar yapma
+      if (isRoot && !sessionStorage.getItem('languageRedirected')) {
+        const userLang = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
         const languageMap = {
           'tr': 'index-tr.html',
           'ar': 'index-ar.html',
@@ -661,7 +663,10 @@
           'it': 'index-it.html',
           'zh': 'index-zh.html'
         };
+
         if (languageMap[userLang]) {
+          // Yönlendirme yapıldığını işaretle, kullanıcı geri dönmek isterse engelleme
+          sessionStorage.setItem('languageRedirected', 'true');
           window.location.href = languageMap[userLang];
         }
       }
