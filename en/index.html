@@ -4,34 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- ══ FAVICON ══════════════════════════════════════════════════════════ -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
   <!-- ══ PRIMARY META ══════════════════════════════════════════════════════ -->
   <title>Selin Özgören | International Arbitration Lawyer – Izmir, Turkey</title>
   <meta name="description" content="Özgören Law Firm offers international commercial arbitration, investment arbitration counsel, tribunal secretary services, and cross-border advisory. Based in Izmir, Turkey. Operating globally.">
   <meta name="keywords" content="international arbitration lawyer Turkey, tribunal secretary, UNCITRAL, investment arbitration, cross-border dispute, Izmir arbitration">
   <meta name="author" content="Selin Özgören">
-  <link rel="canonical" href="https://ozgorenlawfirm.com/index.html">
+
+  <!-- ══ CANONICAL (single, correct) ══════════════════════════════════════ -->
+  <link rel="canonical" href="https://ozgorenlawfirm.com/en/index.html">
 
   <!-- ══ OPEN GRAPH ════════════════════════════════════════════════════════ -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Selin Özgören | International Arbitration Lawyer">
   <meta property="og:description" content="International commercial and investment arbitration counsel. Tribunal secretary. Cross-border advisory. Based in Izmir, Turkey – operating globally.">
-  <meta property="og:url" content="https://ozgorenlawfirm.com">
+  <meta property="og:url" content="https://ozgorenlawfirm.com/en/index.html">
   <meta property="og:image" content="https://ozgorenlawfirm.com/selin.jpg">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Özgören Law Firm">
 
-<link rel="canonical" href="https://ozgorenlawfirm.com/en/index.html">
-
-<link rel="alternate" hreflang="en"       href="https://ozgorenlawfirm.com/en/index.html">
-<link rel="alternate" hreflang="tr"       href="https://ozgorenlawfirm.com/tr/index-tr.html">
-<link rel="alternate" hreflang="ar"       href="https://ozgorenlawfirm.com/ar/index-ar.html">
-<link rel="alternate" hreflang="de"       href="https://ozgorenlawfirm.com/de/index-de.html">
-<link rel="alternate" hreflang="es"       href="https://ozgorenlawfirm.com/es/index-es.html">
-<link rel="alternate" hreflang="fr"       href="https://ozgorenlawfirm.com/fr/index-fr.html">
-<link rel="alternate" hreflang="it"       href="https://ozgorenlawfirm.com/it/index-it.html">
-<link rel="alternate" hreflang="zh-CN"    href="https://ozgorenlawfirm.com/hk/index-zh.html">
-<link rel="alternate" hreflang="zh-HK"    href="https://ozgorenlawfirm.com/hk/index-hk.html">
-<link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/index.html">
+  <!-- ══ HREFLANG ══════════════════════════════════════════════════════════ -->
+  <link rel="alternate" hreflang="en"        href="https://ozgorenlawfirm.com/en/index.html">
+  <link rel="alternate" hreflang="tr"        href="https://ozgorenlawfirm.com/tr/index-tr.html">
+  <link rel="alternate" hreflang="ar"        href="https://ozgorenlawfirm.com/ar/index-ar.html">
+  <link rel="alternate" hreflang="de"        href="https://ozgorenlawfirm.com/de/index-de.html">
+  <link rel="alternate" hreflang="es"        href="https://ozgorenlawfirm.com/es/index-es.html">
+  <link rel="alternate" hreflang="fr"        href="https://ozgorenlawfirm.com/fr/index-fr.html">
+  <link rel="alternate" hreflang="it"        href="https://ozgorenlawfirm.com/it/index-it.html">
+  <link rel="alternate" hreflang="zh-CN"     href="https://ozgorenlawfirm.com/hk/index-zh.html">
+  <link rel="alternate" hreflang="zh-HK"     href="https://ozgorenlawfirm.com/hk/index-hk.html">
+  <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/index.html">
 
   <!-- ══ JSON-LD SCHEMA ═══════════════════════════════════════════════════ -->
   <script type="application/ld+json">
@@ -74,7 +82,7 @@
         "@id": "https://ozgorenlawfirm.com/#selin",
         "name": "Selin Özgören",
         "jobTitle": "International Arbitration Lawyer",
-        "url": "https://ozgorenlawfirm.com",
+        "url": "https://ozgorenlawfirm.com/en/index.html",
         "image": "https://ozgorenlawfirm.com/selin.jpg",
         "sameAs": "https://www.linkedin.com/in/selinozgoren/",
         "worksFor": { "@id": "https://ozgorenlawfirm.com/#firm" },
@@ -126,7 +134,6 @@
       font-weight: 300;
       overflow-x: hidden;
     }
-
     /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0;
@@ -146,37 +153,21 @@
       display: flex;
       align-items: center;
     }
-    .nav-logo img {
-      height: 85px;
-      width: auto;
-      display: block;
-    }
+    .nav-logo img { height: 85px; width: auto; display: block; }
     .lang-switcher {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-      z-index: 1200;
-      flex-wrap: wrap;
-      max-width: 260px;
+      display: flex; align-items: center; gap: 0.3rem;
+      z-index: 1200; flex-wrap: wrap; max-width: 260px;
     }
     .lang-switcher a {
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-decoration: none;
-      padding: 0.3rem 0.55rem;
-      border: 1px solid var(--line);
-      transition: all 0.25s;
-      color: var(--muted);
+      font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none;
+      padding: 0.3rem 0.55rem; border: 1px solid var(--line);
+      transition: all 0.25s; color: var(--muted);
     }
     .lang-switcher a.active {
-      border-color: var(--gold);
-      color: var(--gold);
+      border-color: var(--gold); color: var(--gold);
       background: rgba(184,149,90,0.08);
     }
-    .lang-switcher a:hover:not(.active) {
-      border-color: var(--gold-light);
-      color: var(--dark);
-    }
+    .lang-switcher a:hover:not(.active) { border-color: var(--gold-light); color: var(--dark); }
     .hamburger {
       margin-left: auto;
       display: flex; flex-direction: column; gap: 5px;
@@ -192,17 +183,12 @@
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .nav-overlay {
-      display: none;
-      position: fixed; inset: 0;
-      background: rgba(26,26,24,0.5);
-      z-index: 1100;
+      display: none; position: fixed; inset: 0;
+      background: rgba(26,26,24,0.5); z-index: 1100;
     }
     .nav-overlay.open { display: block; }
-
-    /* ── NAV DRAWER ── */
     .nav-links {
-      position: fixed;
-      top: 0; right: -300px;
+      position: fixed; top: 0; right: -300px;
       width: 260px; height: 100vh;
       background: rgba(247,243,238,0.99);
       display: flex; flex-direction: column;
@@ -210,32 +196,26 @@
       gap: 2rem; padding: 4rem 3rem;
       border-left: 1px solid var(--line);
       transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      z-index: 1200;
-      list-style: none;
+      z-index: 1200; list-style: none;
     }
     .nav-links.open { right: 0; }
     .nav-links a {
       font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase;
       text-decoration: none; color: var(--dark);
-      transition: color 0.3s;
-      display: block; padding: 0.25rem 0;
+      transition: color 0.3s; display: block; padding: 0.25rem 0;
     }
     .nav-links a:hover { color: var(--gold); }
-
     /* ── HERO ── */
     .hero {
-      min-height: 100vh;
-      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
       padding-top: 110px;
     }
     .hero-left {
       display: flex; flex-direction: column; justify-content: center;
-      padding: 5rem 4rem 5rem 6rem;
-      position: relative;
+      padding: 5rem 4rem 5rem 6rem; position: relative;
     }
     .hero-left::before {
-      content: '';
-      position: absolute; top: 0; right: 0;
+      content: ''; position: absolute; top: 0; right: 0;
       width: 1px; height: 100%;
       background: linear-gradient(to bottom, transparent, var(--gold), transparent);
     }
@@ -258,42 +238,35 @@
       animation: fadeUp 0.8s 0.3s ease both;
     }
     .hero-cta {
-      display: inline-block;
-      padding: 0.85rem 2.5rem;
+      display: inline-block; padding: 0.85rem 2.5rem;
       border: 1px solid var(--gold); color: var(--gold);
       text-decoration: none; font-size: 0.7rem;
       letter-spacing: 0.2em; text-transform: uppercase;
       transition: background 0.3s, color 0.3s;
-      animation: fadeUp 0.8s 0.4s ease both;
-      align-self: center;
+      animation: fadeUp 0.8s 0.4s ease both; align-self: center;
     }
     .hero-cta:hover { background: var(--gold); color: var(--cream); }
     .hero-right {
-      position: relative; overflow: hidden;
-      background: var(--dark);
+      position: relative; overflow: hidden; background: var(--dark);
       animation: fadeIn 1s 0.2s ease both;
       display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 1.5rem;
-      padding-bottom: 3rem;
+      align-items: center; justify-content: center; gap: 1.5rem; padding-bottom: 3rem;
     }
     .hero-right::before {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background: linear-gradient(135deg, rgba(184,149,90,0.15) 0%, transparent 60%);
       pointer-events: none;
     }
     .hero-right img {
-      width: 60%; max-width: 420px;
-      aspect-ratio: 1/1; object-fit: cover; object-position: center top;
+      width: 60%; max-width: 420px; aspect-ratio: 1/1;
+      object-fit: cover; object-position: center top;
       border-radius: 50%; border: 3px solid var(--gold);
       box-shadow: 0 0 60px rgba(184,149,90,0.2);
       display: block; position: relative;
     }
     .hero-badge {
-      display: inline-block; width: fit-content;
-      padding: 0.75rem 1.5rem;
-      border: 1px solid var(--line); border-left: 3px solid var(--gold);
-      margin-top: 2rem;
+      display: inline-block; width: fit-content; padding: 0.75rem 1.5rem;
+      border: 1px solid var(--line); border-left: 3px solid var(--gold); margin-top: 2rem;
     }
     .hero-badge p {
       font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
@@ -303,7 +276,6 @@
       font-family: 'Cormorant Garamond', serif; font-size: 1rem;
       font-weight: 400; color: var(--dark); letter-spacing: 0.05em;
     }
-
     /* ── SECTIONS ── */
     section { padding: 6rem clamp(2rem, 5vw, 6rem); }
     .section-label {
@@ -320,7 +292,6 @@
       font-size: clamp(2rem, 3.5vw, 3rem);
       font-weight: 300; line-height: 1.15; margin-bottom: 3rem;
     }
-
     /* ── ABOUT ── */
     .about { background: var(--dark); color: var(--cream); }
     .about .section-title { color: var(--cream); }
@@ -333,10 +304,8 @@
       color: rgba(247,243,238,0.7); margin-bottom: 1.25rem;
     }
     .about-text a {
-      color: var(--gold-light);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(212,180,131,0.3);
-      transition: border-color 0.2s;
+      color: var(--gold-light); text-decoration: none;
+      border-bottom: 1px solid rgba(212,180,131,0.3); transition: border-color 0.2s;
     }
     .about-text a:hover { border-color: var(--gold-light); }
     .about-stats { display: flex; flex-direction: column; gap: 1.5rem; }
@@ -352,7 +321,6 @@
       font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
       color: rgba(247,243,238,0.5); margin-top: 0.4rem;
     }
-
     /* ── SERVICES ── */
     .services-label {
       font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
@@ -399,21 +367,7 @@
       content: '—'; position: absolute; left: 0;
       color: var(--gold-light); font-size: 0.75rem;
     }
-
     /* ── CONTACT ── */
-    /* ── TALLY FORM CUSTOM ── */
-    .contact-form-wrapper {
-      max-width: 800px;
-      margin: 4rem auto 0 auto;
-      background: rgba(184, 149, 90, 0.05); /* Çok hafif gold transparan */
-      border: 1px solid var(--line);
-      border-radius: 4px;
-      padding: 1rem;
-      reveal: visible;
-    }
-    @media (max-width: 600px) {
-      .contact-form-wrapper { margin-top: 2rem; padding: 0.5rem; }
-    }
     .contact {
       background: var(--dark); color: var(--cream);
       text-align: center; padding: 6rem 2rem;
@@ -421,9 +375,7 @@
     .contact .section-label { justify-content: center; }
     .contact .section-label::after { display: none; }
     .contact .section-title { color: var(--cream); margin-bottom: 1.5rem; }
-    .contact-sub {
-      font-size: 0.9rem; color: rgba(247,243,238,0.55); margin-bottom: 3rem;
-    }
+    .contact-sub { font-size: 0.9rem; color: rgba(247,243,238,0.55); margin-bottom: 3rem; }
     .contact-links {
       display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
       max-width: 1300px; margin: 0 auto;
@@ -436,7 +388,6 @@
       transition: border-color 0.3s, background 0.3s;
     }
     .contact-link:hover { border-color: var(--gold); background: rgba(184,149,90,0.1); }
-
     /* ── FOOTER ── */
     footer {
       background: var(--dark); border-top: 1px solid rgba(184,149,90,0.15);
@@ -445,18 +396,14 @@
     }
     footer p { font-size: 0.65rem; color: rgba(247,243,238,0.3); letter-spacing: 0.1em; }
     footer a { color: rgba(247,243,238,0.3); text-decoration: none; letter-spacing: 0.1em; }
-
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    @keyframes fadeIn {
-      from { opacity: 0; } to { opacity: 1; }
-    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav { padding: 1rem 2rem; }
@@ -480,17 +427,16 @@
 
   <!-- ── NAV BAR ── -->
   <nav>
-<div class="lang-switcher">
-  <a href="index.html" class="active">EN</a>
-  <a href="../tr/index-tr.html">TR</a>
-  <a href="../ar/index-ar.html">AR</a>
-  <a href="../de/index-de.html">DE</a>
-  <a href="../fr/index-fr.html">FR</a>
-  <a href="../es/index-es.html">ES</a>
-</div>
-   
-    <a class="nav-logo" href="/">
-      <img src="logo.png" alt="Özgören Law Firm – International Arbitration, İzmir">
+    <div class="lang-switcher">
+      <a href="/en/index.html" class="active">EN</a>
+      <a href="/tr/index-tr.html">TR</a>
+      <a href="/ar/index-ar.html">AR</a>
+      <a href="/de/index-de.html">DE</a>
+      <a href="/fr/index-fr.html">FR</a>
+      <a href="/es/index-es.html">ES</a>
+    </div>
+    <a class="nav-logo" href="/en/index.html">
+      <img src="../logo.png" alt="Özgören Law Firm – International Arbitration, İzmir">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -500,9 +446,9 @@
   <!-- ── NAV DRAWER ── -->
   <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
     <li><a href="#about">About</a></li>
-    <li><a href="arbitration.html">Arbitration Services</a></li>
-    <li><a href="blog.html">Knowledge Bank</a></li>
-    <li><a href="updates.html">Updates</a></li>
+    <li><a href="/en/arbitration.html">Arbitration Services</a></li>
+    <li><a href="/en/blog.html">Knowledge Bank</a></li>
+    <li><a href="/en/updates.html">Updates</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 
@@ -518,7 +464,7 @@
       </div>
     </div>
     <div class="hero-right">
-      <img src="selin.jpg" alt="Selin Özgören, International Arbitration Lawyer based in İzmir, Turkey">
+      <img src="../selin.jpg" alt="Selin Özgören, International Arbitration Lawyer based in İzmir, Turkey">
       <a href="#contact" class="hero-cta">Get in Touch</a>
     </div>
   </div>
@@ -529,7 +475,7 @@
     <h2 class="section-title">A Global Legal Practice<br>Rooted in Integrity</h2>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>Selin Özgören focuses on <a href="arbitration.html">international commercial and investment arbitration</a>, as well as cross-border disputes involving international trade law, and public international law. She is admitted to the Izmir Bar Association and has experience across both common law and civil law jurisdictions.</p>
+        <p>Selin Özgören focuses on <a href="/en/arbitration.html">international commercial and investment arbitration</a>, as well as cross-border disputes involving international trade law, and public international law. She is admitted to the Izmir Bar Association and has experience across both common law and civil law jurisdictions.</p>
         <p>She holds an LL.M. from Bocconi University, where she wrote her thesis on the intersection of sustainable development and international investment arbitration. She obtained her LL.B. from Ankara University Faculty of Law, including an Erasmus Exchange year at University of Bologna.</p>
         <p>Her professional experience includes internship work with the Secretariat of UNCITRAL in Vienna, contributing to Working Group III on ISDS reform, and case administration support at the Hong Kong International Arbitration Centre (HKIAC). She has also been involved in arbitration cases at a Milan-based law firm and has gained experience in cross-border regulatory and sanctions-related matters at global law firms, including Allen &amp; Overy and Baker McKenzie. In the United States, she has worked on legal proceedings before federal authorities in New York and California.</p>
         <p>She is bilingual in English and Turkish and is a sworn Turkish–English translator certified by the Ministry of Justice. She remains actively engaged in the international arbitration community as a former participant, coach, and arbitrator in the Willem C. Vis International Commercial Arbitration Moot, and currently serves as Co-Chair of the International Liaisons Team of the Vienna-based Moot Alumni Association. She also serves in an advisory capacity at <a href="https://nafasienergy.com" target="_blank" rel="noopener noreferrer">Nafasi Energy Info Hub</a>.</p>
@@ -559,10 +505,9 @@
   <section class="practice" id="practice">
     <p class="services-label">Core Competencies</p>
     <h2 class="services-title">
-      <a href="arbitration.html" style="text-decoration:none; color:inherit; border-bottom:1px solid var(--line);">Arbitration Services</a>
+      <a href="/en/arbitration.html" style="text-decoration:none; color:inherit; border-bottom:1px solid var(--line);">Arbitration Services</a>
     </h2>
     <div class="services-grid reveal">
-
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">A</div>
         <h3 itemprop="name">Counsel &amp; Co-Counsel Support</h3>
@@ -573,11 +518,10 @@
           <li>Coordination with foreign counsel and expert teams</li>
         </ul>
       </div>
-
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">B</div>
         <h3 itemprop="name">
-          <a href="tribunal-secretary.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Tribunal Secretary Services</a>
+          <a href="/en/tribunal-secretary.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Tribunal Secretary Services</a>
         </h3>
         <div class="service-meta" itemprop="description">Independent and discreet procedural assistance in complex arbitrations.</div>
         <ul>
@@ -586,7 +530,6 @@
           <li>Management of evidentiary and hearing processes</li>
         </ul>
       </div>
-
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">C</div>
         <h3 itemprop="name">Cross-Border Advisory</h3>
@@ -597,7 +540,6 @@
           <li>Sanctions and regulatory exposure assessment</li>
         </ul>
       </div>
-
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">D</div>
         <h3 itemprop="name">Pre-Dispute &amp; Strategic Risk Advisory</h3>
@@ -608,58 +550,49 @@
           <li>Cross-border enforcement risk analysis</li>
         </ul>
       </div>
-
     </div>
   </section>
 
   <!-- ══ CONTACT ════════════════════════════════════════════════════════════ -->
- <section class="contact" id="contact">
+  <section class="contact" id="contact">
     <p class="section-label">Contact</p>
     <h2 class="section-title">Let's Work Together</h2>
     <p class="contact-sub">Available for international arbitration mandates, co-counsel engagements, and pre-dispute advisory.</p>
-    
     <div class="contact-links">
-      <a href="https://tally.so/r/zxZeDE" target="_blank" rel="noopener noreferrer" class="contact-link">
-  ✎ &nbsp; Inquiry Form
-</a>
+      <a href="https://tally.so/r/zxZeDE" target="_blank" rel="noopener noreferrer" class="contact-link">✎ &nbsp; Inquiry Form</a>
       <a href="mailto:info@ozgorenlawfirm.com" class="contact-link">✉ &nbsp; info@ozgorenlawfirm.com</a>
       <a href="tel:+905431465266" class="contact-link">☎ &nbsp; +90 543 146 52 66</a>
       <a href="https://www.linkedin.com/in/selinozgoren/" target="_blank" rel="noopener noreferrer" class="contact-link">↗ &nbsp; LinkedIn</a>
     </div>
-
-    
+  </section>
 
   <!-- ══ FOOTER ═════════════════════════════════════════════════════════════ -->
   <footer>
     <p>© 2026 Özgören Law Firm. All rights reserved.</p>
     <p>
-      <a href="arbitration-lawyer-izmir.html">Arbitration Lawyer Izmir</a>
+      <a href="/en/arbitration-lawyer-izmir.html">Arbitration Lawyer Izmir</a>
       &nbsp;·&nbsp; İzmir, Türkiye
     </p>
   </footer>
 
   <!-- ══ SCRIPTS ════════════════════════════════════════════════════════════ -->
   <script>
-    /// Akıllı Dil Yönlendirmesi (Sadece ilk girişte ve ana sayfada çalışır)
+    // Smart language redirect — only fires at root, only once per session
     (function() {
       const path = window.location.pathname;
       const isRoot = path === '/' || path === '/index.html' || path === '';
-      
-      // Kullanıcı bu oturumda (browser sekmesi açıkken) bir kez yönlendirildiyse tekrar yapma
       if (isRoot && !sessionStorage.getItem('languageRedirected')) {
         const userLang = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
         const languageMap = {
-          'tr': 'index-tr.html',
-          'ar': 'index-ar.html',
-          'de': 'index-de.html',
-          'es': 'index-es.html',
-          'fr': 'index-fr.html',
-          'it': 'index-it.html',
-          'zh': 'index-zh.html'
+          'tr': '/tr/index-tr.html',
+          'ar': '/ar/index-ar.html',
+          'de': '/de/index-de.html',
+          'es': '/es/index-es.html',
+          'fr': '/fr/index-fr.html',
+          'it': '/it/index-it.html',
+          'zh': '/hk/index-zh.html'
         };
-
         if (languageMap[userLang]) {
-          // Yönlendirme yapıldığını işaretle, kullanıcı geri dönmek isterse engelleme
           sessionStorage.setItem('languageRedirected', 'true');
           window.location.href = languageMap[userLang];
         }
@@ -690,7 +623,6 @@
       hamburger.setAttribute('aria-expanded', 'true');
       hamburger.setAttribute('aria-label', 'Close navigation menu');
     }
-
     function closeMenu() {
       hamburger.classList.remove('open');
       navLinks.classList.remove('open');
@@ -699,17 +631,13 @@
       hamburger.setAttribute('aria-expanded', 'false');
       hamburger.setAttribute('aria-label', 'Open navigation menu');
     }
-
     hamburger.addEventListener('click', () =>
       navLinks.classList.contains('open') ? closeMenu() : openMenu()
     );
     overlay.addEventListener('click', closeMenu);
-
-    // ESC key closes menu
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navLinks.classList.contains('open')) closeMenu();
     });
-
     navLinks.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', (e) => {
         const href = a.getAttribute('href');
@@ -725,8 +653,7 @@
         }
       });
     });
-</script> <script async src="https://tally.so/widgets/embed.js"></script>
-
-
+  </script>
+  <script async src="https://tally.so/widgets/embed.js"></script>
 </body>
 </html>
