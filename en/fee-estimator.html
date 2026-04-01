@@ -5,32 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-  <!-- ══ PRIMARY META ══════════════════════════════════════════════════════ -->
-  <title>Legal Fee Estimator | Özgören Law Firm – International Arbitration</title>
-  <meta name="description" content="Transparent legal fee estimates for international arbitration, cross-border advisory, and dispute resolution services. Özgören Law Firm, İzmir, Turkey.">
-  <meta name="author" content="Selin Özgören">
+  <title>International Arbitration Lawyer Fees Turkey | Özgören Law Firm</title>
+  <meta name="description" content="Transparent legal fee estimates for international arbitration, foreign award enforcement, and cross-border disputes in Turkey. Based on 2026 İzmir Bar Association rates with 25% discount.">
+  <meta name="keywords" content="international arbitration lawyer fees Turkey, legal fee estimate Turkey, arbitration counsel fee Izmir, enforce foreign award Turkey cost">
   <link rel="canonical" href="https://ozgorenlawfirm.com/en/fee-estimator.html">
 
-  <!-- ══ OG ════════════════════════════════════════════════════════════════ -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Legal Fee Estimator | Özgören Law Firm">
-  <meta property="og:description" content="Transparent legal fee estimates for international arbitration and cross-border legal services. Based in İzmir, Turkey.">
+  <meta property="og:description" content="Transparent fee estimates for international arbitration, foreign award enforcement, and cross-border legal work in Turkey.">
   <meta property="og:url" content="https://ozgorenlawfirm.com/en/fee-estimator.html">
   <meta property="og:image" content="https://ozgorenlawfirm.com/selin.jpg">
+  <meta property="og:site_name" content="Özgören Law Firm">
 
-  <!-- ══ HREFLANG ══════════════════════════════════════════════════════════ -->
   <link rel="alternate" hreflang="en" href="https://ozgorenlawfirm.com/en/fee-estimator.html">
   <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/fee-estimator.html">
 
-  <!-- ══ FONTS ═════════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "@id": "https://ozgorenlawfirm.com/#firm",
+    "name": "Özgören Law Firm",
+    "url": "https://ozgorenlawfirm.com",
+    "description": "Boutique international arbitration practice based in İzmir, Turkey, specialising in cross-border disputes, foreign award enforcement, and international arbitration proceedings.",
+    "areaServed": "Worldwide",
+    "knowsLanguage": ["en","tr","ar","de","fr","es","it","zh"],
+    "address": { "@type": "PostalAddress", "addressLocality": "İzmir", "addressCountry": "TR" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Legal Services",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"International Commercial Arbitration Counsel","description":"Full representation in ICC, HKIAC, UNCITRAL and ISTAC arbitration proceedings"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Recognition and Enforcement of Foreign Arbitral Awards in Turkey","description":"Enforcement of foreign arbitral awards under the New York Convention before Turkish courts"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Arbitration Clause Drafting and Dispute Prevention","description":"Bespoke dispute resolution design for cross-border transactions"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Turkish Residence and Work Permits","description":"Immigration and work permit applications for foreign nationals in Turkey"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cross-Border Family Law","description":"International divorce, custody, and matrimonial asset proceedings involving Turkish courts"}}
+      ]
+    }
+  }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVN14SDR0X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WVN14SDR0X');
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"></noscript>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --cream: #F7F3EE;
       --dark: #1A1A18;
@@ -38,11 +72,8 @@
       --gold-light: #D4B483;
       --muted: #6B6558;
       --line: rgba(184,149,90,0.25);
-      --card-bg: #F0EBE3;
     }
-
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--cream);
       color: var(--dark);
@@ -51,365 +82,151 @@
       overflow-x: hidden;
     }
 
-    /* ── NAV ── */
+    /* ── NAV (copied from index.html) ── */
     nav {
-      position: fixed; top: 0; left: 0; right: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; justify-content: center; align-items: center;
       padding: 1.2rem clamp(2rem, 5vw, 6rem);
-      background: rgba(247,243,238,0.97);
+      background: rgba(247,243,238,0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
-    .nav-logo {
-      position: absolute; left: 50%; transform: translateX(-50%);
-      display: flex; align-items: center;
-    }
+    .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; }
     .nav-logo img { height: 85px; width: auto; display: block; }
-    .lang-switcher {
-      display: flex; align-items: center; gap: 0.3rem;
-      z-index: 1200; flex-wrap: wrap; max-width: 260px;
-    }
-    .lang-switcher a {
-      font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none;
-      padding: 0.3rem 0.55rem; border: 1px solid var(--line);
-      transition: all 0.25s; color: var(--muted);
-    }
+    .lang-switcher { display: flex; align-items: center; gap: 0.3rem; z-index: 1200; flex-wrap: wrap; max-width: 260px; }
+    .lang-switcher a { font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none; padding: 0.3rem 0.55rem; border: 1px solid var(--line); transition: all 0.25s; color: var(--muted); }
     .lang-switcher a.active { border-color: var(--gold); color: var(--gold); background: rgba(184,149,90,0.08); }
     .lang-switcher a:hover:not(.active) { border-color: var(--gold-light); color: var(--dark); }
-    .hamburger {
-      margin-left: auto; display: flex; flex-direction: column; gap: 5px;
-      background: none; border: none; cursor: pointer; padding: 4px;
-      position: relative; z-index: 1200;
-    }
-    .hamburger span {
-      display: block; width: 22px; height: 2px;
-      background: var(--dark); border-radius: 2px; transition: all 0.35s ease;
-    }
+    .hamburger { margin-left: auto; display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; position: relative; z-index: 1200; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.35s ease; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .nav-overlay {
-      display: none; position: fixed; inset: 0;
-      background: rgba(26,26,24,0.5); z-index: 1100;
-    }
+    .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(26,26,24,0.5); z-index: 1100; }
     .nav-overlay.open { display: block; }
-    .nav-links {
-      position: fixed; top: 0; right: -300px;
-      width: 260px; height: 100vh;
-      background: rgba(247,243,238,0.99);
-      display: flex; flex-direction: column;
-      justify-content: center; align-items: flex-start;
-      gap: 2rem; padding: 4rem 3rem;
-      border-left: 1px solid var(--line);
-      transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      z-index: 1200; list-style: none;
-    }
+    .nav-links { position: fixed; top: 0; right: -300px; width: 260px; height: 100vh; background: rgba(247,243,238,0.99); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 2rem; padding: 4rem 3rem; border-left: 1px solid var(--line); transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1200; list-style: none; }
     .nav-links.open { right: 0; }
-    .nav-links a {
-      font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase;
-      text-decoration: none; color: var(--dark); transition: color 0.3s;
-    }
-    .nav-links a:hover, .nav-links a.active-nav { color: var(--gold); }
+    .nav-links a { font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; color: var(--dark); transition: color 0.3s; display: block; padding: 0.25rem 0; }
+    .nav-links a:hover { color: var(--gold); }
 
     /* ── PAGE HERO ── */
     .page-hero {
-      padding-top: 140px;
-      padding-bottom: 4rem;
-      padding-left: clamp(2rem, 6vw, 7rem);
-      padding-right: clamp(2rem, 6vw, 7rem);
-      background: var(--dark);
-      position: relative;
-      overflow: hidden;
+      padding: 148px clamp(2rem, 5vw, 6rem) 5rem;
     }
-    .page-hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(184,149,90,0.12) 0%, transparent 55%);
-      pointer-events: none;
-    }
-    .page-hero-inner { max-width: 820px; position: relative; }
     .section-label {
       font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase;
       color: var(--gold); margin-bottom: 1rem;
       display: flex; align-items: center; gap: 1rem;
     }
-    .section-label::after {
-      content: ''; display: block; height: 1px; width: 50px;
-      background: var(--gold); opacity: 0.5;
-    }
-    .page-title {
+    .section-label::after { content: ''; display: block; height: 1px; width: 50px; background: var(--gold); opacity: 0.5; }
+    .section-label.centered { justify-content: center; }
+    .section-label.centered::after { display: none; }
+    .page-hero h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.4rem, 4.5vw, 4rem);
-      font-weight: 300; line-height: 1.1;
-      color: var(--cream); margin-bottom: 1.5rem;
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      font-weight: 300; line-height: 1.08; margin-bottom: 1.5rem;
     }
-    .page-title em { font-style: italic; color: var(--gold); }
-    .page-subtitle {
-      font-size: 0.9rem; line-height: 1.8; color: rgba(247,243,238,0.6);
-      max-width: 640px;
-    }
-
-    /* ── DISCLAIMER BANNER ── */
-    .disclaimer {
-      background: rgba(184,149,90,0.1);
-      border-left: 3px solid var(--gold);
-      padding: 1.2rem 1.8rem;
-      margin: 2.5rem clamp(2rem, 6vw, 7rem) 0;
-      display: flex; align-items: flex-start; gap: 1rem;
-    }
-    .disclaimer-icon {
-      font-size: 1rem; color: var(--gold); flex-shrink: 0; margin-top: 0.05rem;
-    }
-    .disclaimer p {
-      font-size: 0.78rem; line-height: 1.7; color: var(--muted);
-    }
-    .disclaimer strong { color: var(--dark); font-weight: 500; }
-
-    /* ── MAIN LAYOUT ── */
-    .estimator-wrap {
-      padding: 4rem clamp(2rem, 6vw, 7rem) 6rem;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
+    .page-hero h1 em { font-style: italic; color: var(--gold); }
+    .page-hero-sub { font-size: 0.9rem; color: var(--muted); line-height: 1.85; max-width: 580px; margin-bottom: 2rem; }
 
     /* ── CURRENCY BAR ── */
-    .currency-bar {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
-    }
-    .currency-label {
-      font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
-      color: var(--muted); margin-right: 0.5rem;
-    }
-    .currency-btn {
-      background: none; border: 1px solid var(--line);
-      padding: 0.45rem 1.1rem; cursor: pointer;
-      font-family: 'Jost', sans-serif; font-size: 0.72rem;
-      letter-spacing: 0.1em; color: var(--muted);
-      transition: all 0.25s;
-    }
+    .currency-bar { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+    .currency-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-right: 0.3rem; }
+    .currency-btn { font-family: 'Jost', sans-serif; font-size: 0.65rem; letter-spacing: 0.12em; padding: 0.3rem 0.75rem; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.25s; }
     .currency-btn:hover { border-color: var(--gold-light); color: var(--dark); }
     .currency-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(184,149,90,0.08); }
-    .rates-note {
-      font-size: 0.63rem; color: var(--muted); margin-left: auto;
-      letter-spacing: 0.05em;
-    }
-    #refresh-rates {
-      background: none; border: none; cursor: pointer;
-      font-size: 0.63rem; color: var(--gold); text-decoration: underline;
-      font-family: 'Jost', sans-serif; font-weight: 300; padding: 0;
-    }
+    .rate-note { font-size: 0.6rem; color: var(--muted); letter-spacing: 0.06em; opacity: 0.65; }
 
-    /* ── SERVICE GROUPS ── */
-    .service-group {
-      margin-bottom: 2.5rem;
-      border: 1px solid var(--line);
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      margin: 0 clamp(2rem, 5vw, 6rem) 3rem;
+      border: 1px solid var(--line); border-left: 3px solid var(--gold);
+      padding: 1.25rem 1.75rem;
+      font-size: 0.78rem; color: var(--muted); line-height: 1.8;
     }
-    .group-header {
-      display: flex; align-items: center; gap: 1.2rem;
-      padding: 1.4rem 2rem; cursor: pointer;
-      border-bottom: 1px solid transparent;
-      transition: background 0.2s;
-      user-select: none;
-    }
-    .group-header:hover { background: rgba(184,149,90,0.04); }
-    .group-header.open { border-bottom-color: var(--line); }
-    .group-letter {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem; font-weight: 300; color: var(--gold);
-      min-width: 1.8rem; line-height: 1;
-    }
-    .group-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem; font-weight: 400; color: var(--dark);
-      flex: 1;
-    }
-    .group-chevron {
-      font-size: 0.8rem; color: var(--gold-light);
-      transition: transform 0.3s;
-    }
-    .group-header.open .group-chevron { transform: rotate(180deg); }
+    .disclaimer strong { color: var(--dark); font-weight: 400; }
 
-    .group-body {
-      display: none;
-      padding: 0;
-    }
-    .group-body.open { display: block; }
+    /* ── FEE SECTIONS ── */
+    .fee-section { padding: 4rem clamp(2rem, 5vw, 6rem); border-top: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: 3.5rem 1fr; gap: 0 1.5rem; align-items: start; margin-bottom: 2.5rem; }
+    .section-letter { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; line-height: 1; color: rgba(184,149,90,0.22); padding-top: 0.15rem; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 2.5vw, 2.1rem); font-weight: 300; line-height: 1.2; margin-bottom: 0.65rem; }
+    .section-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.85; max-width: 560px; }
 
-    /* ── SERVICE ROWS ── */
-    .service-row {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: start;
-      gap: 1.5rem;
-      padding: 1.4rem 2rem;
-      border-bottom: 1px solid var(--line);
-      transition: background 0.2s;
-    }
-    .service-row:last-child { border-bottom: none; }
-    .service-row:hover { background: rgba(184,149,90,0.03); }
+    /* ── FEE GRID (same pattern as services-grid) ── */
+    .fee-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 1px; }
+    .fee-card { background: var(--cream); padding: 1.75rem 2rem; position: relative; overflow: hidden; transition: background 0.3s; }
+    .fee-card::before { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width 0.4s ease; }
+    .fee-card:hover::before { width: 100%; }
+    .fee-card:hover { background: #F0EBE3; }
+    .fee-name { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 400; line-height: 1.35; margin-bottom: 0.4rem; }
+    .fee-desc { font-size: 0.73rem; color: var(--muted); line-height: 1.75; margin-bottom: 1.1rem; }
+    .fee-amount { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 300; color: var(--gold); line-height: 1; }
+    .fee-amount-sub { font-size: 0.62rem; color: var(--muted); letter-spacing: 0.06em; margin-top: 0.3rem; }
 
-    .service-info {}
-    .service-name {
-      font-size: 0.88rem; color: var(--dark); margin-bottom: 0.3rem; line-height: 1.45;
-    }
-    .service-note {
-      font-size: 0.72rem; color: var(--muted); line-height: 1.5;
-    }
-    .service-note em { color: var(--gold); font-style: normal; }
+    /* ── CALCULATOR ── */
+    .calc-card { border: 1px solid var(--line); border-left: 3px solid var(--gold); padding: 1.75rem 2rem; margin-bottom: 1px; }
+    .calc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; margin-bottom: 0.35rem; }
+    .calc-desc { font-size: 0.73rem; color: var(--muted); line-height: 1.75; margin-bottom: 1.25rem; }
+    .calc-row { display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap; }
+    .calc-input-wrap { flex: 1; min-width: 180px; }
+    .calc-input-wrap label { display: block; font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+    .calc-input { width: 100%; padding: 0.65rem 0.9rem; border: 1px solid var(--line); background: var(--cream); font-family: 'Jost', sans-serif; font-weight: 300; font-size: 0.9rem; color: var(--dark); outline: none; transition: border-color 0.2s; -moz-appearance: textfield; }
+    .calc-input::-webkit-outer-spin-button, .calc-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+    .calc-input:focus { border-color: var(--gold); }
+    .calc-result { border: 1px solid var(--line); border-left: 3px solid var(--gold); padding: 0.65rem 1.25rem; min-width: 200px; background: rgba(184,149,90,0.04); }
+    .calc-result-label { font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.2rem; }
+    .calc-result-value { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 300; color: var(--dark); }
+    .calc-min-note { font-size: 0.63rem; color: var(--muted); margin-top: 0.75rem; letter-spacing: 0.04em; }
 
-    .service-price-area {
-      text-align: right; min-width: 200px;
-    }
+    /* ── SEO BLOCK ── */
+    .seo-block { border: 1px solid var(--line); padding: 1.5rem 2rem; margin-top: 1px; background: rgba(184,149,90,0.025); }
+    .seo-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: var(--dark); margin-bottom: 0.5rem; }
+    .seo-block p { font-size: 0.75rem; color: var(--muted); line-height: 1.9; }
 
-    /* Flat fee */
-    .price-flat .price-main {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem; font-weight: 300; color: var(--dark); line-height: 1;
-    }
-    .price-flat .price-currency {
-      font-size: 0.7rem; letter-spacing: 0.12em; color: var(--gold); text-transform: uppercase;
-      margin-top: 0.2rem;
-    }
+    /* ── CONTACT (copied from index.html) ── */
+    .contact { background: var(--dark); color: var(--cream); text-align: center; padding: 6rem 2rem; }
+    .contact .section-label { justify-content: center; }
+    .contact .section-label::after { display: none; }
+    .contact-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--cream); margin-bottom: 1.5rem; line-height: 1.15; }
+    .contact-sub { font-size: 0.9rem; color: rgba(247,243,238,0.55); margin-bottom: 3rem; }
+    .contact-links { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; max-width: 1300px; margin: 0 auto; }
+    .contact-link { display: flex; align-items: center; gap: 0.6rem; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); text-decoration: none; border: 1px solid rgba(184,149,90,0.3); padding: 0.85rem 2rem; transition: border-color 0.3s, background 0.3s; }
+    .contact-link:hover { border-color: var(--gold); background: rgba(184,149,90,0.1); }
 
-    /* Percentage fee with input */
-    .price-pct {
-      display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;
-    }
-    .pct-input-row {
-      display: flex; align-items: center; gap: 0.5rem;
-    }
-    .pct-label { font-size: 0.68rem; color: var(--muted); white-space: nowrap; }
-    .pct-input {
-      width: 120px; padding: 0.4rem 0.6rem;
-      border: 1px solid var(--line); background: var(--cream);
-      font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 300;
-      color: var(--dark); text-align: right;
-      transition: border-color 0.2s; outline: none;
-    }
-    .pct-input:focus { border-color: var(--gold); }
-    .pct-result {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem; font-weight: 300; color: var(--dark); line-height: 1;
-    }
-    .pct-result-label {
-      font-size: 0.65rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;
-      margin-top: 0.15rem;
-    }
-    .pct-min-note {
-      font-size: 0.63rem; color: var(--muted); margin-top: 0.1rem;
-    }
-
-    /* Hourly */
-    .price-hourly {
-      display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;
-    }
-    .hourly-input-row {
-      display: flex; align-items: center; gap: 0.5rem;
-    }
-    .hourly-input {
-      width: 70px; padding: 0.4rem 0.6rem;
-      border: 1px solid var(--line); background: var(--cream);
-      font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 300;
-      color: var(--dark); text-align: right;
-      transition: border-color 0.2s; outline: none;
-    }
-    .hourly-input:focus { border-color: var(--gold); }
-    .hourly-result {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem; font-weight: 300; color: var(--dark); line-height: 1;
-    }
-    .hourly-result-label {
-      font-size: 0.65rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;
-      margin-top: 0.15rem;
-    }
-
-    /* ── CONTACT CTA ── */
-    .cta-section {
-      background: var(--dark);
-      padding: 4.5rem clamp(2rem, 6vw, 7rem);
-      display: flex; flex-direction: column; align-items: center;
-      text-align: center;
-      position: relative; overflow: hidden;
-    }
-    .cta-section::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(184,149,90,0.1) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .cta-section .section-label { justify-content: center; }
-    .cta-section .section-label::after { display: none; }
-    .cta-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      font-weight: 300; color: var(--cream); margin-bottom: 1rem;
-    }
-    .cta-sub { font-size: 0.88rem; color: rgba(247,243,238,0.55); margin-bottom: 2.5rem; max-width: 520px; line-height: 1.75; }
-    .cta-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
-    .cta-link {
-      display: inline-block; padding: 0.85rem 2.4rem;
-      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-      text-decoration: none; transition: all 0.3s;
-    }
-    .cta-link.primary { border: 1px solid var(--gold); color: var(--gold); }
-    .cta-link.primary:hover { background: var(--gold); color: var(--cream); }
-    .cta-link.secondary { border: 1px solid rgba(247,243,238,0.2); color: rgba(247,243,238,0.6); }
-    .cta-link.secondary:hover { border-color: rgba(247,243,238,0.5); color: var(--cream); }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--dark); border-top: 1px solid rgba(184,149,90,0.15);
-      padding: 1.5rem clamp(2rem, 5vw, 6rem);
-      display: flex; justify-content: space-between; align-items: center;
-    }
+    /* ── FOOTER (copied from index.html) ── */
+    footer { background: var(--dark); border-top: 1px solid rgba(184,149,90,0.15); padding: 1.5rem clamp(2rem, 5vw, 6rem); display: flex; justify-content: space-between; align-items: center; }
     footer p { font-size: 0.65rem; color: rgba(247,243,238,0.3); letter-spacing: 0.1em; }
     footer a { color: rgba(247,243,238,0.3); text-decoration: none; letter-spacing: 0.1em; }
 
-    /* ── LOADING OVERLAY ── */
-    .rates-loading {
-      display: inline-block; width: 8px; height: 8px;
-      border: 1px solid var(--gold-light);
-      border-top-color: var(--gold);
-      border-radius: 50%;
-      animation: spin 0.7s linear infinite;
-      margin-left: 4px; vertical-align: middle;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
+    /* ── ANIMATIONS ── */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 760px) {
+    @media (max-width: 900px) {
+      nav { padding: 1rem 2rem; }
       .nav-logo img { height: 65px; }
-      .page-hero { padding-top: 120px; }
       .lang-switcher { display: none; }
-      .service-row { grid-template-columns: 1fr; }
-      .service-price-area { text-align: left; }
-      .price-pct, .price-hourly { align-items: flex-start; }
-      .rates-note { display: none; }
-      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .page-hero { padding: 110px 2rem 4rem; }
+      .disclaimer { margin-left: 2rem; margin-right: 2rem; }
+      .fee-section { padding: 3rem 2rem; }
+      .fee-grid { grid-template-columns: 1fr; }
+      .calc-row { flex-direction: column; }
+      .calc-result { width: 100%; }
+      .section-head { grid-template-columns: 2.5rem 1fr; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 2rem; }
+      .contact { padding: 4rem 2rem; }
     }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .page-hero-inner { animation: fadeUp 0.8s 0.1s ease both; }
   </style>
 </head>
 <body>
 
   <div class="nav-overlay" id="navOverlay"></div>
 
-  <!-- ── NAV ── -->
   <nav>
     <div class="lang-switcher">
-      <a href="/en/index.html" class="active">EN</a>
+      <a href="/en/fee-estimator.html" class="active">EN</a>
       <a href="/tr/index-tr.html">TR</a>
       <a href="/ar/index-ar.html">AR</a>
       <a href="/de/index-de.html">DE</a>
@@ -429,707 +246,454 @@
   <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
     <li><a href="/en/index.html#about">About</a></li>
     <li><a href="/en/arbitration.html">Arbitration Services</a></li>
-    <li><a href="/en/fee-estimator.html" class="active-nav">Fee Estimator</a></li>
+    <li><a href="/en/fee-estimator.html">Fee Estimator</a></li>
     <li><a href="/en/blog.html">Knowledge Bank</a></li>
     <li><a href="/en/updates.html">Updates</a></li>
     <li><a href="/en/index.html#contact">Contact</a></li>
   </ul>
 
-  <!-- ══ PAGE HERO ══════════════════════════════════════════════════════════ -->
+  <!-- HERO -->
   <div class="page-hero">
-    <div class="page-hero-inner">
-      <p class="section-label">Transparency</p>
-      <h1 class="page-title">Legal Fee<br><em>Estimator</em></h1>
-      <p class="page-subtitle">
-        We believe in transparent pricing. The estimates below are based on the İzmir Bar Association's 2026 Recommended Minimum Fee Schedule, applied with 25% discount of the published rates. All fees are exclusive of VAT and disbursements.
-      </p>
-    </div>
-  </div>
-
-  <!-- ── DISCLAIMER ── -->
-  <div class="disclaimer">
-    <span class="disclaimer-icon">ℹ</span>
-    <p>
-      <strong>These are indicative estimates only, not binding quotes.</strong>
-      Actual fees depend on case complexity, counterparty conduct, institutional rules, and time required.
-      For percentage-based services, enter the approximate dispute or transaction value to see the estimated fee.
-      Fees shown are <strong>exclusive of VAT (KDV hariç)</strong> and out-of-pocket disbursements (filing fees, translation costs, travel, etc.).
-      A formal engagement letter with agreed fees will be provided before any mandate commences.
-    </p>
-  </div>
-
-  <!-- ══ ESTIMATOR ══════════════════════════════════════════════════════════ -->
-  <div class="estimator-wrap">
-
-    <!-- Currency bar -->
+    <p class="section-label">Transparency</p>
+    <h1>Legal Fee<br><em>Estimator</em></h1>
+    <p class="page-hero-sub">Estimates based on the İzmir Bar Association's 2026 Recommended Minimum Fee Schedule (effective 01.01.2026, decision no. 58/130), applied with a 25% discount on published rates. All figures exclude VAT and disbursements.</p>
     <div class="currency-bar">
-      <span class="currency-label">Display currency</span>
+      <span class="currency-label">Display in</span>
       <button class="currency-btn active" data-cur="TRY">₺ TRY</button>
       <button class="currency-btn" data-cur="USD">$ USD</button>
       <button class="currency-btn" data-cur="EUR">€ EUR</button>
       <button class="currency-btn" data-cur="GBP">£ GBP</button>
-      <span class="rates-note" id="ratesNote">Loading live rates… <span class="rates-loading"></span></span>
     </div>
-
-    <!-- ═══════════════════════════════════════════════
-         GROUP A — CONSULTATION & ADVISORY
-    ════════════════════════════════════════════════ -->
-    <div class="service-group">
-      <div class="group-header open" onclick="toggleGroup(this)">
-        <span class="group-letter">A</span>
-        <span class="group-title">Consultation & Advisory</span>
-        <span class="group-chevron">▼</span>
-      </div>
-      <div class="group-body open">
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">In-office consultation — first hour</div>
-            <div class="service-note">Initial meeting to assess your matter and advise on strategy.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="15000"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">In-office consultation — each additional 15 min</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="6375"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Video / audio consultation — first hour</div>
-            <div class="service-note">Remote consultation via Zoom, Teams or phone.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="11250"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Video / audio consultation — each additional 15 min</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="3750"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Written legal opinion</div>
-            <div class="service-note">Formal written analysis and legal opinion on your matter.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="30000"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Legal notice / demand letter (ihtarname)</div>
-            <div class="service-note">Formal pre-dispute notice to counterparty.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="24938"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════
-         GROUP B — ARBITRATION PROCEEDINGS
-    ════════════════════════════════════════════════ -->
-    <div class="service-group">
-      <div class="group-header" onclick="toggleGroup(this)">
-        <span class="group-letter">B</span>
-        <span class="group-title">Arbitration Proceedings — Counsel & Co-Counsel</span>
-        <span class="group-chevron">▼</span>
-      </div>
-      <div class="group-body">
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Statement of Claim / Memorial</div>
-            <div class="service-note">Drafting of the primary written submission, including pleadings and exhibits index.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="45000"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Statement of Defence / Counter-Memorial</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="45000"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Arbitration counsel — percentage of claim value</div>
-            <div class="service-note">Full representation including pleadings, hearings, and closing. <em>Minimum: ₺128,250</em></div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-pct" data-pct="12" data-min="128250">
-              <div class="pct-input-row">
-                <span class="pct-label">Claim value (TRY)</span>
-                <input class="pct-input" type="number" placeholder="e.g. 1,000,000" min="0">
-              </div>
-              <div class="pct-result">—</div>
-              <div class="pct-result-label">Estimated fee (excl. VAT)</div>
-              <div class="pct-min-note">12% of claim value · min. ₺128,250</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Procedural motions & interim measures applications</div>
-            <div class="service-note">Emergency arbitrator applications, anti-suit injunctions, provisional measures.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="57750"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Appeal / annulment proceedings (Regional Court of Appeal)</div>
-            <div class="service-note">Single-hearing matters. Multi-hearing matters are billed at a higher rate.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="183750"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Cassation / Supreme Court proceedings</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="118500"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════
-         GROUP C — RECOGNITION & ENFORCEMENT
-    ════════════════════════════════════════════════ -->
-    <div class="service-group">
-      <div class="group-header" onclick="toggleGroup(this)">
-        <span class="group-letter">C</span>
-        <span class="group-title">Recognition & Enforcement of Foreign Awards</span>
-        <span class="group-chevron">▼</span>
-      </div>
-      <div class="group-body">
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Recognition proceedings (Tanıma) — foreign court judgments</div>
-            <div class="service-note">Exequatur before Turkish courts for foreign judgments or awards.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="108750"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Enforcement proceedings (Tenfiz) — foreign arbitral awards</div>
-            <div class="service-note">Enforcement of foreign arbitral awards under New York Convention.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="131250"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Enforcement proceedings — family / matrimonial awards (Tenfiz)</div>
-            <div class="service-note">Cross-border divorce judgments, maintenance orders, custody decisions.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="131250"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Execution of recognised award (icra takibi)</div>
-            <div class="service-note">Enforcement via bailiff — percentage of award value recovered.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-pct" data-pct="12" data-min="0">
-              <div class="pct-input-row">
-                <span class="pct-label">Award value (TRY)</span>
-                <input class="pct-input" type="number" placeholder="e.g. 500,000" min="0">
-              </div>
-              <div class="pct-result">—</div>
-              <div class="pct-result-label">Estimated fee (excl. VAT)</div>
-              <div class="pct-min-note">12% of award value</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════
-         GROUP D — CONTRACT DRAFTING & STRUCTURING
-    ════════════════════════════════════════════════ -->
-    <div class="service-group">
-      <div class="group-header" onclick="toggleGroup(this)">
-        <span class="group-letter">D</span>
-        <span class="group-title">Contract Drafting & Dispute Prevention</span>
-        <span class="group-chevron">▼</span>
-      </div>
-      <div class="group-body">
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Arbitration clause drafting & dispute resolution design</div>
-            <div class="service-note">Bespoke clause tailored to institutional rules (HKIAC, ICC, UNCITRAL, ISTAC, etc.).</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="49125"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Commercial / investment contract — fixed value</div>
-            <div class="service-note">Full negotiation and drafting of a commercial agreement. <em>Minimum: ₺49,125</em></div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-pct" data-pct="12" data-min="49125">
-              <div class="pct-input-row">
-                <span class="pct-label">Contract value (TRY)</span>
-                <input class="pct-input" type="number" placeholder="e.g. 2,000,000" min="0">
-              </div>
-              <div class="pct-result">—</div>
-              <div class="pct-result-label">Estimated fee (excl. VAT)</div>
-              <div class="pct-min-note">12% of contract value · min. ₺49,125</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Commercial contract — non-monetary / framework</div>
-            <div class="service-note">Cooperation agreements, MOUs, service framework agreements without fixed monetary value.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="49125"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Corporate documents — articles, bylaws, shareholder agreements</div>
-            <div class="service-note">Foundation documents for Turkish-incorporated entities and joint ventures.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="172500"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Sanctions & regulatory exposure assessment</div>
-            <div class="service-note">Risk analysis for cross-border transactions subject to US/EU/UN sanctions.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="49125"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════
-         GROUP E — IMMIGRATION & RESIDENCE
-    ════════════════════════════════════════════════ -->
-    <div class="service-group">
-      <div class="group-header" onclick="toggleGroup(this)">
-        <span class="group-letter">E</span>
-        <span class="group-title">Immigration, Residence & Work Permits</span>
-        <span class="group-chevron">▼</span>
-      </div>
-      <div class="group-body">
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Turkish residence permit application</div>
-            <div class="service-note">Short-term, family, student or long-term residence permits.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="131250"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Turkish work permit application</div>
-            <div class="service-note">Employee or independent professional work permit filings.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="131250"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Citizenship application (naturalisation / acquisition)</div>
-            <div class="service-note">Full file preparation for Turkish citizenship, including citizenship-by-investment track.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="156000"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════
-         GROUP F — CROSS-BORDER FAMILY LAW
-    ════════════════════════════════════════════════ -->
-    <div class="service-group">
-      <div class="group-header" onclick="toggleGroup(this)">
-        <span class="group-letter">F</span>
-        <span class="group-title">Cross-Border Family Law</span>
-        <span class="group-chevron">▼</span>
-      </div>
-      <div class="group-body">
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Uncontested divorce (anlaşmalı boşanma)</div>
-            <div class="service-note">Including settlement agreement drafting and court representation.</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="108000"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Contested divorce (çekişmeli boşanma)</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="140250"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Contested divorce with damages claim</div>
-            <div class="service-note">Includes material and/or moral damages in addition to divorce proceedings. <em>Minimum: ₺140,250</em></div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-pct" data-pct="12" data-min="140250">
-              <div class="pct-input-row">
-                <span class="pct-label">Damages claimed (TRY)</span>
-                <input class="pct-input" type="number" placeholder="e.g. 300,000" min="0">
-              </div>
-              <div class="pct-result">—</div>
-              <div class="pct-result-label">Estimated fee (excl. VAT)</div>
-              <div class="pct-min-note">12% of claim value · min. ₺140,250</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Child custody & visitation proceedings</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="93000"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Maintenance (nafaka) proceedings</div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-flat">
-              <div class="price-main" data-base="89250"></div>
-              <div class="price-currency"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-row">
-          <div class="service-info">
-            <div class="service-name">Matrimonial property regime / division of assets</div>
-            <div class="service-note">Claims arising from participation in acquired property regime. <em>Minimum: ₺140,250</em></div>
-          </div>
-          <div class="service-price-area">
-            <div class="price-pct" data-pct="12" data-min="140250">
-              <div class="pct-input-row">
-                <span class="pct-label">Asset value (TRY)</span>
-                <input class="pct-input" type="number" placeholder="e.g. 5,000,000" min="0">
-              </div>
-              <div class="pct-result">—</div>
-              <div class="pct-result-label">Estimated fee (excl. VAT)</div>
-              <div class="pct-min-note">12% of asset value · min. ₺140,250</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div><!-- /estimator-wrap -->
-
-  <!-- ══ CTA ════════════════════════════════════════════════════════════════ -->
-  <div class="cta-section">
-    <p class="section-label">Next Steps</p>
-    <h2 class="cta-title">Request a Formal Quote</h2>
-    <p class="cta-sub">The estimates above give you a clear starting point. Every mandate is different — reach out for a scoped proposal tailored to your matter.</p>
-    <div class="cta-links">
-      <a href="https://tally.so/r/zxZeDE" target="_blank" rel="noopener noreferrer" class="cta-link primary">✎ &nbsp; Inquiry Form</a>
-      <a href="mailto:info@ozgorenlawfirm.com" class="cta-link secondary">✉ &nbsp; info@ozgorenlawfirm.com</a>
-    </div>
+    <p class="rate-note" id="rate-note">Loading live rates…</p>
   </div>
 
-  <!-- ══ FOOTER ═════════════════════════════════════════════════════════════ -->
+  <div class="disclaimer">
+    <strong>These are indicative estimates only, not binding quotes.</strong> Actual fees depend on case complexity, counterparty conduct, institutional rules, and time required. A formal engagement letter with agreed fees is always provided before any mandate commences. Fees are exclusive of VAT (KDV hariç) and out-of-pocket disbursements.
+  </div>
+
+  <!-- A -->
+  <section class="fee-section reveal" id="consultation">
+    <div class="section-head">
+      <div class="section-letter">A</div>
+      <div class="section-meta">
+        <p class="section-label">Advisory</p>
+        <h2 class="section-title">Consultation & Advisory</h2>
+        <p class="section-desc">Every matter begins with a conversation. We offer in-office and remote consultations to help you understand your legal position and options before committing to formal proceedings.</p>
+      </div>
+    </div>
+    <div class="fee-grid">
+      <div class="fee-card">
+        <div class="fee-name">In-office consultation — first hour</div>
+        <div class="fee-desc">Initial meeting to assess your matter and advise on strategy.</div>
+        <div class="fee-amount" data-try="15000">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">In-office consultation — each additional 15 min</div>
+        <div class="fee-desc">Continued in-person advisory time beyond the first hour.</div>
+        <div class="fee-amount" data-try="6375">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Video / audio consultation — first hour</div>
+        <div class="fee-desc">Remote consultation via Zoom, Teams or phone.</div>
+        <div class="fee-amount" data-try="11250">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Video / audio consultation — each additional 15 min</div>
+        <div class="fee-desc">Continued remote advisory time beyond the first hour.</div>
+        <div class="fee-amount" data-try="3750">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Written legal opinion</div>
+        <div class="fee-desc">Formal written analysis and legal opinion on your matter.</div>
+        <div class="fee-amount" data-try="30000">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Legal notice / demand letter (ihtarname)</div>
+        <div class="fee-desc">Formal pre-dispute notice to counterparty — often the most cost-effective first step.</div>
+        <div class="fee-amount" data-try="24938">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+    </div>
+    <div class="seo-block">
+      <h3>When should you request a legal opinion on a Turkish law matter?</h3>
+      <p>If you are a foreign company considering a transaction with a Turkish counterparty, planning to enforce a contract in Turkey, or dealing with a regulatory issue affecting your Turkish operations, a written legal opinion from a qualified Turkish lawyer provides documented guidance you can share with your board, investors, or compliance team. It is particularly valuable before signing contracts, commencing arbitration, or making investment decisions that touch Turkish jurisdiction.</p>
+    </div>
+  </section>
+
+  <!-- B -->
+  <section class="fee-section reveal" id="arbitration">
+    <div class="section-head">
+      <div class="section-letter">B</div>
+      <div class="section-meta">
+        <p class="section-label">Proceedings</p>
+        <h2 class="section-title">Arbitration Proceedings — Counsel & Co-Counsel</h2>
+        <p class="section-desc">We act as lead counsel or co-counsel in international commercial arbitration under ICC, HKIAC, UNCITRAL, ISTAC, and other institutional rules. Our role covers everything from the statement of claim through the final award.</p>
+      </div>
+    </div>
+    <div class="fee-grid">
+      <div class="fee-card">
+        <div class="fee-name">Statement of claim / memorial</div>
+        <div class="fee-desc">Drafting of the primary written submission, including pleadings and exhibits index.</div>
+        <div class="fee-amount" data-try="128250">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Statement of defence / counter-memorial</div>
+        <div class="fee-desc">Full written response including counter-arguments and documentary exhibits.</div>
+        <div class="fee-amount" data-try="128250">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Procedural motions & interim measures</div>
+        <div class="fee-desc">Emergency arbitrator applications, anti-suit injunctions, provisional measures.</div>
+        <div class="fee-amount" data-try="87750">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Appeal / annulment proceedings (Bölge Adliye)</div>
+        <div class="fee-desc">Matters before the Turkish Regional Court of Appeal.</div>
+        <div class="fee-amount" data-try="183750">—</div>
+        <div class="fee-amount-sub">single hearing · multiple hearings: <span data-try="291000">—</span></div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Cassation / Supreme Court (Yargıtay)</div>
+        <div class="fee-desc">Proceedings before the Turkish Court of Cassation.</div>
+        <div class="fee-amount" data-try="118500">—</div>
+        <div class="fee-amount-sub">without hearing · with hearing: <span data-try="183750">—</span></div>
+      </div>
+    </div>
+    <div class="calc-card">
+      <div class="calc-title">Arbitration counsel — percentage of claim value</div>
+      <div class="calc-desc">Full representation including pleadings, hearings, and closing submissions. Minimum fee applies regardless of claim size.</div>
+      <div class="calc-row">
+        <div class="calc-input-wrap">
+          <label>Claim value (TRY)</label>
+          <input class="calc-input" type="number" id="arb-input" placeholder="e.g. 5000000" min="0">
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Estimated fee</div>
+          <div class="calc-result-value" id="arb-result">—</div>
+        </div>
+      </div>
+      <div class="calc-min-note">12% of claim value · minimum <span data-try="128250">—</span> · excl. VAT</div>
+    </div>
+    <div class="seo-block">
+      <h3>International arbitration in Turkey — what foreign parties need to know</h3>
+      <p>Turkey is a signatory to the New York Convention and has a modern arbitration framework aligned with the UNCITRAL Model Law. Turkish courts have developed a consistent body of case law on arbitrability, enforcement, and challenges to awards. For foreign parties with disputes involving Turkish counterparties, Turkish-seated arbitration under ISTAC rules or a neutral seat (ICC, HKIAC) with Turkish-qualified co-counsel is often the most effective path to resolution and eventual enforcement.</p>
+    </div>
+  </section>
+
+  <!-- C -->
+  <section class="fee-section reveal" id="enforcement">
+    <div class="section-head">
+      <div class="section-letter">C</div>
+      <div class="section-meta">
+        <p class="section-label">Enforcement</p>
+        <h2 class="section-title">Recognition & Enforcement of Foreign Awards in Turkey</h2>
+        <p class="section-desc">Obtaining a favourable arbitral award abroad is only part of the challenge. If the losing party's assets are in Turkey, you need to enforce that award before Turkish courts — a distinct legal process requiring specialist knowledge of both Turkish procedural law and the New York Convention framework.</p>
+      </div>
+    </div>
+    <div class="fee-grid">
+      <div class="fee-card">
+        <div class="fee-name">Recognition proceedings (tanıma) — foreign court judgments</div>
+        <div class="fee-desc">Exequatur before Turkish courts for foreign court judgments or arbitral awards.</div>
+        <div class="fee-amount" data-try="108750">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Enforcement proceedings (tenfiz) — foreign arbitral awards</div>
+        <div class="fee-desc">Enforcement of foreign arbitral awards under the New York Convention 1958.</div>
+        <div class="fee-amount" data-try="108750">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Enforcement — family / matrimonial awards</div>
+        <div class="fee-desc">Cross-border divorce judgments, maintenance orders, and custody decisions.</div>
+        <div class="fee-amount" data-try="131250">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+    </div>
+    <div class="calc-card">
+      <div class="calc-title">Execution of recognised award (icra takibi)</div>
+      <div class="calc-desc">Once your foreign award is recognised by Turkish courts, bailiff-led enforcement recovers the amount. Fee is percentage-based on the award value recovered.</div>
+      <div class="calc-row">
+        <div class="calc-input-wrap">
+          <label>Award value (TRY)</label>
+          <input class="calc-input" type="number" id="enf-input" placeholder="e.g. 2000000" min="0">
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Estimated fee</div>
+          <div class="calc-result-value" id="enf-result">—</div>
+        </div>
+      </div>
+      <div class="calc-min-note">12% of award value · excl. VAT</div>
+    </div>
+    <div class="seo-block">
+      <h3>Enforcing a foreign arbitral award in Turkey under the New York Convention</h3>
+      <p>Turkey ratified the New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards in 1992. Turkish courts are generally receptive to enforcement applications, though grounds for refusal under Article V — including lack of proper notice, non-arbitrability, and public policy — are assessed carefully. Proceedings typically take between 6 and 18 months depending on the civil court's caseload and whether the respondent opposes the application. Early engagement with Turkish counsel after an award is issued significantly improves asset tracing and enforcement outcomes.</p>
+    </div>
+  </section>
+
+  <!-- D -->
+  <section class="fee-section reveal" id="contracts">
+    <div class="section-head">
+      <div class="section-letter">D</div>
+      <div class="section-meta">
+        <p class="section-label">Prevention</p>
+        <h2 class="section-title">Contract Drafting & Dispute Prevention</h2>
+        <p class="section-desc">A well-drafted arbitration clause and properly structured commercial contract can prevent costly disputes from arising in the first place. We advise on bespoke dispute resolution architecture tailored to each transaction and counterparty relationship.</p>
+      </div>
+    </div>
+    <div class="fee-grid">
+      <div class="fee-card">
+        <div class="fee-name">Arbitration clause drafting & dispute resolution design</div>
+        <div class="fee-desc">Bespoke clause tailored to institutional rules (HKIAC, ICC, UNCITRAL, ISTAC, etc.).</div>
+        <div class="fee-amount" data-try="49125">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Commercial contract — non-monetary / framework</div>
+        <div class="fee-desc">Cooperation agreements, MOUs, and service framework agreements without fixed monetary value.</div>
+        <div class="fee-amount" data-try="49125">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Corporate documents — articles, bylaws, shareholder agreements</div>
+        <div class="fee-desc">Foundation documents for Turkish-incorporated entities and joint ventures.</div>
+        <div class="fee-amount" data-try="172500">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Sanctions & regulatory exposure assessment</div>
+        <div class="fee-desc">Risk analysis for cross-border transactions subject to US/EU/UN sanctions regimes.</div>
+        <div class="fee-amount" data-try="30000">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+    </div>
+    <div class="calc-card">
+      <div class="calc-title">Commercial / investment contract — fixed value</div>
+      <div class="calc-desc">Full negotiation and drafting of a commercial agreement with a defined contract value. Minimum fee applies.</div>
+      <div class="calc-row">
+        <div class="calc-input-wrap">
+          <label>Contract value (TRY)</label>
+          <input class="calc-input" type="number" id="contract-input" placeholder="e.g. 10000000" min="0">
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Estimated fee</div>
+          <div class="calc-result-value" id="contract-result">—</div>
+        </div>
+      </div>
+      <div class="calc-min-note">12% of contract value · minimum <span data-try="49125">—</span> · excl. VAT</div>
+    </div>
+    <div class="seo-block">
+      <h3>Why arbitration clause drafting matters for Turkey-connected transactions</h3>
+      <p>Many cross-border disputes involving Turkish parties arise not from bad faith but from poorly drafted contracts that fail to address governing law, seat of arbitration, language of proceedings, and the scope of arbitrable disputes. A defective clause can render an arbitration agreement unenforceable in Turkey or create jurisdictional challenges that delay resolution by years. Investing in specialist drafting at the outset is significantly less expensive than litigating clause validity mid-dispute.</p>
+    </div>
+  </section>
+
+  <!-- E -->
+  <section class="fee-section reveal" id="immigration">
+    <div class="section-head">
+      <div class="section-letter">E</div>
+      <div class="section-meta">
+        <p class="section-label">Immigration</p>
+        <h2 class="section-title">Immigration, Residence & Work Permits</h2>
+        <p class="section-desc">We assist foreign nationals and their employers with Turkish residence and work permit applications, as well as Turkish citizenship by investment and naturalisation procedures.</p>
+      </div>
+    </div>
+    <div class="fee-grid">
+      <div class="fee-card">
+        <div class="fee-name">Turkish residence permit application</div>
+        <div class="fee-desc">Short-term, family, student or long-term residence permits. Includes document preparation and filing.</div>
+        <div class="fee-amount" data-try="93000">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Turkish work permit application</div>
+        <div class="fee-desc">Employee or independent professional work permit filings with the Ministry of Labour.</div>
+        <div class="fee-amount" data-try="131250">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Citizenship application (naturalisation / acquisition)</div>
+        <div class="fee-desc">Full file preparation for Turkish citizenship, including the citizenship-by-investment track.</div>
+        <div class="fee-amount" data-try="156000">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+    </div>
+    <div class="seo-block">
+      <h3>Turkish residence and work permits for foreign professionals and investors</h3>
+      <p>Turkey offers several residence permit categories suited to foreign investors, retirees, remote workers, and employees of Turkish companies. Work permit applications are processed by the Ministry of Labour and Social Security and typically require coordination between employer and employee. For those considering Turkish citizenship by investment, the programme requires a qualifying real estate purchase or fund investment, combined with a formal application through the Directorate General of Migration Management. Processing times and documentation requirements change periodically; working with a qualified Turkish lawyer ensures your application is complete and correctly filed at the outset.</p>
+    </div>
+  </section>
+
+  <!-- F -->
+  <section class="fee-section reveal" id="family-law">
+    <div class="section-head">
+      <div class="section-letter">F</div>
+      <div class="section-meta">
+        <p class="section-label">Family Law</p>
+        <h2 class="section-title">Cross-Border Family Law</h2>
+        <p class="section-desc">International family matters involving Turkish jurisdiction — including divorce, custody, maintenance, and matrimonial property division — require a lawyer who understands both Turkish family law and how it interacts with foreign legal systems and international conventions.</p>
+      </div>
+    </div>
+    <div class="fee-grid">
+      <div class="fee-card">
+        <div class="fee-name">Uncontested divorce (anlaşmalı boşanma)</div>
+        <div class="fee-desc">Including settlement agreement drafting and court representation before Turkish family courts.</div>
+        <div class="fee-amount" data-try="108000">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Contested divorce (çekişmeli boşanma)</div>
+        <div class="fee-desc">Full representation in contested divorce proceedings before Turkish courts.</div>
+        <div class="fee-amount" data-try="140250">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Child custody & visitation proceedings</div>
+        <div class="fee-desc">Representation in Turkish family court custody and access proceedings.</div>
+        <div class="fee-amount" data-try="46500">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-name">Maintenance (nafaka) proceedings</div>
+        <div class="fee-desc">Applications for spousal or child maintenance in Turkish courts.</div>
+        <div class="fee-amount" data-try="89250">—</div>
+        <div class="fee-amount-sub">excl. VAT</div>
+      </div>
+    </div>
+    <div class="calc-card">
+      <div class="calc-title">Contested divorce with damages claim</div>
+      <div class="calc-desc">Includes material and/or moral damages in addition to divorce proceedings. Fee is percentage-based on the damages claimed.</div>
+      <div class="calc-row">
+        <div class="calc-input-wrap">
+          <label>Damages claimed (TRY)</label>
+          <input class="calc-input" type="number" id="divorce-input" placeholder="e.g. 500000" min="0">
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Estimated fee</div>
+          <div class="calc-result-value" id="divorce-result">—</div>
+        </div>
+      </div>
+      <div class="calc-min-note">12% of claim value · minimum <span data-try="140250">—</span> · excl. VAT</div>
+    </div>
+    <div class="calc-card" style="margin-top: 1px;">
+      <div class="calc-title">Matrimonial property regime / division of assets</div>
+      <div class="calc-desc">Claims arising from participation in the acquired property regime under Turkish law.</div>
+      <div class="calc-row">
+        <div class="calc-input-wrap">
+          <label>Asset value (TRY)</label>
+          <input class="calc-input" type="number" id="asset-input" placeholder="e.g. 3000000" min="0">
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Estimated fee</div>
+          <div class="calc-result-value" id="asset-result">—</div>
+        </div>
+      </div>
+      <div class="calc-min-note">12% of asset value · minimum <span data-try="140250">—</span> · excl. VAT</div>
+    </div>
+    <div class="seo-block">
+      <h3>International divorce and custody matters involving Turkish courts</h3>
+      <p>Cross-border family disputes involving Turkey are often complicated by questions of which country's courts have jurisdiction, which country's law governs the marriage, and whether a foreign judgment or custody order will be recognised in Turkey. Turkey is a party to the Hague Convention on the Civil Aspects of International Child Abduction, which affects how cross-border custody disputes are handled when one parent relocates a child to or from Turkey without consent. Early specialist advice is important in these matters, as procedural missteps can significantly affect outcomes.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <p class="section-label centered">Contact</p>
+    <h2 class="contact-title">Let's Work Together</h2>
+    <p class="contact-sub">Available for international arbitration mandates, co-counsel engagements, and pre-dispute advisory.</p>
+    <div class="contact-links">
+      <a href="https://tally.so/r/zxZeDE" target="_blank" rel="noopener noreferrer" class="contact-link">✎ &nbsp; Inquiry Form</a>
+      <a href="mailto:info@ozgorenlawfirm.com" class="contact-link">✉ &nbsp; info@ozgorenlawfirm.com</a>
+      <a href="tel:+905431465266" class="contact-link">☎ &nbsp; +90 543 146 52 66</a>
+      <a href="https://www.linkedin.com/in/selinozgoren/" target="_blank" rel="noopener noreferrer" class="contact-link">↗ &nbsp; LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Özgören Law Firm. All rights reserved. · Fees shown are indicative, excl. VAT.</p>
+    <p>© 2026 Özgören Law Firm. All rights reserved.</p>
     <p>
-      <a href="/en/arbitration.html">Arbitration Services</a>
+      <a href="/en/arbitration-lawyer-izmir.html">Arbitration Lawyer Izmir</a>
       &nbsp;·&nbsp; İzmir, Türkiye
     </p>
   </footer>
 
-  <!-- ══ SCRIPTS ════════════════════════════════════════════════════════════ -->
   <script>
-    // ── ACCORDION ──────────────────────────────────────────────────────────
-    function toggleGroup(header) {
-      header.classList.toggle('open');
-      header.nextElementSibling.classList.toggle('open');
-    }
+    // Nav drawer
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const overlay   = document.getElementById('navOverlay');
+    function openMenu() { hamburger.classList.add('open'); navLinks.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; hamburger.setAttribute('aria-expanded','true'); hamburger.setAttribute('aria-label','Close navigation menu'); }
+    function closeMenu() { hamburger.classList.remove('open'); navLinks.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; hamburger.setAttribute('aria-expanded','false'); hamburger.setAttribute('aria-label','Open navigation menu'); }
+    hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
+    overlay.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && navLinks.classList.contains('open')) closeMenu(); });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href && href.startsWith('#')) { e.preventDefault(); closeMenu(); setTimeout(() => { const t = document.querySelector(href); if (t) t.scrollIntoView({ behavior: 'smooth' }); }, 420); }
+        else { closeMenu(); }
+      });
+    });
 
-    // ── CURRENCY & RATES ───────────────────────────────────────────────────
-    let rates = { TRY: 1, USD: null, EUR: null, GBP: null };
+    // Scroll reveal
+    const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // Currency & calculator
+    const RATES = { TRY: 1, USD: null, EUR: null, GBP: null };
+    const SYMBOLS = { TRY: '₺', USD: '$', EUR: '€', GBP: '£' };
     let activeCur = 'TRY';
 
-    const SYMBOLS = { TRY: '₺', USD: '$', EUR: '€', GBP: '£' };
-    const NAMES   = { TRY: 'TRY', USD: 'USD', EUR: 'EUR', GBP: 'GBP' };
-
     async function fetchRates() {
-      const note = document.getElementById('ratesNote');
-      note.innerHTML = 'Fetching live rates… <span class="rates-loading"></span>';
       try {
-        // Use open exchange-rates compatible API (no key needed for TRY base pairs via frankfurter)
-        const res = await fetch('https://api.frankfurter.app/latest?from=TRY&to=USD,EUR,GBP');
-        const data = await res.json();
-        rates.USD = data.rates.USD;
-        rates.EUR = data.rates.EUR;
-        rates.GBP = data.rates.GBP;
-        const ts = new Date().toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit' });
-        note.innerHTML = `Live rates as of ${ts} &nbsp;·&nbsp; <button id="refresh-rates" onclick="fetchRates()">Refresh</button>`;
-      } catch(e) {
-        // Fallback approximate rates
-        rates.USD = 0.0285;
-        rates.EUR = 0.0262;
-        rates.GBP = 0.0224;
-        note.innerHTML = `Approximate rates (offline fallback) &nbsp;·&nbsp; <button id="refresh-rates" onclick="fetchRates()">Retry</button>`;
+        const r = await fetch('https://open.er-api.com/v6/latest/TRY');
+        const d = await r.json();
+        if (d.rates) { RATES.USD = d.rates.USD; RATES.EUR = d.rates.EUR; RATES.GBP = d.rates.GBP; document.getElementById('rate-note').textContent = 'Live exchange rates loaded · Estimates are approximate'; }
+      } catch {
+        RATES.USD = 0.028; RATES.EUR = 0.026; RATES.GBP = 0.022;
+        document.getElementById('rate-note').textContent = 'Using approximate rates · Refresh for latest';
       }
       renderAll();
     }
 
-    function convertFromTRY(amountTRY) {
-      if (activeCur === 'TRY') return amountTRY;
-      if (!rates[activeCur]) return null;
-      return amountTRY * rates[activeCur];
-    }
-
-    function formatAmount(amountTRY) {
-      const converted = convertFromTRY(amountTRY);
-      if (converted === null) return '—';
-      const sym = SYMBOLS[activeCur];
-      if (activeCur === 'TRY') {
-        return sym + ' ' + Math.round(converted).toLocaleString('en-GB');
-      }
-      return sym + ' ' + converted.toLocaleLocale('en-GB', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-    }
-
-    function fmtNum(amountTRY) {
-      const converted = convertFromTRY(amountTRY);
-      if (converted === null) return '—';
-      if (activeCur === 'TRY') return Math.round(converted).toLocaleString('en-GB');
-      return converted.toLocaleString('en-GB', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-    }
-
-    // Render all flat prices
-    function renderFlatPrices() {
-      document.querySelectorAll('.price-flat').forEach(el => {
-        const base = parseFloat(el.querySelector('[data-base]').dataset.base);
-        el.querySelector('.price-main').textContent = SYMBOLS[activeCur] + ' ' + fmtNum(base);
-        el.querySelector('.price-currency').textContent = NAMES[activeCur] + ' · excl. VAT';
-      });
-    }
-
-    // Render pct fee result
-    function calcPct(container) {
-      const pct = parseFloat(container.dataset.pct) / 100;
-      const minTRY = parseFloat(container.dataset.min);
-      const input = container.querySelector('.pct-input');
-      const result = container.querySelector('.pct-result');
-      const minNote = container.querySelector('.pct-min-note');
-
-      // Update min note label in current currency
-      const minLabel = minTRY > 0
-        ? `${parseFloat(container.dataset.pct)}% of value · min. ${SYMBOLS[activeCur]}${fmtNum(minTRY)}`
-        : `${parseFloat(container.dataset.pct)}% of value`;
-      minNote.textContent = minLabel;
-
-      const rawVal = parseFloat(input.value.replace(/[^\d.]/g, ''));
-      if (!rawVal || isNaN(rawVal)) { result.textContent = '—'; return; }
-
-      // Input is assumed TRY — if user is in another currency, convert input back to TRY
-      let valueTRY = rawVal;
-      if (activeCur !== 'TRY' && rates[activeCur]) {
-        valueTRY = rawVal / rates[activeCur];
-      }
-      let feeTRY = Math.max(valueTRY * pct, minTRY);
-      result.textContent = SYMBOLS[activeCur] + ' ' + fmtNum(feeTRY);
-    }
+    function convert(v) { const r = RATES[activeCur]; return r ? v * r : null; }
+    function fmt(val) { if (val === null) return '—'; return SYMBOLS[activeCur] + Math.round(val).toLocaleString(activeCur === 'TRY' ? 'tr-TR' : 'en-US'); }
 
     function renderAll() {
-      renderFlatPrices();
-      document.querySelectorAll('.price-pct').forEach(el => calcPct(el));
+      document.querySelectorAll('[data-try]').forEach(el => { el.textContent = fmt(convert(parseFloat(el.dataset.try))); });
+      recalcAll();
     }
 
-    // Currency button clicks
+    function calcFee(inId, outId, pct, minTRY) {
+      const raw = parseFloat(document.getElementById(inId).value);
+      const el = document.getElementById(outId);
+      el.textContent = (!raw || raw <= 0) ? '—' : fmt(convert(Math.max(raw * pct, minTRY || 0)));
+    }
+
+    function recalcAll() {
+      calcFee('arb-input', 'arb-result', 0.12, 128250);
+      calcFee('enf-input', 'enf-result', 0.12, 0);
+      calcFee('contract-input', 'contract-result', 0.12, 49125);
+      calcFee('divorce-input', 'divorce-result', 0.12, 140250);
+      calcFee('asset-input', 'asset-result', 0.12, 140250);
+    }
+
     document.querySelectorAll('.currency-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.currency-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeCur = btn.dataset.cur;
-
-        // Update input placeholders
-        document.querySelectorAll('.pct-input').forEach(inp => {
-          const label = inp.previousElementSibling;
-          if (label) {
-            const baseTxt = label.textContent.split('(')[0].trim();
-            label.textContent = `${baseTxt} (${NAMES[activeCur]})`;
-          }
-        });
-
-        renderAll();
-      });
+      btn.addEventListener('click', () => { document.querySelectorAll('.currency-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); activeCur = btn.dataset.cur; renderAll(); });
     });
+    document.querySelectorAll('.calc-input').forEach(inp => inp.addEventListener('input', recalcAll));
 
-    // Live pct recalculation on input
-    document.querySelectorAll('.price-pct').forEach(container => {
-      container.querySelector('.pct-input').addEventListener('input', () => calcPct(container));
-    });
-
-    // ── NAV DRAWER ─────────────────────────────────────────────────────────
-    const hamburger = document.getElementById('hamburger');
-    const navLinks  = document.getElementById('navLinks');
-    const overlay   = document.getElementById('navOverlay');
-    function openMenu() {
-      hamburger.classList.add('open'); navLinks.classList.add('open');
-      overlay.classList.add('open'); document.body.style.overflow = 'hidden';
-      hamburger.setAttribute('aria-expanded', 'true');
-    }
-    function closeMenu() {
-      hamburger.classList.remove('open'); navLinks.classList.remove('open');
-      overlay.classList.remove('open'); document.body.style.overflow = '';
-      hamburger.setAttribute('aria-expanded', 'false');
-    }
-    hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
-    overlay.addEventListener('click', closeMenu);
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
-
-    // ── INIT ───────────────────────────────────────────────────────────────
     fetchRates();
   </script>
+  <script async src="https://tally.so/widgets/embed.js"></script>
 </body>
 </html>
