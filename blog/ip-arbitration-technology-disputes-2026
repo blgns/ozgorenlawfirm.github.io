@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ══ PRIMARY META ══════════════════════════════════════════════════════ -->
+  <title>IP Arbitration for Technology Disputes: Arbitrability, AI Assets & Drafting Traps (2026) | Özgören Law Firm</title>
+  <meta name="description" content="A senior practitioner's guide to IP arbitration in 2026 — covering arbitrability under Turkish law (HMK Art. 408, SMK), WIPO expedited rules, AI dataset ownership disputes, emergency arbitrator clauses, and the three drafting errors that most commonly undermine technology companies in cross-border IP proceedings.">
+  <meta name="keywords" content="IP arbitration Turkey 2026, intellectual property arbitration Turkey, arbitrability patent Turkey, WIPO expedited arbitration technology, AI data ownership arbitration, IP tahkim Turkey, SMK 6769 arbitration, software license dispute arbitration, technology arbitration Istanbul Izmir, patent dispute arbitration Turkey">
+  <meta name="author" content="Selin Özgören">
+  <link rel="canonical" href="https://ozgorenlawfirm.com/en/blog/ip-arbitration-technology-disputes-2026.html">
+
+  <!-- ══ OPEN GRAPH ════════════════════════════════════════════════════════ -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="IP Arbitration for Technology Disputes: Arbitrability, AI Assets & Drafting Traps (2026)">
+  <meta property="og:description" content="From arbitrability under Turkish law to AI dataset ownership and emergency arbitrator clauses — a practitioner's analysis of IP arbitration strategy for technology companies in 2026.">
+  <meta property="og:image" content="https://ozgorenlawfirm.com/selin.jpg">
+  <meta property="og:url" content="https://ozgorenlawfirm.com/en/blog/ip-arbitration-technology-disputes-2026.html">
+  <meta property="og:site_name" content="Özgören Law Firm">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Selin Özgören">
+  <meta property="article:published_time" content="2026-04-01">
+  <meta property="article:section" content="Intellectual Property Arbitration">
+  <meta property="article:tag" content="IP arbitration Turkey">
+  <meta property="article:tag" content="technology disputes arbitration">
+  <meta property="article:tag" content="WIPO arbitration">
+  <meta property="article:tag" content="AI intellectual property">
+  <meta property="article:tag" content="patent arbitrability Turkey">
+
+  <!-- ══ HREFLANG ══════════════════════════════════════════════════════════ -->
+  <link rel="alternate" hreflang="en" href="https://ozgorenlawfirm.com/en/blog/ip-arbitration-technology-disputes-2026.html">
+  <link rel="alternate" hreflang="tr" href="https://ozgorenlawfirm.com/tr/blog/ip-tahkim-teknoloji-uyusmazliklari-2026.html">
+  <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/blog/ip-arbitration-technology-disputes-2026.html">
+
+  <!-- ══ JSON-LD SCHEMA ════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://ozgorenlawfirm.com/en/blog/ip-arbitration-technology-disputes-2026.html#article",
+        "headline": "IP Arbitration for Technology Disputes: Arbitrability, AI Assets & Drafting Traps (2026)",
+        "description": "A senior practitioner's guide to IP arbitration in 2026 — covering arbitrability under Turkish law, WIPO expedited rules, AI dataset ownership disputes, emergency arbitrator clauses, and the drafting errors that most commonly undermine technology companies in cross-border IP proceedings.",
+        "image": "https://ozgorenlawfirm.com/selin.jpg",
+        "datePublished": "2026-04-01",
+        "dateModified": "2026-04-01",
+        "wordCount": 2600,
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://ozgorenlawfirm.com/en/blog/ip-arbitration-technology-disputes-2026.html"
+        },
+        "author": { "@id": "https://ozgorenlawfirm.com/#selin" },
+        "publisher": {
+          "@id": "https://ozgorenlawfirm.com/#firm",
+          "logo": { "@type": "ImageObject", "url": "https://ozgorenlawfirm.com/logo.png" }
+        },
+        "about": [
+          { "@type": "Thing", "name": "Intellectual Property Arbitration" },
+          { "@type": "Thing", "name": "Technology Dispute Resolution" },
+          { "@type": "Thing", "name": "WIPO Arbitration Rules" },
+          { "@type": "Thing", "name": "AI Intellectual Property" },
+          { "@type": "Place", "name": "Turkey" }
+        ]
+      },
+      {
+        "@type": "LegalService",
+        "@id": "https://ozgorenlawfirm.com/#firm",
+        "name": "Özgören Law Firm",
+        "url": "https://ozgorenlawfirm.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "İzmir", "addressCountry": "TR" },
+        "areaServed": "Worldwide"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://ozgorenlawfirm.com/#selin",
+        "name": "Selin Özgören",
+        "jobTitle": "International Arbitration Lawyer",
+        "url": "https://ozgorenlawfirm.com",
+        "sameAs": "https://www.linkedin.com/in/selinozgoren/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ozgorenlawfirm.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Knowledge Bank", "item": "https://ozgorenlawfirm.com/en/blog.html" },
+          { "@type": "ListItem", "position": 3, "name": "IP Arbitration for Technology Disputes (2026)", "item": "https://ozgorenlawfirm.com/en/blog/ip-arbitration-technology-disputes-2026.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are IP disputes arbitrable under Turkish law?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Under Turkish law (HMK Article 408 and SMK Law No. 6769), IP disputes are arbitrable where they concern rights that the parties may freely dispose of by contract. Licence fee claims, contractual IP breach, damages for infringement, and trade secret misappropriation are all arbitrable. Patent and trademark invalidity — as registral acts affecting third parties — fall within the exclusive jurisdiction of Turkish courts and cannot be finally determined by arbitration. However, a tribunal may assess invalidity as a preliminary issue with inter partes effect, which is sufficient to resolve most commercial IP disputes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the WIPO Expedited Arbitration procedure for technology disputes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The WIPO Expedited Arbitration Rules (updated 2023) provide for a streamlined procedure with condensed timescales — typically six to nine months from tribunal constitution to award. A sole arbitrator is appointed, procedural steps are consolidated, and hearing time is compressed. The procedure is designed for disputes where speed of resolution is commercially critical, such as software licence terminations, patent licensing deadlocks, and technology transfer disputes. It is available under any WIPO-administered arbitration agreement and can be agreed ad hoc after a dispute has arisen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who owns AI-generated content and training data under current law?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This is one of the most contested areas in IP law in 2026. Under the Berne Convention and most national copyright systems — including Turkish law — copyright protection requires a human author. AI-generated outputs without meaningful human creative input are not protected by copyright in most jurisdictions. Training data ownership raises separate questions: whether the use of third-party data to train an AI model constitutes infringement depends on fair use or text-and-data mining exceptions that vary significantly by jurisdiction. These unresolved questions make AI asset ownership disputes particularly well-suited to arbitration, where specialist neutrals can be selected and proceedings kept confidential."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is an emergency arbitrator and why does it matter in IP disputes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An emergency arbitrator is a neutral appointed on an urgent basis — often within 24 to 48 hours — to grant interim relief before a full tribunal is constituted. In IP disputes, where continued infringement can cause irreversible commercial harm (e.g. an unlicensed product launch, a source code leak, or a parallel import network), the emergency arbitrator procedure allows a party to obtain injunctive-type relief through the arbitral process rather than national courts. The procedure is available under WIPO, ICC, and most major institutional rules. Under Turkish law (MTK Article 6), parties may also seek interim measures from state courts in parallel without waiving the arbitration agreement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does arbitration clause scope matter in IP disputes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The scope of an arbitration clause determines which claims the tribunal has jurisdiction to hear. A clause limited to 'disputes arising from this agreement' may exclude tort-based IP infringement claims, unjust enrichment claims arising from unlicensed use, and post-termination obligations. In IP transactions — licences, R&D agreements, technology transfers — the clause should be drafted to cover all disputes 'arising out of or in connection with' the agreement, including its validity, breach, termination, and any related IP rights. Anything narrower creates jurisdictional gaps that opponents will exploit."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ══ GOOGLE ANALYTICS ══════════════════════════════════════════════════ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVN14SDR0X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WVN14SDR0X');
+  </script>
+
+  <!-- ══ FONTS ═════════════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:      #F7F3EE;
+      --dark:       #1A1A18;
+      --gold:       #B8955A;
+      --gold-light: #D4B483;
+      --muted:      #6B6558;
+      --line:       rgba(184,149,90,0.25);
+      --warm:       #F0EBE3;
+      --nav-h:      124px;
+    }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      background: var(--cream); color: var(--dark);
+      font-family: 'Jost', sans-serif; font-weight: 300;
+      font-size: 16px; line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; justify-content: center; align-items: center;
+      padding: 1.2rem clamp(2rem, 5vw, 6rem);
+      background: rgba(247,243,238,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-logo {
+      position: absolute; left: 50%; transform: translateX(-50%);
+      display: flex; align-items: center;
+    }
+    .nav-logo img { height: 85px; width: auto; display: block; }
+    .lang-switcher {
+      display: flex; align-items: center; gap: 0.3rem; z-index: 1200;
+    }
+    .lang-switcher a {
+      font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none;
+      padding: 0.3rem 0.55rem; border: 1px solid var(--line);
+      transition: all 0.25s; color: var(--muted);
+    }
+    .lang-switcher a.active { border-color: var(--gold); color: var(--gold); background: rgba(184,149,90,0.08); }
+    .lang-switcher a:hover:not(.active) { border-color: var(--gold-light); color: var(--dark); }
+    .hamburger {
+      margin-left: auto; display: flex; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+      position: relative; z-index: 1200;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--dark); border-radius: 2px; transition: all 0.35s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(26,26,24,0.5); z-index: 1100; }
+    .nav-overlay.open { display: block; }
+    .nav-links {
+      position: fixed; top: 0; right: -300px; width: 260px; height: 100vh;
+      background: rgba(247,243,238,0.99);
+      display: flex; flex-direction: column; justify-content: center;
+      align-items: flex-start; gap: 2rem; padding: 4rem 3rem;
+      border-left: 1px solid var(--line);
+      transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1200; list-style: none;
+    }
+    .nav-links.open { right: 0; }
+    .nav-links a {
+      font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase;
+      text-decoration: none; color: var(--dark); transition: color 0.3s;
+      display: block; padding: 0.25rem 0;
+    }
+    .nav-links a:hover, .nav-links a.current { color: var(--gold); }
+
+    /* ── HERO ── */
+    .post-hero {
+      background: var(--dark);
+      padding-top: var(--nav-h);
+      min-height: 64vh;
+      display: flex; align-items: flex-end;
+      position: relative; overflow: hidden;
+    }
+    .post-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 95% 5%, rgba(184,149,90,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 35% 50% at 5% 100%, rgba(184,149,90,0.07) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .hero-symbol {
+      position: absolute; right: 4vw; top: 50%; transform: translateY(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(12rem, 20vw, 20rem);
+      font-weight: 300; line-height: 1;
+      color: rgba(184,149,90,0.05);
+      pointer-events: none; user-select: none;
+    }
+    .post-hero-inner {
+      max-width: 820px;
+      padding: 0 clamp(2rem, 7vw, 8rem) 5rem;
+      position: relative; z-index: 1;
+    }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(247,243,238,0.3); margin-bottom: 1.8rem;
+    }
+    .breadcrumb a { color: rgba(247,243,238,0.3); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+    .breadcrumb span { color: var(--gold); }
+    .breadcrumb-sep { opacity: 0.4; }
+    .post-category {
+      display: inline-flex; align-items: center; gap: 0.8rem;
+      font-size: 0.58rem; font-weight: 400; letter-spacing: 0.35em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 1.4rem;
+    }
+    .post-category::before { content: ''; display: block; width: 36px; height: 1px; background: var(--gold); opacity: 0.6; }
+    .post-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.1rem, 4.5vw, 3.6rem);
+      font-weight: 300; line-height: 1.1;
+      color: var(--cream); letter-spacing: -0.01em; margin-bottom: 2rem;
+    }
+    .post-hero h1 em { font-style: italic; color: var(--gold-light); }
+    .post-meta {
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: 0.4rem 1.4rem;
+      font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(247,243,238,0.35);
+    }
+    .post-meta strong { color: rgba(247,243,238,0.7); font-weight: 400; }
+    .meta-dot { width: 3px; height: 3px; background: rgba(184,149,90,0.45); border-radius: 50%; }
+
+    /* ── LAYOUT ── */
+    .post-layout {
+      max-width: 1160px; margin: 0 auto;
+      padding: 5rem clamp(2rem, 7vw, 8rem) 8rem;
+      display: grid; grid-template-columns: 1fr 260px;
+      gap: 0 5rem; align-items: start;
+    }
+    .post-body { min-width: 0; }
+
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); text-decoration: none; margin-bottom: 2.5rem;
+      transition: gap 0.2s;
+    }
+    .back-link:hover { gap: 0.9rem; }
+
+    /* Key Takeaways */
+    .key-takeaways {
+      border: 1px solid var(--line); margin-bottom: 3.5rem;
+      position: relative; overflow: hidden;
+    }
+    .key-takeaways::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 2px; background: linear-gradient(to right, var(--gold), transparent);
+    }
+    .kt-head {
+      padding: 1rem 1.6rem; border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .kt-head::before { content: ''; display: block; width: 22px; height: 1px; background: var(--gold); opacity: 0.6; }
+    .kt-head span { font-size: 0.58rem; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); }
+    .kt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); }
+    .kt-item { background: var(--cream); padding: 1.3rem 1.5rem; }
+    .kt-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: rgba(184,149,90,0.22); line-height: 1; margin-bottom: 0.4rem; }
+    .kt-label { font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--dark); margin-bottom: 0.35rem; }
+    .kt-text { font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+
+    /* Intro box */
+    .intro-box {
+      background: var(--dark); border-left: 3px solid var(--gold);
+      padding: 1.8rem 2rem; margin-bottom: 3.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-style: italic;
+      color: rgba(247,243,238,0.82); line-height: 1.8;
+    }
+    .intro-box strong { font-style: normal; color: var(--gold-light); font-weight: 600; }
+
+    /* Sections */
+    .post-body section { margin-bottom: 3.5rem; }
+    .post-body h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.85rem; font-weight: 400; color: var(--dark); line-height: 1.2;
+      margin-bottom: 1.2rem; padding-bottom: 0.7rem;
+      border-bottom: 1px solid var(--line); position: relative;
+    }
+    .post-body h2::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 44px; height: 2px; background: var(--gold); }
+    .post-body h3 {
+      font-size: 0.6rem; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--gold); margin: 2.2rem 0 0.9rem;
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .post-body h3::after { content: ''; display: block; height: 1px; flex: 1; background: var(--line); }
+    .post-body p { margin-bottom: 1.2rem; font-weight: 300; line-height: 1.85; }
+    .post-body p strong { font-weight: 500; color: var(--dark); }
+
+    /* Takeaway */
+    .takeaway {
+      background: var(--warm); border-left: 3px solid var(--dark);
+      padding: 1.1rem 1.4rem; margin: 1.8rem 0;
+      font-size: 0.85rem; line-height: 1.72; color: var(--dark);
+    }
+    .takeaway::before {
+      content: '▸ PRACTITIONER NOTE'; display: block;
+      font-size: 0.56rem; font-weight: 500; letter-spacing: 0.18em; color: var(--gold); margin-bottom: 0.5rem;
+    }
+
+    /* Pull quote */
+    .pullquote {
+      background: var(--dark); padding: 2.2rem 2.5rem; margin: 2.5rem 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-style: italic;
+      color: rgba(247,243,238,0.85); line-height: 1.65;
+      text-align: center; position: relative;
+    }
+    .pullquote::before {
+      content: '"'; position: absolute; top: -0.6rem; left: 1.5rem;
+      font-size: 5.5rem; line-height: 1; color: var(--gold); opacity: 0.18;
+    }
+
+    /* Arbitrability grid */
+    .arb-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--line); border: 1px solid var(--line);
+      margin: 1.2rem 0 1.8rem;
+    }
+    .arb-cell { background: var(--cream); padding: 1.2rem 1.4rem; }
+    .arb-cell.hdr {
+      background: var(--dark); color: rgba(247,243,238,0.65);
+      font-size: 0.58rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+    }
+    .arb-cell .arb-label { display: block; font-weight: 500; color: var(--dark); margin-bottom: 4px; font-size: 0.82rem; }
+    .arb-cell .arb-detail { color: var(--muted); line-height: 1.65; font-size: 0.78rem; }
+    .arb-cell.yes .arb-label::before { content: '✓ '; color: #5A8A5A; }
+    .arb-cell.no  .arb-label::before { content: '✗ '; color: #8A5A5A; }
+
+    /* Trap cards */
+    .trap-grid { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 1.2rem 0 1.8rem; }
+    .trap-card {
+      background: var(--cream); padding: 1.4rem 1.6rem;
+      display: grid; grid-template-columns: 52px 1fr; gap: 0 1.2rem;
+      position: relative; transition: background 0.25s;
+    }
+    .trap-card::before { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width 0.4s ease; }
+    .trap-card:hover::before { width: 100%; }
+    .trap-card:hover { background: #EDE7DE; }
+    .trap-num {
+      width: 40px; height: 40px; background: var(--dark); color: var(--gold-light);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300;
+      margin-top: 2px; flex-shrink: 0;
+    }
+    .trap-title { font-size: 0.84rem; font-weight: 500; color: var(--dark); margin-bottom: 0.4rem; }
+    .trap-body { font-size: 0.8rem; font-weight: 300; line-height: 1.7; color: var(--muted); margin: 0; }
+    .trap-fix {
+      margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid var(--line);
+      font-size: 0.75rem; color: var(--dark); font-weight: 400;
+    }
+    .trap-fix::before { content: '↳ Recommended approach: '; color: var(--gold); font-weight: 500; }
+
+    /* Checklist */
+    .checklist { list-style: none; margin: 1rem 0 1.8rem; }
+    .checklist li {
+      padding: 0.9rem 0 0.9rem 1.8rem; border-bottom: 1px solid var(--line);
+      font-weight: 300; font-size: 0.88rem; position: relative;
+    }
+    .checklist li:first-child { border-top: 1px solid var(--line); }
+    .checklist li::before { content: '—'; position: absolute; left: 0; color: var(--gold-light); font-weight: 400; }
+    .checklist li strong { display: block; font-weight: 500; color: var(--dark); font-size: 0.76rem; letter-spacing: 0.05em; margin-bottom: 3px; }
+
+    /* Model clause box */
+    .clause-box {
+      background: var(--dark); border: 1px solid rgba(184,149,90,0.3);
+      padding: 1.6rem 2rem; margin: 1.8rem 0; position: relative;
+    }
+    .clause-box::before {
+      content: 'ILLUSTRATIVE CLAUSE LANGUAGE'; display: block;
+      font-size: 0.55rem; font-weight: 500; letter-spacing: 0.22em;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+    .clause-box p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem; font-style: italic;
+      color: rgba(247,243,238,0.75); line-height: 1.8; margin-bottom: 0;
+    }
+    .clause-note {
+      margin-top: 0.8rem; font-size: 0.7rem; font-weight: 300;
+      color: rgba(247,243,238,0.4); font-style: normal;
+      font-family: 'Jost', sans-serif;
+    }
+
+    /* FAQ */
+    .faq-list { margin-top: 1rem; }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-item:first-child { border-top: 1px solid var(--line); }
+    .faq-btn {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 1.5rem; padding: 1.3rem 0; text-align: left;
+      font-family: 'Jost', sans-serif; font-size: 0.88rem; font-weight: 400;
+      color: var(--dark); line-height: 1.5; transition: color 0.2s;
+    }
+    .faq-btn:hover { color: var(--gold); }
+    .faq-icon {
+      flex-shrink: 0; width: 20px; height: 20px;
+      border: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.72rem; color: var(--gold);
+      transition: transform 0.3s, background 0.2s; margin-top: 2px;
+    }
+    .faq-btn[aria-expanded="true"] .faq-icon { transform: rotate(45deg); background: var(--dark); color: var(--gold-light); border-color: var(--dark); }
+    .faq-answer { display: none; padding: 0 0 1.3rem; font-size: 0.84rem; font-weight: 300; color: var(--muted); line-height: 1.8; }
+    .faq-answer.open { display: block; }
+    .faq-answer strong { font-weight: 500; color: var(--dark); }
+    .faq-answer em { font-style: italic; color: var(--dark); }
+
+    /* CTA */
+    .cta-block { background: var(--dark); padding: 2.5rem 2.5rem 2.2rem; margin-top: 3.5rem; position: relative; overflow: hidden; }
+    .cta-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--gold), transparent); }
+    .cta-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--cream); margin-bottom: 0.8rem; }
+    .cta-block p { font-size: 0.82rem; color: rgba(247,243,238,0.55); margin-bottom: 1.6rem; font-weight: 300; }
+    .cta-btn { display: inline-block; border: 1px solid rgba(184,149,90,0.5); color: var(--gold); font-size: 0.65rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.75rem 2rem; text-decoration: none; transition: background 0.25s, border-color 0.25s; }
+    .cta-btn:hover { background: rgba(184,149,90,0.1); border-color: var(--gold); }
+
+    .disclaimer { font-size: 0.72rem; color: var(--muted); line-height: 1.7; border-top: 1px solid var(--line); padding-top: 1.5rem; margin-top: 3rem; }
+
+    /* SIDEBAR */
+    .post-sidebar { position: sticky; top: calc(var(--nav-h) + 2rem); }
+    .sb-card { border: 1px solid var(--line); position: relative; overflow: hidden; margin-bottom: 1.2rem; }
+    .sb-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--gold), transparent); }
+    .sb-card-head { padding: 1.2rem 1.4rem 1rem; border-bottom: 1px solid var(--line); }
+    .sb-card-head h4 { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: var(--dark); }
+    .sb-card-body { padding: 1rem 1.4rem 1.3rem; }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a { font-size: 0.75rem; color: var(--muted); text-decoration: none; display: block; padding: 0.45rem 0 0.45rem 0.9rem; border-left: 2px solid transparent; line-height: 1.45; transition: all 0.15s; }
+    .toc-list a:hover, .toc-list a.active { color: var(--dark); border-left-color: var(--gold); padding-left: 1.2rem; }
+    .author-row { display: flex; gap: 0.9rem; align-items: center; margin-bottom: 0.9rem; }
+    .author-initials { width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0; border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--gold); }
+    .author-name-block strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: var(--dark); }
+    .author-name-block span { font-size: 0.65rem; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; }
+    .author-bio-text { font-size: 0.75rem; font-weight: 300; color: var(--muted); line-height: 1.65; margin-bottom: 0.9rem; }
+    .author-link { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; transition: gap 0.2s; }
+    .author-link:hover { gap: 0.7rem; }
+    .related-list { list-style: none; }
+    .related-list li { padding: 0.6rem 0; border-bottom: 1px solid rgba(184,149,90,0.1); }
+    .related-list li:last-child { border-bottom: none; }
+    .related-list a { font-size: 0.76rem; color: var(--muted); text-decoration: none; display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.45; transition: color 0.2s; }
+    .related-list a::before { content: '—'; color: var(--gold-light); flex-shrink: 0; }
+    .related-list a:hover { color: var(--dark); }
+
+    /* CONTACT */
+    .contact-section {
+      background: var(--dark); color: var(--cream);
+      text-align: center; padding: 6rem 2rem;
+    }
+    .contact-section .section-label {
+      font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+      display: flex; align-items: center; justify-content: center; gap: 1rem;
+    }
+    .contact-section .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300; line-height: 1.15;
+      color: var(--cream); margin-bottom: 1.5rem;
+    }
+    .contact-sub { font-size: 0.9rem; color: rgba(247,243,238,0.55); margin-bottom: 3rem; }
+    .contact-links { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; max-width: 1300px; margin: 0 auto; }
+    .contact-link {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); text-decoration: none;
+      border: 1px solid rgba(184,149,90,0.3); padding: 0.85rem 2rem;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .contact-link:hover { border-color: var(--gold); background: rgba(184,149,90,0.1); }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark); border-top: 1px solid rgba(184,149,90,0.15);
+      padding: 1.5rem clamp(2rem, 5vw, 6rem);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    footer p { font-size: 0.65rem; color: rgba(247,243,238,0.3); letter-spacing: 0.1em; }
+    footer a { color: rgba(247,243,238,0.3); text-decoration: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .post-layout { grid-template-columns: 1fr; max-width: 760px; }
+      .post-sidebar { display: none; }
+      .arb-grid { grid-template-columns: 1fr; }
+      .kt-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      nav { padding: 1rem 2rem; }
+      .nav-logo img { height: 65px; }
+      .lang-switcher { display: none; }
+    }
+    @media (max-width: 700px) {
+      :root { --nav-h: 97px; }
+      .post-hero h1 { font-size: 2rem; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 2rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  </style>
+</head>
+<body>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="lang-switcher">
+      <a href="/en/blog/ip-arbitration-technology-disputes-2026.html" class="active">EN</a>
+      <a href="/tr/blog/ip-tahkim-teknoloji-uyusmazliklari-2026.html">TR</a>
+    </div>
+    <a class="nav-logo" href="/en/index.html">
+      <img src="../../logo.png" alt="Özgören Law Firm – International Arbitration, İzmir">
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+    <li><a href="/en/index.html#about">About</a></li>
+    <li><a href="/en/arbitration.html">Arbitration Services</a></li>
+    <li><a href="/en/tribunal-secretary.html">Tribunal Secretary</a></li>
+    <li><a href="/en/blog.html" class="current">Knowledge Bank</a></li>
+    <li><a href="/en/index.html#contact">Contact</a></li>
+  </ul>
+
+  <!-- HERO -->
+  <header class="post-hero">
+    <div class="hero-symbol">©</div>
+    <div class="post-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/en/index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/en/blog.html">Knowledge Bank</a>
+        <span class="breadcrumb-sep">/</span>
+        <span aria-current="page">IP Arbitration 2026</span>
+      </nav>
+      <p class="post-category">Intellectual Property · International Arbitration</p>
+      <h1>IP Arbitration for Technology Disputes:<br><em>Arbitrability, AI Assets &amp; Drafting Traps</em></h1>
+      <div class="post-meta">
+        <strong>Selin Özgören</strong>
+        <span class="meta-dot"></span>
+        <span>Özgören Law Firm</span>
+        <span class="meta-dot"></span>
+        <time datetime="2026-04-01">April 2026</time>
+        <span class="meta-dot"></span>
+        <span>8 min read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- LAYOUT -->
+  <div class="post-layout">
+    <article class="post-body">
+      <a href="/en/blog.html" class="back-link">← Back to Knowledge Bank</a>
+
+      <!-- KEY TAKEAWAYS -->
+      <div class="key-takeaways">
+        <div class="kt-head"><span>Key Takeaways</span></div>
+        <div class="kt-grid">
+          <div class="kt-item">
+            <div class="kt-num">01</div>
+            <div class="kt-label">Arbitrability is binary</div>
+            <p class="kt-text">Under HMK Art. 408 and SMK, licence disputes and damages claims are arbitrable. Patent invalidity is not — but a tribunal can address it as a preliminary matter with inter partes effect, which resolves most commercial IP disputes.</p>
+          </div>
+          <div class="kt-item">
+            <div class="kt-num">02</div>
+            <div class="kt-label">AI ownership is unresolved</div>
+            <p class="kt-text">In 2026, neither training data ownership nor the copyright status of AI-generated outputs has been settled at the international treaty level. These disputes are landing in arbitration precisely because national courts lack specialist neutrals and cannot seal proceedings.</p>
+          </div>
+          <div class="kt-item">
+            <div class="kt-num">03</div>
+            <div class="kt-label">Clause scope determines outcome</div>
+            <p class="kt-text">The three most common IP arbitration failures — narrow clause scope, no emergency arbitrator provision, and vague evidence rules — are all drafting problems, not legal ones. They are entirely preventable.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTRO -->
+      <div class="intro-box">
+        Intellectual property rights are territorial by design. Their commercial ecosystems are not. A software licence dispute between a Turkish developer and a German distributor can simultaneously implicate the law of five jurisdictions — and produce five inconsistent court orders. <strong>IP arbitration</strong> does not eliminate that territorial complexity, but it provides the one mechanism capable of resolving it in a single proceeding, before a neutral with the technical background to understand what is actually in dispute.
+      </div>
+
+      <!-- SECTION 1: ARBITRABILITY -->
+      <section id="arbitrability">
+        <h2>What Is — and Is Not — Arbitrable Under Turkish Law</h2>
+        <p>The threshold question in any IP arbitration is whether the dispute can be submitted to arbitration at all. Under Turkish law, the answer turns on two provisions read together: <strong>Article 408 of the Code of Civil Procedure (HMK)</strong>, which defines the general scope of arbitrability by reference to the parties' freedom to dispose of their rights, and the <strong>Industrial Property Law (SMK, Law No. 6769)</strong>, which governs patents, trademarks, designs, and geographical indications.</p>
+
+        <h3>The arbitrability line in practice</h3>
+        <p>The distinction Turkish law draws is between rights the parties may freely settle — and rights they cannot, because those rights affect third parties and the public registral order.</p>
+
+        <div class="arb-grid">
+          <div class="arb-cell hdr">Arbitrable</div>
+          <div class="arb-cell hdr">Not arbitrable (exclusive court jurisdiction)</div>
+
+          <div class="arb-cell yes">
+            <span class="arb-label">Licence fee disputes</span>
+            <span class="arb-detail">Unpaid royalties, calculation disputes, most-favoured-licensee claims, audit rights under licence agreements.</span>
+          </div>
+          <div class="arb-cell no">
+            <span class="arb-label">Patent invalidation (hükümsüzlük)</span>
+            <span class="arb-detail">Cancellation of a patent from the TÜRKPATENT register has erga omnes effect and falls within the exclusive jurisdiction of specialised IP courts.</span>
+          </div>
+
+          <div class="arb-cell yes">
+            <span class="arb-label">Contractual IP breach</span>
+            <span class="arb-detail">Breach of exclusivity, unauthorised sublicensing, failure to commercialise, post-termination IP use obligations.</span>
+          </div>
+          <div class="arb-cell no">
+            <span class="arb-label">Trademark invalidation</span>
+            <span class="arb-detail">Removal of a trademark registration affects the public register and cannot be ordered by arbitral award with third-party effect.</span>
+          </div>
+
+          <div class="arb-cell yes">
+            <span class="arb-label">Damages for infringement</span>
+            <span class="arb-detail">Monetary compensation for infringement between contracting parties — including lost profits, reasonable royalty, and disgorgement of the infringer's profits.</span>
+          </div>
+          <div class="arb-cell no">
+            <span class="arb-label">Compulsory licensing (SMK Art. 129 ff.)</span>
+            <span class="arb-detail">Applications for compulsory licence where the patentee has refused to licence on reasonable terms — a public interest determination reserved for courts.</span>
+          </div>
+
+          <div class="arb-cell yes">
+            <span class="arb-label">Trade secret misappropriation</span>
+            <span class="arb-detail">Claims under the Turkish Commercial Code and SMK Art. 82 ff. for the unlawful disclosure, acquisition, or use of confidential technical information.</span>
+          </div>
+          <div class="arb-cell no">
+            <span class="arb-label">Ownership disputes affecting the register</span>
+            <span class="arb-detail">Where resolution requires alteration of the registered owner on the TÜRKPATENT record — distinct from a contractual ownership dispute between the parties.</span>
+          </div>
+        </div>
+
+        <div class="takeaway">
+          A tribunal may assess patent validity as a <em>preliminary issue</em> when it is raised as a defence to a licence fee claim. Its determination will bind the parties to that arbitration — inter partes — but cannot be used to cancel the patent from the register. For resolving commercial IP disputes between contracting parties, this is ordinarily sufficient.
+        </div>
+      </section>
+
+      <!-- SECTION 2: WHY ARBITRATION -->
+      <section id="why-arbitration">
+        <h2>Why Technology Companies Choose Arbitration Over Litigation</h2>
+        <p>The preference for arbitration in technology IP disputes is not a default to familiarity. It reflects specific structural features of this category of dispute that court litigation handles poorly.</p>
+
+        <h3>Specialist neutrals</h3>
+        <p>A general civil court judge brings expertise in civil procedure. An IP arbitration tribunal can include a patent attorney with a background in semiconductor physics, a former software engineer turned lawyer, and a specialist in licensing economics. For disputes that turn on whether a rival product actually uses the patented method — or whether a training dataset genuinely contains the claimant's protected expression — tribunal composition is outcome-relevant in a way it rarely is in ordinary commercial disputes.</p>
+
+        <h3>Confidentiality as structural protection</h3>
+        <p>In court litigation, the disclosure process is inherently public. A party asserting trade secret misappropriation must, to some extent, reveal the secret it claims was taken. Hearings examining source code or proprietary algorithms occur in open courtrooms. IP arbitration proceedings, by contrast, are private by default under all major institutional rules, and confidentiality obligations can be extended by agreement to cover all disclosed materials, including technical exhibits and expert reports. For companies whose core commercial value is embedded in information, this is not a secondary consideration.</p>
+
+        <div class="pullquote">
+          The question is not whether arbitration is preferable to litigation in the abstract. The question is whether your dispute — with its specific technical subject matter, cross-border enforcement needs, and confidentiality constraints — is better resolved by a generalist judge applying procedural rules designed for contract disputes, or by a specialist tribunal operating under rules designed for exactly this.
+        </div>
+
+        <h3>The New York Convention enforcement advantage</h3>
+        <p>A judgment from a Turkish court faces recognition and enforcement obstacles in jurisdictions with which Turkey has no bilateral treaty, or where reciprocity has not been established in practice. An arbitral award carries none of those obstacles: under the <strong>New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards</strong> (to which 172 states are party as of 2026), the award is enforceable in any contracting state on a largely standardised basis. For technology companies whose infringing counterpart operates assets across multiple jurisdictions, this matters considerably.</p>
+      </section>
+
+      <!-- SECTION 3: AI DISPUTES -->
+      <section id="ai-disputes">
+        <h2>The 2026 Frontier: AI Dataset Ownership and Generated-Content Disputes</h2>
+        <p>In 2025–2026, a new category of IP dispute emerged at volume that had previously been theoretical: disputes over the ownership of AI training datasets, the copyright status of AI-generated outputs, and the contractual allocation of IP rights in AI development agreements. Courts across Europe, the United States, and Asia are still producing first-instance decisions in this space. International treaty frameworks have not been updated. The legal landscape is genuinely unsettled.</p>
+
+        <h3>Three unresolved questions driving arbitration demand</h3>
+
+        <ul class="checklist">
+          <li>
+            <strong>Training data and the copyright status of inputs</strong>
+            Using third-party data to train an AI model may or may not constitute copyright infringement depending on which jurisdiction's law applies. EU law provides a text-and-data mining exception under the 2019 Copyright Directive (Art. 4), subject to rights-holder opt-out. US law applies a fair use analysis that remains unsettled after several significant district court rulings in 2024–2025. Turkish copyright law (FSEK) provides no equivalent exception, leaving the position uncertain. A cross-border training data dispute will involve all three regimes simultaneously — and arbitration provides the only forum capable of addressing them in a single proceeding.
+          </li>
+          <li>
+            <strong>Copyright in AI-generated outputs</strong>
+            Under the Berne Convention framework and the domestic law of most jurisdictions — including Turkey — copyright requires a human author. AI-generated content produced without meaningful human creative input is not protected. Where human contribution is present but partial (prompt engineering, curation, editorial selection), the scope of protection — and its ownership — is contested. Companies building on AI-generated assets need contractual clarity that no registry can currently provide.
+          </li>
+          <li>
+            <strong>IP ownership in AI development agreements</strong>
+            Who owns the model weights produced by a joint AI development project? Who owns improvements to a licensed model made by the licensee's development team? Does a data-sharing agreement transfer the IP embedded in the contributor's data? These questions are now appearing in commercial disputes with frequency, and they require bespoke contractual analysis — not default statutory rules, which in most jurisdictions were not designed with machine-learning outputs in mind.
+          </li>
+        </ul>
+
+        <div class="takeaway">
+          The WIPO Arbitration and Mediation Center updated its Expedited Arbitration Rules in 2023, reducing the standard timeline to six to nine months from tribunal constitution to award for disputes submitted under those rules. The procedure is available by agreement and can be adopted after a dispute has arisen. For technology companies facing time-sensitive IP disputes — a product launch injunction, a licence termination, a dataset ownership claim — the expedited procedure materially reduces the commercial cost of arbitration.
+        </div>
+      </section>
+
+      <!-- SECTION 4: DRAFTING TRAPS -->
+      <section id="drafting-traps">
+        <h2>Three Drafting Errors That Undermine IP Arbitration Clauses</h2>
+        <p>The most avoidable failures in IP arbitration proceedings arise not from the law, not from the facts, and not from the tribunal. They arise from the arbitration clause itself — negotiated at the time of contracting, when the dispute was hypothetical and neither party's lawyers gave it sufficient attention.</p>
+
+        <div class="trap-grid">
+          <div class="trap-card">
+            <div class="trap-num">I</div>
+            <div>
+              <div class="trap-title">Clause scope limited to "contractual disputes"</div>
+              <p class="trap-body">A clause that submits "disputes arising from this agreement" to arbitration will be interpreted narrowly in most jurisdictions. Tort-based infringement claims (a party infringes the other's IP outside the scope of the agreement), unjust enrichment claims arising from unlicensed use, and post-termination IP obligations may fall outside the clause's scope — leaving them for national courts to determine in parallel with the arbitration.</p>
+              <p class="trap-fix">Draft the clause to cover "all disputes arising out of or in connection with this agreement, including disputes relating to its validity, breach, termination, or any related intellectual property rights."</p>
+            </div>
+          </div>
+          <div class="trap-card">
+            <div class="trap-num">II</div>
+            <div>
+              <div class="trap-title">No emergency arbitrator provision — and no carve-out for court interim relief</div>
+              <p class="trap-body">In IP disputes, continued infringement during the proceedings can cause irreversible commercial harm: a competing product enters the market, a trade secret is further disclosed, a parallel import network becomes established. Without either an emergency arbitrator provision or a clause preserving the right to seek court interim relief, the claimant may be left without any protective remedy during the twelve to eighteen months it takes to constitute a full tribunal and obtain a substantive order.</p>
+              <p class="trap-fix">Expressly adopt the emergency arbitrator procedure of the chosen institution, and separately preserve court interim relief rights under MTK Article 6 / applicable national law — these rights co-exist with the arbitration agreement and do not constitute a waiver.</p>
+            </div>
+          </div>
+          <div class="trap-card">
+            <div class="trap-num">III</div>
+            <div>
+              <div class="trap-title">No agreed standard for document production</div>
+              <p class="trap-body">Technology IP disputes frequently require disclosure of source code, training datasets, development logs, or proprietary technical documentation. Without an agreed evidence standard in the clause or the procedural timetable, parties face satellite disputes about the scope of production, the format of disclosure, and the protective order regime for sensitive materials. These disputes add cost, delay, and uncertainty — and in the worst cases, prevent access to the central evidence in the proceeding.</p>
+              <p class="trap-fix">Specify by reference in the clause (or at the first procedural conference) that the IBA Rules on the Taking of Evidence in International Arbitration will govern document production, and address source code review and confidentiality tiers from the outset.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Model clause elements for IP transactions</h3>
+        <p>The following illustrates the structural elements that a well-drafted IP arbitration clause should address. This is not a template and should not be used as such — appropriate drafting depends on the specific transaction, governing law, seat, and institutional rules.</p>
+
+        <div class="clause-box">
+          <p>"Any dispute, controversy, or claim arising out of or relating to this Agreement, or the breach, termination, or validity thereof, including any dispute relating to intellectual property rights owned by or licensed to the parties, shall be finally resolved by arbitration under the [Institution] Rules. The seat of arbitration shall be [Seat]. The language of the arbitration shall be [Language]. The parties expressly agree that the emergency arbitrator provisions of the [Institution] Rules shall apply. Nothing in this clause shall prevent either party from seeking interim or conservatory measures from a court of competent jurisdiction before the tribunal is constituted."</p>
+          <p class="clause-note">Illustrative only. Not legal advice. Appropriate clause language must be tailored to the specific transaction and governing law.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 5: FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p>Questions most commonly raised by technology companies considering IP arbitration for cross-border disputes.</p>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              Are IP disputes arbitrable under Turkish law?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Under Turkish law — specifically <strong>HMK Article 408</strong> and <strong>SMK Law No. 6769</strong> — IP disputes are arbitrable where they concern rights the parties may freely settle by agreement. Licence fee disputes, contractual IP breach, damages for infringement, and trade secret misappropriation are all arbitrable.<br><br>
+              Patent and trademark <em>invalidity</em> — as registral determinations affecting third parties — fall within the exclusive jurisdiction of Turkish courts and cannot be finally ordered by arbitral award. However, a tribunal may address validity as a preliminary issue with inter partes effect, which in most commercial IP disputes is the functionally equivalent outcome.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              What is the WIPO Expedited Arbitration procedure for technology disputes?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              The <strong>WIPO Expedited Arbitration Rules</strong> (updated 2023) provide for a condensed procedure — typically six to nine months from constitution of the tribunal to award. A sole arbitrator is appointed, procedural steps are consolidated, and hearing time is compressed.<br><br>
+              The procedure is designed for disputes where speed of resolution is commercially critical, such as software licence terminations, patent licensing deadlocks, and technology transfer disputes. It can be agreed in the original arbitration clause or adopted after a dispute has arisen, and is administered by the WIPO Arbitration and Mediation Center in Geneva.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              Who owns AI-generated content and training data under current law?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              This is among the most actively contested areas in IP law in 2026. Under the Berne Convention framework and most domestic copyright systems — including Turkish law (FSEK) — copyright protection requires a human author. AI-generated outputs produced without meaningful human creative input are not protected by copyright in most jurisdictions.<br><br>
+              Training data ownership raises separate questions: whether using third-party data to train an AI model constitutes infringement depends on text-and-data mining exceptions that vary significantly by jurisdiction (EU Copyright Directive Art. 4; US fair use doctrine; no equivalent under Turkish FSEK). These unresolved questions make AI ownership disputes particularly well-suited to arbitration, where specialist neutrals can be selected and proceedings kept confidential.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              What is an emergency arbitrator and why does it matter in IP disputes?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              An emergency arbitrator is a neutral appointed — typically within 24 to 48 hours of an application — to grant interim relief before a full tribunal has been constituted. In IP disputes, where continued infringement can cause irreversible harm (an unlicensed product launch, a source code leak, a parallel import network becoming established), the emergency procedure provides protective relief through the arbitral process rather than requiring a separate court application.<br><br>
+              Under <strong>MTK Article 6</strong>, parties may also apply to Turkish courts for interim measures in parallel without waiving their arbitration agreement. The two routes are complementary.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              Why does the scope of the arbitration clause matter in IP transactions?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              A clause limited to "disputes arising from this agreement" may exclude tort-based IP infringement claims, unjust enrichment claims for unlicensed use, and post-termination IP obligations — leaving those claims for national courts to determine in parallel with the arbitration.<br><br>
+              In IP transactions — licences, R&amp;D agreements, technology transfers — the clause should be drafted to cover all disputes "arising out of or in connection with" the agreement, including its validity, breach, termination, and any related intellectual property rights. Jurisdictional gaps created by narrow clauses are a standard line of attack in proceedings where the opposing party's position on the merits is weak.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion">
+        <h2>The Practitioner's View</h2>
+        <p>IP arbitration has matured considerably since the early institutional rules were drafted for straightforward patent licence disputes. The current caseload — AI asset ownership, cross-border software infringement, multi-party technology transfer breakdowns — reflects the genuine complexity of how technology value is created and deployed in 2026.</p>
+        <p>The legal framework, both in Turkey and internationally, is adequate for resolving these disputes through arbitration when the dispute resolution infrastructure has been properly designed. The cases that fail — those that take four years, cost disproportionately, or produce awards that cannot be enforced where the assets are — almost invariably fail because of avoidable drafting deficiencies in the arbitration clause, not because arbitration was the wrong choice.</p>
+        <p>The implication is straightforward: the investment in well-structured dispute resolution provisions at the contracting stage — including clause scope, seat selection, institutional rules, emergency procedures, and evidence standards — is material. It is also the part of the transaction that receives the least attention.</p>
+      </section>
+
+      <p class="disclaimer">
+        This article is published for informational purposes only and does not constitute legal advice. The views expressed are those of the author in an informational capacity. References to legal frameworks reflect the position as understood at the date of publication and are subject to legislative and judicial developments. No reader should act or refrain from acting on the basis of this article without obtaining independent legal advice specific to their situation. © Özgören Law Firm 2026. All rights reserved.
+      </p>
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="post-sidebar" aria-label="Article sidebar">
+      <div class="sb-card">
+        <div class="sb-card-head"><h4>Contents</h4></div>
+        <div class="sb-card-body">
+          <ul class="toc-list">
+            <li><a href="#arbitrability">Arbitrability Under Turkish Law</a></li>
+            <li><a href="#why-arbitration">Why Technology Companies Choose Arbitration</a></li>
+            <li><a href="#ai-disputes">AI Dataset &amp; Generated-Content Disputes</a></li>
+            <li><a href="#drafting-traps">Three Drafting Traps</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#conclusion">The Practitioner's View</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-card-head"><h4>About the Author</h4></div>
+        <div class="sb-card-body">
+          <div class="author-row">
+            <div class="author-initials">SÖ</div>
+            <div class="author-name-block">
+              <strong>Selin Özgören</strong>
+              <span>International Arbitration Lawyer</span>
+            </div>
+          </div>
+          <p class="author-bio-text">LL.M. Bocconi University (full scholarship). Former UNCITRAL Secretariat, HKIAC, Allen &amp; Overy, and Baker McKenzie. Practice focuses on international arbitration and cross-border dispute resolution involving Turkey. Based in İzmir.</p>
+          <a class="author-link" href="/en/index.html#about">Full Profile →</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-card-head"><h4>Related Articles</h4></div>
+        <div class="sb-card-body">
+          <ul class="related-list">
+            <li><a href="/en/blog/enforcement-foreign-judgments-izmir.html">Enforcing Foreign Judgments at İzmir Courts</a></li>
+            <li><a href="/en/blog/foreign-divorce-recognition-turkey.html">Recognising a Foreign Divorce in Turkey</a></li>
+            <li><a href="/en/arbitration.html">Arbitration Services</a></li>
+            <li><a href="/en/clause-generator.html">Arbitration Clause Generator</a></li>
+            <li><a href="/en/blog.html">Knowledge Bank</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="contact-sub">Available for international arbitration mandates, co-counsel engagements, and pre-dispute advisory.</p>
+    <div class="contact-links">
+      <a href="https://tally.so/r/zxZeDE" target="_blank" rel="noopener noreferrer" class="contact-link">✎ &nbsp; Inquiry Form</a>
+      <a href="mailto:info@ozgorenlawfirm.com" class="contact-link">✉ &nbsp; info@ozgorenlawfirm.com</a>
+      <a href="tel:+905431465266" class="contact-link">☎ &nbsp; +90 543 146 52 66</a>
+      <a href="https://www.linkedin.com/in/selinozgoren/" target="_blank" rel="noopener noreferrer" class="contact-link">↗ &nbsp; LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Özgören Law Firm. All rights reserved.</p>
+    <p>
+      <a href="/en/arbitration-lawyer-izmir.html">Arbitration Lawyer Izmir</a>
+      &nbsp;·&nbsp; İzmir, Türkiye
+    </p>
+  </footer>
+
+  <script>
+    // Nav drawer — Özgören standard
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const overlay   = document.getElementById('navOverlay');
+    function openMenu() { hamburger.classList.add('open'); navLinks.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; hamburger.setAttribute('aria-expanded','true'); hamburger.setAttribute('aria-label','Close navigation menu'); }
+    function closeMenu() { hamburger.classList.remove('open'); navLinks.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; hamburger.setAttribute('aria-expanded','false'); hamburger.setAttribute('aria-label','Open navigation menu'); }
+    hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
+    overlay.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', e => { if (e.key==='Escape' && navLinks.classList.contains('open')) closeMenu(); });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href && href.startsWith('#')) { e.preventDefault(); closeMenu(); setTimeout(() => { const t=document.querySelector(href); if(t) t.scrollIntoView({behavior:'smooth'}); }, 420); }
+        else { closeMenu(); }
+      });
+    });
+
+    // Active TOC
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const tocObs   = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+    sections.forEach(s => tocObs.observe(s));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-btn').forEach(b => { b.setAttribute('aria-expanded','false'); b.nextElementSibling.classList.remove('open'); });
+        if (!isOpen) { btn.setAttribute('aria-expanded','true'); answer.classList.add('open'); }
+      });
+    });
+  </script>
+
+</body>
+</html>
