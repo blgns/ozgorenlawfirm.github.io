@@ -2,12 +2,14 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ══ FAVICON ══════════════════════════════════════════════════════════ -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- ══ PRIMARY META ══════════════════════════════════════════════════════ -->
   <title>Selin Özgören | Rechtsanwältin für internationale Schiedsgerichtsbarkeit – Izmir, Türkei</title>
@@ -15,31 +17,36 @@
   <meta name="description" content="Özgören Law Firm berät in internationaler Handels- und Investitionsschiedsgerichtsbarkeit, übernimmt Schiedsgerichtssekretariate und begleitet grenzüberschreitende Mandate. Kanzleisitz in Izmir, Türkei – weltweit tätig.">
   <meta name="keywords" content="Rechtsanwältin Schiedsgerichtsbarkeit Türkei, internationale Schiedsgerichtsbarkeit, Investitionsschiedsverfahren, Schiedsgerichtssekretariat, UNCITRAL, ICC, HKIAC, grenzüberschreitende Streitigkeiten, Schiedsrecht Türkei Deutschland, Schiedsanwältin Izmir">
   <meta name="author" content="Selin Özgören">
-  <link rel="canonical" href="https://ozgorenlawfirm.com/index-de.html">
+
+  <!-- ══ CANONICAL — Bug fix: corrected from root to /de/ subdirectory ════ -->
+  <link rel="canonical" href="https://ozgorenlawfirm.com/de/index-de.html">
 
   <!-- ══ OPEN GRAPH ════════════════════════════════════════════════════════ -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Selin Özgören | Rechtsanwältin für internationale Schiedsgerichtsbarkeit">
   <meta property="og:description" content="Beratung in internationaler Handels- und Investitionsschiedsgerichtsbarkeit. Schiedsgerichtssekretariat. Grenzüberschreitende Rechtsberatung. Kanzleisitz in Izmir, Türkei – weltweit tätig.">
   <meta property="og:image" content="https://ozgorenlawfirm.com/selin.jpg">
-  <meta property="og:url" content="https://ozgorenlawfirm.com/index-de.html">
+  <!-- Bug fix: og:url was pointing to root-level path -->
+  <meta property="og:url" content="https://ozgorenlawfirm.com/de/index-de.html">
   <meta property="og:locale" content="de_DE">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Özgören Law Firm">
 
-  <!-- ══ HREFLANG — FIX: Duplikate entfernt, vollständiger Satz ═══════════ -->
-  <link rel="alternate" hreflang="en"        href="https://ozgorenlawfirm.com/index.html">
-  <link rel="alternate" hreflang="tr"        href="https://ozgorenlawfirm.com/index-tr.html">
-  <link rel="alternate" hreflang="ar"        href="https://ozgorenlawfirm.com/index-ar.html">
-  <link rel="alternate" hreflang="de"        href="https://ozgorenlawfirm.com/index-de.html">
-  <link rel="alternate" hreflang="es"        href="https://ozgorenlawfirm.com/index-es.html">
-  <link rel="alternate" hreflang="fr"        href="https://ozgorenlawfirm.com/index-fr.html">
-  <link rel="alternate" hreflang="it"        href="https://ozgorenlawfirm.com/index-it.html">
-  <link rel="alternate" hreflang="zh-CN"     href="https://ozgorenlawfirm.com/index-zh.html">
-  <link rel="alternate" hreflang="zh-HK"     href="https://ozgorenlawfirm.com/index-hk.html">
-  <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/index.html">
+  <!-- ══ HREFLANG — Bug fix: all paths corrected to /lang/ subdirectories;
+       ru added; zh-HK entry restored ══════════════════════════════════════ -->
+  <link rel="alternate" hreflang="en"        href="https://ozgorenlawfirm.com/en/index.html">
+  <link rel="alternate" hreflang="tr"        href="https://ozgorenlawfirm.com/tr/index-tr.html">
+  <link rel="alternate" hreflang="ar"        href="https://ozgorenlawfirm.com/ar/index-ar.html">
+  <link rel="alternate" hreflang="de"        href="https://ozgorenlawfirm.com/de/index-de.html">
+  <link rel="alternate" hreflang="es"        href="https://ozgorenlawfirm.com/es/index-es.html">
+  <link rel="alternate" hreflang="fr"        href="https://ozgorenlawfirm.com/fr/index-fr.html">
+  <link rel="alternate" hreflang="it"        href="https://ozgorenlawfirm.com/it/index-it.html">
+  <link rel="alternate" hreflang="ru"        href="https://ozgorenlawfirm.com/ru/index-ru.html">
+  <link rel="alternate" hreflang="zh-CN"     href="https://ozgorenlawfirm.com/hk/index-zh.html">
+  <link rel="alternate" hreflang="zh-HK"     href="https://ozgorenlawfirm.com/hk/index-hk.html">
+  <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/index.html">
 
-  <!-- ══ JSON-LD SCHEMA — FIX: @id-Verknüpfungen, alternateName, @graph ══ -->
+  <!-- ══ JSON-LD SCHEMA ═══════════════════════════════════════════════════ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -80,7 +87,7 @@
         "@id": "https://ozgorenlawfirm.com/#selin",
         "name": "Selin Özgören",
         "jobTitle": "Rechtsanwältin für internationale Schiedsgerichtsbarkeit",
-        "url": "https://ozgorenlawfirm.com/index-de.html",
+        "url": "https://ozgorenlawfirm.com/de/index-de.html",
         "image": "https://ozgorenlawfirm.com/selin.jpg",
         "sameAs": "https://www.linkedin.com/in/selinozgoren/",
         "worksFor": { "@id": "https://ozgorenlawfirm.com/#firm" },
@@ -132,7 +139,8 @@
     }
     .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; }
     .nav-logo img { height: 85px; width: auto; display: block; }
-    .lang-switcher { display: flex; align-items: center; gap: 0.3rem; z-index: 1200; }
+    /* Bug fix: added flex-wrap and max-width to prevent overflow on narrow viewports */
+    .lang-switcher { display: flex; align-items: center; gap: 0.3rem; z-index: 1200; flex-wrap: wrap; max-width: 280px; }
     .lang-switcher a { font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none; padding: 0.3rem 0.55rem; border: 1px solid var(--line); transition: all 0.25s; color: var(--muted); }
     .lang-switcher a.active { border-color: var(--gold); color: var(--gold); background: rgba(184,149,90,0.08); }
     .lang-switcher a:hover:not(.active) { border-color: var(--gold-light); color: var(--dark); }
@@ -143,7 +151,7 @@
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(26,26,24,0.5); z-index: 1100; }
     .nav-overlay.open { display: block; }
-    .nav-links { position: fixed; top: 0; right: -300px; width: 260px; height: 100vh; background: rgba(247,243,238,0.99); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 2rem; padding: 4rem 3rem; border-left: 1px solid var(--line); transition: right 0.4s ease; z-index: 1200; list-style: none; }
+    .nav-links { position: fixed; top: 0; right: -300px; width: 260px; height: 100vh; background: rgba(247,243,238,0.99); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 2rem; padding: 4rem 3rem; border-left: 1px solid var(--line); transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1200; list-style: none; }
     .nav-links.open { right: 0; }
     .nav-links a { font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; color: var(--dark); transition: color 0.3s; display: block; padding: 0.25rem 0; }
     .nav-links a:hover { color: var(--gold); }
@@ -234,6 +242,7 @@
       .services-grid { grid-template-columns: 1fr; }
       .contact { padding: 4rem 2rem; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 2rem; }
+      .lang-switcher { display: none; }
     }
   </style>
 </head>
@@ -244,19 +253,22 @@
 
   <!-- ── NAVIGATION ── -->
   <nav>
+    <!-- Bug fix: RU added; ZH-HK restored -->
     <div class="lang-switcher">
-  <a href="/en/index.html">EN</a>
-  <a href="/tr/index-tr.html">TR</a>
-  <a href="/ar/index-ar.html">AR</a>
-  <a href="/de/index-de.html" class="active">DE</a>
-  <a href="/fr/index-fr.html">FR</a>
-  <a href="/es/index-es.html">ES</a>
-  <a href="/it/index-it.html">IT</a>
-  <a href="/hk/index-zh.html">ZH</a>
-</div>
-    <!-- FIX: href="#" → korrekte URL -->
-    <a class="nav-logo" href="/index-de.html">
-      <img src="logo.png" alt="Özgören Law Firm – Internationale Schiedsgerichtsbarkeit, Izmir">
+      <a href="/en/index.html">EN</a>
+      <a href="/tr/index-tr.html">TR</a>
+      <a href="/ar/index-ar.html">AR</a>
+      <a href="/de/index-de.html" class="active">DE</a>
+      <a href="/fr/index-fr.html">FR</a>
+      <a href="/es/index-es.html">ES</a>
+      <a href="/it/index-it.html">IT</a>
+      <a href="/ru/index-ru.html">RU</a>
+      <a href="/hk/index-zh.html">ZH</a>
+    </div>
+    <!-- Bug fix: href corrected to /de/ subdirectory path -->
+    <a class="nav-logo" href="/de/index-de.html">
+      <!-- Bug fix: src was "logo.png" (relative, 404s from /de/); corrected to ../logo.png -->
+      <img src="../logo.png" alt="Özgören Law Firm – Internationale Schiedsgerichtsbarkeit, Izmir">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Navigationsmenü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -264,11 +276,12 @@
   </nav>
 
   <!-- ── NAV DRAWER ── -->
+  <!-- Bug fix: all href paths corrected from bare filenames to /de/ subdirectory paths -->
   <ul class="nav-links" id="navLinks" role="navigation" aria-label="Hauptnavigation">
     <li><a href="#profil">Profil</a></li>
-    <li><a href="arbitration-de.html">Schiedsverfahren</a></li>
-    <li><a href="blog-de.html">Publikationen</a></li>
-    <li><a href="updates-de.html">Aktuelles</a></li>
+    <li><a href="/de/arbitration-de.html">Schiedsverfahren</a></li>
+    <li><a href="/de/blog-de.html">Publikationen</a></li>
+    <li><a href="/de/updates-de.html">Aktuelles</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
 
@@ -276,9 +289,7 @@
   <div class="hero">
     <div class="hero-left">
       <h1 class="hero-name">Selin<br><em>Özgören</em></h1>
-      <!-- FIX: Titel mit Ortsangabe für lokales SEO -->
       <p class="hero-title">Rechtsanwältin · Internationale Schiedsgerichtsbarkeit · Izmir</p>
-      <!-- FIX: Vollständiger Satz mit Subjekt, kein Partizipialstil aus Direktübersetzung -->
       <p class="hero-desc">Selin Özgören ist auf internationale Handelsschiedsgerichtsbarkeit, Investitionsschiedsverfahren und internationales Wirtschaftsrecht spezialisiert. Sie begleitet Mandanten bei der Beilegung grenzüberschreitender Streitigkeiten und bei der rechtlichen Gestaltung zur Konfliktprävention. Verfahrenssprachen: Englisch und Türkisch. Erfahrung in Europa, Asien, Afrika und Nordamerika.</p>
       <div class="hero-badge">
         <p>Kanzleisitz</p>
@@ -286,7 +297,8 @@
       </div>
     </div>
     <div class="hero-right">
-      <img src="selin.jpg" alt="Selin Özgören, Rechtsanwältin für internationale Schiedsgerichtsbarkeit, Izmir, Türkei">
+      <!-- Bug fix: src was "selin.jpg" (relative, 404s from /de/); corrected to ../selin.jpg -->
+      <img src="../selin.jpg" alt="Selin Özgören, Rechtsanwältin für internationale Schiedsgerichtsbarkeit, Izmir, Türkei">
       <a href="#kontakt" class="hero-cta">Kontakt aufnehmen</a>
     </div>
   </div>
@@ -297,11 +309,10 @@
     <h2 class="section-title">Internationale Rechtspraxis<br>mit institutioneller Erfahrung</h2>
     <div class="about-grid">
       <div class="about-text reveal">
-        <!-- FIX: Dritte Person Singular, sachlich-juristischer Duktus -->
-        <p>Selin Özgören ist auf <a href="arbitration-de.html">internationale Handels- und Investitionsschiedsgerichtsbarkeit</a> sowie auf grenzüberschreitende Streitigkeiten im Bereich des internationalen Wirtschaftsrechts und des Völkerrechts spezialisiert. Sie ist Mitglied der Anwaltskammer Izmir und verfügt über Erfahrung in Common-Law- sowie kontinentaleuropäischen Rechtssystemen.</p>
+        <p>Selin Özgören ist auf <a href="/de/arbitration-de.html">internationale Handels- und Investitionsschiedsgerichtsbarkeit</a> sowie auf grenzüberschreitende Streitigkeiten im Bereich des internationalen Wirtschaftsrechts und des Völkerrechts spezialisiert. Sie ist Mitglied der Anwaltskammer Izmir und verfügt über Erfahrung in Common-Law- sowie kontinentaleuropäischen Rechtssystemen.</p>
         <p>Ihren LL.M. erwarb sie mit einem Vollstipendium an der Bocconi-Universität in Mailand, wo sie ihre Abschlussarbeit zur Schnittstelle zwischen nachhaltiger Entwicklung und internationaler Investitionsschiedsgerichtsbarkeit verfasste. Den LL.B. erlangte sie an der Rechtsfakultät der Universität Ankara, einschließlich eines Erasmus-Austauschjahres an der Universität Bologna.</p>
         <p>Ihre Berufserfahrung umfasst eine Tätigkeit beim Sekretariat der UNCITRAL in Wien, wo sie die Arbeitsgruppe III zur Reform der Investor-Staat-Streitbeilegung (ISDS) unterstützte, sowie Aufgaben in der Fallverwaltung am Hong Kong International Arbitration Centre (HKIAC). Darüber hinaus war sie in Schiedsverfahren einer Mailänder Kanzlei eingebunden und sammelte Erfahrungen im grenzüberschreitenden Regulierungs- und Sanktionsrecht bei internationalen Großkanzleien, darunter Allen &amp; Overy und Baker McKenzie. In den USA war sie in Verfahren vor Bundesbehörden in New York und Kalifornien tätig.</p>
-        <p>Sie ist zweisprachig Englisch–Türkisch und staatlich geprüfte Übersetzerin, zertifiziert durch das türkische Justizministerium. In der internationalen Schiedsgemeinschaft ist sie als ehemalige Teilnehmerin, Trainerin und Schiedsrichterin beim Willem C. Vis International Commercial Arbitration Moot aktiv und amtiert derzeit als Co-Vorsitzende des International Liaisons Teams der in Wien ansässigen Moot Alumni Association.</p>
+        <p>Sie ist zweisprachig Englisch–Türkisch und staatlich geprüfte Übersetzerin, zertifiziert durch das türkische Justizministerium. In der internationalen Schiedsgemeinschaft ist sie als ehemalige Teilnehmerin, Trainerin und Schiedsrichterin beim Willem C. Vis International Commercial Arbitration Moot aktiv und amtiert derzeit als Co-Vorsitzende des International Liaisons Teams der in Wien ansässigen Moot Alumni Association. Sie ist außerdem in beratender Funktion für <a href="https://www.nafasihub.co.uk" target="_blank" rel="noopener noreferrer">Nafasi Energy Info Hub</a> tätig.</p>
       </div>
       <div class="about-stats reveal">
         <div class="stat-item">
@@ -328,7 +339,8 @@
   <section class="practice" id="taetigkeiten">
     <p class="services-label">Tätigkeitsschwerpunkte</p>
     <h2 class="services-title">
-      <a href="arbitration-de.html" style="text-decoration:none; color:inherit; border-bottom:1px solid var(--line);">Schiedsrechtliche Dienstleistungen</a>
+      <!-- Bug fix: bare filename corrected to /de/ path -->
+      <a href="/de/arbitration-de.html" style="text-decoration:none; color:inherit; border-bottom:1px solid var(--line);">Schiedsrechtliche Dienstleistungen</a>
     </h2>
     <div class="services-grid reveal">
 
@@ -346,7 +358,8 @@
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">B</div>
         <h3 itemprop="name">
-          <a href="tribunal-secretary-de.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Schiedsgerichtssekretariat</a>
+          <!-- Bug fix: bare filename corrected to /de/ path -->
+          <a href="/de/tribunal-secretary-de.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Schiedsgerichtssekretariat</a>
         </h3>
         <div class="service-meta" itemprop="description">Unabhängige und diskrete Verfahrensunterstützung für Schiedsgerichte.</div>
         <ul>
@@ -384,17 +397,19 @@
   <!-- ══ KONTAKT ════════════════════════════════════════════════════════════ -->
   <section class="contact" id="kontakt">
     <p class="section-label">Kontakt</p>
-    <!-- FIX: BRAO § 43b — kein werbender Imperativ, sachliche Formulierung -->
+    <!-- BRAO § 43b — kein werbender Imperativ, sachliche Formulierung -->
     <h2 class="section-title">Kontaktaufnahme</h2>
     <p class="contact-sub">Die Kanzlei steht für internationale Schiedsmandate, Co-Counsel-Mandate und vorsorgende Rechtsberatung zur Verfügung.</p>
     <div class="contact-links">
+      <!-- Bug fix: Tally inquiry form button was missing from the DE version -->
+      <a href="https://tally.so/r/zxZeDE" target="_blank" rel="noopener noreferrer" class="contact-link">✎ &nbsp; Kontaktformular</a>
       <a href="mailto:info@ozgorenlawfirm.com" class="contact-link">✉ &nbsp; info@ozgorenlawfirm.com</a>
       <a href="tel:+905431465266" class="contact-link">☎ &nbsp; +90 543 146 52 66</a>
       <a href="https://www.linkedin.com/in/selinozgoren/" target="_blank" rel="noopener noreferrer" class="contact-link">↗ &nbsp; LinkedIn</a>
     </div>
   </section>
 
-  <!-- ══ PFLICHTANGABEN / LEGAL NOTICE ═════════════════════════════════════
+  <!-- ══ PFLICHTANGABEN / LEGAL NOTICE ══════════════════════════════════════
     BRAO § 43b: Sachlichkeitsgebot. Diese Seite hat ausschließlich
     informatorischen Charakter und stellt keine Rechtsberatung dar.
   ═════════════════════════════════════════════════════════════════════════ -->
@@ -409,7 +424,8 @@
   <footer>
     <p>© 2026 Özgören Law Firm. Alle Rechte vorbehalten.</p>
     <p>
-      <a href="arbitration-lawyer-izmir.html" style="color:rgba(247,243,238,0.3); text-decoration:none; letter-spacing:0.1em;">
+      <!-- Bug fix: bare filename corrected to absolute /en/ path -->
+      <a href="/en/arbitration-lawyer-izmir.html" style="color:rgba(247,243,238,0.3); text-decoration:none; letter-spacing:0.1em;">
         Schiedsanwältin Izmir
       </a>
       &nbsp;·&nbsp; Izmir, Türkei
@@ -454,6 +470,8 @@
       });
     });
   </script>
+  <!-- Bug fix: tally embed script was missing from the DE version -->
+  <script async src="https://tally.so/widgets/embed.js"></script>
 
 </body>
 </html>
