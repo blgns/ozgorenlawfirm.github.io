@@ -2,43 +2,43 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ══ META PRIMARI ══════════════════════════════════════════════════════ -->
   <title>Selin Özgören | Avvocato Arbitrato Internazionale – Smirne, Turchia</title>
   <meta name="description" content="Özgören Law Firm — arbitrato commerciale internazionale, arbitrato d'investimento, segreteria arbitrale e consulenza transfrontaliera. Sede a Smirne, Turchia.">
   <meta name="keywords" content="avvocato arbitrato internazionale Turchia, segreteria tribunale arbitrale, UNCITRAL, arbitrato investimento, controversia transfrontaliera, arbitrato Smirne">
   <meta name="author" content="Selin Özgören">
-  <link rel="canonical" href="https://ozgorenlawfirm.com/index-it.html">
+  <link rel="canonical" href="https://ozgorenlawfirm.com/it/index-it.html">
 
   <!-- ══ OPEN GRAPH ════════════════════════════════════════════════════════ -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Selin Özgören | Avvocato Arbitrato Internazionale">
   <meta property="og:description" content="Consulenza in arbitrato commerciale internazionale e arbitrato d'investimento. Segreteria arbitrale. Assistenza legale transfrontaliera. Sede a Smirne, Turchia — operativa a livello globale.">
-  <meta property="og:url" content="https://ozgorenlawfirm.com/index-it.html">
+  <meta property="og:url" content="https://ozgorenlawfirm.com/it/index-it.html">
   <meta property="og:image" content="https://ozgorenlawfirm.com/selin.jpg">
   <meta property="og:locale" content="it_IT">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Özgören Law Firm">
 
   <!-- ══ HREFLANG ══════════════════════════════════════════════════════════ -->
-  <link rel="alternate" hreflang="en"        href="https://ozgorenlawfirm.com/index.html">
-  <link rel="alternate" hreflang="tr"        href="https://ozgorenlawfirm.com/index-tr.html">
-  <link rel="alternate" hreflang="ar"        href="https://ozgorenlawfirm.com/index-ar.html">
-  <link rel="alternate" hreflang="de"        href="https://ozgorenlawfirm.com/index-de.html">
-  <link rel="alternate" hreflang="es"        href="https://ozgorenlawfirm.com/index-es.html">
-  <link rel="alternate" hreflang="fr"        href="https://ozgorenlawfirm.com/index-fr.html">
-  <link rel="alternate" hreflang="it"        href="https://ozgorenlawfirm.com/index-it.html">
-  <link rel="alternate" hreflang="zh-CN"     href="https://ozgorenlawfirm.com/index-zh.html">
-  <link rel="alternate" hreflang="zh-HK"     href="https://ozgorenlawfirm.com/index-hk.html">
-  <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/index.html">
+  <link rel="alternate" hreflang="en"        href="https://ozgorenlawfirm.com/en/index.html">
+  <link rel="alternate" hreflang="tr"        href="https://ozgorenlawfirm.com/tr/index-tr.html">
+  <link rel="alternate" hreflang="ar"        href="https://ozgorenlawfirm.com/ar/index-ar.html">
+  <link rel="alternate" hreflang="de"        href="https://ozgorenlawfirm.com/de/index-de.html">
+  <link rel="alternate" hreflang="es"        href="https://ozgorenlawfirm.com/es/index-es.html">
+  <link rel="alternate" hreflang="fr"        href="https://ozgorenlawfirm.com/fr/index-fr.html">
+  <link rel="alternate" hreflang="it"        href="https://ozgorenlawfirm.com/it/index-it.html">
+  <link rel="alternate" hreflang="zh-CN"     href="https://ozgorenlawfirm.com/hk/index-zh.html">
+  <link rel="alternate" hreflang="zh-HK"     href="https://ozgorenlawfirm.com/hk/index-hk.html">
+  <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/index.html">
 
-  <!-- ══ JSON-LD SCHEMA (blocco unico, @graph) ════════════════════════════ -->
+  <!-- ══ JSON-LD SCHEMA ════════════════════════════════════════════════════ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -79,7 +79,7 @@
         "@id": "https://ozgorenlawfirm.com/#selin",
         "name": "Selin Özgören",
         "jobTitle": "Avvocato specializzato in arbitrato internazionale",
-        "url": "https://ozgorenlawfirm.com/index-it.html",
+        "url": "https://ozgorenlawfirm.com/it/index-it.html",
         "image": "https://ozgorenlawfirm.com/selin.jpg",
         "sameAs": "https://www.linkedin.com/in/selinozgoren/",
         "worksFor": { "@id": "https://ozgorenlawfirm.com/#firm" },
@@ -155,30 +155,41 @@
       width: auto;
       display: block;
     }
-    .lang-switcher {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-      z-index: 1200;
-    }
-    .lang-switcher a {
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-decoration: none;
-      padding: 0.3rem 0.55rem;
-      border: 1px solid var(--line);
+
+    /* ── LANGUAGE DROPDOWN STYLES ── */
+    .lang-switcher { z-index: 1200; }
+    .lang-dropdown { position: relative; }
+    .lang-btn {
+      display: flex; align-items: center; gap: 0.45rem;
+      background: none; border: 1px solid var(--line);
+      padding: 0.35rem 0.75rem; cursor: pointer;
+      font-family: 'Jost', sans-serif; font-size: 0.65rem;
+      letter-spacing: 0.15em; color: var(--muted);
       transition: all 0.25s;
-      color: var(--muted);
     }
-    .lang-switcher a.active {
-      border-color: var(--gold);
-      color: var(--gold);
-      background: rgba(184,149,90,0.08);
+    .lang-btn:hover { border-color: var(--gold-light); color: var(--dark); }
+    .lang-btn.open { border-color: var(--gold); color: var(--gold); }
+    .lang-btn svg { transition: transform 0.25s; }
+    .lang-btn.open svg { transform: rotate(180deg); }
+    .lang-menu {
+      display: none;
+      position: absolute; top: calc(100% + 6px); left: 0;
+      background: rgba(247,243,238,0.99);
+      border: 1px solid var(--line);
+      list-style: none; min-width: 140px;
+      z-index: 1300;
+      backdrop-filter: blur(12px);
     }
-    .lang-switcher a:hover:not(.active) {
-      border-color: var(--gold-light);
-      color: var(--dark);
+    .lang-menu.open { display: block; }
+    .lang-menu a {
+      display: block; padding: 0.55rem 1rem;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-decoration: none; color: var(--muted);
+      transition: background 0.2s, color 0.2s;
     }
+    .lang-menu a:hover { background: rgba(184,149,90,0.08); color: var(--dark); }
+    .lang-menu a.active { color: var(--gold); background: rgba(184,149,90,0.05); }
+
     .hamburger {
       margin-left: auto;
       display: flex; flex-direction: column; gap: 5px;
@@ -452,7 +463,7 @@
     /* ── ANIMAZIONI ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      to { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeIn {
       from { opacity: 0; } to { opacity: 1; }
@@ -482,18 +493,30 @@
 
   <!-- ── NAVIGAZIONE ── -->
   <nav>
-   <div class="lang-switcher">
-  <a href="/en/index.html">EN</a>
-  <a href="/tr/index-tr.html">TR</a>
-  <a href="/ar/index-ar.html">AR</a>
-  <a href="/de/index-de.html">DE</a>
-  <a href="/fr/index-fr.html">FR</a>
-  <a href="/es/index-es.html">ES</a>
-  <a href="/it/index-it.html" class="active">IT</a>
-  <a href="/hk/index-zh.html">ZH</a>
-</div>
-    <a class="nav-logo" href="/index-it.html">
-      <img src="logo.png" alt="Özgören Law Firm – Arbitrato Internazionale, Smirne">
+    <div class="lang-switcher">
+      <div class="lang-dropdown">
+        <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langLabel">IT</span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-menu" id="langMenu" role="listbox">
+          <li><a href="/en/index.html">English</a></li>
+          <li><a href="/tr/index-tr.html">Türkçe</a></li>
+          <li><a href="/ar/index-ar.html">العربية</a></li>
+          <li><a href="/de/index-de.html">Deutsch</a></li>
+          <li><a href="/fr/index-fr.html">Français</a></li>
+          <li><a href="/es/index-es.html">Español</a></li>
+          <li><a href="/it/index-it.html" class="active">Italiano</a></li>
+          <li><a href="/ru/index-ru.html">Русский</a></li>
+          <li><a href="/hk/index-zh.html">中文</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <a class="nav-logo" href="/it/index-it.html">
+      <img src="../logo.png" alt="Özgören Law Firm – Arbitrato Internazionale, Smirne">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Apri il menu di navigazione" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -503,9 +526,9 @@
   <!-- ── MENU LATERALE ── -->
   <ul class="nav-links" id="navLinks" role="navigation" aria-label="Navigazione principale">
     <li><a href="#chi-sono">Chi sono</a></li>
-    <li><a href="arbitration-it.html">Servizi di Arbitrato</a></li>
-    <li><a href="blog-it.html">Risorse</a></li>
-    <li><a href="updates-it.html">Aggiornamenti</a></li>
+    <li><a href="/it/arbitration-it.html">Servizi di Arbitrato</a></li>
+    <li><a href="/it/blog-it.html">Risorse</a></li>
+    <li><a href="/it/updates-it.html">Aggiornamenti</a></li>
     <li><a href="#contatti">Contatti</a></li>
   </ul>
 
@@ -521,7 +544,7 @@
       </div>
     </div>
     <div class="hero-right">
-      <img src="selin.jpg" alt="Selin Özgören, Avvocato Arbitrato Internazionale Italia Turchia a Smirne, Turchia">
+      <img src="../selin.jpg" alt="Selin Özgören, Avvocato Arbitrato Internazionale Italia Turchia a Smirne, Turchia">
       <a href="#contatti" class="hero-cta">Contattami</a>
     </div>
   </div>
@@ -532,7 +555,7 @@
     <h2 class="section-title">Una pratica legale internazionale<br>fondata sull'integrità</h2>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>Selin Özgören si occupa di <a href="arbitration-it.html">arbitrato commerciale internazionale e arbitrato d'investimento</a>, nonché di controversie transfrontaliere in materia di diritto internazionale del commercio e diritto internazionale pubblico. È iscritta all'Ordine degli Avvocati di Smirne e ha maturato esperienza tanto nei sistemi di common law quanto in quelli di civil law.</p>
+        <p>Selin Özgören si occupa di <a href="/it/arbitration-it.html">arbitrato commerciale internazionale e arbitrato d'investimento</a>, nonché di controversie transfrontaliere in materia di diritto internazionale del commercio e diritto internazionale pubblico. È iscritta all'Ordine degli Avvocati di Smirne e ha maturato esperienza tanto nei sistemi di common law quanto in quelli di civil law.</p>
         <p>Ha conseguito un LL.M. presso l'Università Bocconi di Milano con borsa di studio integrale, con una tesi sull'intersezione tra sviluppo sostenibile e arbitrato internazionale degli investimenti. Ha ottenuto il titolo di LL.B. presso la Facoltà di Giurisprudenza dell'Università di Ankara, includendo un anno di scambio Erasmus presso l'Università di Bologna.</p>
         <p>La sua esperienza professionale comprende uno stage presso il Segretariato UNCITRAL a Vienna, con contributi al Gruppo di Lavoro III sulla riforma dell'ISDS, e attività di supporto alla gestione dei procedimenti presso il Centro Internazionale di Arbitrato di Hong Kong (HKIAC). Ha inoltre preso parte a procedimenti arbitrali presso uno studio legale milanese e acquisito esperienza in materia di regolamentazione transfrontaliera e sanzioni internazionali presso primari studi legali globali, tra cui Allen &amp; Overy e Baker McKenzie. Negli Stati Uniti ha operato nell'ambito di procedimenti davanti ad autorità federali a New York e in California.</p>
         <p>Bilingue in turco e inglese, è traduttrice giurata turco-inglese abilitata dal Ministero della Giustizia turco. Mantiene un impegno attivo nella comunità internazionale dell'arbitrato: già partecipante, coach e arbitro nel Willem C. Vis International Commercial Arbitration Moot, ricopre attualmente il ruolo di Co-Chair del Team Liaison Internazionale della Moot Alumni Association con sede a Vienna.</p>
@@ -562,7 +585,7 @@
   <section class="practice" id="servizi">
     <p class="services-label">Aree di Attività</p>
     <h2 class="services-title">
-      <a href="arbitration-it.html" style="text-decoration:none; color:inherit; border-bottom:1px solid var(--line);">Servizi di Arbitrato</a>
+      <a href="/it/arbitration-it.html" style="text-decoration:none; color:inherit; border-bottom:1px solid var(--line);">Servizi di Arbitrato</a>
     </h2>
     <div class="services-grid reveal">
 
@@ -580,7 +603,7 @@
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">B</div>
         <h3 itemprop="name">
-          <a href="tribunal-secretary-it.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Segreteria di Tribunale Arbitrale</a>
+          <a href="/it/tribunal-secretary-it.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Segreteria di Tribunale Arbitrale</a>
         </h3>
         <div class="service-meta" itemprop="description">Assistenza procedurale indipendente e riservata in arbitrati complessi.</div>
         <ul>
@@ -640,7 +663,7 @@
   <footer>
     <p>© 2026 Özgören Law Firm. Tutti i diritti riservati.</p>
     <p>
-      <a href="arbitration-lawyer-izmir.html" style="color:rgba(247,243,238,0.3); text-decoration:none; letter-spacing:0.1em;">
+      <a href="/en/arbitration-lawyer-izmir.html" style="color:rgba(247,243,238,0.3); text-decoration:none; letter-spacing:0.1em;">
         Avvocato Arbitrato Smirne
       </a>
       &nbsp;·&nbsp; Smirne, Turchia
@@ -707,7 +730,35 @@
         }
       });
     });
-  </script>
 
+    // Language dropdown logic
+    const langBtn  = document.getElementById('langBtn');
+    const langMenu = document.getElementById('langMenu');
+
+    if (langBtn && langMenu) {
+      langBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = langMenu.classList.toggle('open');
+        langBtn.classList.toggle('open', isOpen);
+        langBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.addEventListener('click', () => {
+        langMenu.classList.remove('open');
+        langBtn.classList.remove('open');
+        langBtn.setAttribute('aria-expanded', 'false');
+      });
+
+      langMenu.addEventListener('click', (e) => e.stopPropagation());
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && langMenu.classList.contains('open')) {
+          langMenu.classList.remove('open');
+          langBtn.classList.remove('open');
+          langBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
