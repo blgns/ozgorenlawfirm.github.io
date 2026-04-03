@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <!-- ══ CHARSET FIRST — must precede any multibyte content ════════════════ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ══ FAVICON ══════════════════════════════════════════════════════════ -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- ══ PRIMARY META ══════════════════════════════════════════════════════ -->
   <title>سيلين أوزغورين | محامية تحكيم دولي – إزمير، تركيا</title>
   <meta name="description" content="مكتب أوزغورين للمحاماة يقدّم خدمات التحكيم التجاري الدولي وتحكيم الاستثمار وأمانة هيئة التحكيم والاستشارات العابرة للحدود. خبرة لدى UNCITRAL وHKIAC. مقره إزمير، يعمل عالمياً.">
   <meta name="keywords" content="محامي تحكيم دولي تركيا, تحكيم تجاري دولي, تحكيم استثماري, أمانة هيئة التحكيم, UNCITRAL, ICC, HKIAC, نزاعات عابرة للحدود, قانون دولي إزمير, تحكيم الشرق الأوسط وتركيا, محامية تحكيم دولي">
   <meta name="author" content="Selin Özgören">
 
-  <!-- ══ CANONICAL & HREFLANG ══════════════════════════════════════════════ -->
   <link rel="canonical" href="https://ozgorenlawfirm.com/ar/index-ar.html">
   <link rel="alternate" hreflang="en"        href="https://ozgorenlawfirm.com/en/index.html">
   <link rel="alternate" hreflang="tr"        href="https://ozgorenlawfirm.com/tr/index-tr.html">
@@ -32,7 +28,6 @@
   <link rel="alternate" hreflang="zh-HK"     href="https://ozgorenlawfirm.com/hk/index-hk.html">
   <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/index.html">
 
-  <!-- ══ OPEN GRAPH ════════════════════════════════════════════════════════ -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="سيلين أوزغورين | محامية تحكيم دولي">
   <meta property="og:description" content="تمثيل واستشارات في التحكيم التجاري والاستثماري الدولي. أمانة هيئة التحكيم. استشارات عابرة للحدود. مقرها إزمير، تركيا — خدمة عالمية.">
@@ -41,7 +36,6 @@
   <meta property="og:locale" content="ar_001">
   <meta property="og:site_name" content="Özgören Law Firm">
 
-  <!-- ══ JSON-LD SCHEMA ═══════════════════════════════════════════════════ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -102,7 +96,6 @@
   }
   </script>
 
-  <!-- ══ GOOGLE ANALYTICS ══════════════════════════════════════════════════ -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVN14SDR0X"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -111,7 +104,6 @@
     gtag('config', 'G-WVN14SDR0X');
   </script>
 
-  <!-- ══ FONTS ═════════════════════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Naskh+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -136,19 +128,14 @@
       line-height: 1.8;
     }
 
-    /* ── NAV ──
-       Bug fix: force direction:ltr on nav so that the absolute-centred logo
-       and the switcher/hamburger at each edge behave as designed regardless
-       of the document's dir="rtl". Without this, flex start/end are mirrored
-       and margin-left/right auto push elements to the wrong side.
-    */
+    /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0;
       z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      direction: ltr; /* ← fix: preserve LTR nav layout in RTL document */
+      direction: ltr;
       padding: 1.2rem clamp(2rem, 5vw, 6rem);
       background: rgba(247,243,238,0.95);
       backdrop-filter: blur(12px);
@@ -163,31 +150,42 @@
     }
     .nav-logo img { height: 85px; width: auto; display: block; }
 
-    /* Bug fix: was margin-right:auto which in RTL flex pushed it inward.
-       With direction:ltr on nav, margin-right:auto is now correct (pushes right). */
-    .lang-switcher {
-      display: flex; align-items: center; gap: 0.3rem;
-      z-index: 1200;
-      flex-wrap: wrap; max-width: 320px;
+    /* ── LANGUAGE DROPDOWN ── */
+    .lang-switcher { z-index: 1200; }
+    .lang-dropdown { position: relative; }
+    .lang-btn {
+      display: flex; align-items: center; gap: 0.45rem;
+      background: none; border: 1px solid var(--line);
+      padding: 0.35rem 0.75rem; cursor: pointer;
+      font-family: 'Jost', sans-serif; font-size: 0.65rem;
+      letter-spacing: 0.15em; color: var(--muted);
+      transition: all 0.25s;
     }
-    .lang-switcher a {
-      font-size: 0.65rem; letter-spacing: 0.15em;
-      text-decoration: none;
-      padding: 0.3rem 0.55rem;
+    .lang-btn:hover { border-color: var(--gold-light); color: var(--dark); }
+    .lang-btn.open { border-color: var(--gold); color: var(--gold); }
+    .lang-btn svg { transition: transform 0.25s; }
+    .lang-btn.open svg { transform: rotate(180deg); }
+    .lang-menu {
+      display: none;
+      position: absolute; top: calc(100% + 6px); left: 0;
+      background: rgba(247,243,238,0.99);
       border: 1px solid var(--line);
-      transition: all 0.25s; color: var(--muted);
-      font-family: 'Jost', sans-serif;
+      list-style: none; min-width: 140px;
+      z-index: 1300;
+      backdrop-filter: blur(12px);
     }
-    .lang-switcher a.active {
-      border-color: var(--gold); color: var(--gold);
-      background: rgba(184,149,90,0.08);
+    .lang-menu.open { display: block; }
+    .lang-menu a {
+      display: block; padding: 0.55rem 1rem;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-decoration: none; color: var(--muted);
+      transition: background 0.2s, color 0.2s;
+      direction: ltr; text-align: left;
     }
-    .lang-switcher a:hover:not(.active) {
-      border-color: var(--gold-light); color: var(--dark);
-    }
+    .lang-menu a:hover { background: rgba(184,149,90,0.08); color: var(--dark); }
+    .lang-menu a.active { color: var(--gold); background: rgba(184,149,90,0.05); }
 
-    /* Bug fix: was margin-left:auto. With direction:ltr on nav, margin-left:auto
-       correctly pushes the hamburger to the right edge. */
+    /* ── HAMBURGER ── */
     .hamburger {
       margin-left: auto;
       display: flex; flex-direction: column; gap: 5px;
@@ -243,9 +241,6 @@
       padding: 5rem 6rem 5rem 4rem;
       position: relative; order: 2;
     }
-    /* Bug fix: divider line must be on the LEFT edge of hero-left (order:2 = right column
-       in visual terms, but its logical left borders the image column on the left).
-       Original had left:0 which is correct for this column — keeping it. */
     .hero-left::before {
       content: '';
       position: absolute; top: 0; left: 0;
@@ -273,7 +268,6 @@
       box-shadow: 0 0 60px rgba(184,149,90,0.2);
       display: block; position: relative;
     }
-
     .hero-name {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(3rem, 5vw, 5rem);
@@ -281,7 +275,7 @@
       letter-spacing: -0.01em; margin-bottom: 1.2rem;
       animation: fadeUp 0.8s 0.1s ease both;
       text-align: right;
-      direction: ltr; /* keep Latin name LTR even in RTL context */
+      direction: ltr;
     }
     .hero-name em { font-style: italic; color: var(--gold); }
     .hero-name-ar {
@@ -317,7 +311,6 @@
       font-family: 'Noto Naskh Arabic', sans-serif;
     }
     .hero-cta:hover { background: var(--gold); color: var(--cream); }
-
     .hero-badge {
       display: inline-block; width: fit-content;
       padding: 0.75rem 1.5rem;
@@ -413,8 +406,6 @@
       position: relative; overflow: hidden; transition: background 0.3s;
       text-align: right;
     }
-    /* Bug fix: top-line accent was on left:0. In RTL cards the accent should
-       emerge from the right edge to match reading direction. */
     .service-card::before {
       content: ''; position: absolute; top: 0; right: 0;
       width: 0; height: 2px; background: var(--gold); transition: width 0.4s ease;
@@ -461,7 +452,7 @@
     .contact-links {
       display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
       max-width: 1300px; margin: 0 auto;
-      direction: ltr; /* keep contact buttons LTR regardless of page dir */
+      direction: ltr;
     }
     .contact-link {
       display: flex; align-items: center; gap: 0.6rem;
@@ -516,19 +507,31 @@
   <!-- ── NAV BAR ── -->
   <nav>
     <div class="lang-switcher">
-      <a href="/en/index.html">EN</a>
-      <a href="/tr/index-tr.html">TR</a>
-      <a href="/ar/index-ar.html" class="active">AR</a>
-      <a href="/de/index-de.html">DE</a>
-      <a href="/fr/index-fr.html">FR</a>
-      <a href="/es/index-es.html">ES</a>
-      <a href="/it/index-it.html">IT</a>
-      <a href="/ru/index-ru.html">RU</a>
-      <a href="/hk/index-zh.html">ZH</a>
+      <div class="lang-dropdown">
+        <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langLabel">AR</span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-menu" id="langMenu" role="listbox">
+          <li><a href="/en/index.html">English</a></li>
+          <li><a href="/tr/index-tr.html">Türkçe</a></li>
+          <li><a href="/ar/index-ar.html" class="active">العربية</a></li>
+          <li><a href="/de/index-de.html">Deutsch</a></li>
+          <li><a href="/fr/index-fr.html">Français</a></li>
+          <li><a href="/es/index-es.html">Español</a></li>
+          <li><a href="/it/index-it.html">Italiano</a></li>
+          <li><a href="/ru/index-ru.html">Русский</a></li>
+          <li><a href="/hk/index-hk.html">中文</a></li>
+        </ul>
+      </div>
     </div>
+
     <a class="nav-logo" href="/ar/index-ar.html">
       <img src="../logo.png" alt="مكتب أوزغورين للمحاماة – التحكيم الدولي، إزمير">
     </a>
+
     <button class="hamburger" id="hamburger" aria-label="فتح قائمة التنقل" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -570,7 +573,6 @@
         <p>تتخصص سيلين أوزغورين في <a href="/ar/arbitration.html">التحكيم التجاري الدولي وتحكيم الاستثمار</a>، إلى جانب النزاعات العابرة للحدود ذات الصلة بقانون التجارة الدولية والقانون الدولي العام. مسجّلة لدى نقابة محامي إزمير، وتملك خبرة عملية واسعة في الأنظمة القانونية المختلطة بين القانون العرفي والقانون المدني.</p>
         <p>حاصلة على درجة الماجستير في القانون (LL.M.) من جامعة بوكوني في ميلانو بمنحة دراسية كاملة، وأعدّت أطروحتها حول التقاطع بين التنمية المستدامة وتحكيم الاستثمار الدولي. تخرّجت في القانون (LL.B.) من كلية الحقوق بجامعة أنقرة، وأمضت عاماً دراسياً ضمن برنامج إيراسموس بجامعة بولونيا.</p>
         <p>شملت مسيرتها المهنية عملاً في أمانة لجنة الأمم المتحدة للقانون التجاري الدولي (UNCITRAL) بفيينا، مساهِمةً في أعمال الفريق العامل الثالث المعني بإصلاح آليات تسوية نزاعات الاستثمار. اكتسبت كذلك خبرة في إدارة القضايا التحكيمية لدى مركز هونغ كونغ الدولي للتحكيم (HKIAC)، وعملت في قضايا تحكيم دولي لدى مكتب محاماة في ميلانو. عمّقت تجربتها في مجال العقوبات والامتثال التنظيمي العابر للحدود في مكاتب عالمية من بينها ألن وأوفري وبيكر ماكنزي. كما مثّلت موكّلين في إجراءات قانونية أمام الجهات الفيدرالية في نيويورك وكاليفورنيا.</p>
-        <!-- Bug fix: URL corrected from nafasienergy.com to nafasihub.co.uk per the EN source -->
         <p>ثنائية اللغة إنجليزي–تركي، ومترجمة قانونية معتمدة ومحلَّفة من وزارة العدل التركية. ناشطة في مجتمع التحكيم الدولي بوصفها خريجةً ومدرّبةً ومحكّمةً في مسابقة فيلم سي. فيس للتحكيم التجاري الدولي، وتتولى حالياً المشاركة في رئاسة فريق الاتصالات الدولية لرابطة خريجي المسابقة ومقرها فيينا. تشغل أيضاً دوراً استشارياً لدى <a href="https://www.nafasihub.co.uk" target="_blank" rel="noopener noreferrer">Nafasi Energy Info Hub</a>.</p>
       </div>
       <div class="about-stats reveal">
@@ -721,8 +723,31 @@
         }
       });
     });
+
+    // Language dropdown
+    const langBtn  = document.getElementById('langBtn');
+    const langMenu = document.getElementById('langMenu');
+
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = langMenu.classList.toggle('open');
+      langBtn.classList.toggle('open', isOpen);
+      langBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    document.addEventListener('click', () => {
+      langMenu.classList.remove('open');
+      langBtn.classList.remove('open');
+      langBtn.setAttribute('aria-expanded', 'false');
+    });
+    langMenu.addEventListener('click', (e) => e.stopPropagation());
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && langMenu.classList.contains('open')) {
+        langMenu.classList.remove('open');
+        langBtn.classList.remove('open');
+        langBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
   </script>
-  <!-- Bug fix: tally embed script was missing from the Arabic version -->
   <script async src="https://tally.so/widgets/embed.js"></script>
 </body>
 </html>
