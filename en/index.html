@@ -4,23 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ══ FAVICON ══════════════════════════════════════════════════════════ -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- ══ PRIMARY META ══════════════════════════════════════════════════════ -->
   <title>Selin Özgören | International Arbitration Lawyer – Izmir, Turkey</title>
   <meta name="description" content="Özgören Law Firm offers international commercial arbitration, investment arbitration counsel, tribunal secretary services, and cross-border advisory. Based in Izmir, Turkey. Operating globally.">
   <meta name="keywords" content="international arbitration lawyer Turkey, tribunal secretary, UNCITRAL, investment arbitration, cross-border dispute, Izmir arbitration">
   <meta name="author" content="Selin Özgören">
 
-  <!-- ══ CANONICAL (single, correct) ══════════════════════════════════════ -->
   <link rel="canonical" href="https://ozgorenlawfirm.com/en/index.html">
 
-  <!-- ══ OPEN GRAPH ════════════════════════════════════════════════════════ -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Selin Özgören | International Arbitration Lawyer">
   <meta property="og:description" content="International commercial and investment arbitration counsel. Tribunal secretary. Cross-border advisory. Based in Izmir, Turkey – operating globally.">
@@ -29,7 +25,6 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Özgören Law Firm">
 
-  <!-- ══ HREFLANG ══════════════════════════════════════════════════════════ -->
   <link rel="alternate" hreflang="en"        href="https://ozgorenlawfirm.com/en/index.html">
   <link rel="alternate" hreflang="tr"        href="https://ozgorenlawfirm.com/tr/index-tr.html">
   <link rel="alternate" hreflang="ar"        href="https://ozgorenlawfirm.com/ar/index-ar.html">
@@ -37,11 +32,11 @@
   <link rel="alternate" hreflang="es"        href="https://ozgorenlawfirm.com/es/index-es.html">
   <link rel="alternate" hreflang="fr"        href="https://ozgorenlawfirm.com/fr/index-fr.html">
   <link rel="alternate" hreflang="it"        href="https://ozgorenlawfirm.com/it/index-it.html">
+  <link rel="alternate" hreflang="ru"        href="https://ozgorenlawfirm.com/ru/index-ru.html">
   <link rel="alternate" hreflang="zh-CN"     href="https://ozgorenlawfirm.com/hk/index-zh.html">
   <link rel="alternate" hreflang="zh-HK"     href="https://ozgorenlawfirm.com/hk/index-hk.html">
   <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/index.html">
 
-  <!-- ══ JSON-LD SCHEMA ═══════════════════════════════════════════════════ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -101,7 +96,6 @@
   }
   </script>
 
-  <!-- ══ GOOGLE ANALYTICS ══════════════════════════════════════════════════ -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVN14SDR0X"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -110,7 +104,6 @@
     gtag('config', 'G-WVN14SDR0X');
   </script>
 
-  <!-- ══ FONTS ═════════════════════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -134,6 +127,7 @@
       font-weight: 300;
       overflow-x: hidden;
     }
+
     /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0;
@@ -154,20 +148,41 @@
       align-items: center;
     }
     .nav-logo img { height: 85px; width: auto; display: block; }
-    .lang-switcher {
-      display: flex; align-items: center; gap: 0.3rem;
-      z-index: 1200; flex-wrap: wrap; max-width: 260px;
+
+    /* ── LANGUAGE DROPDOWN ── */
+    .lang-switcher { z-index: 1200; }
+    .lang-dropdown { position: relative; }
+    .lang-btn {
+      display: flex; align-items: center; gap: 0.45rem;
+      background: none; border: 1px solid var(--line);
+      padding: 0.35rem 0.75rem; cursor: pointer;
+      font-family: 'Jost', sans-serif; font-size: 0.65rem;
+      letter-spacing: 0.15em; color: var(--muted);
+      transition: all 0.25s;
     }
-    .lang-switcher a {
-      font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none;
-      padding: 0.3rem 0.55rem; border: 1px solid var(--line);
-      transition: all 0.25s; color: var(--muted);
+    .lang-btn:hover { border-color: var(--gold-light); color: var(--dark); }
+    .lang-btn.open { border-color: var(--gold); color: var(--gold); }
+    .lang-btn svg { transition: transform 0.25s; }
+    .lang-btn.open svg { transform: rotate(180deg); }
+    .lang-menu {
+      display: none;
+      position: absolute; top: calc(100% + 6px); left: 0;
+      background: rgba(247,243,238,0.99);
+      border: 1px solid var(--line);
+      list-style: none; min-width: 140px;
+      z-index: 1300;
+      backdrop-filter: blur(12px);
     }
-    .lang-switcher a.active {
-      border-color: var(--gold); color: var(--gold);
-      background: rgba(184,149,90,0.08);
+    .lang-menu.open { display: block; }
+    .lang-menu a {
+      display: block; padding: 0.55rem 1rem;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-decoration: none; color: var(--muted);
+      transition: background 0.2s, color 0.2s;
     }
-    .lang-switcher a:hover:not(.active) { border-color: var(--gold-light); color: var(--dark); }
+    .lang-menu a:hover { background: rgba(184,149,90,0.08); color: var(--dark); }
+    .lang-menu a.active { color: var(--gold); background: rgba(184,149,90,0.05); }
+
     .hamburger {
       margin-left: auto;
       display: flex; flex-direction: column; gap: 5px;
@@ -205,6 +220,7 @@
       transition: color 0.3s; display: block; padding: 0.25rem 0;
     }
     .nav-links a:hover { color: var(--gold); }
+
     /* ── HERO ── */
     .hero {
       min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
@@ -276,6 +292,7 @@
       font-family: 'Cormorant Garamond', serif; font-size: 1rem;
       font-weight: 400; color: var(--dark); letter-spacing: 0.05em;
     }
+
     /* ── SECTIONS ── */
     section { padding: 6rem clamp(2rem, 5vw, 6rem); }
     .section-label {
@@ -292,6 +309,7 @@
       font-size: clamp(2rem, 3.5vw, 3rem);
       font-weight: 300; line-height: 1.15; margin-bottom: 3rem;
     }
+
     /* ── ABOUT ── */
     .about { background: var(--dark); color: var(--cream); }
     .about .section-title { color: var(--cream); }
@@ -321,6 +339,7 @@
       font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
       color: rgba(247,243,238,0.5); margin-top: 0.4rem;
     }
+
     /* ── SERVICES ── */
     .services-label {
       font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
@@ -367,6 +386,7 @@
       content: '—'; position: absolute; left: 0;
       color: var(--gold-light); font-size: 0.75rem;
     }
+
     /* ── CONTACT ── */
     .contact {
       background: var(--dark); color: var(--cream);
@@ -388,6 +408,7 @@
       transition: border-color 0.3s, background 0.3s;
     }
     .contact-link:hover { border-color: var(--gold); background: rgba(184,149,90,0.1); }
+
     /* ── FOOTER ── */
     footer {
       background: var(--dark); border-top: 1px solid rgba(184,149,90,0.15);
@@ -396,6 +417,7 @@
     }
     footer p { font-size: 0.65rem; color: rgba(247,243,238,0.3); letter-spacing: 0.1em; }
     footer a { color: rgba(247,243,238,0.3); text-decoration: none; letter-spacing: 0.1em; }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
@@ -404,6 +426,7 @@
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav { padding: 1rem 2rem; }
@@ -416,7 +439,6 @@
       .services-grid { grid-template-columns: 1fr; }
       .contact { padding: 4rem 2rem; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 2rem; }
-      .lang-switcher { display: none; }
     }
   </style>
 </head>
@@ -428,18 +450,31 @@
   <!-- ── NAV BAR ── -->
   <nav>
     <div class="lang-switcher">
-  <a href="/en/index.html" class="active">EN</a>
-  <a href="/tr/index-tr.html">TR</a>
-  <a href="/ar/index-ar.html">AR</a>
-  <a href="/de/index-de.html">DE</a>
-  <a href="/fr/index-fr.html">FR</a>
-  <a href="/es/index-es.html">ES</a>
-  <a href="/it/index-it.html">IT</a>
-  <a href="/hk/index-zh.html">ZH</a>
-</div>
+      <div class="lang-dropdown">
+        <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langLabel">EN</span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-menu" id="langMenu" role="listbox">
+          <li><a href="/en/index.html" class="active">English</a></li>
+          <li><a href="/tr/index-tr.html">Türkçe</a></li>
+          <li><a href="/ar/index-ar.html">العربية</a></li>
+          <li><a href="/de/index-de.html">Deutsch</a></li>
+          <li><a href="/fr/index-fr.html">Français</a></li>
+          <li><a href="/es/index-es.html">Español</a></li>
+          <li><a href="/it/index-it.html">Italiano</a></li>
+          <li><a href="/ru/index-ru.html">Русский</a></li>
+          <li><a href="/hk/index-zh.html">中文</a></li>
+        </ul>
+      </div>
+    </div>
+
     <a class="nav-logo" href="/en/index.html">
       <img src="../logo.png" alt="Özgören Law Firm – International Arbitration, İzmir">
     </a>
+
     <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -592,6 +627,7 @@
           'es': '/es/index-es.html',
           'fr': '/fr/index-fr.html',
           'it': '/it/index-it.html',
+          'ru': '/ru/index-ru.html',
           'zh': '/hk/index-zh.html'
         };
         if (languageMap[userLang]) {
@@ -654,6 +690,30 @@
           closeMenu();
         }
       });
+    });
+
+    // Language dropdown
+    const langBtn  = document.getElementById('langBtn');
+    const langMenu = document.getElementById('langMenu');
+
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = langMenu.classList.toggle('open');
+      langBtn.classList.toggle('open', isOpen);
+      langBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    document.addEventListener('click', () => {
+      langMenu.classList.remove('open');
+      langBtn.classList.remove('open');
+      langBtn.setAttribute('aria-expanded', 'false');
+    });
+    langMenu.addEventListener('click', (e) => e.stopPropagation());
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && langMenu.classList.contains('open')) {
+        langMenu.classList.remove('open');
+        langBtn.classList.remove('open');
+        langBtn.setAttribute('aria-expanded', 'false');
+      }
     });
   </script>
   <script async src="https://tally.so/widgets/embed.js"></script>
