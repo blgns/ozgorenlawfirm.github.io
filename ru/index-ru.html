@@ -103,13 +103,6 @@
   <!-- ══ FONTS ═════════════════════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!--
-    Typography notes (Russian linguist perspective):
-    - Cormorant Garamond: excellent Cyrillic coverage, elegant serifs
-      that suit formal legal Russian. The italic lends gravitas to names.
-    - Jost: clean geometric sans, Cyrillic-ready, legible at body sizes.
-      Preferred over Roboto for its less "corporate UI" feel.
-  -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"></noscript>
 
@@ -151,20 +144,41 @@
       align-items: center;
     }
     .nav-logo img { height: 85px; width: auto; display: block; }
-    .lang-switcher {
-      display: flex; align-items: center; gap: 0.3rem;
-      z-index: 1200; flex-wrap: wrap; max-width: 280px;
+
+    /* ── LANGUAGE DROPDOWN STYLES ── */
+    .lang-switcher { z-index: 1200; }
+    .lang-dropdown { position: relative; }
+    .lang-btn {
+      display: flex; align-items: center; gap: 0.45rem;
+      background: none; border: 1px solid var(--line);
+      padding: 0.35rem 0.75rem; cursor: pointer;
+      font-family: 'Jost', sans-serif; font-size: 0.65rem;
+      letter-spacing: 0.15em; color: var(--muted);
+      transition: all 0.25s;
     }
-    .lang-switcher a {
-      font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none;
-      padding: 0.3rem 0.55rem; border: 1px solid var(--line);
-      transition: all 0.25s; color: var(--muted);
+    .lang-btn:hover { border-color: var(--gold-light); color: var(--dark); }
+    .lang-btn.open { border-color: var(--gold); color: var(--gold); }
+    .lang-btn svg { transition: transform 0.25s; }
+    .lang-btn.open svg { transform: rotate(180deg); }
+    .lang-menu {
+      display: none;
+      position: absolute; top: calc(100% + 6px); left: 0;
+      background: rgba(247,243,238,0.99);
+      border: 1px solid var(--line);
+      list-style: none; min-width: 140px;
+      z-index: 1300;
+      backdrop-filter: blur(12px);
     }
-    .lang-switcher a.active {
-      border-color: var(--gold); color: var(--gold);
-      background: rgba(184,149,90,0.08);
+    .lang-menu.open { display: block; }
+    .lang-menu a {
+      display: block; padding: 0.55rem 1rem;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-decoration: none; color: var(--muted);
+      transition: background 0.2s, color 0.2s;
     }
-    .lang-switcher a:hover:not(.active) { border-color: var(--gold-light); color: var(--dark); }
+    .lang-menu a:hover { background: rgba(184,149,90,0.08); color: var(--dark); }
+    .lang-menu a.active { color: var(--gold); background: rgba(184,149,90,0.05); }
+
     .hamburger {
       margin-left: auto;
       display: flex; flex-direction: column; gap: 5px;
@@ -396,7 +410,7 @@
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      to { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -413,7 +427,6 @@
       .services-grid { grid-template-columns: 1fr; }
       .contact { padding: 4rem 2rem; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 2rem; }
-      .lang-switcher { display: none; }
     }
   </style>
 </head>
@@ -425,15 +438,25 @@
   <!-- ── NAV BAR ── -->
   <nav>
     <div class="lang-switcher">
-      <a href="/en/index.html">EN</a>
-      <a href="/tr/index-tr.html">TR</a>
-      <a href="/ar/index-ar.html">AR</a>
-      <a href="/de/index-de.html">DE</a>
-      <a href="/fr/index-fr.html">FR</a>
-      <a href="/es/index-es.html">ES</a>
-      <a href="/it/index-it.html">IT</a>
-      <a href="/hk/index-zh.html">ZH</a>
-      <a href="/ru/index-ru.html" class="active">RU</a>
+      <div class="lang-dropdown">
+        <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langLabel">RU</span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-menu" id="langMenu" role="listbox">
+          <li><a href="/en/index.html">English</a></li>
+          <li><a href="/tr/index-tr.html">Türkçe</a></li>
+          <li><a href="/ar/index-ar.html">العربية</a></li>
+          <li><a href="/de/index-de.html">Deutsch</a></li>
+          <li><a href="/fr/index-fr.html">Français</a></li>
+          <li><a href="/es/index-es.html">Español</a></li>
+          <li><a href="/it/index-it.html">Italiano</a></li>
+          <li><a href="/ru/index-ru.html" class="active">Русский</a></li>
+          <li><a href="/hk/index-zh.html">中文</a></li>
+        </ul>
+      </div>
     </div>
     <a class="nav-logo" href="/ru/index-ru.html">
       <img src="../logo.png" alt="Юридическая фирма Özgören — Международный арбитраж, Измир">
@@ -446,19 +469,13 @@
   <!-- ── NAV DRAWER ── -->
   <ul class="nav-links" id="navLinks" role="navigation" aria-label="Основная навигация">
     <li><a href="#about">О нас</a></li>
-    <li><a href="/en/arbitration.html">Арбитражные услуги</a></li>
-    <li><a href="/en/blog.html">База знаний</a></li>
-    <li><a href="/en/updates.html">Новости</a></li>
+    <li><a href="/ru/arbitration-ru.html">Арбитражные услуги</a></li>
+    <li><a href="/ru/blog-ru.html">База знаний</a></li>
+    <li><a href="/ru/updates-ru.html">Новости</a></li>
     <li><a href="#contact">Контакты</a></li>
   </ul>
 
   <!-- ══ HERO ══════════════════════════════════════════════════════════════ -->
-  <!--
-    Translator's note: The name "Selin Özgören" is kept in its original form.
-    In Russian legal practice, foreign names are retained in their original spelling
-    with Cyrillic transliteration provided in context. "Селин Озгорен" is used
-    in the meta description and page title for SEO purposes.
-  -->
   <div class="hero">
     <div class="hero-left">
       <h1 class="hero-name">Selin<br><em>Özgören</em></h1>
@@ -478,33 +495,12 @@
   <!-- ══ ABOUT ══════════════════════════════════════════════════════════════ -->
   <section class="about" id="about">
     <p class="section-label">О нас</p>
-    <!--
-      "Глобальная юридическая практика, основанная на принципах добросовестности"
-      — "добросовестность" (dobrosovestnost') is the canonical Russian legal term
-      for "good faith / integrity", used in ГК РФ ст. 10. More precise than
-      "честность" which reads as personal honesty rather than legal probity.
-    -->
     <h2 class="section-title">Глобальная юридическая практика,<br>основанная на принципах добросовестности</h2>
     <div class="about-grid">
       <div class="about-text reveal">
-        <!--
-          "арбитражный процесс" — standard term for arbitration proceedings in Russian law doctrine.
-          "трансграничные споры" — preferred over "международные споры" when emphasising cross-border
-          jurisdictional complexity, as used in МКАС and ICC Russian-language rules.
-        -->
-        <p>Selin Özgören специализируется на <a href="/en/arbitration.html">международном коммерческом и инвестиционном арбитраже</a>, а также на трансграничных спорах, связанных с международным торговым правом и публичным международным правом. Она является членом Адвокатской палаты Измира и обладает опытом работы как в системах общего права, так и в континентально-правовых юрисдикциях.</p>
+        <p>Selin Özgören специализируется на <a href="/ru/arbitration-ru.html">международном коммерческом и инвестиционном арбитраже</a>, а также на трансграничных спорах, связанных с международным торговым правом и публичным международным правом. Она является членом Адвокатской палаты Измира и обладает опытом работы как в системах общего права, так и в континентально-правовых юрисдикциях.</p>
         <p>Получила степень LL.M. в Университете Боккони, где её дипломная работа была посвящена взаимосвязи устойчивого развития и международного инвестиционного арбитража. Степень LL.B. получена на юридическом факультете Анкарского университета, в том числе в рамках обменной программы Erasmus в Болонском университете.</p>
-        <!--
-          "Комиссия ООН по праву международной торговли" is the official Russian-language
-          name for UNCITRAL per UN documentation. "Рабочая группа III" is the correct
-          designation used in official ЮНСИТРАЛ documentation on ISDS reform.
-        -->
         <p>Профессиональный опыт включает стажировку в Секретариате ЮНСИТРАЛ (Вена) с участием в работе Рабочей группы III по реформированию механизма ИСДС, а также административное сопровождение дел в Гонконгском международном арбитражном центре (HKIAC). Имеет опыт участия в арбитражных разбирательствах в миланской юридической фирме, а также в области трансграничного регуляторного права и санкционного комплаенса в ведущих международных фирмах — Allen &amp; Overy и Baker McKenzie. В США участвовала в судебных производствах перед федеральными органами в Нью-Йорке и Калифорнии.</p>
-        <!--
-          "присяжный переводчик" — Russian equivalent of sworn translator certified
-          by the Ministry of Justice; this is the term used in Turkish-Russian legal contexts.
-          "Ассоциация выпускников Мута" — standard rendering in Russian arbitration community.
-        -->
         <p>Двуязычный специалист (английский и турецкий), присяжный переводчик турецкого и английского языков, сертифицированный Министерством юстиции. Активно участвует в жизни международного арбитражного сообщества: бывший участник, тренер и арбитр Международного коммерческого арбитражного мута им. Виллема К. Виса; в настоящее время занимает должность сопредседателя Команды международных связей Ассоциации выпускников Мута (Вена). Также выполняет консультативные функции в <a href="https://www.nafasihub.co.uk" target="_blank" rel="noopener noreferrer">Nafasi Energy Info Hub</a>.</p>
       </div>
       <div class="about-stats reveal">
@@ -532,17 +528,12 @@
   <section class="practice" id="practice">
     <p class="services-label">Ключевые компетенции</p>
     <h2 class="services-title">
-      <a href="/en/arbitration.html" style="text-decoration:none; color:inherit; border-bottom:1px solid var(--line);">Арбитражные услуги</a>
+      <a href="/ru/arbitration-ru.html" style="text-decoration:none; color:inherit; border-bottom:1px solid var(--line);">Арбитражные услуги</a>
     </h2>
     <div class="services-grid reveal">
 
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">А</div>
-        <!--
-          "Представительство и поддержка со-адвоката" — in Russian arbitration practice,
-          "со-адвокат" (co-counsel) is used in international contexts; "советник"
-          would also be acceptable but "адвокат" better reflects bar membership.
-        -->
         <h3 itemprop="name">Представительство и поддержка со-адвоката</h3>
         <div class="service-meta" itemprop="description">Ведение и стратегическое сопровождение в сложных международных арбитражных делах.</div>
         <ul>
@@ -554,13 +545,8 @@
 
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">Б</div>
-        <!--
-          "Услуги секретаря арбитражного трибунала" — this is the precise Russian term
-          used by ICC, LCIA and HKIAC in their Russian-language rules and guidelines.
-          "Арбитражного трибунала" preferred over "состава арбитров" in institutional contexts.
-        -->
         <h3 itemprop="name">
-          <a href="/en/tribunal-secretary.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Услуги секретаря арбитражного трибунала</a>
+          <a href="/ru/tribunal-secretary-ru.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Услуги секретаря арбитражного трибунала</a>
         </h3>
         <div class="service-meta" itemprop="description">Независимое и конфиденциальное процессуальное содействие в сложных арбитражных разбирательствах.</div>
         <ul>
@@ -572,11 +558,6 @@
 
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">В</div>
-        <!--
-          "Трансграничное консультирование" — preferred over "международное консультирование"
-          to emphasise jurisdictional complexity, consistent with Russian academic usage
-          in МЧП (международное частное право).
-        -->
         <h3 itemprop="name">Трансграничное консультирование</h3>
         <div class="service-meta" itemprop="description">Правовое структурирование и анализ рисков при трансграничных операциях.</div>
         <ul>
@@ -588,11 +569,6 @@
 
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">Г</div>
-        <!--
-          "Превентивное правовое консультирование и оценка стратегических рисков" —
-          "превентивное" is the standard legal adjective in Russian for pre-dispute
-          advisory, used in notarial and corporate law contexts.
-        -->
         <h3 itemprop="name">Превентивное консультирование и оценка стратегических рисков</h3>
         <div class="service-meta" itemprop="description">Проактивная правовая оценка рисков до возникновения споров.</div>
         <ul>
@@ -608,11 +584,6 @@
   <!-- ══ CONTACT ════════════════════════════════════════════════════════════ -->
   <section class="contact" id="contact">
     <p class="section-label">Контакты</p>
-    <!--
-      "Давайте работать вместе" — natural, professional Russian equivalent.
-      "Приступим к сотрудничеству" (Let us begin cooperation) would be more formal;
-      the chosen phrasing strikes the right balance for a boutique firm.
-    -->
     <h2 class="section-title">Давайте работать вместе</h2>
     <p class="contact-sub">Открыты для арбитражных мандатов, участия в качестве со-адвоката и превентивного правового консультирования.</p>
     <div class="contact-links">
@@ -688,6 +659,35 @@
         }
       });
     });
+
+    // Language dropdown logic
+    const langBtn  = document.getElementById('langBtn');
+    const langMenu = document.getElementById('langMenu');
+
+    if (langBtn && langMenu) {
+      langBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = langMenu.classList.toggle('open');
+        langBtn.classList.toggle('open', isOpen);
+        langBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.addEventListener('click', () => {
+        langMenu.classList.remove('open');
+        langBtn.classList.remove('open');
+        langBtn.setAttribute('aria-expanded', 'false');
+      });
+
+      langMenu.addEventListener('click', (e) => e.stopPropagation());
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && langMenu.classList.contains('open')) {
+          langMenu.classList.remove('open');
+          langBtn.classList.remove('open');
+          langBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
   </script>
   <script async src="https://tally.so/widgets/embed.js"></script>
 </body>
