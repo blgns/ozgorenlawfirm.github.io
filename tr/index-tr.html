@@ -28,8 +28,9 @@
   <link rel="alternate" hreflang="es"    href="https://ozgorenlawfirm.com/es/index-es.html">
   <link rel="alternate" hreflang="fr"    href="https://ozgorenlawfirm.com/fr/index-fr.html">
   <link rel="alternate" hreflang="it"    href="https://ozgorenlawfirm.com/it/index-it.html">
-  <link rel="alternate" hreflang="zh-CN" href="https://ozgorenlawfirm.com/hk/index-zh.html">
-  <link rel="alternate" hreflang="zh-HK" href="https://ozgorenlawfirm.com/hk/index-hk.html">
+  <link rel="alternate" hreflang="ru"    href="https://ozgorenlawfirm.com/ru/index-ru.html">
+  <link rel="alternate" hreflang="zh"    href="https://ozgorenlawfirm.com/zh/index-zh.html">
+  <link rel="alternate" hreflang="zh-hk" href="https://ozgorenlawfirm.com/zh-hk/index-zh-hk.html">
   <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/index.html">
   <script type="application/ld+json">
   {
@@ -100,13 +101,46 @@
     }
     html { scroll-behavior: smooth; }
     body { background: var(--cream); color: var(--dark); font-family: 'Jost', sans-serif; font-weight: 300; overflow-x: hidden; }
+    
+    /* ── NAV ── */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: center; align-items: center; padding: 1.2rem clamp(2rem, 5vw, 6rem); background: rgba(247,243,238,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
     .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; }
     .nav-logo img { height: 85px; width: auto; display: block; }
-    .lang-switcher { display: flex; align-items: center; gap: 0.3rem; z-index: 1200; flex-wrap: wrap; max-width: 260px; }
-    .lang-switcher a { font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none; padding: 0.3rem 0.55rem; border: 1px solid var(--line); transition: all 0.25s; color: var(--muted); }
-    .lang-switcher a.active { border-color: var(--gold); color: var(--gold); background: rgba(184,149,90,0.08); }
-    .lang-switcher a:hover:not(.active) { border-color: var(--gold-light); color: var(--dark); }
+    
+    /* ── LANGUAGE DROPDOWN (NEW) ── */
+    .lang-switcher { z-index: 1200; }
+    .lang-dropdown { position: relative; }
+    .lang-btn {
+      display: flex; align-items: center; gap: 0.45rem;
+      background: none; border: 1px solid var(--line);
+      padding: 0.35rem 0.75rem; cursor: pointer;
+      font-family: 'Jost', sans-serif; font-size: 0.65rem;
+      letter-spacing: 0.15em; color: var(--muted);
+      transition: all 0.25s;
+    }
+    .lang-btn:hover { border-color: var(--gold-light); color: var(--dark); }
+    .lang-btn.open { border-color: var(--gold); color: var(--gold); }
+    .lang-btn svg { transition: transform 0.25s; }
+    .lang-btn.open svg { transform: rotate(180deg); }
+    .lang-menu {
+      display: none;
+      position: absolute; top: calc(100% + 6px); left: 0;
+      background: rgba(247,243,238,0.99);
+      border: 1px solid var(--line);
+      list-style: none; min-width: 140px;
+      z-index: 1300;
+      backdrop-filter: blur(12px);
+    }
+    .lang-menu.open { display: block; }
+    .lang-menu a {
+      display: block; padding: 0.55rem 1rem;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-decoration: none; color: var(--muted);
+      transition: background 0.2s, color 0.2s;
+    }
+    .lang-menu a:hover { background: rgba(184,149,90,0.08); color: var(--dark); }
+    .lang-menu a.active { color: var(--gold); background: rgba(184,149,90,0.05); }
+
     .hamburger { margin-left: auto; display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; position: relative; z-index: 1200; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.35s ease; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -118,6 +152,8 @@
     .nav-links.open { right: 0; }
     .nav-links a { font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; color: var(--dark); transition: color 0.3s; display: block; padding: 0.25rem 0; }
     .nav-links a:hover { color: var(--gold); }
+    
+    /* ── HERO ── */
     .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 110px; }
     .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 5rem 4rem 5rem 6rem; position: relative; }
     .hero-left::before { content: ''; position: absolute; top: 0; right: 0; width: 1px; height: 100%; background: linear-gradient(to bottom, transparent, var(--gold), transparent); }
@@ -133,6 +169,8 @@
     .hero-badge { display: inline-block; width: fit-content; padding: 0.75rem 1.5rem; border: 1px solid var(--line); border-left: 3px solid var(--gold); margin-top: 2rem; }
     .hero-badge p { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
     .hero-badge strong { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: var(--dark); letter-spacing: 0.05em; }
+    
+    /* ── SECTIONS ── */
     section { padding: 6rem clamp(2rem, 5vw, 6rem); }
     .section-label { font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem; }
     .section-label::after { content: ''; display: block; height: 1px; width: 50px; background: var(--gold); opacity: 0.5; }
@@ -160,6 +198,7 @@
     .service-card ul { list-style: none; padding: 0; margin: 0; }
     .service-card ul li { font-size: 0.83rem; line-height: 1.7; color: var(--muted); padding-left: 1rem; position: relative; margin-bottom: 0.3rem; }
     .service-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold-light); font-size: 0.75rem; }
+    
     .legal-notice { background: rgba(184,149,90,0.06); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1.25rem clamp(2rem, 5vw, 6rem); text-align: center; }
     .legal-notice p { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.04em; line-height: 1.6; max-width: 900px; margin: 0 auto; }
     .contact { background: var(--dark); color: var(--cream); text-align: center; padding: 6rem 2rem; }
@@ -173,10 +212,12 @@
     footer { background: var(--dark); border-top: 1px solid rgba(184,149,90,0.15); padding: 1.5rem clamp(2rem, 5vw, 6rem); display: flex; justify-content: space-between; align-items: center; }
     footer p { font-size: 0.65rem; color: rgba(247,243,238,0.3); letter-spacing: 0.1em; }
     footer a { color: rgba(247,243,238,0.3); text-decoration: none; letter-spacing: 0.1em; }
+    
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
+    
     @media (max-width: 900px) {
       nav { padding: 1rem 2rem; }
       .nav-logo img { height: 65px; }
@@ -188,23 +229,37 @@
       .services-grid { grid-template-columns: 1fr; }
       .contact { padding: 4rem 2rem; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 2rem; }
-      .lang-switcher { display: none; }
     }
   </style>
 </head>
 <body>
   <div class="nav-overlay" id="navOverlay"></div>
+  
   <nav>
+    <!-- ── LANGUAGE SWITCHER DROPDOWN ── -->
     <div class="lang-switcher">
-      <a href="/en/index.html">EN</a>
-      <a href="/tr/index-tr.html" class="active">TR</a>
-      <a href="/ar/index-ar.html">AR</a>
-      <a href="/de/index-de.html">DE</a>
-      <a href="/fr/index-fr.html">FR</a>
-      <a href="/es/index-es.html">ES</a>
-      <a href="/it/index-it.html">IT</a>
-      <a href="/hk/index-zh.html">ZH</a>
+      <div class="lang-dropdown">
+        <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langLabel">TR</span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-menu" id="langMenu" role="listbox">
+          <li><a href="/en/index.html">English</a></li>
+          <li><a href="/tr/index-tr.html" class="active">Türkçe</a></li>
+          <li><a href="/ar/index-ar.html">العربية</a></li>
+          <li><a href="/de/index-de.html">Deutsch</a></li>
+          <li><a href="/fr/index-fr.html">Français</a></li>
+          <li><a href="/es/index-es.html">Español</a></li>
+          <li><a href="/it/index-it.html">Italiano</a></li>
+          <li><a href="/ru/index-ru.html">Русский</a></li>
+          <li><a href="/zh/index-zh.html">中文</a></li>
+          <li><a href="/zh-hk/index-zh-hk.html">粵語</a></li>
+        </ul>
+      </div>
     </div>
+
     <a class="nav-logo" href="/tr/index-tr.html">
       <img src="/logo.png" alt="Özgören Hukuk Bürosu – Uluslararası Tahkim, İzmir">
     </a>
@@ -212,6 +267,7 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
+
   <ul class="nav-links" id="navLinks" role="navigation" aria-label="Ana navigasyon">
     <li><a href="#hakkimda">Hakkımda</a></li>
     <li><a href="/tr/arbitration-tr.html">Tahkim Hizmetleri</a></li>
@@ -219,6 +275,7 @@
     <li><a href="/tr/updates-tr.html">Güncel</a></li>
     <li><a href="#iletisim">İletişim</a></li>
   </ul>
+
   <div class="hero">
     <div class="hero-left">
       <h1 class="hero-name">Selin<br><em>Özgören</em></h1>
@@ -234,6 +291,7 @@
       <a href="#iletisim" class="hero-cta">İletişime Geçin</a>
     </div>
   </div>
+
   <section class="about" id="hakkimda">
     <p class="section-label">Hakkımda</p>
     <h2 class="section-title">Bütünlük Temelli<br>Uluslararası Hukuk Pratiği</h2>
@@ -264,6 +322,7 @@
       </div>
     </div>
   </section>
+
   <section class="practice" id="hizmetler">
     <p class="services-label">Temel Faaliyet Alanları</p>
     <h2 class="services-title">
@@ -314,6 +373,7 @@
       </div>
     </div>
   </section>
+
   <div class="legal-notice">
     <p>
       Bu web sitesi, 1136 sayılı Avukatlık Kanunu ile Türkiye Barolar Birliği Meslek Kuralları çerçevesinde yalnızca bilgilendirme amacıyla hazırlanmıştır.
@@ -321,6 +381,7 @@
       Hukuki tavsiye için doğrudan iletişime geçmeniz gerekmektedir.
     </p>
   </div>
+
   <section class="contact" id="iletisim">
     <p class="section-label">İletişim</p>
     <h2 class="section-title">İletişime Geçin</h2>
@@ -332,6 +393,7 @@
       <a href="https://www.linkedin.com/in/selinozgoren/" target="_blank" rel="noopener noreferrer" class="contact-link">↗ &nbsp; LinkedIn</a>
     </div>
   </section>
+
   <footer>
     <p>© 2026 Özgören Hukuk Bürosu. Tüm hakları saklıdır.</p>
     <p>
@@ -339,13 +401,17 @@
       &nbsp;·&nbsp; İzmir, Türkiye
     </p>
   </footer>
+
   <script>
+    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Nav drawer
     const hamburger = document.getElementById('hamburger');
     const navLinks  = document.getElementById('navLinks');
     const overlay   = document.getElementById('navOverlay');
@@ -364,6 +430,7 @@
     hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
     overlay.addEventListener('click', closeMenu);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && navLinks.classList.contains('open')) closeMenu(); });
+    
     navLinks.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', (e) => {
         const href = a.getAttribute('href');
@@ -372,6 +439,30 @@
           setTimeout(() => { const t = document.querySelector(href); if (t) t.scrollIntoView({ behavior: 'smooth' }); }, 420);
         } else { closeMenu(); }
       });
+    });
+
+    // Language dropdown (NEW Logic)
+    const langBtn  = document.getElementById('langBtn');
+    const langMenu = document.getElementById('langMenu');
+
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = langMenu.classList.toggle('open');
+      langBtn.classList.toggle('open', isOpen);
+      langBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    document.addEventListener('click', () => {
+      langMenu.classList.remove('open');
+      langBtn.classList.remove('open');
+      langBtn.setAttribute('aria-expanded', 'false');
+    });
+    langMenu.addEventListener('click', (e) => e.stopPropagation());
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && langMenu.classList.contains('open')) {
+        langMenu.classList.remove('open');
+        langBtn.classList.remove('open');
+        langBtn.setAttribute('aria-expanded', 'false');
+      }
     });
   </script>
 </body>
