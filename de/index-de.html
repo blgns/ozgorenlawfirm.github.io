@@ -13,12 +13,10 @@
 
   <!-- ══ PRIMARY META ══════════════════════════════════════════════════════ -->
   <title>Selin Özgören | Rechtsanwältin für internationale Schiedsgerichtsbarkeit – Izmir, Türkei</title>
-  <!-- BRAO § 43b: keine werbenden Superlative, sachliche Tätigkeitsbeschreibung -->
   <meta name="description" content="Özgören Law Firm berät in internationaler Handels- und Investitionsschiedsgerichtsbarkeit, übernimmt Schiedsgerichtssekretariate und begleitet grenzüberschreitende Mandate. Kanzleisitz in Izmir, Türkei – weltweit tätig.">
   <meta name="keywords" content="Rechtsanwältin Schiedsgerichtsbarkeit Türkei, internationale Schiedsgerichtsbarkeit, Investitionsschiedsverfahren, Schiedsgerichtssekretariat, UNCITRAL, ICC, HKIAC, grenzüberschreitende Streitigkeiten, Schiedsrecht Türkei Deutschland, Schiedsanwältin Izmir">
   <meta name="author" content="Selin Özgören">
 
-  <!-- ══ CANONICAL — Bug fix: corrected from root to /de/ subdirectory ════ -->
   <link rel="canonical" href="https://ozgorenlawfirm.com/de/index-de.html">
 
   <!-- ══ OPEN GRAPH ════════════════════════════════════════════════════════ -->
@@ -26,14 +24,12 @@
   <meta property="og:title" content="Selin Özgören | Rechtsanwältin für internationale Schiedsgerichtsbarkeit">
   <meta property="og:description" content="Beratung in internationaler Handels- und Investitionsschiedsgerichtsbarkeit. Schiedsgerichtssekretariat. Grenzüberschreitende Rechtsberatung. Kanzleisitz in Izmir, Türkei – weltweit tätig.">
   <meta property="og:image" content="https://ozgorenlawfirm.com/selin.jpg">
-  <!-- Bug fix: og:url was pointing to root-level path -->
   <meta property="og:url" content="https://ozgorenlawfirm.com/de/index-de.html">
   <meta property="og:locale" content="de_DE">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Özgören Law Firm">
 
-  <!-- ══ HREFLANG — Bug fix: all paths corrected to /lang/ subdirectories;
-       ru added; zh-HK entry restored ══════════════════════════════════════ -->
+  <!-- ══ HREFLANG ══════════════════════════════════════════════════════════ -->
   <link rel="alternate" hreflang="en"        href="https://ozgorenlawfirm.com/en/index.html">
   <link rel="alternate" hreflang="tr"        href="https://ozgorenlawfirm.com/tr/index-tr.html">
   <link rel="alternate" hreflang="ar"        href="https://ozgorenlawfirm.com/ar/index-ar.html">
@@ -139,11 +135,41 @@
     }
     .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; }
     .nav-logo img { height: 85px; width: auto; display: block; }
-    /* Bug fix: added flex-wrap and max-width to prevent overflow on narrow viewports */
-    .lang-switcher { display: flex; align-items: center; gap: 0.3rem; z-index: 1200; flex-wrap: wrap; max-width: 280px; }
-    .lang-switcher a { font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none; padding: 0.3rem 0.55rem; border: 1px solid var(--line); transition: all 0.25s; color: var(--muted); }
-    .lang-switcher a.active { border-color: var(--gold); color: var(--gold); background: rgba(184,149,90,0.08); }
-    .lang-switcher a:hover:not(.active) { border-color: var(--gold-light); color: var(--dark); }
+
+    /* ── LANGUAGE DROPDOWN STYLES ── */
+    .lang-switcher { z-index: 1200; }
+    .lang-dropdown { position: relative; }
+    .lang-btn {
+      display: flex; align-items: center; gap: 0.45rem;
+      background: none; border: 1px solid var(--line);
+      padding: 0.35rem 0.75rem; cursor: pointer;
+      font-family: 'Jost', sans-serif; font-size: 0.65rem;
+      letter-spacing: 0.15em; color: var(--muted);
+      transition: all 0.25s;
+    }
+    .lang-btn:hover { border-color: var(--gold-light); color: var(--dark); }
+    .lang-btn.open { border-color: var(--gold); color: var(--gold); }
+    .lang-btn svg { transition: transform 0.25s; }
+    .lang-btn.open svg { transform: rotate(180deg); }
+    .lang-menu {
+      display: none;
+      position: absolute; top: calc(100% + 6px); left: 0;
+      background: rgba(247,243,238,0.99);
+      border: 1px solid var(--line);
+      list-style: none; min-width: 140px;
+      z-index: 1300;
+      backdrop-filter: blur(12px);
+    }
+    .lang-menu.open { display: block; }
+    .lang-menu a {
+      display: block; padding: 0.55rem 1rem;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-decoration: none; color: var(--muted);
+      transition: background 0.2s, color 0.2s;
+    }
+    .lang-menu a:hover { background: rgba(184,149,90,0.08); color: var(--dark); }
+    .lang-menu a.active { color: var(--gold); background: rgba(184,149,90,0.05); }
+
     .hamburger { margin-left: auto; display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; position: relative; z-index: 1200; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.35s ease; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -242,7 +268,6 @@
       .services-grid { grid-template-columns: 1fr; }
       .contact { padding: 4rem 2rem; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 2rem; }
-      .lang-switcher { display: none; }
     }
   </style>
 </head>
@@ -253,21 +278,29 @@
 
   <!-- ── NAVIGATION ── -->
   <nav>
-    <!-- Bug fix: RU added; ZH-HK restored -->
     <div class="lang-switcher">
-      <a href="/en/index.html">EN</a>
-      <a href="/tr/index-tr.html">TR</a>
-      <a href="/ar/index-ar.html">AR</a>
-      <a href="/de/index-de.html" class="active">DE</a>
-      <a href="/fr/index-fr.html">FR</a>
-      <a href="/es/index-es.html">ES</a>
-      <a href="/it/index-it.html">IT</a>
-      <a href="/ru/index-ru.html">RU</a>
-      <a href="/hk/index-zh.html">ZH</a>
+      <div class="lang-dropdown">
+        <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langLabel">DE</span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-menu" id="langMenu" role="listbox">
+          <li><a href="/en/index.html">English</a></li>
+          <li><a href="/tr/index-tr.html">Türkçe</a></li>
+          <li><a href="/ar/index-ar.html">العربية</a></li>
+          <li><a href="/de/index-de.html" class="active">Deutsch</a></li>
+          <li><a href="/fr/index-fr.html">Français</a></li>
+          <li><a href="/es/index-es.html">Español</a></li>
+          <li><a href="/it/index-it.html">Italiano</a></li>
+          <li><a href="/ru/index-ru.html">Русский</a></li>
+          <li><a href="/hk/index-zh.html">中文</a></li>
+        </ul>
+      </div>
     </div>
-    <!-- Bug fix: href corrected to /de/ subdirectory path -->
+
     <a class="nav-logo" href="/de/index-de.html">
-      <!-- Bug fix: src was "logo.png" (relative, 404s from /de/); corrected to ../logo.png -->
       <img src="../logo.png" alt="Özgören Law Firm – Internationale Schiedsgerichtsbarkeit, Izmir">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Navigationsmenü öffnen" aria-expanded="false">
@@ -276,7 +309,6 @@
   </nav>
 
   <!-- ── NAV DRAWER ── -->
-  <!-- Bug fix: all href paths corrected from bare filenames to /de/ subdirectory paths -->
   <ul class="nav-links" id="navLinks" role="navigation" aria-label="Hauptnavigation">
     <li><a href="#profil">Profil</a></li>
     <li><a href="/de/arbitration-de.html">Schiedsverfahren</a></li>
@@ -297,7 +329,6 @@
       </div>
     </div>
     <div class="hero-right">
-      <!-- Bug fix: src was "selin.jpg" (relative, 404s from /de/); corrected to ../selin.jpg -->
       <img src="../selin.jpg" alt="Selin Özgören, Rechtsanwältin für internationale Schiedsgerichtsbarkeit, Izmir, Türkei">
       <a href="#kontakt" class="hero-cta">Kontakt aufnehmen</a>
     </div>
@@ -339,7 +370,6 @@
   <section class="practice" id="taetigkeiten">
     <p class="services-label">Tätigkeitsschwerpunkte</p>
     <h2 class="services-title">
-      <!-- Bug fix: bare filename corrected to /de/ path -->
       <a href="/de/arbitration-de.html" style="text-decoration:none; color:inherit; border-bottom:1px solid var(--line);">Schiedsrechtliche Dienstleistungen</a>
     </h2>
     <div class="services-grid reveal">
@@ -358,7 +388,6 @@
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">B</div>
         <h3 itemprop="name">
-          <!-- Bug fix: bare filename corrected to /de/ path -->
           <a href="/de/tribunal-secretary-de.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Schiedsgerichtssekretariat</a>
         </h3>
         <div class="service-meta" itemprop="description">Unabhängige und diskrete Verfahrensunterstützung für Schiedsgerichte.</div>
@@ -397,11 +426,9 @@
   <!-- ══ KONTAKT ════════════════════════════════════════════════════════════ -->
   <section class="contact" id="kontakt">
     <p class="section-label">Kontakt</p>
-    <!-- BRAO § 43b — kein werbender Imperativ, sachliche Formulierung -->
     <h2 class="section-title">Kontaktaufnahme</h2>
     <p class="contact-sub">Die Kanzlei steht für internationale Schiedsmandate, Co-Counsel-Mandate und vorsorgende Rechtsberatung zur Verfügung.</p>
     <div class="contact-links">
-      <!-- Bug fix: Tally inquiry form button was missing from the DE version -->
       <a href="https://tally.so/r/zxZeDE" target="_blank" rel="noopener noreferrer" class="contact-link">✎ &nbsp; Kontaktformular</a>
       <a href="mailto:info@ozgorenlawfirm.com" class="contact-link">✉ &nbsp; info@ozgorenlawfirm.com</a>
       <a href="tel:+905431465266" class="contact-link">☎ &nbsp; +90 543 146 52 66</a>
@@ -409,10 +436,6 @@
     </div>
   </section>
 
-  <!-- ══ PFLICHTANGABEN / LEGAL NOTICE ══════════════════════════════════════
-    BRAO § 43b: Sachlichkeitsgebot. Diese Seite hat ausschließlich
-    informatorischen Charakter und stellt keine Rechtsberatung dar.
-  ═════════════════════════════════════════════════════════════════════════ -->
   <div class="legal-notice">
     <p>
       Diese Website dient ausschließlich der allgemeinen Information und stellt keine Rechtsberatung dar.
@@ -424,7 +447,6 @@
   <footer>
     <p>© 2026 Özgören Law Firm. Alle Rechte vorbehalten.</p>
     <p>
-      <!-- Bug fix: bare filename corrected to absolute /en/ path -->
       <a href="/en/arbitration-lawyer-izmir.html" style="color:rgba(247,243,238,0.3); text-decoration:none; letter-spacing:0.1em;">
         Schiedsanwältin Izmir
       </a>
@@ -434,11 +456,13 @@
 
   <!-- ══ SCRIPTS ════════════════════════════════════════════════════════════ -->
   <script>
+    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+    // Nav drawer
     const hamburger = document.getElementById('hamburger');
     const navLinks  = document.getElementById('navLinks');
     const overlay   = document.getElementById('navOverlay');
@@ -469,8 +493,36 @@
         } else { closeMenu(); }
       });
     });
+
+    // Language dropdown logic
+    const langBtn  = document.getElementById('langBtn');
+    const langMenu = document.getElementById('langMenu');
+
+    if (langBtn && langMenu) {
+      langBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = langMenu.classList.toggle('open');
+        langBtn.classList.toggle('open', isOpen);
+        langBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.addEventListener('click', () => {
+        langMenu.classList.remove('open');
+        langBtn.classList.remove('open');
+        langBtn.setAttribute('aria-expanded', 'false');
+      });
+
+      langMenu.addEventListener('click', (e) => e.stopPropagation());
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && langMenu.classList.contains('open')) {
+          langMenu.classList.remove('open');
+          langBtn.classList.remove('open');
+          langBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
   </script>
-  <!-- Bug fix: tally embed script was missing from the DE version -->
   <script async src="https://tally.so/widgets/embed.js"></script>
 
 </body>
