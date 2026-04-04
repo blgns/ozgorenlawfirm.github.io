@@ -17,23 +17,15 @@
   <link rel="canonical" href="https://ozgorenlawfirm.com/arbitration-lawyer-izmir.html">
 
   <!-- ══ OPEN GRAPH ════════════════════════════════════════════════════════ -->
-  <!-- FIX: og:type ve og:locale eklendi -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Arbitration Lawyer Izmir | Özgören Law Firm">
   <meta property="og:description" content="International arbitration practice based in Izmir, Turkey. ICC, ICSID, UNCITRAL and HKIAC proceedings globally. Selin Özgören.">
-  <!-- FIX: logo.png → selin.jpg -->
   <meta property="og:image" content="https://ozgorenlawfirm.com/selin.jpg">
   <meta property="og:url" content="https://ozgorenlawfirm.com/arbitration-lawyer-izmir.html">
   <meta property="og:site_name" content="Özgören Law Firm">
   <meta property="og:locale" content="en_US">
 
-  <!-- ══ JSON-LD SCHEMA ════════════════════════════════════════════════════
-    FIX: üç ayrı blok → tek @graph
-    FIX: @id bağlantıları eklendi
-    FIX: GeoCoordinates LocalBusiness ile birleştirildi
-    FIX: FAQPage @graph'a dahil edildi
-    FIX: "advising" → nesnel tanım (reklam yasağı)
-  ══════════════════════════════════════════════════════════════════════════ -->
+  <!-- ══ JSON-LD SCHEMA ════════════════════════════════════════════════════ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -183,7 +175,11 @@
     }
     .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; }
     .nav-logo img { height: 85px; width: auto; display: block; }
-    .lang-switcher { display: flex; align-items: center; gap: 0.3rem; z-index: 1200; }
+    .lang-switcher { 
+      display: flex; align-items: center; gap: 0.3rem; z-index: 1200; 
+      opacity: 0; /* Hidden since no Turkish version exists */
+      pointer-events: none;
+    }
     .lang-switcher a {
       font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none;
       padding: 0.3rem 0.55rem; border: 1px solid var(--line);
@@ -250,6 +246,11 @@
       color: rgba(247,243,238,0.55); max-width: 580px; margin-top: 1.5rem;
       animation: fadeUp 0.7s 0.3s ease both;
     }
+    .hero-sub a {
+      color: var(--gold-light); text-decoration: none;
+      border-bottom: 1px solid rgba(212,180,131,0.3); transition: border-color 0.2s;
+    }
+    .hero-sub a:hover { border-color: var(--gold-light); }
     .hero-location {
       display: inline-flex; align-items: center; gap: 0.6rem;
       margin-top: 2rem;
@@ -336,6 +337,8 @@
     .service-card:hover { background: #F0EBE3; }
     .service-letter { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 0.5rem; }
     .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 0.5rem; line-height: 1.3; }
+    .service-card h3 a { text-decoration: none; color: inherit; transition: color 0.3s; }
+    .service-card h3 a:hover { color: var(--gold); }
     .service-meta { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem; }
     .service-card ul { list-style: none; padding: 0; margin: 0; }
     .service-card ul li { font-size: 0.83rem; line-height: 1.7; color: var(--muted); padding-left: 1rem; position: relative; margin-bottom: 0.3rem; }
@@ -357,6 +360,7 @@
       color: var(--cream); cursor: pointer;
       display: flex; justify-content: space-between; align-items: center; gap: 1rem; line-height: 1.4;
     }
+    .faq-q:focus { outline: 2px solid var(--gold); outline-offset: 4px; }
     .faq-q::after { content: '+'; font-family: 'Jost', sans-serif; font-size: 1.3rem; font-weight: 300; color: var(--gold); flex-shrink: 0; transition: transform 0.3s; }
     .faq-item.open .faq-q::after { transform: rotate(45deg); }
     .faq-a { font-size: 0.88rem; line-height: 1.8; color: rgba(247,243,238,0.5); max-height: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.3s; opacity: 0; padding-right: 2rem; }
@@ -432,14 +436,11 @@
   <!-- ── NAV ── -->
   <nav>
     <div class="lang-switcher">
-      <!-- FIX: href="#" → gerçek URL -->
       <a href="arbitration-lawyer-izmir.html" class="active">EN</a>
     </div>
     <a class="nav-logo" href="index.html">
-      <!-- FIX: alt text güçlendirildi -->
       <img src="logo.png" alt="Özgören Law Firm – International Arbitration, İzmir">
     </a>
-    <!-- FIX: aria-expanded eklendi -->
     <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -454,19 +455,11 @@
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
 
-  <!-- ══ HERO ══════════════════════════════════════════════════════════════
-    FIX: <section class="hero"> → <header class="hero"> (semantic HTML)
-    FIX: breadcrumb <nav> semantic yapısına alındı
-    FIX: hero-sub "high-value disputes" kaldırıldı (reklam yasağı)
-  ═════════════════════════════════════════════════════════════════════════ -->
+  <!-- ══ HERO ══════════════════════════════════════════════════════════════ -->
   <header class="hero">
-    <nav class="hero-breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Home</a> &nbsp;/&nbsp;
-      <span aria-current="page">Arbitration Lawyer Izmir</span>
-    </nav>
     <h1>International Arbitration<br>Lawyer in <em>Izmir, Turkey</em></h1>
     <p class="hero-sub">
-      Selin Özgören is an international arbitration lawyer based in Izmir, with experience in ICC, ICSID, UNCITRAL, and HKIAC proceedings for clients across Europe, Asia, Africa and North America.
+      Selin Özgören is an international arbitration lawyer based in Izmir, with experience in ICC, <a href="investment-arbitration.html">ICSID</a>, UNCITRAL, and HKIAC proceedings for clients across Europe, Asia, Africa and North America.
     </p>
     <div class="hero-location">◎ &nbsp; Izmir, Turkey — Connected Globally</div>
   </header>
@@ -480,7 +473,7 @@
     <div class="about-grid">
       <div class="about-text reveal">
         <p>Özgören Law Firm is an international arbitration boutique founded by Selin Özgören and based in Izmir, Turkey. While rooted in one of Turkey's most dynamic commercial cities — a major Aegean port with deep trade ties to Europe, the Middle East, and beyond — the firm's work is global in scope.</p>
-        <p>Selin Özgören's practice covers <a href="arbitration.html">international commercial arbitration, investment treaty arbitration, and cross-border dispute resolution</a>. Her experience spans proceedings before the world's leading arbitral institutions and encompasses both common law and civil law jurisdictions.</p>
+        <p>Selin Özgören's practice covers <a href="arbitration.html">international commercial arbitration</a>, <a href="investment-arbitration.html">investment treaty arbitration</a>, and cross-border dispute resolution. Her experience spans proceedings before the world's leading arbitral institutions and encompasses both common law and civil law jurisdictions.</p>
         <p>Her professional background includes work at the <strong>UNCITRAL Secretariat in Vienna</strong> (contributing to ISDS reform in Working Group III), case administration at the <strong>Hong Kong International Arbitration Centre (HKIAC)</strong>, arbitration work at a <strong>Milan-based law firm</strong>, and cross-border regulatory matters at <strong>Allen &amp; Overy</strong> and <strong>Baker McKenzie</strong>. She has also worked on proceedings before federal authorities in New York and California.</p>
         <p>She holds an <strong>LL.M. from Bocconi University</strong> (full scholarship), where her thesis examined the intersection of sustainable development and international investment arbitration, and an LL.B. from Ankara University Faculty of Law, including an Erasmus year at the University of Bologna.</p>
         <p>Being based in Izmir rather than Istanbul offers clients a focused, partner-led service. Turkey's Aegean hub is equally accessible to international clients across European, Middle Eastern, and Asian time zones.</p>
@@ -491,10 +484,7 @@
     </div>
   </section>
 
-  <!-- ══ WHY IZMIR ══════════════════════════════════════════════════════════
-    FIX: "Every engagement is treated as a priority" kaldırıldı (reklam taahhüdü)
-    FIX: "core part of the firm's model" kaldırıldı
-  ═════════════════════════════════════════════════════════════════════════ -->
+  <!-- ══ WHY IZMIR ══════════════════════════════════════════════════════════ -->
   <section class="why-izmir">
     <div style="max-width:1300px; margin:0 auto 3rem;">
       <p class="section-label reveal">Location &amp; Reach</p>
@@ -528,7 +518,7 @@
     <div class="services-grid reveal">
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">A</div>
-        <h3 itemprop="name"><a href="arbitration.html" style="text-decoration:none; color:inherit;">International Commercial Arbitration</a></h3>
+        <h3 itemprop="name"><a href="arbitration.html">International Commercial Arbitration</a></h3>
         <div class="service-meta" itemprop="description">Cross-border dispute resolution</div>
         <ul>
           <li>Counsel and co-counsel in ICC, UNCITRAL, HKIAC proceedings</li>
@@ -538,7 +528,7 @@
       </div>
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">B</div>
-        <h3 itemprop="name"><a href="arbitration.html" style="text-decoration:none; color:inherit;">Investment Treaty Arbitration</a></h3>
+        <h3 itemprop="name"><a href="investment-arbitration.html">Investment Treaty Arbitration</a></h3>
         <div class="service-meta" itemprop="description">BIT &amp; multilateral treaty claims</div>
         <ul>
           <li>ICSID and UNCITRAL proceedings involving the Turkish State</li>
@@ -548,7 +538,7 @@
       </div>
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">C</div>
-        <h3 itemprop="name"><a href="tribunal-secretary.html" style="text-decoration:none; color:inherit;">Tribunal Secretary Services</a></h3>
+        <h3 itemprop="name"><a href="tribunal-secretary.html">Tribunal Secretary Services</a></h3>
         <div class="service-meta" itemprop="description">Procedural support for arbitral tribunals</div>
         <ul>
           <li>Case management and timetabling across ICC, HKIAC, ISTAC</li>
@@ -558,7 +548,7 @@
       </div>
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">D</div>
-        <h3 itemprop="name"><a href="arbitration.html" style="text-decoration:none; color:inherit;">Cross-Border Advisory</a></h3>
+        <h3 itemprop="name"><a href="arbitration.html">Cross-Border Advisory</a></h3>
         <div class="service-meta" itemprop="description">Pre-dispute legal structuring</div>
         <ul>
           <li>Arbitration clause drafting and dispute resolution design</li>
@@ -569,11 +559,7 @@
     </div>
   </section>
 
-  <!-- ══ FAQ ════════════════════════════════════════════════════════════════
-    FIX: "this is a core part of the firm's model" kaldırıldı
-    FIX: "making her equally comfortable" → nesnel ifade
-    FIX: aria-expanded eklendi
-  ═════════════════════════════════════════════════════════════════════════ -->
+  <!-- ══ FAQ ════════════════════════════════════════════════════════════════ -->
   <section class="faq">
     <div class="faq-grid">
       <div class="faq-intro reveal">
@@ -583,29 +569,26 @@
       </div>
       <div class="faq-list reveal reveal-d1">
         <div class="faq-item">
-          <div class="faq-q" role="button" aria-expanded="false">What are Özgören Law Firm's focus areas?</div>
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What are Özgören Law Firm's focus areas?</div>
           <div class="faq-a">The firm focuses on international commercial arbitration, investment treaty arbitration, cross-border advisory, and tribunal secretary services. It is particularly well-positioned to assist in disputes involving Turkey or Turkish counterparties, proceedings governed by Turkish law, and matters where bilingual English–Turkish legal expertise is required.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" role="button" aria-expanded="false">Is Selin Özgören admitted to the Turkish bar?</div>
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Is Selin Özgören admitted to the Turkish bar?</div>
           <div class="faq-a">Yes. Selin Özgören is admitted to the Izmir Bar Association and is fully qualified to practise Turkish law. She also has experience in international proceedings under common law and civil law frameworks.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" role="button" aria-expanded="false">Do you work with co-counsel in other jurisdictions?</div>
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Do you work with co-counsel in other jurisdictions?</div>
           <div class="faq-a">Yes. For disputes that require expertise in multiple jurisdictions, Özgören Law Firm works with specialist counsel in the relevant jurisdictions on a project basis. This allows clients to access coordinated multilateral representation without engaging a large multinational firm for the entire matter.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" role="button" aria-expanded="false">What languages does the firm work in?</div>
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What languages does the firm work in?</div>
           <div class="faq-a">The firm works primarily in English and Turkish. Selin Özgören is a sworn Turkish–English translator certified by the Turkish Ministry of Justice, which means she can also assist with certified legal translation in addition to substantive legal matters — a practical capability in Turkey-related arbitrations where documents exist in both languages.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ CTA ════════════════════════════════════════════════════════════════
-    FIX: "Ready to discuss your dispute?" → nötr başlık (reklam yasağı)
-    FIX: "Based in Izmir" korundu — bilgi niteliğinde
-  ═════════════════════════════════════════════════════════════════════════ -->
+  <!-- ══ CTA ════════════════════════════════════════════════════════════════ -->
   <div class="legal-notice">
     <p>This page is provided for informational purposes only and does not constitute legal advice or an offer of legal services. For assistance with a specific matter, please contact the firm directly.</p>
   </div>
@@ -624,12 +607,7 @@
   <!-- ══ FOOTER ═════════════════════════════════════════════════════════════ -->
   <footer>
     <p>© 2026 Özgören Law Firm. All rights reserved.</p>
-    <p>
-      <a href="arbitration-lawyer-izmir.html" style="color:rgba(247,243,238,0.3); text-decoration:none; letter-spacing:0.1em;">
-        Arbitration Lawyer Izmir
-      </a>
-      &nbsp;·&nbsp; İzmir, Türkiye
-    </p>
+    <p>İzmir, Türkiye</p>
   </footer>
 
   <!-- ══ SCRIPTS ════════════════════════════════════════════════════════════ -->
@@ -657,10 +635,12 @@
     }
     hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
     overlay.addEventListener('click', closeMenu);
-    // FIX: ESC key desteği
+    
+    // ESC key support
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navLinks.classList.contains('open')) closeMenu();
     });
+    
     navLinks.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', (e) => {
         const href = a.getAttribute('href');
@@ -671,21 +651,36 @@
       });
     });
 
-    // FAQ accordion + aria
+    // FAQ accordion with full keyboard accessibility
     document.querySelectorAll('.faq-q').forEach(q => {
-      q.addEventListener('click', () => {
-        const item = q.closest('.faq-item');
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => {
-          i.classList.remove('open');
-          i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-        });
-        if (!isOpen) {
-          item.classList.add('open');
-          q.setAttribute('aria-expanded', 'true');
+      // Click handler
+      q.addEventListener('click', () => toggleFaq(q));
+      
+      // Keyboard handler (Enter and Space)
+      q.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleFaq(q);
         }
       });
     });
+
+    function toggleFaq(q) {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      
+      // Close all other FAQs
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      
+      // Toggle current FAQ
+      if (!isOpen) {
+        item.classList.add('open');
+        q.setAttribute('aria-expanded', 'true');
+      }
+    }
   </script>
 
 </body>
