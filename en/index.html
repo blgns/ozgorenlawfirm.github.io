@@ -10,16 +10,20 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <title>Selin Özgören | International Arbitration Lawyer – Izmir, Turkey</title>
-  <meta name="description" content="Özgören Law Firm offers international commercial arbitration, investment arbitration counsel, tribunal secretary services, and cross-border advisory. Based in Izmir, Turkey. Operating globally.">
+  <!-- ✅ SEO FIX 1: Title tag — keyword-first, brand second -->
+  <title>International Arbitration Lawyer Turkey | Özgören Law Firm</title>
+
+  <!-- ✅ SEO FIX 2: Meta description — value proposition + geo + institution signals -->
+  <meta name="description" content="Özgören Law Firm accepts instructions in international commercial arbitration, investment arbitration, and cross-border matters. Izmir-based. HKIAC, UNCITRAL, ICC proceedings.">
   <meta name="keywords" content="international arbitration lawyer Turkey, tribunal secretary, UNCITRAL, investment arbitration, cross-border dispute, Izmir arbitration">
   <meta name="author" content="Selin Özgören">
 
   <link rel="canonical" href="https://ozgorenlawfirm.com/en/index.html">
 
+  <!-- ✅ OG title updated to match new title strategy -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Selin Özgören | International Arbitration Lawyer">
-  <meta property="og:description" content="International commercial and investment arbitration counsel. Tribunal secretary. Cross-border advisory. Based in Izmir, Turkey – operating globally.">
+  <meta property="og:title" content="International Arbitration Lawyer Turkey | Özgören Law Firm">
+  <meta property="og:description" content="Özgören Law Firm accepts instructions in international commercial arbitration, investment arbitration, and cross-border matters. Izmir-based. HKIAC, UNCITRAL, ICC proceedings.">
   <meta property="og:url" content="https://ozgorenlawfirm.com/en/index.html">
   <meta property="og:image" content="https://ozgorenlawfirm.com/selin.jpg">
   <meta property="og:locale" content="en_US">
@@ -33,10 +37,11 @@
   <link rel="alternate" hreflang="fr"        href="https://ozgorenlawfirm.com/fr/index-fr.html">
   <link rel="alternate" hreflang="it"        href="https://ozgorenlawfirm.com/it/index-it.html">
   <link rel="alternate" hreflang="ru"        href="https://ozgorenlawfirm.com/ru/index-ru.html">
-  <link rel="alternate" hreflang="zh"     href="https://ozgorenlawfirm.com/zh/index-zh.html">
+  <link rel="alternate" hreflang="zh"        href="https://ozgorenlawfirm.com/zh/index-zh.html">
   <link rel="alternate" hreflang="zh-hk"     href="https://ozgorenlawfirm.com/zh-hk/index-zh-hk.html">
   <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/index.html">
 
+  <!-- ✅ SEO FIX 6: Schema — knowsAbout expanded with enforcement + BIT + foreign judgment -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,7 +64,25 @@
         "email": "selin@ozgorenlawfirm.com",
         "areaServed": "Worldwide",
         "knowsLanguage": ["en", "tr"],
-        "sameAs": "https://www.linkedin.com/in/selinozgoren/",
+        "knowsAbout": [
+          "International Commercial Arbitration",
+          "Investment Arbitration",
+          "Bilateral Investment Treaty Claims",
+          "Enforcement of Foreign Arbitral Awards",
+          "Recognition of Foreign Judgments in Turkey",
+          "Tribunal Secretary Services",
+          "Cross-Border Dispute Resolution",
+          "UNCITRAL Arbitration Rules",
+          "HKIAC Arbitration",
+          "ICC Arbitration",
+          "LCIA Arbitration",
+          "ISTAC Arbitration",
+          "OHADA Arbitration"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/selinozgoren/",
+          "https://www.izmir.barosu.org.tr"
+        ],
         "founder": { "@id": "https://ozgorenlawfirm.com/#selin" },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -235,18 +258,37 @@
       width: 1px; height: 100%;
       background: linear-gradient(to bottom, transparent, var(--gold), transparent);
     }
-    .hero-name {
+    /* ✅ SEO FIX 1: H1 is now the service keyword */
+    .hero-h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3rem, 5vw, 5rem);
-      font-weight: 300; line-height: 1.05;
-      letter-spacing: -0.01em; margin-bottom: 1.2rem;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      font-weight: 300; line-height: 1.15;
+      letter-spacing: -0.01em; margin-bottom: 0.5rem;
       animation: fadeUp 0.8s 0.1s ease both;
+      color: var(--dark);
     }
-    .hero-name em { font-style: italic; color: var(--gold); }
+    /* ✅ SEO FIX 2: H2 carries the name as brand subtitle */
+    .hero-name-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 300; font-style: italic;
+      color: var(--gold); line-height: 1.2;
+      margin-bottom: 1.2rem;
+      animation: fadeUp 0.8s 0.15s ease both;
+    }
     .hero-title {
       font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 2.5rem;
+      color: var(--muted); margin-bottom: 2rem;
       animation: fadeUp 0.8s 0.2s ease both;
+    }
+    /* ✅ SEO FIX 5: Service description paragraph — indexable body text */
+    .hero-service-desc {
+      font-size: 0.92rem; line-height: 1.75;
+      color: var(--dark); max-width: 420px;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s 0.25s ease both;
+      border-left: 2px solid var(--gold);
+      padding-left: 1rem;
     }
     .hero-desc {
       font-size: 1rem; line-height: 1.75;
@@ -273,6 +315,7 @@
       background: linear-gradient(135deg, rgba(184,149,90,0.15) 0%, transparent 60%);
       pointer-events: none;
     }
+    /* ✅ SEO FIX 8: lazy loading on portrait image */
     .hero-right img {
       width: 60%; max-width: 420px; aspect-ratio: 1/1;
       object-fit: cover; object-position: center top;
@@ -493,16 +536,25 @@
   <!-- ══ HERO ══════════════════════════════════════════════════════════════ -->
   <div class="hero">
     <div class="hero-left">
-      <h1 class="hero-name">Selin<br><em>Özgören</em></h1>
-      <p class="hero-title">International Arbitration Lawyer — İzmir, Turkey</p>
-      <p class="hero-desc">Focusing on international commercial arbitration, investment arbitration, and international trade law. Assisting clients both in the resolution of disputes and in the prevention of future conflicts through careful structuring and drafting. Fluent in English and Turkish with experience across Europe, Asia, Africa and North America.</p>
+
+      <!-- ✅ SEO FIX 1 & 2: H1 = service keyword, H2 = lawyer name -->
+      <h1 class="hero-h1">International Arbitration<br>Lawyer in Turkey</h1>
+      <h2 class="hero-name-sub">Selin Özgören — İzmir, Turkey</h2>
+
+      <!-- ✅ SEO FIX 5: Geo-signal in paragraph tag, readable by Google as body text -->
+      <p class="hero-service-desc">Özgören Law Firm accepts instructions in international commercial arbitration and investment arbitration proceedings involving Turkish parties or Turkish law. The firm is based in Izmir and acts as counsel and co-counsel in ICC, HKIAC, UNCITRAL, LCIA, and ISTAC proceedings.</p>
+
+      <p class="hero-desc">Assisting clients in the resolution of disputes and in the prevention of future conflicts through careful structuring and drafting. Fluent in English and Turkish with experience across Europe, Asia, Africa and North America.</p>
+
       <div class="hero-badge">
         <p>Based in</p>
         <strong>Izmir · Connected Globally</strong>
       </div>
     </div>
     <div class="hero-right">
-      <img src="../selin.jpg" alt="Selin Özgören, International Arbitration Lawyer based in İzmir, Turkey">
+      <!-- ✅ SEO FIX 8: loading="lazy" added -->
+      <img src="../selin.jpg" alt="Selin Özgören, International Arbitration Lawyer based in İzmir, Turkey" loading="lazy">
+      <!-- ✅ TBB FIX: CTA revised from "Get in Touch" — already neutral, retained -->
       <a href="#contact" class="hero-cta">Get in Touch</a>
     </div>
   </div>
@@ -510,7 +562,8 @@
   <!-- ══ ABOUT ══════════════════════════════════════════════════════════════ -->
   <section class="about" id="about">
     <p class="section-label">About</p>
-    <h2 class="section-title">A Global Legal Practice<br>Rooted in Integrity</h2>
+    <!-- ✅ TBB FIX: "A Global Legal Practice Rooted in Integrity" removed — Art. 7/1-a violation -->
+    <h2 class="section-title">About the Firm</h2>
     <div class="about-grid">
       <div class="about-text reveal">
         <p>Selin Özgören focuses on <a href="/en/arbitration.html">international commercial and investment arbitration</a>, as well as cross-border disputes involving international trade law, and public international law. She is admitted to the Izmir Bar Association and has experience across both common law and civil law jurisdictions.</p>
@@ -549,7 +602,8 @@
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">A</div>
         <h3 itemprop="name">Counsel &amp; Co-Counsel Support</h3>
-        <div class="service-meta" itemprop="description">Representation and strategic support in complex international arbitration cases.</div>
+        <!-- ✅ TBB FIX: "Representation and strategic support" → scope language -->
+        <div class="service-meta" itemprop="description">The firm accepts instructions in complex international arbitration cases as counsel and co-counsel.</div>
         <ul>
           <li>Development of case theory and procedural strategy</li>
           <li>Drafting of submissions, memorials and legal opinions</li>
@@ -571,8 +625,8 @@
       <div class="service-card" itemscope itemtype="https://schema.org/Service">
         <div class="service-letter">C</div>
         <h3 itemprop="name">
-  <a href="/en/foreign-companies-turkey.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Cross-Border Advisory</a>
-</h3>
+          <a href="/en/foreign-companies-turkey.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Cross-Border Advisory</a>
+        </h3>
         <div class="service-meta" itemprop="description">Legal structuring and risk analysis for cross-border operations.</div>
         <ul>
           <li>Arbitration clause drafting and dispute resolution design</li>
@@ -596,8 +650,10 @@
   <!-- ══ CONTACT ════════════════════════════════════════════════════════════ -->
   <section class="contact" id="contact">
     <p class="section-label">Contact</p>
-    <h2 class="section-title">Let's Work Together</h2>
-    <p class="contact-sub">Available for international arbitration mandates, co-counsel engagements, and pre-dispute advisory.</p>
+    <!-- ✅ TBB FIX: "Let's Work Together" → "Contact" -->
+    <h2 class="section-title">Contact</h2>
+    <!-- ✅ TBB FIX: "Available for international arbitration mandates" → scope language -->
+    <p class="contact-sub">The firm accepts inquiries regarding international arbitration proceedings, co-counsel engagements, and pre-dispute matters.</p>
     <div class="contact-links">
       <a href="https://tally.so/r/zxZeDE" target="_blank" rel="noopener noreferrer" class="contact-link">✎ &nbsp; Inquiry Form</a>
       <a href="mailto:info@ozgorenlawfirm.com" class="contact-link">✉ &nbsp; info@ozgorenlawfirm.com</a>
@@ -630,7 +686,6 @@
           'es': '/es/index-es.html',
           'fr': '/fr/index-fr.html',
           'it': '/it/index-it.html',
-          'ru': '/ru/index-ru.html',
           'ru': '/ru/index-ru.html',
           'zh': '/zh/index-zh.html',
           'zh-hk': '/zh-hk/index-zh-hk.html'
