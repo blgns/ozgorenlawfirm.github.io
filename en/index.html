@@ -429,6 +429,7 @@
       content: '—'; position: absolute; left: 0;
       color: var(--gold-light); font-size: 0.75rem;
     }
+    .service-card-full { grid-column: span 2; }
 
     /* ── CONTACT ── */
     .contact {
@@ -480,6 +481,7 @@
       section { padding: 4rem 2rem; }
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .services-grid { grid-template-columns: 1fr; }
+      .service-card-full { grid-column: span 1 !important; }
       .contact { padding: 4rem 2rem; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 2rem; }
     }
@@ -542,7 +544,7 @@
       <h2 class="hero-name-sub">Selin Özgören — İzmir, Turkey</h2>
 
       <!-- ✅ SEO FIX 5: Geo-signal in paragraph tag, readable by Google as body text -->
-      <p class="hero-service-desc">Özgören Law Firm accepts instructions in international commercial arbitration and investment arbitration proceedings involving Turkish parties or Turkish law. The firm is based in Izmir and acts as counsel and co-counsel in ICC, HKIAC, UNCITRAL, LCIA, and ISTAC proceedings.</p>
+      <p class="hero-service-desc">Özgören Law Firm accepts instructions in <a href="/en/arbitration.html" style="color:inherit; border-bottom:1px solid rgba(107,101,88,0.4); text-decoration:none;">international commercial arbitration</a> and <a href="/en/investment-arbitration.html" style="color:inherit; border-bottom:1px solid rgba(107,101,88,0.4); text-decoration:none;">investment arbitration</a> proceedings involving Turkish parties or Turkish law. The firm is based in Izmir and acts as counsel and co-counsel in ICC, HKIAC, UNCITRAL, LCIA, and ISTAC proceedings.</p>
 
       <p class="hero-desc">Assisting clients in the resolution of disputes and in the prevention of future conflicts through careful structuring and drafting. Fluent in English and Turkish with experience across Europe, Asia, Africa and North America.</p>
 
@@ -566,7 +568,7 @@
     <h2 class="section-title">About the Firm</h2>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>Selin Özgören focuses on <a href="/en/arbitration.html">international commercial and investment arbitration</a>, as well as cross-border disputes involving international trade law, and public international law. She is admitted to the Izmir Bar Association and has experience across both common law and civil law jurisdictions.</p>
+        <p>Selin Özgören focuses on <a href="/en/arbitration.html">international commercial arbitration</a> and <a href="/en/investment-arbitration.html">investment arbitration</a>, as well as cross-border disputes involving international trade law, and public international law. She is admitted to the Izmir Bar Association and has experience across both common law and civil law jurisdictions.</p>
         <p>She holds an LL.M. from Bocconi University, where she wrote her thesis on the intersection of sustainable development and international investment arbitration. She obtained her LL.B. from Ankara University Faculty of Law, including an Erasmus Exchange year at University of Bologna.</p>
         <p>Her professional experience includes internship work with the Secretariat of UNCITRAL in Vienna, contributing to Working Group III on ISDS reform, and case administration support at the Hong Kong International Arbitration Centre (HKIAC). She has also been involved in arbitration cases at a Milan-based law firm and has gained experience in cross-border regulatory and sanctions-related matters at global law firms, including Allen &amp; Overy and Baker McKenzie. In the United States, she has worked on legal proceedings before federal authorities in New York and California.</p>
         <p>She is bilingual in English and Turkish and is a sworn Turkish–English translator certified by the Ministry of Justice. She remains actively engaged in the international arbitration community as a former participant, coach, and arbitrator in the Willem C. Vis International Commercial Arbitration Moot, and currently serves as Co-Chair of the International Liaisons Team of the Vienna-based Moot Alumni Association. She also serves in an advisory capacity at <a href="https://www.nafasihub.co.uk" target="_blank" rel="noopener noreferrer">Nafasi Energy Info Hub</a>.</p>
@@ -642,6 +644,18 @@
           <li>Early dispute evaluation</li>
           <li>Contractual vulnerability mapping</li>
           <li>Cross-border enforcement risk analysis</li>
+        </ul>
+      </div>
+      <div class="service-card service-card-full" itemscope itemtype="https://schema.org/Service">
+        <div class="service-letter">E</div>
+        <h3 itemprop="name">
+          <a href="/en/blog/enforce-arbitral-award-turkey.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Enforcement of Foreign Awards &amp; Judgments in Turkey</a>
+        </h3>
+        <div class="service-meta" itemprop="description">Recognition and enforcement of foreign arbitral awards and court judgments in Turkish courts.</div>
+        <ul>
+          <li>Enforcement of foreign arbitral awards under the New York Convention</li>
+          <li>Recognition of foreign court judgments in Turkey</li>
+          <li>BIT-based investment claims and post-award proceedings</li>
         </ul>
       </div>
     </div>
