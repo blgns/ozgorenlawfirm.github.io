@@ -60,7 +60,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* TASARIM VE CSS ASLALTE DEĞİŞTİRİLMEDİ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --cream: #F7F3EE;
@@ -91,7 +90,11 @@
       display: flex; align-items: center;
     }
     .nav-logo img { height: 85px; width: auto; display: block; }
-    .lang-switcher { display: flex; align-items: center; gap: 0.3rem; z-index: 1200; }
+    .lang-switcher { 
+      display: flex; align-items: center; gap: 0.3rem; z-index: 1200;
+      opacity: 0; /* Hidden - no Turkish version */
+      pointer-events: none;
+    }
     .lang-switcher a {
       font-size: 0.65rem; letter-spacing: 0.15em; text-decoration: none;
       padding: 0.3rem 0.55rem; border: 1px solid var(--line);
@@ -233,10 +236,14 @@
     .service-card:hover { background: rgba(184,149,90,0.07); }
     .service-letter { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 0.5rem; }
     .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 0.5rem; line-height: 1.3; color: var(--cream); }
+    .service-card h3 a { text-decoration: none; color: inherit; transition: color 0.3s; }
+    .service-card h3 a:hover { color: var(--gold-light); }
     .service-meta { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem; }
     .service-card ul { list-style: none; padding: 0; margin: 0; }
     .service-card ul li { font-size: 0.83rem; line-height: 1.7; color: rgba(247,243,238,0.5); padding-left: 1rem; position: relative; margin-bottom: 0.3rem; }
     .service-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold-light); font-size: 0.75rem; }
+    .service-card ul li a { color: var(--gold-light); text-decoration: none; font-weight: 500; transition: opacity 0.2s; }
+    .service-card ul li a:hover { opacity: 0.7; }
     .process-steps {
       display: grid; grid-template-columns: repeat(4, 1fr);
       gap: 0; max-width: 1300px; margin: 0 auto;
@@ -260,6 +267,7 @@
       color: var(--cream); cursor: pointer;
       display: flex; justify-content: space-between; align-items: center; gap: 1rem; line-height: 1.4;
     }
+    .faq-q:focus { outline: 2px solid var(--gold); outline-offset: 4px; }
     .faq-q::after { content: '+'; font-family: 'Jost', sans-serif; font-size: 1.3rem; font-weight: 300; color: var(--gold); flex-shrink: 0; transition: transform 0.3s; }
     .faq-item.open .faq-q::after { transform: rotate(45deg); }
     .faq-a {
@@ -322,11 +330,11 @@
     <a class="nav-logo" href="index.html">
       <img src="logo.png" alt="Özgören Law Firm">
     </a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
-  <ul class="nav-links" id="navLinks">
+  <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
     <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#practice">Services</a></li>
     <li><a href="arbitration.html" class="active-link">Arbitration</a></li>
@@ -345,7 +353,7 @@
     </p>
   </section>
 
-  <!-- OVERVIEW: Deepened content but original design -->
+  <!-- OVERVIEW -->
   <section>
     <div style="max-width:1300px; margin:0 auto;">
       <p class="section-label reveal">Legal Analysis</p>
@@ -370,7 +378,7 @@
     </div>
   </section>
 
-  <!-- NEW TECHNICAL BLUEPRINT SECTION: Inserted without removing anything else -->
+  <!-- TECHNICAL BLUEPRINT -->
   <section style="background: rgba(184,149,90,0.03); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
     <div style="max-width:1300px; margin:0 auto;">
       <p class="section-label reveal">Technical Blueprint</p>
@@ -409,7 +417,7 @@
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
+  <!-- SERVICES -->
   <section class="services">
     <div style="max-width:1300px; margin:0 auto 3rem;">
       <p class="section-label reveal">Practice Areas</p>
@@ -429,7 +437,7 @@
      <div class="service-card">
       <div class="service-letter">B</div>
       <h3>
-        <a href="en/investment-arbitration.html" style="text-decoration:none; color:inherit;">
+        <a href="en/investment-arbitration.html">
           Investment Treaty Arbitration <span style="color:var(--gold-light); font-size: 0.9rem;">↗</span>
         </a>
       </h3>
@@ -439,7 +447,7 @@
         <li>Analysis of Bilateral Investment Treaty (BIT) protections</li>
         <li>Claims regarding expropriation and fair & equitable treatment (FET)</li>
         <li style="list-style:none; padding-left:0; margin-top:1rem;">
-          <a href="en/investment-arbitration.html" style="color:var(--gold-light); text-decoration:none; font-size:0.75rem; letter-spacing:0.05em; font-weight:500;">
+          <a href="en/investment-arbitration.html">
             TECHNICAL DATA ON BIT CLAIMS →
           </a>
         </li>
@@ -457,7 +465,7 @@
       </div>
       <div class="service-card">
         <div class="service-letter">D</div>
-        <h3><a href="tribunal-secretary.html" style="text-decoration:none; color:inherit; border-bottom:1px solid rgba(212,180,131,0.4);">Tribunal Secretary Support</a></h3>
+        <h3><a href="tribunal-secretary.html">Tribunal Secretary Support</a></h3>
         <div class="service-meta">Procedural Coordination</div>
         <ul>
           <li>Administrative management of complex international tribunals</li>
@@ -488,7 +496,7 @@
     </div>
   </section>
 
-  <!-- PROCESS SECTION (THE LIFECYCLE - RESTORED) -->
+  <!-- PROCESS -->
   <section>
     <div style="max-width:1300px; margin:0 auto;">
       <p class="section-label reveal">Procedural Workflow</p>
@@ -518,7 +526,7 @@
     </div>
   </section>
 
-  <!-- FAQ SECTION (RESTORED & FUNCTIONAL) -->
+  <!-- FAQ -->
   <section class="faq">
     <div class="faq-grid">
       <div class="faq-intro reveal">
@@ -528,27 +536,27 @@
       </div>
       <div class="faq-list reveal reveal-d1">
         <div class="faq-item">
-          <div class="faq-q">What are the primary advantages of arbitration in the Turkish context?</div>
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What are the primary advantages of arbitration in the Turkish context?</div>
           <div class="faq-a">Arbitration provides neutrality, confidentiality, and the ability to appoint arbitrators with specific technical expertise. Most importantly, awards are globally enforceable in 170+ countries via the New York Convention.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">How does the New York Convention operate in Turkey?</div>
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">How does the New York Convention operate in Turkey?</div>
           <div class="faq-a">Since 1992, Turkey has applied the 1958 New York Convention. This means Turkish courts generally recognize foreign awards as binding, provided they do not violate "Public Policy" (Kamu Düzeni) or lack proper notice.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">Which institutions are most relevant for disputes involving Turkey?</div>
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Which institutions are most relevant for disputes involving Turkey?</div>
          <div class="faq-a">The ICC (International Chamber of Commerce) is the primary forum for commercial disputes. For investment claims against the State, ICSID is the standard. Additionally, ISTAC is increasingly used for disputes with a local nexus.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">What is the typical duration of these proceedings?</div>
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What is the typical duration of these proceedings?</div>
           <div class="faq-a">Timelines vary. A standard commercial arbitration may take 12–24 months. Investment treaty cases are more complex and can last 3–5 years.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">Can legal representation be coordinated across multiple jurisdictions?</div>
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Can legal representation be coordinated across multiple jurisdictions?</div>
           <div class="faq-a">Yes. International arbitration often requires a "Co-Counsel" model where a Turkish firm handles local law and enforcement, while international firms handle the seat of arbitration.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">Why is the drafting of the arbitration clause critical?</div>
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Why is the drafting of the arbitration clause critical?</div>
           <div class="faq-a">A "pathological" clause—one that is vague or contradictory—can lead to prolonged litigation just to determine if the arbitration is valid. Precise drafting is essential to ensure the award is enforceable.</div>
         </div>
       </div>
@@ -568,15 +576,10 @@
   </section>
 
   <!-- FOOTER -->
- <footer>
-  <p>© 2026 Özgören Law Firm. All rights reserved.</p>
-  <p>
-    <a href="arbitration-lawyer-izmir.html" style="color:rgba(247,243,238,0.3); text-decoration:none; letter-spacing:0.1em;">
-      Arbitration Lawyer Izmir
-    </a>
-    &nbsp;·&nbsp; İzmir, Türkiye
-  </p>
-</footer>
+  <footer>
+    <p>© 2026 Özgören Law Firm. All rights reserved.</p>
+    <p>İzmir, Türkiye</p>
+  </footer>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
@@ -587,20 +590,64 @@
     const hamburger = document.getElementById('hamburger');
     const navLinks  = document.getElementById('navLinks');
     const overlay   = document.getElementById('navOverlay');
-    function openMenu() { hamburger.classList.add('open'); navLinks.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
-    function closeMenu() { hamburger.classList.remove('open'); navLinks.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    
+    function openMenu() { 
+      hamburger.classList.add('open'); 
+      navLinks.classList.add('open'); 
+      overlay.classList.add('open'); 
+      document.body.style.overflow = 'hidden';
+      hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.setAttribute('aria-label', 'Close navigation menu');
+    }
+    function closeMenu() { 
+      hamburger.classList.remove('open'); 
+      navLinks.classList.remove('open'); 
+      overlay.classList.remove('open'); 
+      document.body.style.overflow = '';
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open navigation menu');
+    }
+    
     hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
     overlay.addEventListener('click', closeMenu);
+    
+    // ESC key support
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) closeMenu();
+    });
+    
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => closeMenu()));
 
+    // FAQ with full keyboard accessibility
     document.querySelectorAll('.faq-q').forEach(q => {
-      q.addEventListener('click', () => {
-        const item = q.closest('.faq-item');
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
+      // Click handler
+      q.addEventListener('click', () => toggleFaq(q));
+      
+      // Keyboard handler
+      q.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleFaq(q);
+        }
       });
     });
+
+    function toggleFaq(q) {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      
+      // Toggle current
+      if (!isOpen) {
+        item.classList.add('open');
+        q.setAttribute('aria-expanded', 'true');
+      }
+    }
   </script>
 </body>
 </html>
