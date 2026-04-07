@@ -488,52 +488,8 @@
   </style>
 </head>
 <body>
-
-  <!-- ── NAV OVERLAY ── -->
-  <div class="nav-overlay" id="navOverlay"></div>
-
-  <!-- ── NAV BAR ── -->
-  <nav>
-    <div class="lang-switcher">
-      <div class="lang-dropdown">
-        <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
-          <span id="langLabel">EN</span>
-          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-          </svg>
-        </button>
-        <ul class="lang-menu" id="langMenu" role="listbox">
-          <li><a href="/en/index.html" class="active">English</a></li>
-          <li><a href="/tr/index-tr.html">Türkçe</a></li>
-          <li><a href="/ar/index-ar.html">العربية</a></li>
-          <li><a href="/de/index-de.html">Deutsch</a></li>
-          <li><a href="/fr/index-fr.html">Français</a></li>
-          <li><a href="/es/index-es.html">Español</a></li>
-          <li><a href="/it/index-it.html">Italiano</a></li>
-          <li><a href="/ru/index-ru.html">Русский</a></li>
-          <li><a href="/zh/index-zh.html">中文</a></li>
-          <li><a href="/zh-hk/index-zh-hk.html">粵語</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <a class="nav-logo" href="/en/index.html">
-      <img src="../logo.png" alt="Özgören Law Firm – International Arbitration, İzmir">
-    </a>
-
-    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- ── NAV DRAWER ── -->
-  <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
-    <li><a href="#about">About</a></li>
-    <li><a href="">Services</a></li>
-    <li><a href="/en/blog.html">Knowledge Bank</a></li>
-    <li><a href="/en/updates.html">Updates</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<?php include 'menu.php'; ?>
+  
 
   <!-- ══ HERO ══════════════════════════════════════════════════════════════ -->
   <div class="hero">
@@ -676,13 +632,7 @@
   </section>
 
   <!-- ══ FOOTER ═════════════════════════════════════════════════════════════ -->
-  <footer>
-    <p>© 2026 Özgören Law Firm. All rights reserved.</p>
-    <p>
-      <a href="/en/arbitration-lawyer-izmir.html">Arbitration Lawyer Izmir</a>
-      &nbsp;·&nbsp; İzmir, Türkiye
-    </p>
-  </footer>
+  <?php include 'footer.php'; ?>
 
   <!-- ══ SCRIPTS ════════════════════════════════════════════════════════════ -->
   <script>
