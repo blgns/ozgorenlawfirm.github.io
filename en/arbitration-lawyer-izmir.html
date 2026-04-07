@@ -433,6 +433,7 @@
   <div id="menu-container"></div>
 
 <script>
+  // Menüyü yükle
   fetch('/menu.html')
     .then(r => r.text())
     .then(html => {
@@ -465,6 +466,7 @@
         overlay.classList.add('open');
         document.body.style.overflow = 'hidden';
         hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close navigation menu');
       }
       function closeMenu() {
         hamburger.classList.remove('open');
@@ -472,6 +474,7 @@
         overlay.classList.remove('open');
         document.body.style.overflow = '';
         hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open navigation menu');
       }
       hamburger.addEventListener('click', () =>
         navLinks.classList.contains('open') ? closeMenu() : openMenu()
@@ -496,6 +499,35 @@
         });
       });
     });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => toggleFaq(q));
+    q.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(q); }
+    });
+  });
+
+  function toggleFaq(q) {
+    const item = q.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      q.setAttribute('aria-expanded', 'true');
+    }
+  }
 </script>
 
   <!-- ══ HERO ══════════════════════════════════════════════════════════════ -->
@@ -652,79 +684,6 @@
     <p>© 2026 Özgören Law Firm. All rights reserved.</p>
     <p>İzmir, Türkiye</p>
   </footer>
-
-  <!-- ══ SCRIPTS ════════════════════════════════════════════════════════════ -->
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    const hamburger = document.getElementById('hamburger');
-    const navLinks  = document.getElementById('navLinks');
-    const overlay   = document.getElementById('navOverlay');
-
-    function openMenu() {
-      hamburger.classList.add('open'); navLinks.classList.add('open'); overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      hamburger.setAttribute('aria-expanded', 'true');
-      hamburger.setAttribute('aria-label', 'Close navigation menu');
-    }
-    function closeMenu() {
-      hamburger.classList.remove('open'); navLinks.classList.remove('open'); overlay.classList.remove('open');
-      document.body.style.overflow = '';
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.setAttribute('aria-label', 'Open navigation menu');
-    }
-    hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
-    overlay.addEventListener('click', closeMenu);
-    
-    // ESC key support
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && navLinks.classList.contains('open')) closeMenu();
-    });
-    
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const href = a.getAttribute('href');
-        if (href && href.startsWith('#')) {
-          e.preventDefault(); closeMenu();
-          setTimeout(() => { const t = document.querySelector(href); if (t) t.scrollIntoView({ behavior: 'smooth' }); }, 420);
-        } else { closeMenu(); }
-      });
-    });
-
-    // FAQ accordion with full keyboard accessibility
-    document.querySelectorAll('.faq-q').forEach(q => {
-      // Click handler
-      q.addEventListener('click', () => toggleFaq(q));
-      
-      // Keyboard handler (Enter and Space)
-      q.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleFaq(q);
-        }
-      });
-    });
-
-    function toggleFaq(q) {
-      const item = q.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      
-      // Close all other FAQs
-      document.querySelectorAll('.faq-item').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-      });
-      
-      // Toggle current FAQ
-      if (!isOpen) {
-        item.classList.add('open');
-        q.setAttribute('aria-expanded', 'true');
-      }
-    }
-  </script>
 
 </body>
 </html>
