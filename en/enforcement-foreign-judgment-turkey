@@ -9,8 +9,8 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Enforcement of Foreign Awards &amp; Judgments in Turkey | Özgören Law Firm</title>
-  <meta name="description" content="How to enforce a foreign arbitral award or court judgment in Turkey. Covers the New York Convention, PILPL Law No. 5718, the exequatur process, grounds for refusal, and strategic considerations for creditors.">
+  <title>Enforcement of Foreign Judgments &amp; Arbitral Awards in Turkey — Legal Framework (2026) | Özgören Law Firm</title>
+  <meta name="description" content="Step-by-step guide to enforcing foreign arbitral awards and court judgments in Turkey. New York Convention, PILPL Law No. 5718, exequatur process, grounds for refusal, and practical considerations.">
   <meta name="keywords" content="enforce foreign arbitral award Turkey, enforcement foreign judgment Turkey, exequatur Turkey, New York Convention Turkey, recognition arbitral award Turkey, PILPL Turkey, foreign award enforcement Izmir">
   <meta name="author" content="Selin Özgören">
   <link rel="canonical" href="https://ozgorenlawfirm.com/en/enforcement-foreign-judgment-turkey.html">
@@ -304,6 +304,18 @@
     .refusal-cell .ground { font-weight: 500; color: var(--dark); display: block; margin-bottom: 3px; }
     .refusal-cell .detail { color: var(--muted); line-height: 1.6; font-size: 0.78rem; }
 
+    /* ── RECIPROCITY TABLE ── */
+    .reciprocity-grid { display: grid; grid-template-columns: 1fr 1.2fr 1.4fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 1.2rem 0 1.8rem; font-size: 0.8rem; }
+    .rec-cell { background: var(--cream); padding: 0.95rem 1.2rem; }
+    .rec-cell.header { background: var(--dark); color: rgba(247,243,238,0.75); font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
+    .rec-cell .country { font-weight: 500; color: var(--dark); }
+    .rec-cell .status { color: var(--muted); font-size: 0.78rem; }
+    .rec-cell .basis { color: var(--muted); font-size: 0.78rem; line-height: 1.55; }
+    .rec-status-tag { display: inline-block; font-size: 0.6rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.55rem; border: 1px solid; margin-top: 0.25rem; }
+    .rec-status-tag.recognized { border-color: rgba(100,160,100,0.4); color: #4a8a4a; background: rgba(100,160,100,0.07); }
+    .rec-status-tag.variable   { border-color: rgba(184,149,90,0.5); color: var(--gold); background: rgba(184,149,90,0.07); }
+    .rec-status-tag.limited    { border-color: rgba(180,80,80,0.35); color: #b05050; background: rgba(180,80,80,0.06); }
+
     .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 1.2rem 0 1.8rem; }
     .compare-col { background: var(--cream); }
     .compare-head { padding: 1rem 1.4rem; background: var(--dark); color: var(--gold-light); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
@@ -377,6 +389,7 @@
       .post-layout { grid-template-columns: 1fr; max-width: 760px; }
       .post-sidebar { display: none; }
       .refusal-grid { grid-template-columns: 1fr; }
+      .reciprocity-grid { grid-template-columns: 1fr; }
       .kt-grid { grid-template-columns: 1fr; }
       .compare-grid { grid-template-columns: 1fr; }
       .scope-switcher { grid-template-columns: 1fr; }
@@ -482,6 +495,17 @@
         Winning an international arbitration or obtaining a foreign court judgment is only part of the process. Where the debtor holds assets in Turkey, the award or judgment must be <strong>recognised and enforced by Turkish courts</strong> before it can produce binding legal consequences. Without this judicial approval — known as <strong>exequatur</strong> — neither an arbitral award nor a foreign court judgment can be executed in Turkey, regardless of where it was rendered.
       </div>
 
+      <!-- LEGAL FRAMEWORK — TWO PARALLEL TRACKS -->
+      <section id="legal-framework">
+        <h2>Legal Framework — Two Parallel Tracks</h2>
+        <p>Turkey maintains two distinct enforcement regimes: one for foreign arbitral awards and one for foreign court judgments. Understanding which track applies is the first — and most consequential — step in any cross-border enforcement strategy.</p>
+        <p>Foreign arbitral awards benefit from the <strong>1958 New York Convention</strong> on the Recognition and Enforcement of Foreign Arbitral Awards, to which Turkey has been a party since 1992. This provides a multilateral, relatively uniform framework for enforcement across more than 170 contracting states.</p>
+        <p>Foreign court judgments, by contrast, have no equivalent multilateral treaty. Their enforcement in Turkey is governed exclusively by the <strong>International Private and Procedural Law (PILPL), Law No. 5718, Articles 50–59</strong>, and depends on the existence of a bilateral treaty or de facto reciprocity between Turkey and the country where the judgment was issued.</p>
+        <div class="takeaway">
+          ICSID awards occupy a separate category entirely. Under the Washington Convention on the Settlement of Investment Disputes Between States and Nationals of Other States — ratified by Turkey in 1988 — ICSID awards are enforceable as of right in all member states without the requirement of domestic court merits review. This makes ICSID the most direct enforcement route where investment treaty claims are involved.
+        </div>
+      </section>
+
       <!-- PART I: ARBITRAL AWARDS -->
       <section id="framework">
         <h2>Part I — Enforcing Foreign Arbitral Awards in Turkey</h2>
@@ -489,12 +513,14 @@
 
         <h3>The New York Convention (1958)</h3>
         <p>Turkey ratified the Convention on the Recognition and Enforcement of Foreign Arbitral Awards in 1992, <strong>with a reciprocity reservation</strong>. This means Turkey will enforce awards rendered in other New York Convention signatory states — a network covering over 170 countries. The Convention establishes a strong presumption in favour of enforcement and limits the grounds on which courts may refuse recognition to those exhaustively listed in Article V.</p>
+        <p>Turkey also declared a <strong>commercial reservation</strong>, meaning the Convention applies only to disputes arising from commercial — as opposed to purely civil — legal relationships. This distinction is relevant where the underlying contract or transaction could be characterised as non-commercial under Turkish law.</p>
 
         <h3>PILPL — Law No. 5718 (Arts. 60–62)</h3>
         <p>For awards from non-signatory states, or where bilateral treaty provisions apply, enforcement is governed by Turkey's <strong>Private International Law and Procedural Law (PILPL)</strong>, specifically Articles 60–62. The PILPL applies a parallel but not identical set of conditions — and in certain respects is more restrictive than the Convention, including an additional requirement of reciprocity between Turkey and the country of origin.</p>
+        <p>Where the New York Convention applies, it takes precedence as the primary instrument. The PILPL fills procedural gaps relating to documentation, court jurisdiction, and the conduct of exequatur proceedings.</p>
 
         <div class="takeaway">
-          Turkey's New York Convention ratification includes a reciprocity reservation. Awards from non-signatory states must be pursued under the PILPL — which carries additional requirements, including proof of reciprocity. Always verify the applicable legal basis before filing.
+          Turkey's New York Convention ratification includes both a reciprocity reservation and a commercial reservation. Awards from non-signatory states must be pursued under the PILPL — which carries additional requirements, including proof of reciprocity. Always verify the applicable legal basis before filing.
         </div>
       </section>
 
@@ -629,6 +655,34 @@
 
         <div class="takeaway">
           The reciprocity requirement is the most distinctive feature of the foreign judgment enforcement regime — and the most variable. For arbitral awards, the New York Convention eliminates this uncertainty for 170+ states. For court judgments, reciprocity must be assessed case by case. Counsel should verify the current state of Turkey's enforcement practice with the relevant country before filing.
+        </div>
+
+        <h3>Country-Specific Reciprocity Status</h3>
+        <p>The table below reflects general practice based on available Turkish court precedent and treaty instruments. Country-specific assessment is always recommended before filing.</p>
+        <div class="reciprocity-grid">
+          <div class="rec-cell header">Country of Origin</div>
+          <div class="rec-cell header">Reciprocity Status</div>
+          <div class="rec-cell header">Basis</div>
+
+          <div class="rec-cell"><span class="country">United Kingdom</span></div>
+          <div class="rec-cell"><span class="rec-status-tag recognized">Generally Recognised</span></div>
+          <div class="rec-cell"><span class="basis">Turkish court precedent on mutual enforcement practice (de facto)</span></div>
+
+          <div class="rec-cell"><span class="country">Germany</span></div>
+          <div class="rec-cell"><span class="rec-status-tag recognized">Generally Recognised</span></div>
+          <div class="rec-cell"><span class="basis">Bilateral treaty and established de facto practice</span></div>
+
+          <div class="rec-cell"><span class="country">United States</span></div>
+          <div class="rec-cell"><span class="rec-status-tag variable">Variable — Case by Case</span></div>
+          <div class="rec-cell"><span class="basis">No bilateral treaty; de facto assessment conducted per U.S. state</span></div>
+
+          <div class="rec-cell"><span class="country">United Arab Emirates</span></div>
+          <div class="rec-cell"><span class="rec-status-tag recognized">Generally Recognised</span></div>
+          <div class="rec-cell"><span class="basis">Judicial cooperation agreement between Turkey and UAE</span></div>
+
+          <div class="rec-cell"><span class="country">China</span></div>
+          <div class="rec-cell"><span class="rec-status-tag limited">Not Established</span></div>
+          <div class="rec-cell"><span class="basis">No bilateral treaty; no consistent de facto enforcement practice</span></div>
         </div>
 
         <h3>Arbitral awards vs. foreign judgments — a comparison</h3>
@@ -780,6 +834,7 @@
         <div class="sb-card-head"><h4>Contents</h4></div>
         <div class="sb-card-body">
           <ul class="toc-list">
+            <li><a href="#legal-framework">Legal Framework</a></li>
             <li><a href="#framework">Part I — Arbitral Awards</a></li>
             <li><a href="#process">The Exequatur Process</a></li>
             <li><a href="#refusal">Grounds for Refusal</a></li>
