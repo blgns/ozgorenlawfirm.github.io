@@ -603,30 +603,7 @@
 </head>
 <body>
 
-  <!-- ── OVERLAY ── -->
-  <div class="nav-overlay" id="navOverlay"></div>
-
-  <!-- ── NAV ── -->
-  <nav>
-    <div class="lang-switcher">
-      <a href="blog-enforce-foreign-arbitral-award-Turkey.html" class="active">EN</a>
-    </div>
-    <a class="nav-logo" href="index.html">
-      <img src="logo.png" alt="Özgören Law Firm – International Arbitration, İzmir">
-    </a>
-    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- ── NAV DRAWER ── -->
-  <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="arbitration.html">Arbitration Services</a></li>
-    <li><a href="tribunal-secretary.html">Tribunal Secretary</a></li>
-    <li><a href="blog.html" class="current">Knowledge Bank</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
+  <?php include 'menu.php'; ?>
 
   <!-- ══ HERO ══════════════════════════════════════════════════════════════ -->
   <header class="post-hero">
@@ -886,12 +863,7 @@
         <p>The most effective enforcement strategies are built at the outset of the arbitration, not after the award is rendered. Proper arbitration clause drafting, early asset identification, and the involvement of Turkey-qualified counsel are decisions that materially affect what happens after an award is issued.</p>
       </section>
 
-      <!-- ── CTA BLOCK (REVISED for TBB compliance) ── -->
-      <div class="cta-block">
-        <h3>Academic Enquiries &amp; Further Information</h3>
-        <p>For enquiries regarding the legal framework described in this article, or for information about the firm's work in cross-border enforcement and international arbitration matters involving Turkey, please feel free to reach out directly.</p>
-        <a class="cta-btn" href="index.html#contact">Send an Enquiry →</a>
-      </div>
+      <?php include 'contact.php'; ?>
 
       <p class="disclaimer">
         This article is published for informational purposes only and does not constitute legal advice. Enforcement outcomes depend on the specific facts and documents of each case, and the legal framework described herein is subject to change. No party should rely on the general principles described herein without obtaining independent legal counsel. © Özgören Law Firm 2026. All rights reserved.
@@ -943,14 +915,7 @@
     </aside>
   </div>
 
-  <!-- ══ FOOTER ═════════════════════════════════════════════════════════════ -->
-  <footer>
-    <p>© 2026 Özgören Law Firm · <a href="index.html">ozgorenlawfirm.com</a> · International Arbitration · İzmir, Turkey</p>
-    <div style="display:flex; gap:1.5rem; align-items:center; flex-wrap:wrap;">
-      <a href="blog.html" style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;">← Knowledge Bank</a>
-      <a href="arbitration-lawyer-izmir.html" style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;">Arbitration Lawyer Izmir</a>
-    </div>
-  </footer>
+  <?php include 'footer.php'; ?>
 
   <!-- ══ SCRIPTS ════════════════════════════════════════════════════════════ -->
   <script>
