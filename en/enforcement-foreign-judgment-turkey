@@ -405,27 +405,73 @@
   </style>
 </head>
 <body>
+<div id="menu-container"></div>
 
-  <div class="nav-overlay" id="navOverlay"></div>
+<script>
+  fetch('/menu.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('menu-container').innerHTML = html;
 
-  <nav>
-    <div class="lang-switcher">
-      <a href="/en/enforcement-foreign-judgment-turkey.html" class="active">EN</a>
-    </div>
-    <a class="nav-logo" href="/en/index.html">
-      <img src="/logo.png" alt="Özgören Law Firm – International Arbitration, İzmir">
-    </a>
-    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+      // Language dropdown
+      const langBtn  = document.getElementById('langBtn');
+      const langMenu = document.getElementById('langMenu');
+      langBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = langMenu.classList.toggle('open');
+        langBtn.classList.toggle('open', isOpen);
+        langBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+      document.addEventListener('click', () => {
+        langMenu.classList.remove('open');
+        langBtn.classList.remove('open');
+        langBtn.setAttribute('aria-expanded', 'false');
+      });
+      langMenu.addEventListener('click', (e) => e.stopPropagation());
 
-  <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
-    <li><a href="/en/index.html#about">About</a></li>
-    <li><a href="/en/arbitration.html">Arbitration Services</a></li>
-    <li><a href="/en/blog.html">Knowledge Bank</a></li>
-    <li><a href="/en/index.html#contact">Contact</a></li>
-  </ul>
+      // Hamburger menü
+      const hamburger = document.getElementById('hamburger');
+      const navLinks  = document.getElementById('navLinks');
+      const overlay   = document.getElementById('navOverlay');
+
+      function openMenu() {
+        hamburger.classList.add('open');
+        navLinks.classList.add('open');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        hamburger.setAttribute('aria-expanded', 'true');
+      }
+      function closeMenu() {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+      hamburger.addEventListener('click', () =>
+        navLinks.classList.contains('open') ? closeMenu() : openMenu()
+      );
+      overlay.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', (e) => {
+          const href = a.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            e.preventDefault();
+            closeMenu();
+            setTimeout(() => {
+              const target = document.querySelector(href);
+              if (target) target.scrollIntoView({ behavior: 'smooth' });
+            }, 420);
+          } else {
+            closeMenu();
+          }
+        });
+      });
+    });
+</script>
 
   <header class="post-hero">
     <div class="post-hero-inner">
