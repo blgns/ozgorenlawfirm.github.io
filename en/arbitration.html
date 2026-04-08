@@ -11,22 +11,22 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- SEO: High-Intent Title for Foreign Law Firms seeking Local Counsel -->
-    <title>International Arbitration Counsel & Co-Counsel Turkey | Özgören Law Firm</title>
+    <!-- SEO: High-Intent Title -->
+    <title>International Arbitration in Turkey: Legal Framework & Enforcement | Özgören Law Firm</title>
 
     <meta name="description"
-        content="Professional local counsel and co-counsel support for international commercial and investment arbitration in Turkey. Expertise in ICC, UNCITRAL, HKIAC, and LCIA proceedings.">
+        content="Comprehensive analysis of international commercial and investment arbitration in Turkey. Detailed information on ICC, ICSID, UNCITRAL, and the enforcement of foreign awards.">
     <meta name="keywords"
-        content="local counsel turkey arbitration, co-counsel international arbitration turkey, Turkish law expert for arbitration, ICC counsel Turkey, UNCITRAL local counsel Turkey, arbitration legal support Izmir">
+        content="international arbitration Turkey, enforcement of foreign arbitral awards Turkey, New York Convention Turkey, ICSID Turkey, UNCITRAL Turkey, Turkish International Arbitration Law, arbitration lawyer Izmir, investment treaty arbitration Turkey">
     <meta name="author" content="Selin Özgören">
 
     <link rel="canonical" href="https://ozgorenlawfirm.com/en/arbitration.html">
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="International Arbitration Counsel & Co-Counsel Turkey | Özgören Law Firm">
+    <meta property="og:title" content="International Arbitration in Turkey: Framework & Enforcement | Özgören Law Firm">
     <meta property="og:description"
-        content="Professional local counsel and co-counsel support for international arbitration proceedings in Turkey.">
+        content="A technical guide to international commercial and investment arbitration in Turkey. Analysis of ICC, ICSID, UNCITRAL proceedings and the New York Convention.">
     <meta property="og:url" content="https://ozgorenlawfirm.com/en/arbitration.html">
     <meta property="og:image" content="https://ozgorenlawfirm.com/selin.jpg">
     <meta property="og:locale" content="en_US">
@@ -36,20 +36,42 @@
     <link rel="alternate" hreflang="tr" href="https://ozgorenlawfirm.com/tr/tahkim.html">
     <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/arbitration.html">
 
-    <!-- Schema: Service focusing on Legal Representation -->
+    <!-- Schema: LegalService -->
     <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "International Arbitration Counsel",
-    "provider": {
-      "@type": "LegalService",
-      "name": "Özgören Law Firm"
-    },
-    "description": "Providing local counsel and co-counsel support for international commercial and investment arbitration cases with a focus on Turkish law and international procedural rules.",
-    "areaServed": "Worldwide"
+    "@type": "LegalService",
+    "name": "Özgören Law Firm",
+    "description": "Specialized legal practice focusing on international commercial arbitration, investment treaty disputes, and the enforcement of foreign awards in Turkey.",
+    "url": "https://ozgorenlawfirm.com/en/arbitration.html",
+    "telephone": "+905431465266",
+    "email": "info@ozgorenlawfirm.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Izmir", "addressCountry": "TR" },
+    "serviceType": [
+      "International Commercial Arbitration",
+      "Investment Treaty Arbitration",
+      "Enforcement of Foreign Arbitral Awards",
+      "Arbitration Clause Drafting"
+    ],
+    "knowsAbout": [
+      "New York Convention 1958",
+      "UNCITRAL Model Law",
+      "ICSID Convention",
+      "Turkish International Arbitration Law",
+      "ICC Arbitration Rules"
+    ],
+    "areaServed": ["Turkey", "Europe", "Asia", "North America"],
+    "founder": { "@type": "Person", "name": "Selin Özgören" }
   }
   </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVN14SDR0X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-WVN14SDR0X');
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,7 +109,7 @@
             line-height: 1.6;
         }
 
-        /* ── NAV (Fixed from Index) ── */
+        /* ── NAV (Exact copy from Index) ── */
         nav {
             position: fixed;
             top: 0;
@@ -232,37 +254,67 @@
             color: var(--gold);
         }
 
-        /* ── PAGE CONTENT ── */
-        .service-hero {
-            padding: 12rem clamp(1.5rem, 4vw, 4rem) 6rem;
+        /* ── PAGE LAYOUT ── */
+        .hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10rem clamp(1.5rem, 4vw, 4rem) 6rem;
+            background: var(--fg);
+            color: var(--bg);
             border-bottom: 1px solid var(--border);
-            max-width: 1400px;
-            margin: 0 auto;
         }
 
-        .service-hero-h1 {
-            font-family: var(--font-serif);
-            font-size: clamp(3rem, 7vw, 6rem);
-            line-height: 1.1;
-            max-width: 1100px;
+        .hero-breadcrumb {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(247, 243, 238, 0.5);
             margin-bottom: 2rem;
         }
 
-        .service-hero-desc {
+        .hero-breadcrumb a {
+            color: rgba(247, 243, 238, 0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .hero-breadcrumb a:hover {
+            color: var(--gold);
+        }
+
+        .hero-h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            max-width: 1100px;
+        }
+
+        .hero-h1 i {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-sub {
             font-size: 1.2rem;
-            color: var(--fg-muted);
+            color: rgba(247, 243, 238, 0.7);
             max-width: 800px;
             line-height: 1.6;
         }
 
-        .main-content {
-            padding: 6rem clamp(1.5rem, 4vw, 4rem);
-            max-width: 1100px;
+        section {
+            padding: 8rem clamp(1.5rem, 4vw, 4rem);
+            max-width: 1300px;
             margin: 0 auto;
         }
 
-        .content-section {
-            margin-bottom: 8rem;
+        .section-header {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            margin-bottom: 6rem;
         }
 
         .section-label {
@@ -270,7 +322,6 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             color: var(--fg-muted);
-            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             gap: 1rem;
@@ -287,66 +338,199 @@
 
         .section-title {
             font-family: var(--font-serif);
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            line-height: 1.2;
-            margin-bottom: 2rem;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
         }
 
         .text-block {
             font-size: 1.1rem;
             color: var(--fg-muted);
             line-height: 1.8;
+            max-width: 900px;
         }
 
         .text-block p {
             margin-bottom: 1.5rem;
         }
 
-        /* Technical Insight Box - E-E-A-T Booster */
-        .technical-insight {
+        .text-block strong {
+            color: var(--fg);
+            font-weight: 500;
+        }
+
+        /* Technical Insights (The "Knowledge Hub" style) */
+        .tech-box {
             background: var(--accent);
-            padding: 3rem;
+            padding: 4rem;
             border-left: 4px solid var(--gold);
             margin: 4rem 0;
         }
 
-        .technical-insight h4 {
+        .tech-box h4 {
             font-family: var(--font-serif);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
             color: var(--fg);
         }
 
-        .technical-insight p {
-            font-size: 1rem;
+        .tech-box p {
+            font-size: 1.05rem;
             color: var(--fg-muted);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        /* Scope Grid */
-        .scope-grid {
+        /* Blueprint Grid */
+        .blueprint-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            gap: 2rem;
             margin-top: 3rem;
         }
 
-        .scope-item {
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1.5rem;
+        .blueprint-card {
+            padding: 3rem;
+            border: 1px solid var(--border);
+            transition: background 0.3s, border-color 0.3s;
         }
 
-        .scope-item h5 {
+        .blueprint-card:hover {
+            background: var(--accent);
+            border-color: var(--gold);
+        }
+
+        .blueprint-card h3 {
             font-family: var(--font-serif);
-            font-size: 1.4rem;
-            margin-bottom: 0.75rem;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
             color: var(--fg);
         }
 
-        .scope-item p {
+        .blueprint-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .blueprint-card li {
             font-size: 0.95rem;
             color: var(--fg-muted);
-            line-height: 1.6;
+            margin-bottom: 0.8rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .blueprint-card li::before {
+            content: '→';
+            color: var(--gold);
+        }
+
+        /* Process Steps */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .process-item {
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .process-num {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .process-item h3 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .process-item p {
+            font-size: 0.95rem;
+            color: var(--fg-muted);
+        }
+
+        /* FAQ Accordion */
+        .faq-section {
+            background: var(--fg);
+            color: var(--bg);
+            padding: 8rem clamp(1.5rem, 4vw, 4rem);
+        }
+
+        .faq-section .section-label {
+            color: rgba(247, 243, 238, 0.5);
+            justify-content: center;
+        }
+
+        .faq-section .section-label::before {
+            background: var(--bg);
+        }
+
+        .faq-section .section-title {
+            color: var(--bg);
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(247, 243, 238, 0.1);
+            padding: 2rem 0;
+        }
+
+        .faq-q {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .faq-q:hover {
+            color: var(--gold);
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s;
+            opacity: 0;
+            color: rgba(247, 243, 238, 0.6);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-top: 1rem;
+        }
+
+        .faq-item.open .faq-a {
+            max-height: 500px;
+            opacity: 1;
+            padding-bottom: 1rem;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
         }
 
         /* ── CONTACT (Fixed from Index) ── */
@@ -431,13 +615,11 @@
         }
 
         @media (max-width: 900px) {
-            .hero-bottom { grid-template-columns: 1fr; }
-            .scope-grid { grid-template-columns: 1fr; }
+            .section-header { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-h1 { font-size: 3rem; }
             footer { flex-direction: column; gap: 1rem; text-align: center; }
         }
     </style>
-
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
 </head>
 
 <body>
@@ -467,7 +649,8 @@
     <div class="menu-overlay" id="menuOverlay">
         <div class="menu-links">
             <a href="/en/index.html">Home</a>
-            <a href="/en/arbitration.html">Counsel Support</a>
+            <a href="/en/arbitration.html">Arbitration</a>
+            <a href="/en/investment-arbitration.html">Investment</a>
             <a href="/en/tribunal-secretary.html">Tribunal Secretary</a>
             <a href="/en/foreign-companies-turkey.html">Advisory</a>
             <a href="/en/enforcement-foreign-judgment-turkey.html">Enforcement</a>
@@ -475,70 +658,121 @@
         </div>
     </div>
 
-    <div class="service-hero">
-        <h1 class="service-hero-h1 reveal">Counsel & Co-Counsel Support for <br><i>International Arbitration</i></h1>
-        <p class="service-hero-desc reveal">Providing specialized local counsel and co-counsel representation for international law firms and corporate clients in Turkey, ensuring a seamless bridge between international procedural standards and Turkish legal requirements.</p>
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-breadcrumb">
+            <a href="/en/index.html">Home</a> &nbsp;/&nbsp; <span>International Arbitration</span>
+        </div>
+        <h1 class="hero-h1">International Arbitration in Turkey — <i>Legal Framework & Enforcement</i></h1>
+        <p class="hero-sub">
+            A technical overview of international commercial and investment arbitration within the Turkish legal system — addressing proceedings before ICC, ICSID, UNCITRAL, and HKIAC.
+        </p>
     </div>
 
-    <main class="main-content">
-        <!-- Section 1: The Role of Local Counsel -->
-        <section class="content-section reveal">
-            <div class="section-label">The Local Bridge</div>
-            <h2 class="section-title">Navigating Turkish Law in International Proceedings</h2>
+    <!-- OVERVIEW -->
+    <section>
+        <div class="section-header reveal">
+            <div class="section-label">Legal Analysis</div>
+            <h2 class="section-title">Navigating the <i>Arbitration Landscape</i> in Türkiye</h2>
+        </div>
+        <div class="content-grid reveal">
             <div class="text-block">
-                <p>In complex international arbitrations, the interaction between the applicable law and the procedural requirements of the seat—especially when the dispute involves Turkish assets, entities, or jurisdiction—requires a precise understanding of both international standards and local mandates.</p>
-                <p>Özgören Law Firm acts as the essential local partner for international firms, providing the necessary legal bridge to ensure that the proceedings are not only compliant with institutional rules (such as ICC, HKIAC, or UNCITRAL) but also resilient against future challenges in Turkish courts.</p>
+                <p>Turkey's arbitration framework is primarily governed by the <strong>International Arbitration Law (MILPA)</strong> and is closely aligned with the UNCITRAL Model Law. This alignment ensures that cross-border disputes are handled with a level of predictability and procedural rigor required by international commercial standards.</p>
+
+                <p>The efficacy of arbitration in Turkey relies heavily on the <strong>1958 New York Convention</strong>. Under this treaty, Turkish courts are mandated to recognize and enforce foreign arbitral awards, provided they meet the requirements of Article V. However, the process of <strong>Exequatur (Recognition and Enforcement)</strong> is not automatic; it requires a technical application to the competent Turkish court to convert the award into an enforceable judgment.</p>
+
+                <p><strong>The "Public Policy" (Kamu Düzeni) Exception:</strong> One of the most critical nuances in Turkish enforcement law is the "Public Policy" exception. Turkish courts may refuse enforcement if the award is deemed contrary to the fundamental legal principles of the Republic of Türkiye. This includes not only statutory law but also the "universal principles of law" and "moral values."</p>
+
+                <p>For foreign investors, <strong>Investment Treaty Arbitration</strong> serves as a critical mechanism for the protection of assets. Turkey's extensive network of Bilateral Investment Treaties (BITs) allows investors to seek recourse before tribunals such as ICSID or UNCITRAL when facing issues like unfair treatment, indirect expropriation, or breach of Fair and Equitable Treatment (FET) standards.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Section 2: Scope of Support (The Grid) -->
-        <section class="content-section reveal">
-            <div class="section-label">Our Scope</div>
-            <h2 class="section-title">Procedural & Legal Support</h2>
-            <div class="scope-grid">
-                <div class="scope-item">
-                    <h5>Strategic Procedural Guidance</h5>
-                    <p>Advising on the selection of the seat, the drafting of arbitration agreements, and the strategic management of the proceedings to avoid jurisdictional conflicts.</p>
-                </div>
-                <div class="scope-item">
-                    <h5>Memorials & Submissions</h5>
-                    <p>Co-drafting and reviewing statements of claim, defense, and counter-memorials, ensuring that arguments regarding Turkish law are technically sound and evidence-based.</p>
-                </div>
-                <div class="scope-item">
-                    <h5>Evidence & Document Management</h5>
-                    <p>Assisting in the collection of local evidence, coordinating witness statements, and managing the production of documents in accordance with the IBA Rules on the Taking of Evidence.</p>
-                </div>
-                <div class="scope-item">
-                    <h5>Liaison with Local Authorities</h5>
-                    <p>Representing clients before Turkish courts for interim measures, freezing orders, or other urgent procedural requests necessary to secure the award.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3: Technical Insight (E-E-A-T BOOSTER) -->
-        <section class="technical-insight reveal">
-            <h4>Technical Insight: Mandatory Law & Public Policy</h4>
-            <p>One of the most critical aspects of co-counsel support in Turkey is the analysis of <b>mandatory rules (jus cogens)</b> and the <b>public policy (ordre public)</b> exception. Even if a tribunal applies a foreign law, the final award must not violate the public policy of Turkey to be enforceable. Our role is to ensure that the strategy adopted during the proceedings safeguards the award's future enforceability under the New York Convention and Turkish law.</p>
-        </section>
-
-        <!-- Section 4: Institutional Proficiency -->
-        <section class="content-section reveal">
-            <div class="section-label">Proficiency</div>
-            <h2 class="section-title">Institutional Rule Familiarity</h2>
-            <div class="text-block">
-                <p>Our practice is structured to align with the diverse procedural requirements of the world's leading arbitral institutions. We provide co-counsel support under the following frameworks:</p>
-                <ul style="list-style: none; margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                    <li>→ International Chamber of Commerce (ICC)</li>
-                    <li>→ UNCITRAL Arbitration Rules</li>
-                    <li>→ Hong Kong International Arbitration Centre (HKIAC)</li>
-                    <li>→ London Court of International Arbitration (LCIA)</li>
-                    <li>→ Istanbul Arbitration Centre (ISTAC)</li>
-                    <li>→ ICSID / Investment Treaties</li>
+    <!-- TECHNICAL BLUEPRINT -->
+    <section style="background: var(--accent);">
+        <div class="section-header reveal">
+            <div class="section-label">Technical Blueprint</div>
+            <h2 class="section-title">The Process of <i>Recognition & Enforcement</i></h2>
+        </div>
+        <div class="blueprint-grid reveal">
+            <div class="blueprint-card">
+                <h3>1. Documentation & Formalities</h3>
+                <ul>
+                    <li>Original award or a certified copy.</li>
+                    <li>Apostille certification (per the Hague Convention).</li>
+                    <li>Notarized Turkish translations of all documents.</li>
                 </ul>
             </div>
-        </section>
-    </main>
+            <div class="blueprint-card">
+                <h3>2. Judicial Review (Limited)</h3>
+                <ul>
+                    <li>Validity of the arbitration agreement.</li>
+                    <li>Compliance with New York Convention Article V.</li>
+                    <li>Non-review of the merits of the dispute.</li>
+                </ul>
+            </div>
+            <div class="blueprint-card">
+                <h3>3. Execution Phase</h3>
+                <ul>
+                    <li>Conversion of award into a Turkish judgment.</li>
+                    <li>Asset seizure and foreclosure.</li>
+                    <li>Enforcement via the Execution Offices (İcra Daireleri).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
+    <!-- PROCESS STEPS -->
+    <section>
+        <div class="section-header reveal">
+            <div class="section-label">Procedural Workflow</div>
+            <h2 class="section-title">The Lifecycle of an <i>International Arbitration</i></h2>
+        </div>
+        <div class="process-grid reveal">
+            <div class="process-item">
+                <div class="process-num">01</div>
+                <h3>Jurisdictional Analysis</h3>
+                <p>Examination of the arbitration agreement, validity of the clause, and preliminary assessment of the claim.</p>
+            </div>
+            <div class="process-item">
+                <div class="process-num">02</div>
+                <h3>Notice & Constitution</h3>
+                <p>Filing the Request for Arbitration, tribunal appointment, and establishing Procedural Order No. 1.</p>
+            </div>
+            <div class="process-item">
+                <div class="process-num">03</div>
+                <h3>Evidentiary Phase</h3>
+                <p>Submission of memorials, witness statements, and expert reports, followed by oral hearings.</p>
+            </div>
+            <div class="process-item">
+                <div class="process-num">04</div>
+                <h3>Award & Exequatur</h3>
+                <p>Review of the final award and initiation of recognition/enforcement before Turkish courts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="section-label reveal" style="justify-content: center;">Technical FAQs</div>
+        <h2 class="section-title reveal" style="text-align: center; color: var(--bg); margin-bottom: 4rem;">Frequently Asked about <br><i>Arbitration in Türkiye</i></h2>
+        <div class="faq-container reveal">
+            <div class="faq-item">
+                <div class="faq-q">What are the primary advantages of arbitration in Turkey? <span class="faq-icon">+</span></div>
+                <div class="faq-a">Arbitration provides neutrality, confidentiality, and the ability to appoint arbitrators with specific technical expertise. Awards are globally enforceable via the New York Convention.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How does the New York Convention operate in Turkey? <span class="faq-icon">+</span></div>
+                <div class="faq-a">Since 1992, Turkey has applied the 1958 New York Convention. Turkish courts generally recognize foreign awards provided they do not violate "Public Policy" or lack proper notice.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Which institutions are most relevant for disputes involving Turkey? <span class="faq-icon">+</span></div>
+                <div class="faq-a">The ICC is primary for commercial disputes, ICSID for investment claims against the State, and ISTAC for disputes with a local nexus.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT (Fixed from Index) -->
     <section class="contact" id="contact">
         <div class="section-label reveal">Professional Inquiries</div>
         <h2 class="contact-title reveal">Connect with the Firm</h2>
@@ -550,12 +784,14 @@
         </div>
     </section>
 
+    <!-- FOOTER (Fixed from Index) -->
     <footer>
         <div class="footer-left">© 2026 Özgören Law Firm</div>
         <div class="footer-right"><a href="/legal-notice">Legal Notice</a></div>
     </footer>
 
     <script>
+        // Lenis Smooth Scroll Setup
         const lenis = new Lenis({
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -568,6 +804,7 @@
         }
         requestAnimationFrame(raf)
 
+        // Scroll reveal
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(e => {
                 if (e.isIntersecting) {
@@ -578,6 +815,7 @@
         }, { threshold: 0.15 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+        // Language Dropdown
         const langBtn = document.getElementById('langBtn');
         const langMenu = document.getElementById('langMenu');
         if (langBtn && langMenu) {
@@ -588,6 +826,7 @@
             document.addEventListener('click', () => langMenu.classList.remove('open'));
         }
 
+        // Mobile Menu
         const hamburger = document.getElementById('hamburger');
         const menuOverlay = document.getElementById('menuOverlay');
         if (hamburger && menuOverlay) {
@@ -604,7 +843,16 @@
                 });
             });
         }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item.open').forEach(openItem => openItem.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
     </script>
 </body>
-
 </html>
