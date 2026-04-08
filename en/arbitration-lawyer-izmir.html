@@ -380,29 +380,24 @@
       max-width: 900px; margin: 0 auto;
     }
 
-    /* ── CTA ── */
-    .cta { background: var(--cream); text-align: center; padding: 7rem clamp(2rem, 5vw, 6rem); }
-    .cta .section-label { justify-content: center; }
-    .cta .section-label::after { display: none; }
-    .cta .section-title { margin-bottom: 1rem; }
-    .cta-sub { font-size: 0.9rem; color: var(--muted); margin-bottom: 3rem; line-height: 1.7; }
-    .cta-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+    /* ── CONTACT ── */
+    .contact { background: var(--fg); color: var(--bg); text-align: center; padding: 10rem 2rem; }
+    .contact .section-label { justify-content: center; color: rgba(255,255,255,0.5); }
+    .contact .section-label::before { background: var(--bg); }
+    .contact-title { font-family: var(--font-serif); font-size: clamp(3rem, 7vw, 6rem); margin: 2rem 0; }
+    .contact-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 4rem; }
     .contact-link {
-      display: flex; align-items: center; gap: 0.6rem;
-      font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--gold); text-decoration: none;
-      border: 1px solid rgba(184,149,90,0.3); padding: 0.85rem 2rem;
-      transition: border-color 0.3s, background 0.3s;
+      padding: 1rem 2.5rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 100px;
+      color: var(--bg); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
+      transition: all 0.3s;
     }
-    .contact-link:hover { border-color: var(--gold); background: rgba(184,149,90,0.1); }
+    .contact-link:hover { background: var(--bg); color: var(--fg); }
 
-    /* ── FOOTER ── */
-    footer {
-      background: var(--dark); border-top: 1px solid rgba(184,149,90,0.15);
-      padding: 1.5rem clamp(2rem, 5vw, 6rem);
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    footer p { font-size: 0.65rem; color: rgba(247,243,238,0.3); letter-spacing: 0.1em; }
+        /* ── FOOTER ── */
+    footer { padding: 2rem clamp(1.5rem, 4vw, 4rem); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    footer a { color: var(--fg-muted); text-decoration: none; }
+    footer a:hover { color: var(--fg); }
+
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
@@ -663,27 +658,21 @@
     </div>
   </section>
 
-  <!-- ══ CTA ════════════════════════════════════════════════════════════════ -->
-  <div class="legal-notice">
-    <p>This page is provided for informational purposes only and does not constitute legal advice or an offer of legal services. For assistance with a specific matter, please contact the firm directly.</p>
+  <section class="contact" id="contact">
+  <div class="section-label reveal">Professional Inquiries</div>
+  <h2 class="contact-title reveal">Connect with the Firm</h2>
+  <div class="contact-links reveal">
+    <a href="mailto:info@ozgorenlawfirm.com" class="contact-link">Email Us</a>
+    <a href="tel:+905431465266" class="contact-link">+90 543 146 52 66</a>
+    <a href="https://tally.so/r/zxZeDE" class="contact-link" target="_blank">Inquiry Form</a>
+    <a href="https://www.linkedin.com/in/selinozgoren/" class="contact-link" target="_blank">LinkedIn</a>
   </div>
+    </section>
 
-  <section class="cta">
-    <p class="section-label reveal">Contact</p>
-    <h2 class="section-title reveal">Izmir-based.<br>Available globally.</h2>
-    <p class="cta-sub reveal">For information about the firm's work in international arbitration, please reach out directly.</p>
-    <div class="cta-links reveal reveal-d1">
-      <a href="mailto:info@ozgorenlawfirm.com" class="contact-link">✉ &nbsp; info@ozgorenlawfirm.com</a>
-      <a href="tel:+905431465266" class="contact-link">☎ &nbsp; +90 543 146 52 66</a>
-      <a href="https://www.linkedin.com/in/selinozgoren/" target="_blank" rel="noopener noreferrer" class="contact-link">↗ &nbsp; LinkedIn</a>
-    </div>
-  </section>
-
-  <!-- ══ FOOTER ═════════════════════════════════════════════════════════════ -->
-  <footer>
-    <p>© 2026 Özgören Law Firm. All rights reserved.</p>
-    <p>İzmir, Türkiye</p>
-  </footer>
+    <footer>
+  <div class="footer-left">© 2026 Özgören Law Firm</div>
+  <div class="footer-right"><a href="/legal-notice">Legal Notice</a></div>
+</footer>
 
 </body>
 </html>
