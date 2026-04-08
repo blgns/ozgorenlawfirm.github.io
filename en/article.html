@@ -162,10 +162,16 @@
 
         /* ── HERO ── */
         .hero {
-            padding: 10rem clamp(1.5rem, 4vw, 4rem) 4rem;
+            padding: 12rem clamp(1.5rem, 4vw, 4rem) 4rem;
             border-bottom: 1px solid var(--border);
             display: flex;
             flex-direction: column;
+        }
+
+        @media (min-width: 1024px) {
+            .hero {
+                padding-top: 16rem;
+            }
         }
 
         .breadcrumb {
@@ -1118,7 +1124,7 @@
 
         @media (max-width: 700px) {
             .hero {
-                padding-top: 8rem;
+                padding-top: 12rem;
             }
 
             .comp-table {
@@ -1214,8 +1220,7 @@
                             <span>Arbitration Lawyer</span>
                         </div>
                     </div>
-                    <p class="author-bio-text">LL.M. Bocconi University. Former UNCITRAL Secretariat, HKIAC, Allen &amp;
-                        Overy. Practice focuses on international arbitration and cross-border dispute resolution. Based
+                    <p class="author-bio-text">LL.M. Bocconi University, LL.B. Ankara University. International arbitration specialist with practical experiences in global law firms, government institution and international organisations across Europe, Asia, Africa, and North America. Based
                         in İzmir.</p>
                     <a class="author-link" href="/en/index.html#about">Full Profile →</a>
                 </div>
@@ -1286,6 +1291,7 @@
 
                 document.getElementById('hero-title').innerHTML = data.title;
                 document.getElementById('hero-title-crumb').textContent = data.title;
+                document.title = `${data.title} — Özgören Law Firm`;
                 if (data.category) document.getElementById('hero-category').textContent = data.category;
                 if (data.author) document.getElementById('hero-author').textContent = data.author;
 
