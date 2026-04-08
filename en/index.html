@@ -420,13 +420,16 @@
 
         /* ── SECTIONS ── */
         section {
-            padding: 8rem clamp(1.5rem, 4vw, 4rem);
+            padding: 8rem clamp(1.5rem, 5vw, 4rem);
             border-bottom: 1px solid var(--border);
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
         }
 
         .section-header {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr 2.5fr;
             gap: 4rem;
             margin-bottom: 6rem;
         }
@@ -453,15 +456,15 @@
         .section-title {
             font-family: var(--font-serif);
             font-size: clamp(2.5rem, 5vw, 4.5rem);
-            line-height: 1;
+            line-height: 1.1;
             letter-spacing: -0.02em;
         }
 
         /* ── ABOUT ── */
         .about-grid {
             display: grid;
-            grid-template-columns: 1.2fr 1fr 1fr;
-            gap: clamp(2rem, 5vw, 6rem);
+            grid-template-columns: 1.2fr 0.8fr 1fr;
+            gap: clamp(2rem, 5vw, 4rem);
             align-items: center;
         }
 
@@ -473,21 +476,27 @@
         }
 
         .about-image img {
-            display: block;
-            filter: grayscale(0.2) contrast(1.05);
-            /* Subtle editorial look */
-            transition: filter 0.5s ease;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            padding: 10px;
+            background: #fff;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
         }
 
         .about-image img:hover {
-            filter: grayscale(0) contrast(1);
+            transform: scale(1.05);
+            border-color: var(--gold);
         }
 
         .about-text {
             color: var(--fg-muted);
             font-size: 1.15rem;
             line-height: 1.8;
-            max-width: 500px;
         }
 
         .about-text p {
