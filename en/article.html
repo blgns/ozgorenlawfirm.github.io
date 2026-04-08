@@ -1080,6 +1080,243 @@
                 padding: 1rem;
             }
         }
+
+        /* ── STEP CARDS (1️⃣–9️⃣ ve 🛡️ callout'ları) ── */
+        .protection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3rem 0;
+        }
+
+        .pcard {
+            background: var(--bg);
+            padding: 2.5rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            transition: background 0.3s;
+        }
+
+        .pcard:hover {
+            background: var(--accent);
+        }
+
+        .pcard-icon {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--border);
+            line-height: 1;
+            flex-shrink: 0;
+            min-width: 2.5rem;
+        }
+
+        .pcard-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--fg);
+            margin-bottom: 0.75rem;
+            font-family: var(--font-sans);
+        }
+
+        .pcard-text {
+            font-size: 1rem;
+            color: var(--fg-muted);
+            line-height: 1.7;
+            margin: 0;
+            font-family: var(--font-serif);
+        }
+
+        /* ── NOTION TABLE ── */
+        .notion-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            font-size: 1.05rem;
+            border: 1px solid var(--border);
+        }
+
+        .notion-table th {
+            font-size: 0.8rem;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+            background: var(--fg);
+            color: var(--gold);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .notion-table td {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--fg-muted);
+            vertical-align: top;
+            line-height: 1.7;
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+        }
+
+        .notion-table td:first-child {
+            color: var(--fg);
+            font-weight: 500;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+        }
+
+        .notion-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .notion-table tr:hover td {
+            background: var(--accent);
+        }
+
+        /* ── BLOCKQUOTE ── */
+        .notion-quote {
+            padding: 2.5rem 0 2.5rem 3rem;
+            margin: 3rem 0;
+            border-left: 2px solid var(--gold);
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-style: italic;
+            color: var(--fg-muted);
+            line-height: 1.6;
+        }
+
+        .notion-quote strong {
+            color: var(--fg);
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        /* ── BLUE CARD NOTE (📘) ── */
+        .blue-card-note {
+            background: rgba(184, 149, 90, 0.06);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--gold);
+            padding: 2rem 2.5rem;
+            margin: 3rem 0;
+            font-size: 1.05rem;
+            color: var(--fg-muted);
+            line-height: 1.7;
+            font-family: var(--font-serif);
+        }
+
+        .blue-card-note strong {
+            color: var(--fg);
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        /* ── REFUSAL / COMPARISON GRID (⚖️) ── */
+        .refusal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3rem 0;
+        }
+
+        .refusal-cell {
+            background: var(--bg);
+            padding: 1.5rem 2rem;
+            font-size: 1rem;
+            color: var(--fg-muted);
+            line-height: 1.6;
+            font-family: var(--font-serif);
+        }
+
+        .refusal-cell.header {
+            background: var(--fg);
+            color: var(--gold);
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ── CTA BLOCK (📞) ── */
+        .cta-block {
+            background: var(--fg);
+            padding: 3rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-block h3 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 0 0 1rem;
+        }
+
+        .cta-block p {
+            font-size: 1.05rem;
+            color: rgba(247, 243, 238, 0.7);
+            margin-bottom: 2rem;
+            font-family: var(--font-serif);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: var(--gold);
+            color: var(--fg);
+        }
+
+        /* ── RESPONSIVE: YENİ BLOKLAR ── */
+        @media (max-width: 1024px) {
+            .protection-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .refusal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .notion-table {
+                font-size: 0.9rem;
+            }
+
+            .notion-table th,
+            .notion-table td {
+                padding: 1rem;
+            }
+
+            .notion-quote {
+                font-size: 1.3rem;
+                padding-left: 1.5rem;
+            }
+
+            .pcard {
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 
@@ -1184,7 +1421,7 @@
         <div class="section-label">Professional Inquiries</div>
         <h2 class="contact-title">Connect with the Firm</h2>
         <div class="contact-links">
-            <a href="mailto:info@ozgorenlawfirm.com" class="contact-link">Email Us</a>
+            <a href="/cdn-cgi/l/email-protection#f891969e97b897829f978a9d9694998f9e918a95d69b9795" class="contact-link">Email Us</a>
             <a href="tel:+905431465266" class="contact-link">+90 543 146 52 66</a>
             <a href="https://tally.so/r/zxZeDE" class="contact-link" target="_blank">Inquiry Form</a>
         </div>
@@ -1196,7 +1433,7 @@
         <div class="footer-right"><a href="/legal-notice">Legal Notice</a></div>
     </footer>
 
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
     <script>
         const lenis = new Lenis({ duration: 1.2, smooth: true })
         function raf(time) { lenis.raf(time); requestAnimationFrame(raf) }
@@ -1296,6 +1533,7 @@
 
         fetchArticle();
     </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"d1686ae3a45b472aa9b10e9fa0fecc0e","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 
 </html>
