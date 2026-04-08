@@ -28,14 +28,6 @@
 
   <link rel="alternate" hreflang="en"        href="https://ozgorenlawfirm.com/en/index.html">
   <link rel="alternate" hreflang="tr"        href="https://ozgorenlawfirm.com/tr/index-tr.html">
-  <link rel="alternate" hreflang="ar"        href="https://ozgorenlawfirm.com/ar/index-ar.html">
-  <link rel="alternate" hreflang="de"        href="https://ozgorenlawfirm.com/de/index-de.html">
-  <link rel="alternate" hreflang="es"        href="https://ozgorenlawfirm.com/es/index-es.html">
-  <link rel="alternate" hreflang="fr"        href="https://ozgorenlawfirm.com/fr/index-fr.html">
-  <link rel="alternate" hreflang="it"        href="https://ozgorenlawfirm.com/it/index-it.html">
-  <link rel="alternate" hreflang="ru"        href="https://ozgorenlawfirm.com/ru/index-ru.html">
-  <link rel="alternate" hreflang="zh"        href="https://ozgorenlawfirm.com/zh/index-zh.html">
-  <link rel="alternate" hreflang="zh-hk"     href="https://ozgorenlawfirm.com/zh-hk/index-zh-hk.html">
   <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/index.html">
 
   <script type="application/ld+json">
@@ -67,29 +59,13 @@
           "Enforcement of Foreign Arbitral Awards",
           "Recognition of Foreign Judgments in Turkey",
           "Tribunal Secretary Services",
-          "Cross-Border Dispute Resolution",
-          "UNCITRAL Arbitration Rules",
-          "HKIAC Arbitration",
-          "ICC Arbitration",
-          "LCIA Arbitration",
-          "ISTAC Arbitration",
-          "OHADA Arbitration"
+          "Cross-Border Dispute Resolution"
         ],
         "sameAs": [
           "https://www.linkedin.com/in/selinozgoren/",
           "https://www.izmir.barosu.org.tr"
         ],
-        "founder": { "@id": "https://ozgorenlawfirm.com/#selin" },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Legal Services",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "International Commercial Arbitration" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Investment Arbitration" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tribunal Secretary Services" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cross-Border Advisory" } }
-          ]
-        }
+        "founder": { "@id": "https://ozgorenlawfirm.com/#selin" }
       },
       {
         "@type": "Person",
@@ -191,7 +167,7 @@
         }
 
         .nav-logo img {
-            height: 50px;
+            height: 80px;
             width: auto;
             display: block;
         }
@@ -223,8 +199,29 @@
     }
     .hamburger span {
       display: block; width: 24px; height: 1.5px;
-      background: var(--fg); transition: 0.3s;
+      background: var(--fg); transition: 0.3s; transform-origin: center;
     }
+    .hamburger.open span:nth-child(1) { transform: translateY(2.75px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { transform: translateY(-2.75px) rotate(-45deg); }
+
+    /* ── MENU OVERLAY ── */
+    .menu-overlay {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--bg); z-index: 900;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 2rem clamp(1.5rem, 4vw, 4rem);
+      opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+    }
+    .menu-overlay.open { opacity: 1; pointer-events: auto; }
+    .menu-links { display: flex; flex-direction: column; gap: 2rem; }
+    .menu-links a {
+      font-family: var(--font-serif); font-size: clamp(3rem, 6vw, 5rem);
+      color: var(--fg); text-decoration: none; line-height: 1;
+      transform: translateY(20px); transition: transform 0.4s ease, opacity 0.4s ease, color 0.3s ease;
+      opacity: 0;
+    }
+    .menu-overlay.open .menu-links a { transform: translateY(0); opacity: 1; }
+    .menu-links a:hover { color: var(--gold); }
 
     /* ── HERO ── */
     .hero {
@@ -368,6 +365,14 @@
     </button>
   </div>
 </nav>
+
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-links">
+    <a href="#about">Profile</a>
+    <a href="#practice">Expertise</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
 
 <div class="hero">
   <div class="hero-top">
@@ -529,6 +534,31 @@
       langMenu.classList.toggle('open');
     });
     document.addEventListener('click', () => langMenu.classList.remove('open'));
+  }
+
+  // Mobile Menu
+  const hamburger = document.getElementById('hamburger');
+  const menuOverlay = document.getElementById('menuOverlay');
+  const menuLinks = document.querySelectorAll('.menu-links a');
+  
+  if(hamburger && menuOverlay) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      menuOverlay.classList.toggle('open');
+      if (menuOverlay.classList.contains('open')) {
+        lenis.stop();
+      } else {
+        lenis.start();
+      }
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        menuOverlay.classList.remove('open');
+        lenis.start();
+      });
+    });
   }
 </script>
 </body>
