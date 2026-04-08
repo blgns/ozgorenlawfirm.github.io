@@ -476,16 +476,16 @@
         }
 
         .about-image img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            aspect-ratio: 1/1;
+            width: clamp(200px, 20vw, 280px);
+            height: clamp(200px, 20vw, 280px);
             object-fit: cover;
+            object-position: center 0%;
+            /* Ensure head is not clipped */
             border-radius: 50%;
-            border: 1px solid var(--border);
-            padding: 10px;
-            background: #fff;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+            border: 1px solid var(--gold);
+            padding: 4px;
+            background: transparent;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .about-image img:hover {
@@ -684,6 +684,110 @@
             color: var(--fg);
         }
 
+        /* ── PROFILE DRAWER ── */
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 26, 24, 0.4);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .drawer-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            max-width: 600px;
+            height: 100%;
+            background: var(--bg);
+            z-index: 2001;
+            transform: translateX(100%);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            padding: 4rem clamp(1.5rem, 4vw, 4rem);
+            box-shadow: -20px 0 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .drawer-overlay.open .drawer {
+            transform: translateX(0);
+        }
+
+        .drawer-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--fg-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .drawer-close:hover {
+            color: var(--fg);
+        }
+
+        .drawer-content {
+            flex: 1;
+        }
+
+        .drawer-image {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            filter: grayscale(0.2);
+        }
+
+        .drawer-title {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+
+        .drawer-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--fg-muted);
+        }
+
+        .drawer-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .drawer-text b {
+            color: var(--fg);
+            font-weight: 500;
+        }
+
+        .drawer-stats {
+            margin-top: 4rem;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+        }
+
         /* ── ANIMATIONS ── */
         .reveal {
             opacity: 0;
@@ -824,15 +928,16 @@
         <div class="about-grid">
             <div class="about-text reveal">
                 <p>Selin Özgören focuses on international commercial arbitration and investment arbitration, as well as
-                    cross-border disputes involving international trade law and public international law.</p>
-                <p>She holds an LL.M. from Bocconi University, examining sustainable development and international
-                    investment arbitration. She obtained her LL.B. from Ankara University Faculty of Law.</p>
-                <p>Professional experience includes the Secretariat of UNCITRAL in Vienna (Working Group III on ISDS
-                    reform), case administration at the Hong Kong International Arbitration Centre (HKIAC), and
-                    arbitration cases at a Milan-based law firm. She has worked on cross-border regulatory matters at
-                    Allen & Overy and Baker McKenzie.</p>
+                    cross-border disputes.</p>
+
+                <p>Specialized in ISDS reform and institutional case administration with experience at UNCITRAL and
+                    HKIAC.</p>
+
+                <a href="javascript:void(0)" class="drawer-trigger"
+                    style="display: inline-block; margin-top: 1rem; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.1em; font-weight: 600;">View
+                    Full Biography →</a>
             </div>
-            <div class="about-image reveal">
+            <div class="about-image reveal drawer-trigger" style="cursor: pointer;">
                 <img src="/selin.webp" alt="Selin Özgören - International Arbitration Lawyer">
             </div>
             <div class="about-stats reveal">
@@ -844,17 +949,49 @@
                     <div class="stat-num">TR · EN</div>
                     <div class="stat-label">Bilingual Practice</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-num">LL.M.</div>
-                    <div class="stat-label">Bocconi University</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-num">LL.B.</div>
-                    <div class="stat-label">Ankara University</div>
-                </div>
             </div>
         </div>
     </section>
+
+    <!-- Profile Drawer Overlay -->
+    <div class="drawer-overlay" id="drawerOverlay">
+        <div class="drawer">
+            <button class="drawer-close" id="drawerClose">
+                <span>Close</span>
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                    <path d="M1 1L14 14M1 14L14 1" stroke="currentColor" stroke-width="1.2" />
+                </svg>
+            </button>
+            <div class="drawer-content">
+                <img src="/selin.webp" alt="Selin Özgören" class="drawer-image">
+                <h2 class="drawer-title">Selin Özgören</h2>
+                <div class="drawer-text">
+                    <p><b>Selin Özgören</b> is an international arbitration lawyer focused on commercial and investment
+                        disputes, with a particular emphasis on international trade law and public international law.
+                    </p>
+                    <p>She holds an <b>LL.M. from Bocconi University</b> (Milan), where she examined sustainable
+                        development and ISDS reform. She obtained her <b>LL.B. from Ankara University</b>.</p>
+                    <p>Professional background includes the <b>Secretariat of UNCITRAL</b> in Vienna (Working Group
+                        III), case administration at the <b>Hong Kong International Arbitration Centre (HKIAC)</b>, and
+                        arbitration experience at leading firms in Milan and Turkey.</p>
+                    <p>She has worked on cross-border regulatory matters and large-scale disputes at Allen & Overy and
+                        Baker McKenzie, bringing a global perspective to her İzmir-based practice.</p>
+                </div>
+                <div class="drawer-stats">
+                    <div class="about-stats" style="border: none;">
+                        <div class="stat-item" style="padding: 1.5rem 0;">
+                            <div class="stat-num" style="font-size: 1.5rem;">LL.M.</div>
+                            <div class="stat-label">Bocconi</div>
+                        </div>
+                        <div class="stat-item" style="padding: 1.5rem 0;">
+                            <div class="stat-num" style="font-size: 1.5rem;">LL.B.</div>
+                            <div class="stat-label">Ankara</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="practice">
         <div class="section-header reveal">
@@ -997,6 +1134,34 @@
                 });
             });
         }
+
+        // Profile Drawer Logic
+        const drawerOverlay = document.getElementById('drawerOverlay');
+        const drawerClose = document.getElementById('drawerClose');
+        const drawerTriggers = document.querySelectorAll('.drawer-trigger');
+        const profileNavLink = document.querySelector('a[href="#about"]');
+
+        function openDrawer() {
+            drawerOverlay.classList.add('open');
+            lenis.stop();
+        }
+
+        function closeDrawer() {
+            drawerOverlay.classList.remove('open');
+            lenis.start();
+        }
+
+        drawerTriggers.forEach(t => t.addEventListener('click', openDrawer));
+        if (profileNavLink) profileNavLink.addEventListener('click', (e) => {
+            if (window.innerWidth > 1024) {
+                e.preventDefault();
+                openDrawer();
+            }
+        });
+        drawerClose.addEventListener('click', closeDrawer);
+        drawerOverlay.addEventListener('click', (e) => {
+            if (e.target === drawerOverlay) closeDrawer();
+        });
     </script>
 </body>
 
