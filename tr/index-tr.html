@@ -656,6 +656,110 @@
             color: var(--fg);
         }
 
+        /* ── PROFILE DRAWER ── */
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 26, 24, 0.4);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .drawer-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            max-width: 600px;
+            height: 100%;
+            background: var(--bg);
+            z-index: 2001;
+            transform: translateX(100%);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            padding: 4rem clamp(1.5rem, 4vw, 4rem);
+            box-shadow: -20px 0 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .drawer-overlay.open .drawer {
+            transform: translateX(0);
+        }
+
+        .drawer-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--fg-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .drawer-close:hover {
+            color: var(--fg);
+        }
+
+        .drawer-content {
+            flex: 1;
+        }
+
+        .drawer-image {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            filter: grayscale(0.2);
+        }
+
+        .drawer-title {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+
+        .drawer-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--fg-muted);
+        }
+
+        .drawer-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .drawer-text b {
+            color: var(--fg);
+            font-weight: 500;
+        }
+
+        .drawer-stats {
+            margin-top: 4rem;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+        }
+
         /* ── ANIMATIONS ── */
         .reveal {
             opacity: 0;
@@ -778,40 +882,70 @@
         </div>
         <div class="about-grid">
             <div class="about-text reveal">
-                <p>Selin Özgören; uluslararası ticari tahkim, yatırım tahkimi, uluslararası ticaret hukuku ve
-                    uluslararası kamu hukuku kapsamındaki sınır aşan uyuşmazlıklarda faaliyet göstermektedir. İzmir
-                    Barosu'na kayıtlıdır.</p>
-                <p>Bocconi Üniversitesi'nden onur derecesiyle mezun olduğu LL.M. programında, sürdürülebilir kalkınma ve
-                    uluslararası yatırım tahkimi üzerine tezini tamamlamıştır. Lisans (LL.B.) eğitimini ise Ankara
-                    Üniversitesi Hukuk Fakültesi'nde almıştır.</p>
-                <p>Profesyonel deneyimleri arasında Viyana'da UNCITRAL Sekreteryası'nda (Çalışma Grubu III), Hong Kong
-                    Uluslararası Tahkim Merkezi'nde (HKIAC) dosya idaresi ve Milano merkezli bir hukuk bürosunda tahkim
-                    alanındaki görevleri bulunmaktadır. Keza Allen & Overy ve Baker McKenzie bünyesinde sınır aşan
-                    projelerde çalışmıştır.</p>
+                <p>Selin Özgören; uluslararası ticari tahkim, yatırım tahkimi ve sınır aşan uyuşmazlıklarda faaliyet
+                    göstermektedir.</p>
+                <p>UNCITRAL ve HKIAC gibi kurumlardaki deneyimiyle, karmaşık yargılama süreçlerinin yönetiminde
+                    uzmanlaşmıştır.</p>
+                <a href="javascript:void(0)" class="drawer-trigger"
+                    style="display: inline-block; margin-top: 1rem; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.1em; font-weight: 600;">Profilin
+                    Tamamını Gör →</a>
             </div>
-            <div class="about-image reveal">
+            <div class="about-image reveal drawer-trigger" style="cursor: pointer;">
                 <img src="/selin.webp" alt="Selin Özgören - Uluslararası Tahkim Avukatı">
             </div>
             <div class="about-stats reveal">
                 <div class="stat-item">
                     <div class="stat-num">HKIAC<br>ICC</div>
-                    <div class="stat-label">Kurumsal Deneyim</div>
+                    <div class="stat-label">Deneyim</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-num">TR · EN</div>
-                    <div class="stat-label">Çift Dilli Hizmet</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-num">LL.M.</div>
-                    <div class="stat-label">Bocconi Üniversitesi</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-num">LL.B.</div>
-                    <div class="stat-label">Ankara Üniversitesi</div>
+                    <div class="stat-label">Çift Dilli</div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Profile Drawer Overlay -->
+    <div class="drawer-overlay" id="drawerOverlay">
+        <div class="drawer">
+            <button class="drawer-close" id="drawerClose">
+                <span>Kapat</span>
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                    <path d="M1 1L14 14M1 14L14 1" stroke="currentColor" stroke-width="1.2" />
+                </svg>
+            </button>
+            <div class="drawer-content">
+                <img src="/selin.webp" alt="Selin Özgören" class="drawer-image">
+                <h2 class="drawer-title">Selin Özgören</h2>
+                <div class="drawer-text">
+                    <p><b>Selin Özgören</b>; uluslararası ticari tahkim, yatırım tahkimi, uluslararası ticaret hukuku ve
+                        uluslararası kamu hukuku kapsamındaki sınır aşan uyuşmazlıklarda faaliyet göstermektedir.</p>
+                    <p><b>Bocconi Üniversitesi</b>'nden (Milano) onur derecesiyle mezun olduğu LL.M. programında,
+                        sürdürülebilir kalkınma ve ISDS reformu üzerine tezini tamamlamıştır. Lisans (LL.B.) eğitimini
+                        <b>Ankara Üniversitesi Hukuk Fakültesi</b>'nde almıştır.</p>
+                    <p>Profesyonel deneyimleri arasında Viyana'da <b>UNCITRAL Sekreteryası</b>'nda (Çalışma Grubu III),
+                        <b>Hong Kong Uluslararası Tahkim Merkezi</b>'nde (HKIAC) dosya idaresi ve Milano merkezli bir
+                        hukuk bürosunda tahkim alanındaki görevleri bulunmaktadır.</p>
+                    <p><b>Allen & Overy</b> ve <b>Baker McKenzie</b> bünyesinde sınır aşan projelerde ve büyük ölçekli
+                        uyuşmazlıklarda çalışmış olup, İzmir merkezli çalışmalarına küresel bir perspektif katmaktadır.
+                    </p>
+                </div>
+                <div class="drawer-stats">
+                    <div class="about-stats" style="border: none;">
+                        <div class="stat-item" style="padding: 1.5rem 0;">
+                            <div class="stat-num" style="font-size: 1.5rem;">LL.M.</div>
+                            <div class="stat-label">Bocconi</div>
+                        </div>
+                        <div class="stat-item" style="padding: 1.5rem 0;">
+                            <div class="stat-num" style="font-size: 1.5rem;">LL.B.</div>
+                            <div class="stat-label">Ankara</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="practice">
         <div class="section-header reveal">
@@ -956,6 +1090,34 @@
                 });
             });
         }
+
+        // Profile Drawer Logic
+        const drawerOverlay = document.getElementById('drawerOverlay');
+        const drawerClose = document.getElementById('drawerClose');
+        const drawerTriggers = document.querySelectorAll('.drawer-trigger');
+        const profileNavLink = document.querySelector('a[href="#about"]');
+
+        function openDrawer() {
+            drawerOverlay.classList.add('open');
+            lenis.stop();
+        }
+
+        function closeDrawer() {
+            drawerOverlay.classList.remove('open');
+            lenis.start();
+        }
+
+        drawerTriggers.forEach(t => t.addEventListener('click', openDrawer));
+        if (profileNavLink) profileNavLink.addEventListener('click', (e) => {
+            if (window.innerWidth > 1024) {
+                e.preventDefault();
+                openDrawer();
+            }
+        });
+        drawerClose.addEventListener('click', closeDrawer);
+        drawerOverlay.addEventListener('click', (e) => {
+            if (e.target === drawerOverlay) closeDrawer();
+        });
     </script>
 </body>
 
