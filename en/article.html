@@ -10,9 +10,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>Beyond the PPA: How BITs Protect Renewable Energy Investments in Africa (2026) | Özgören Law Firm</title>
+    <title>Article | Özgören Law Firm</title>
     <meta name="description"
-        content="When a state utility stops taking power or regulators cut feed-in tariffs, your PPA alone may not be enough. A practitioner's guide to BIT protection, FET claims, and the PPA-to-treaty translation layer for renewable energy projects in Africa — 2026.">
+        content="International arbitration and investment law insights by Selin Özgören.">
     <meta name="author" content="Selin Özgören">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,7 +62,8 @@
         }
 
         /* ── NAV ── */
-        nav {
+        /* ✅ DÜZELTME 1: Sadece ana menüyü hedeflemesi için nav.main-nav yapıldı */
+        nav.main-nav {
             position: fixed;
             top: 0;
             left: 0;
@@ -411,7 +412,6 @@
             color: var(--fg-muted);
             line-height: 1.8;
             font-family: var(--font-serif);
-            /* Premium reading experience */
         }
 
         .post-body ul,
@@ -432,7 +432,6 @@
             color: var(--fg);
             font-weight: 600;
             font-family: var(--font-sans);
-            /* Use sans for accent bolding */
             font-size: 0.9em;
             letter-spacing: 0.02em;
         }
@@ -506,9 +505,7 @@
             font-weight: 500;
         }
 
-        /* ── ADVANCED COMPONENTS (NEW) ── */
-
-        /* Member States / Globe Grid */
+        /* Member States Grid */
         .members-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -615,59 +612,6 @@
             color: rgba(247, 243, 238, 0.9);
             line-height: 1.6;
             margin: 0;
-        }
-
-        /* CTA Block */
-        .cta-block {
-            background: var(--fg);
-            padding: 4rem;
-            margin-top: 6rem;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .cta-block::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(to right, var(--gold), transparent);
-        }
-
-        .cta-block h3 {
-            font-family: var(--font-serif);
-            font-size: 2.5rem;
-            font-weight: 400;
-            color: var(--bg);
-            margin: 0 0 1rem 0;
-        }
-
-        .cta-block p {
-            font-size: 1.1rem;
-            color: rgba(247, 243, 238, 0.6);
-            margin-bottom: 2.5rem;
-            font-family: var(--font-sans);
-            font-style: normal;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            font-size: 0.8rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .cta-btn:hover {
-            background: var(--gold);
-            color: var(--fg);
         }
 
         /* Steps List */
@@ -1020,7 +964,7 @@
             color: var(--gold);
         }
 
-        /* CONTACT SECTION replacement */
+        /* CONTACT SECTION */
         .contact {
             background: var(--bg);
             color: var(--fg);
@@ -1141,7 +1085,7 @@
 
 <body>
 
-    <nav>
+    <nav class="main-nav">
         <a href="/en/index.html" class="nav-logo">
             <img src="/logo.png" alt="Özgören Law Firm Logo">
         </a>
@@ -1196,7 +1140,7 @@
             </div>
         </article>
 
-        <!-- SIDEBAR -->
+        <!-- SIDEBAR (DÜZELTİLDİ: Tüm kartlar aside içine alındı) -->
         <aside class="post-sidebar" aria-label="Article sidebar">
             <div class="sb-card">
                 <div class="sb-card-head">
@@ -1208,7 +1152,7 @@
                 </div>
             </div>
 
-             <div class="sb-card">
+            <div class="sb-card">
                 <div class="sb-card-head"><h4>About the Author</h4></div>
                 <div class="sb-card-body">
                     <div class="author-row">
@@ -1219,10 +1163,8 @@
                     <a class="author-link" href="/en/index.html#about">Full Profile →</a>
                 </div>
             </div>
-        </aside>
-    </div>
 
-            <div class="sb-card">
+            <div class="sb-card" style="border-bottom: none;">
                 <div class="sb-card-head">
                     <h4>Related Articles</h4>
                 </div>
@@ -1237,6 +1179,7 @@
         </aside>
     </div>
 
+    <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
         <div class="section-label">Professional Inquiries</div>
         <h2 class="contact-title">Connect with the Firm</h2>
@@ -1247,6 +1190,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="footer-left">© 2026 Özgören Law Firm</div>
         <div class="footer-right"><a href="/legal-notice">Legal Notice</a></div>
