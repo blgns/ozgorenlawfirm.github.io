@@ -39,6 +39,8 @@
             --gold: #B8955A;
             --font-serif: 'Instrument Serif', serif;
             --font-sans: 'Inter', sans-serif;
+            --line: rgba(184, 149, 90, 0.25);
+            --warm: #F0EBE3;
         }
 
         html.lenis {
@@ -496,6 +498,215 @@
         .comp-table td:first-child {
             color: var(--fg);
             font-weight: 500;
+        }
+
+        /* ── ADVANCED COMPONENTS (NEW) ── */
+
+        /* Member States / Globe Grid */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+            margin: 2rem 0;
+        }
+
+        .member-cell {
+            background: var(--bg);
+            padding: 1rem;
+            font-size: 0.95rem;
+            color: var(--fg-muted);
+            text-align: center;
+        }
+
+        .member-cell.header {
+            background: var(--fg);
+            color: var(--bg);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Comparison Grid */
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+            margin: 3rem 0;
+        }
+
+        .compare-col {
+            background: var(--bg);
+        }
+
+        .compare-head {
+            padding: 1.5rem;
+            background: var(--fg);
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .compare-body {
+            padding: 2rem;
+        }
+
+        .compare-body ul {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .compare-body ul li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            padding: 0.8rem 0 0.8rem 1.5rem;
+            border-bottom: 1px solid var(--line);
+            position: relative;
+            color: var(--fg-muted);
+        }
+
+        .compare-body ul li:last-child {
+            border-bottom: none;
+        }
+
+        .compare-body ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        /* Clause Box */
+        .clause-box {
+            background: var(--fg);
+            border-left: 3px solid var(--gold);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .clause-box::before {
+            content: 'SAMPLE CLAUSE / PROVISION';
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .clause-box p {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-style: italic;
+            color: rgba(247, 243, 238, 0.9);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* CTA Block */
+        .cta-block {
+            background: var(--fg);
+            padding: 4rem;
+            margin-top: 6rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--gold), transparent);
+        }
+
+        .cta-block h3 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--bg);
+            margin: 0 0 1rem 0;
+        }
+
+        .cta-block p {
+            font-size: 1.1rem;
+            color: rgba(247, 243, 238, 0.6);
+            margin-bottom: 2.5rem;
+            font-family: var(--font-sans);
+            font-style: normal;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: var(--gold);
+            color: var(--fg);
+        }
+
+        /* Steps List */
+        .steps-list {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 3rem 0;
+            counter-reset: step-counter;
+        }
+
+        .steps-list li {
+            padding: 2rem 2rem 2rem 5rem !important;
+            border-bottom: 1px solid var(--line);
+            position: relative;
+            font-size: 1.2rem;
+            font-family: var(--font-serif);
+            counter-increment: step-counter;
+        }
+
+        .steps-list li:first-child {
+            border-top: 1px solid var(--line);
+        }
+
+        .steps-list li::before {
+            content: counter(step-counter, decimal-leading-zero);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--border);
+            line-height: 1;
+        }
+
+        .steps-list li strong {
+            display: block;
+            font-weight: 600;
+            color: var(--fg);
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-sans);
+            text-transform: uppercase;
         }
 
         /* BIT provision audit grid */
@@ -987,14 +1198,6 @@
                 </div>
                 <div class="sb-card-body">
                     <ul class="toc-list">
-                        <li><a href="#two-layers">PPA vs. BIT — The Two Layers</a></li>
-                        <li><a href="#fet-standard">The FET Standard</a></li>
-                        <li><a href="#expropriation">Expropriation vs. Police Powers</a></li>
-                        <li><a href="#afcfta">The AfCFTA Investment Protocol</a></li>
-                        <li><a href="#cooling-off">The Cooling-Off Period</a></li>
-                        <li><a href="#bit-audit">Four BIT Provisions</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#conclusion">The Practitioner's View</a></li>
                     </ul>
                 </div>
             </div>
@@ -1093,16 +1296,45 @@
                 }
 
                 document.getElementById('loading').style.display = 'none';
-                document.getElementById('dynamic-content').innerHTML = data.htmlContent;
+                const contentArea = document.getElementById('dynamic-content');
+                contentArea.innerHTML = data.htmlContent;
 
-                // Toggle Logic Reload
+                // == DYNAMIC TOC GENERATION ==
+                const tocList = document.querySelector('.toc-list');
+                tocList.innerHTML = '';
+                const headers = contentArea.querySelectorAll('h2, h3');
+                headers.forEach((h, index) => {
+                    const id = `sec-${index}`;
+                    h.id = id;
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = `#${id}`;
+                    a.textContent = h.textContent;
+                    if (h.tagName === 'H3') a.style.paddingLeft = '2.5rem';
+                    li.appendChild(a);
+                    tocList.appendChild(li);
+                });
+
+                // Scrollspy and Toggle Logic
+                const tocLinks = tocList.querySelectorAll('a');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            tocLinks.forEach(a => a.classList.remove('active'));
+                            const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+                            if (active) active.classList.add('active');
+                        }
+                    });
+                }, { rootMargin: '-20% 0px -60% 0px' });
+                headers.forEach(h => observer.observe(h));
+
                 document.querySelectorAll('.faq-btn').forEach(btn => {
                     btn.addEventListener('click', () => {
                         const answer = btn.nextElementSibling;
                         const isOpen = btn.getAttribute('aria-expanded') === 'true';
                         document.querySelectorAll('.faq-btn').forEach(b => {
                             b.setAttribute('aria-expanded', 'false');
-                            b.nextElementSibling.classList.remove('open');
+                            if (b.nextElementSibling) b.nextElementSibling.classList.remove('open');
                         });
                         if (!isOpen) {
                             btn.setAttribute('aria-expanded', 'true');
