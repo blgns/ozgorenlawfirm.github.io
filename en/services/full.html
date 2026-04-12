@@ -412,32 +412,53 @@
     .faq-item.open .faq-a { max-height: 400px; }
     .faq-a-inner { padding-bottom: 1.75rem; font-size: 0.95rem; color: var(--fg-muted); line-height: 1.8; max-width: 680px; }
 
-    /* CONTACT / CTA */
-    .contact {
-      background: var(--fg); color: var(--bg);
-      text-align: center; padding: 10rem 2rem;
-    }
-    .contact .section-label { justify-content: center; color: rgba(255,255,255,0.5); }
-    .contact .section-label::before { background: var(--bg); }
-    .contact-title {
-      font-family: var(--font-serif);
-      font-size: clamp(3rem, 7vw, 6rem); margin: 2rem 0; line-height: 1;
-    }
-    .contact-title i { font-style: italic; color: rgba(255,255,255,0.5); }
-    .contact-sub {
-      font-size: 0.95rem; color: rgba(255,255,255,0.45);
-      max-width: 460px; margin: 0 auto 4rem; line-height: 1.75;
-    }
-    .contact-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
-    .contact-link {
-      padding: 1rem 2.5rem; border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 100px; color: var(--bg); text-decoration: none;
-      font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
-      transition: all 0.3s;
-    }
-    .contact-link:hover { background: var(--bg); color: var(--fg); }
-    .contact-link.primary { background: var(--bg); color: var(--fg); }
-    .contact-link.primary:hover { background: var(--accent); }
+     /* ── CONTACT ── */
+        .contact {
+            background: var(--fg);
+            color: var(--bg);
+            text-align: center;
+            padding: 10rem 2rem;
+        }
+
+        .contact .section-label {
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .contact .section-label::before {
+            background: var(--bg);
+        }
+
+        .contact-title {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 7vw, 6rem);
+            margin: 2rem 0;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 4rem;
+        }
+
+        .contact-link {
+            padding: 1rem 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            color: var(--bg);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s;
+        }
+
+        .contact-link:hover {
+            background: var(--bg);
+            color: var(--fg);
+        }
 
     /* FOOTER */
     footer {
@@ -1091,16 +1112,15 @@
 
 <!-- CTA / CONTACT -->
 <section class="contact" id="contact">
-  <div class="section-label reveal">Professional Inquiries</div>
-  <h2 class="contact-title reveal">Available for <i>International</i><br>Mandates &amp; Co-Counsel</h2>
-  <p class="contact-sub reveal">Whether you face an urgent dispute or are structuring a long-term international investment, Özgören Law Firm is available to discuss your matter confidentially.</p>
-  <div class="contact-links reveal">
-    <a href="https://tally.so/r/zxZeDE" class="contact-link primary" target="_blank">Send an Inquiry</a>
-    <a href="mailto:selin@ozgorenlawfirm.com" class="contact-link">Email the Firm</a>
-    <a href="tel:+905431465266" class="contact-link">+90 543 146 52 66</a>
-    <a href="https://www.linkedin.com/in/selinozgoren/" class="contact-link" target="_blank">LinkedIn</a>
-  </div>
-</section>
+        <div class="section-label reveal">Professional Inquiries</div>
+        <h2 class="contact-title reveal">Connect with the Firm</h2>
+        <div class="contact-links reveal">
+            <a href="mailto:info@ozgorenlawfirm.com" class="contact-link">Email Us</a>
+            <a href="tel:+905431465266" class="contact-link">+90 543 146 52 66</a>
+            <a href="https://tally.so/r/zxZeDE" class="contact-link" target="_blank">Inquiry Form</a>
+            <a href="https://www.linkedin.com/in/selinozgoren/" class="contact-link" target="_blank">LinkedIn</a>
+        </div>
+    </section>
 
 <!-- FOOTER -->
 <footer>
