@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <title>Legal Services | International Arbitration & Cross-Border Law | Özgören Law Firm</title>
+  <meta name="description" content="Özgören Law Firm offers international commercial arbitration, investment treaty arbitration, enforcement of foreign judgments in Turkey, tribunal secretary services, and cross-border legal advisory — based in Izmir, acting globally.">
+  <meta name="keywords" content="international arbitration lawyer Turkey, investment arbitration Turkey, enforcement foreign judgment Turkey, tribunal secretary, ICC arbitration Turkey, ICSID lawyer, UNCITRAL arbitration, cross-border disputes Izmir, New York Convention Turkey">
+  <meta name="author" content="Selin Özgören">
+  <link rel="canonical" href="https://ozgorenlawfirm.com/en/services.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Legal Services | Özgören Law Firm">
+  <meta property="og:description" content="International arbitration, investment disputes, enforcement of foreign awards, and cross-border legal advisory — Özgören Law Firm, Izmir, Turkey.">
+  <meta property="og:url" content="https://ozgorenlawfirm.com/en/services.html">
+  <meta property="og:image" content="https://ozgorenlawfirm.com/selin.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Özgören Law Firm">
+
+  <link rel="alternate" hreflang="en" href="https://ozgorenlawfirm.com/en/services.html">
+  <link rel="alternate" hreflang="x-default" href="https://ozgorenlawfirm.com/en/services.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LegalService",
+        "@id": "https://ozgorenlawfirm.com/#firm",
+        "name": "Özgören Law Firm",
+        "url": "https://ozgorenlawfirm.com/en/services.html",
+        "logo": "https://ozgorenlawfirm.com/logo.png",
+        "description": "International arbitration practice focusing on commercial and investment disputes, enforcement of foreign awards, and cross-border legal advisory in Turkey.",
+        "address": { "@type": "PostalAddress", "addressLocality": "İzmir", "addressCountry": "TR" },
+        "telephone": "+905431465266",
+        "email": "selin@ozgorenlawfirm.com",
+        "areaServed": "Worldwide",
+        "knowsLanguage": ["en", "tr"],
+        "knowsAbout": [
+          "International Commercial Arbitration","Investment Treaty Arbitration","New York Convention",
+          "Enforcement of Foreign Arbitral Awards Turkey","Recognition of Foreign Judgments Turkey",
+          "Tribunal Secretary Services","BIT Claims","ICSID Arbitration","UNCITRAL Arbitration",
+          "Cross-Border Dispute Resolution","Energy Arbitration","Construction Arbitration FIDIC"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Legal Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "International Commercial Arbitration Counsel" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Investment Treaty Arbitration (ICSID, UNCITRAL)" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enforcement of Foreign Arbitral Awards in Turkey" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tribunal Secretary Services" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cross-Border Advisory for Foreign Companies in Turkey" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arbitration Clause Drafting and Contract Structuring" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-Dispute Strategic Advisory" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Energy Dispute Arbitration and ECT Claims" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Construction Arbitration FIDIC Turkey" } }
+          ]
+        },
+        "sameAs": ["https://www.linkedin.com/in/selinozgoren/"],
+        "founder": { "@id": "https://ozgorenlawfirm.com/#selin" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://ozgorenlawfirm.com/#selin",
+        "name": "Selin Özgören",
+        "jobTitle": "International Arbitration Lawyer",
+        "url": "https://ozgorenlawfirm.com/en/index.html",
+        "image": "https://ozgorenlawfirm.com/selin.jpg",
+        "sameAs": "https://www.linkedin.com/in/selinozgoren/",
+        "worksFor": { "@id": "https://ozgorenlawfirm.com/#firm" },
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "Bocconi University" },
+          { "@type": "CollegeOrUniversity", "name": "Ankara University" }
+        ],
+        "knowsLanguage": ["English", "Turkish"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can foreign arbitral awards be enforced in Turkey?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Turkey ratified the 1958 New York Convention in 1992. Foreign arbitral awards are enforceable before Turkish courts through exequatur proceedings, subject to the limited grounds for refusal under Article V of the Convention." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which arbitral institutions are most commonly used for disputes involving Turkey?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The ICC Court of Arbitration (Paris) is most frequently used for Turkish cross-border commercial disputes. ICSID is the primary forum for investment treaty claims against the Turkish State. HKIAC, ISTAC, LCIA, and UNCITRAL ad hoc proceedings are also regularly encountered." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Özgören Law Firm provide tribunal secretary services?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Drawing on direct experience at the HKIAC Secretariat, the firm provides independent tribunal secretary services for arbitral tribunals in institutional and ad hoc proceedings — covering procedural coordination, document management, hearing logistics, and legal research within strict ethical guidelines." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the firm represent clients based outside Turkey?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The practice is international by design. Selin Özgören advises and represents clients across Europe, Asia, Africa, and North America, and regularly appears in arbitrations seated outside Turkey. The firm is fluent in English and Turkish." }
+          },
+          {
+            "@type": "Question",
+            "name": "How important is the arbitration clause in an international contract?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Critically important. A poorly drafted arbitration clause can render the entire dispute resolution mechanism unenforceable. Özgören Law Firm advises on clause drafting as a core part of transaction structuring — tailored to the governing law, seat of arbitration, and specific risk profile of each deal." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Turkey have bilateral investment treaties that protect foreign investors?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Turkey has concluded over 100 bilateral investment treaties, providing foreign investors with protections against expropriation and denial of fair and equitable treatment, and granting access to international arbitration. Turkey is also a signatory to the Energy Charter Treaty." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVN14SDR0X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-WVN14SDR0X');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F7F3EE;
+      --fg: #1A1A18;
+      --fg-muted: #6B6558;
+      --border: rgba(184, 149, 90, 0.25);
+      --accent: #EBE1CE;
+      --gold: #B8955A;
+      --font-serif: 'Instrument Serif', serif;
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    html.lenis { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto; }
+    .lenis.lenis-stopped { overflow: hidden; }
+
+    body {
+      background: var(--bg); color: var(--fg);
+      font-family: var(--font-sans); font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden; line-height: 1.5;
+    }
+    ::selection { background: var(--fg); color: var(--bg); }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.5rem clamp(1.5rem, 4vw, 4rem);
+      background: rgba(247,243,238,0.95); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border); transition: transform 0.4s ease;
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 80px; width: auto; display: block; }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+
+    .lang-dropdown { position: relative; }
+    .lang-btn {
+      background: none; border: none; font-family: var(--font-sans);
+      font-size: 0.75rem; color: var(--fg); cursor: pointer;
+      text-transform: uppercase; display: flex; align-items: center; gap: 0.4rem;
+    }
+    .lang-menu {
+      display: none; position: absolute; top: calc(100% + 15px); right: 0;
+      background: var(--bg); border: 1px solid var(--border); padding: 0.5rem 0;
+      min-width: 120px; z-index: 1300; box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    }
+    .lang-menu.open { display: block; }
+    .lang-menu a {
+      display: block; padding: 0.5rem 1.5rem; font-size: 0.75rem;
+      text-decoration: none; color: var(--fg-muted); transition: color 0.2s;
+    }
+    .lang-menu a:hover { color: var(--fg); background: var(--accent); }
+
+    .hamburger {
+      display: flex; flex-direction: column; gap: 4px;
+      background: none; border: none; cursor: pointer; padding: 4px; z-index: 1200;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 1.5px; background: var(--fg);
+      transition: 0.3s; transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(2.75px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { transform: translateY(-2.75px) rotate(-45deg); }
+
+    /* MENU OVERLAY */
+    .menu-overlay {
+      position: fixed; inset: 0; background: var(--bg); z-index: 900;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 2rem clamp(1.5rem, 4vw, 4rem);
+      opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+    }
+    .menu-overlay.open { opacity: 1; pointer-events: auto; }
+    .menu-links { display: flex; flex-direction: column; gap: 2rem; }
+    .menu-links a {
+      font-family: var(--font-serif); font-size: clamp(3rem, 6vw, 5rem);
+      color: var(--fg); text-decoration: none; line-height: 1;
+      transform: translateY(20px);
+      transition: transform 0.4s ease, opacity 0.4s ease, color 0.3s ease;
+      opacity: 0;
+    }
+    .menu-overlay.open .menu-links a { transform: translateY(0); opacity: 1; }
+    .menu-links a:hover { color: var(--gold); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: flex; flex-direction: column;
+      padding: 8rem clamp(1.5rem, 4vw, 4rem) 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-top { flex: 1; display: flex; align-items: flex-end; padding-bottom: 4rem; }
+    .hero-eyebrow {
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--fg-muted); margin-bottom: 2rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block; width: 12px; height: 12px;
+      background: var(--fg); border-radius: 50%;
+    }
+    .hero-eyebrow a { color: var(--fg-muted); text-decoration: none; }
+    .hero-eyebrow a:hover { color: var(--fg); }
+    .hero-h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(3.5rem, 8vw, 8rem);
+      line-height: 0.92; letter-spacing: -0.02em; color: var(--fg);
+      max-width: 90%; animation: fadeUp 1s cubic-bezier(0.16,1,0.3,1) both;
+    }
+    .hero-h1 i { font-style: italic; color: var(--fg-muted); }
+    .hero-bottom {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+      border-top: 1px solid var(--border); padding-top: 2rem;
+      animation: fadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both;
+    }
+    .hero-desc-wrap { max-width: 500px; }
+    .hero-sub { font-size: 1.5rem; font-family: var(--font-serif); color: var(--fg); margin-bottom: 1rem; }
+    .hero-desc { font-size: 0.95rem; color: var(--fg-muted); line-height: 1.6; }
+    .hero-desc a {
+      color: var(--fg); text-decoration: none;
+      border-bottom: 1px solid var(--border); transition: border-color 0.2s;
+    }
+    .hero-desc a:hover { border-color: var(--fg); }
+
+    /* SECTION WRAPPER */
+    .section-wrap {
+      padding: 8rem clamp(1.5rem, 5vw, 4rem);
+      max-width: 1400px; margin: 0 auto; width: 100%;
+    }
+    .section-bg-white { background: #fff; border-bottom: 1px solid var(--border); }
+    .section-bg-default { background: var(--bg); border-bottom: 1px solid var(--border); }
+    .section-header {
+      display: grid; grid-template-columns: 1fr 2.5fr;
+      gap: 4rem; margin-bottom: 6rem;
+    }
+    .section-label {
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--fg-muted); display: flex; align-items: center; gap: 1rem;
+    }
+    .section-label::before {
+      content: ''; display: block; width: 12px; height: 12px;
+      background: var(--fg); border-radius: 50%;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1.1; letter-spacing: -0.02em;
+    }
+    .section-title i { font-style: italic; color: var(--fg-muted); }
+    .section-intro {
+      font-size: 1rem; color: var(--fg-muted); line-height: 1.8;
+      max-width: 680px; margin-top: -3rem; margin-bottom: 5rem;
+    }
+
+    /* SERVICE ROWS */
+    .services-grid { border-top: 1px solid var(--border); }
+    .service-row {
+      display: grid; grid-template-columns: 1fr 2fr;
+      gap: 4rem; padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.4s, padding 0.3s, margin 0.3s, width 0.3s;
+    }
+    .service-row:hover {
+      background: var(--accent);
+      padding-left: 1rem; padding-right: 1rem;
+      margin: 0 -1rem; width: calc(100% + 2rem);
+    }
+    .service-num {
+      font-family: var(--font-serif); font-size: 1.5rem;
+      color: var(--fg-muted); padding-top: 0.25rem;
+    }
+    .service-content h3 {
+      font-family: var(--font-serif); font-size: 2.2rem;
+      margin-bottom: 0.5rem; letter-spacing: -0.01em; line-height: 1.15;
+    }
+    .service-content h3 a { color: var(--fg); text-decoration: none; }
+    .service-content h3 a:hover { color: var(--gold); }
+    .service-tag {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--gold); margin-bottom: 1rem; display: block;
+    }
+    .service-content p {
+      font-size: 1rem; color: var(--fg-muted);
+      margin-bottom: 1.5rem; max-width: 560px; line-height: 1.7;
+    }
+    .service-content ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .service-content li {
+      font-size: 0.9rem; color: var(--fg);
+      display: flex; align-items: flex-start; gap: 0.5rem;
+    }
+    .service-content li::before {
+      content: '→'; font-family: var(--font-serif);
+      color: var(--fg-muted); flex-shrink: 0;
+    }
+    .service-link {
+      display: inline-block; margin-top: 1.5rem;
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--fg); text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2px; transition: border-color 0.2s, color 0.2s;
+    }
+    .service-link:hover { color: var(--gold); border-color: var(--gold); }
+
+    /* SECTOR GRID */
+    .sector-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border); border: 1px solid var(--border);
+    }
+    .sector-card { background: var(--bg); padding: 2.5rem 2rem; transition: background 0.3s; }
+    .sector-card:hover { background: var(--accent); }
+    .sector-num {
+      font-family: var(--font-serif); font-size: 1rem;
+      color: var(--fg-muted); margin-bottom: 0.75rem; display: block;
+    }
+    .sector-card h3 {
+      font-family: var(--font-serif); font-size: 1.5rem;
+      margin-bottom: 0.75rem; letter-spacing: -0.01em; line-height: 1.2;
+    }
+    .sector-card p { font-size: 0.9rem; color: var(--fg-muted); line-height: 1.7; margin-bottom: 1rem; }
+    .sector-card ul { list-style: none; }
+    .sector-card li {
+      font-size: 0.85rem; color: var(--fg-muted);
+      padding: 0.3rem 0; border-top: 1px solid var(--border);
+      display: flex; gap: 0.5rem; align-items: flex-start;
+    }
+    .sector-card li::before { content: '→'; color: var(--gold); font-family: var(--font-serif); flex-shrink: 0; }
+
+    /* STATS */
+    .stats-row {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--border); border: 1px solid var(--border);
+    }
+    .stat-item {
+      background: var(--bg); padding: 2.5rem 2rem;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .stat-num {
+      font-family: var(--font-serif); font-size: 2.5rem;
+      line-height: 1; margin-bottom: 1.5rem;
+    }
+    .stat-label {
+      font-size: 0.75rem; text-transform: uppercase;
+      color: var(--fg-muted); letter-spacing: 0.05em;
+    }
+
+    /* PROCESS */
+    .process-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--border); border: 1px solid var(--border);
+    }
+    .process-step { background: var(--bg); padding: 3rem 2rem; transition: background 0.3s; }
+    .process-step:hover { background: var(--accent); }
+    .process-step-num {
+      font-family: var(--font-serif); font-size: 3rem; line-height: 1;
+      color: var(--fg-muted); margin-bottom: 1.5rem; display: block;
+    }
+    .process-step h3 {
+      font-family: var(--font-serif); font-size: 1.4rem;
+      margin-bottom: 0.75rem; letter-spacing: -0.01em;
+    }
+    .process-step p { font-size: 0.9rem; color: var(--fg-muted); line-height: 1.75; }
+
+    /* FAQ */
+    .faq-list { border-top: 1px solid var(--border); }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q {
+      width: 100%; background: none; border: none; text-align: left;
+      padding: 1.75rem 0; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: var(--font-serif); font-size: 1.35rem;
+      color: var(--fg); letter-spacing: -0.01em; transition: color 0.2s;
+    }
+    .faq-q:hover { color: var(--gold); }
+    .faq-icon { font-size: 1.5rem; transition: transform 0.35s; flex-shrink: 0; margin-left: 2rem; color: var(--fg-muted); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.45s cubic-bezier(0.16,1,0.3,1); }
+    .faq-item.open .faq-a { max-height: 400px; }
+    .faq-a-inner { padding-bottom: 1.75rem; font-size: 0.95rem; color: var(--fg-muted); line-height: 1.8; max-width: 680px; }
+
+    /* CONTACT / CTA */
+    .contact {
+      background: var(--fg); color: var(--bg);
+      text-align: center; padding: 10rem 2rem;
+    }
+    .contact .section-label { justify-content: center; color: rgba(255,255,255,0.5); }
+    .contact .section-label::before { background: var(--bg); }
+    .contact-title {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 7vw, 6rem); margin: 2rem 0; line-height: 1;
+    }
+    .contact-title i { font-style: italic; color: rgba(255,255,255,0.5); }
+    .contact-sub {
+      font-size: 0.95rem; color: rgba(255,255,255,0.45);
+      max-width: 460px; margin: 0 auto 4rem; line-height: 1.75;
+    }
+    .contact-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+    .contact-link {
+      padding: 1rem 2.5rem; border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 100px; color: var(--bg); text-decoration: none;
+      font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
+      transition: all 0.3s;
+    }
+    .contact-link:hover { background: var(--bg); color: var(--fg); }
+    .contact-link.primary { background: var(--bg); color: var(--fg); }
+    .contact-link.primary:hover { background: var(--accent); }
+
+    /* FOOTER */
+    footer {
+      padding: 2rem clamp(1.5rem, 4vw, 4rem);
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem; color: var(--fg-muted);
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    footer a { color: var(--fg-muted); text-decoration: none; }
+    footer a:hover { color: var(--fg); }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+
+    /* REVEAL ANIMATION */
+    .reveal {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-bottom { grid-template-columns: 1fr; gap: 2rem; }
+      .section-header { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3rem; }
+      .service-row { grid-template-columns: 1fr; gap: 1rem; }
+      .service-content ul { grid-template-columns: 1fr; }
+      .sector-grid { grid-template-columns: 1fr 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+      .service-row:hover { padding-left: 0; padding-right: 0; margin: 0; width: 100%; }
+    }
+    @media (max-width: 600px) {
+      .sector-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/en/index.html" class="nav-logo">
+    <img src="/logo.png" alt="Özgören Law Firm Logo">
+  </a>
+  <div class="nav-right">
+    <div class="lang-dropdown">
+      <button class="lang-btn" id="langBtn">EN
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.2"/></svg>
+      </button>
+      <div class="lang-menu" id="langMenu">
+        <a href="/tr/index-tr.html">Türkçe</a>
+        <a href="/fr/index-fr.html">Français</a>
+        <a href="/es/index-es.html">Español</a>
+      </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MENU OVERLAY -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-links">
+    <a href="/en/index.html#about">Profile</a>
+    <a href="/en/services.html">Services</a>
+    <a href="/en/arbitration.html">Arbitration</a>
+    <a href="/en/blog.html">Knowledge Bank</a>
+    <a href="/en/index.html#contact">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow"><a href="/en/index.html">Home</a>&nbsp;/&nbsp;Services</p>
+      <h1 class="hero-h1">Legal Services for<br><i>Cross-Border</i> Disputes</h1>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-desc-wrap">
+      <h2 class="hero-sub">Nine practice areas. One integrated approach.</h2>
+      <p class="hero-desc">From <a href="/en/arbitration.html">international commercial arbitration</a> to <a href="/en/en/enforcement-foreign-judgment-turkey">enforcement of foreign awards in Turkey</a> — Özgören Law Firm provides specialist counsel across every stage of cross-border dispute resolution.</p>
+    </div>
+    <div class="hero-desc-wrap">
+      <p class="hero-desc">Based in İzmir and acting globally — in ICC, HKIAC, ICSID, UNCITRAL, and ISTAC proceedings. Fluent in English and Turkish, with experience across Europe, Asia, Africa, and North America.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 01 · INTERNATIONAL COMMERCIAL ARBITRATION -->
+<div class="section-bg-default">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="section-label">01 — Core Practice</div>
+      <h2 class="section-title">International <i>Commercial</i> Arbitration</h2>
+    </div>
+    <p class="section-intro reveal">Full counsel and co-counsel representation in cross-border commercial arbitration proceedings — from the drafting of the Request for Arbitration through to enforcement of the final award. The firm acts in proceedings administered by the ICC, HKIAC, UNCITRAL, LCIA, ISTAC, and in ad hoc proceedings under rules agreed by the parties.</p>
+    <div class="services-grid">
+      <div class="service-row reveal">
+        <div class="service-num">A</div>
+        <div class="service-content">
+          <span class="service-tag">ICC · HKIAC · UNCITRAL · LCIA · ISTAC</span>
+          <h3><a href="/en/arbitration.html">Institutional Arbitration — Counsel &amp; Co-Counsel</a></h3>
+          <p>Complete case management in proceedings before major arbitral institutions — acting as lead counsel or as co-counsel alongside foreign law firms. The firm manages the entire litigation lifecycle with procedural and strategic rigour.</p>
+          <ul>
+            <li>Request for Arbitration and Answer drafting</li>
+            <li>Written submissions, memorials &amp; replies</li>
+            <li>Witness preparation and coordination</li>
+            <li>Expert coordination and cross-examination</li>
+            <li>Oral advocacy at the evidentiary hearing</li>
+            <li>Post-hearing brief preparation</li>
+          </ul>
+          <a class="service-link" href="/en/arbitration.html">View arbitration services →</a>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">B</div>
+        <div class="service-content">
+          <span class="service-tag">Ad Hoc Proceedings</span>
+          <h3>UNCITRAL Ad Hoc Arbitration</h3>
+          <p>Strategic guidance and full representation in ad hoc proceedings under UNCITRAL Arbitration Rules — including arbitrator appointment, procedural framework design, and seat selection for disputes involving Turkish parties or Turkish-law governed contracts.</p>
+          <ul>
+            <li>Arbitrator selection and appointment strategy</li>
+            <li>Procedural order and timetable drafting</li>
+            <li>Seat and governing law analysis</li>
+            <li>Interim measures and emergency applications</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">C</div>
+        <div class="service-content">
+          <span class="service-tag">Emergency Relief</span>
+          <h3>Emergency Arbitration &amp; Interim Measures</h3>
+          <p>Fast-track procedural support for emergency arbitration applications where speed is critical to preserving assets, contractual rights, or commercial relationships — before a full tribunal is constituted.</p>
+          <ul>
+            <li>Emergency arbitrator applications (ICC, HKIAC, ISTAC)</li>
+            <li>Asset preservation and freezing orders</li>
+            <li>Anti-suit injunction strategy</li>
+            <li>Coordination with local courts for interim relief</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 02 · INVESTMENT TREATY ARBITRATION -->
+<div class="section-bg-white">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="section-label">02 — Investment Law</div>
+      <h2 class="section-title">Investment <i>Treaty</i> Arbitration</h2>
+    </div>
+    <p class="section-intro reveal">Turkey is a party to over 100 bilateral investment treaties. Özgören Law Firm advises foreign investors and states on the full spectrum of investment treaty claims — from treaty analysis and pre-claim structuring through to full proceedings before ICSID and UNCITRAL tribunals. The firm's ISDS expertise is grounded in direct experience at the UNCITRAL Secretariat in Vienna.</p>
+    <div class="services-grid">
+      <div class="service-row reveal">
+        <div class="service-num">A</div>
+        <div class="service-content">
+          <span class="service-tag">ICSID · UNCITRAL</span>
+          <h3><a href="/en/investment-arbitration.html">ICSID &amp; UNCITRAL Investment Arbitration</a></h3>
+          <p>Representation of investors and states in treaty-based investment arbitration — covering expropriation, denial of fair and equitable treatment, full protection and security, and most-favoured-nation claims before international tribunals.</p>
+          <ul>
+            <li>ICSID Convention and Additional Facility proceedings</li>
+            <li>UNCITRAL Rules investment arbitration under BITs</li>
+            <li>Jurisdictional and admissibility objections</li>
+            <li>State responsibility and attribution analysis</li>
+            <li>Quantum and valuation methodology disputes</li>
+            <li>Annulment proceedings before ICSID committees</li>
+          </ul>
+          <a class="service-link" href="/en/investment-arbitration.html">View investment arbitration →</a>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">B</div>
+        <div class="service-content">
+          <span class="service-tag">Bilateral Investment Treaties</span>
+          <h3>BIT Claims &amp; Treaty Analysis</h3>
+          <p>In-depth analysis of applicable bilateral investment treaties to identify available protections, viable claims against host states, or available defences — covering Turkey's full network of over 100 BITs and the Energy Charter Treaty.</p>
+          <ul>
+            <li>BIT applicability and MFN clause analysis</li>
+            <li>Expropriation and regulatory taking claims</li>
+            <li>Fair and equitable treatment standard</li>
+            <li>Energy Charter Treaty Article 10 claims</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">C</div>
+        <div class="service-content">
+          <span class="service-tag">ISDS Reform · UNCITRAL WGIII</span>
+          <h3>ISDS Reform Advisory</h3>
+          <p>Drawing on Selin Özgören's direct experience at the UNCITRAL Working Group III on ISDS reform — specialist guidance on the evolving investor-state dispute landscape and its implications for investment structuring and treaty strategy.</p>
+          <ul>
+            <li>UNCITRAL WGIII developments and treaty implications</li>
+            <li>Multilateral Investment Court planning</li>
+            <li>Treaty renegotiation and sunset clause analysis</li>
+            <li>State advisory on ISDS exposure and treaty policy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 03 · ENFORCEMENT & RECOGNITION -->
+<div class="section-bg-default">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="section-label">03 — Post-Award</div>
+      <h2 class="section-title">Enforcement &amp; <i>Recognition</i> of Foreign Awards</h2>
+    </div>
+    <p class="section-intro reveal">Obtaining an award is only part of the battle. Özgören Law Firm advises clients on enforcement strategy from the outset — identifying assets, anticipating resistance, and converting the award into a real outcome before Turkish courts and across multiple jurisdictions. Turkey ratified the 1958 New York Convention in 1992.</p>
+    <div class="services-grid">
+      <div class="service-row reveal">
+        <div class="service-num">A</div>
+        <div class="service-content">
+          <span class="service-tag">New York Convention · Turkey</span>
+          <h3><a href="/en/en/enforcement-foreign-judgment-turkey">Enforcement of Foreign Arbitral Awards in Turkey</a></h3>
+          <p>Guiding foreign award-holders through Turkish exequatur proceedings from filing to satisfaction of the award — anticipating and countering Article V objections at every stage of the process.</p>
+          <ul>
+            <li>Exequatur applications before Turkish courts</li>
+            <li>Article V defence and counter-argument strategy</li>
+            <li>Asset tracing and attachment proceedings</li>
+            <li>Multi-jurisdictional enforcement coordination</li>
+          </ul>
+          <a class="service-link" href="/en/en/enforcement-foreign-judgment-turkey">View enforcement services →</a>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">B</div>
+        <div class="service-content">
+          <span class="service-tag">Foreign Court Judgments · MÖHUK</span>
+          <h3>Recognition of Foreign Court Judgments in Turkey</h3>
+          <p>Recognition and enforcement of foreign court judgments in Turkey under the International Private and Procedural Law (MÖHUK) — including judgments from EU member states, the United States, the United Kingdom, and other jurisdictions.</p>
+          <ul>
+            <li>MÖHUK recognition and enforcement proceedings</li>
+            <li>Reciprocity and enforceability analysis</li>
+            <li>Enforcement against Turkish-domiciled defendants</li>
+            <li>Bilateral treaty applicability review</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">C</div>
+        <div class="service-content">
+          <span class="service-tag">Award Challenges</span>
+          <h3>Challenging or Opposing Enforcement</h3>
+          <p>Defending against enforcement proceedings in Turkey — or challenging arbitral awards on procedural and substantive grounds before Turkish courts of appeal, including public policy and due process objections.</p>
+          <ul>
+            <li>Public policy (ordre public) objections</li>
+            <li>Due process and jurisdiction challenges</li>
+            <li>Setting-aside applications before Turkish courts</li>
+            <li>Stay of enforcement applications</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="section-bg-white">
+  <div class="section-wrap" style="padding-top: 4rem; padding-bottom: 4rem;">
+    <div class="stats-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">100+</div>
+        <div class="stat-label">Turkish Bilateral Investment Treaties</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">170+</div>
+        <div class="stat-label">New York Convention Contracting States</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">ICC · HKIAC</div>
+        <div class="stat-label">Institutional Secretariat Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Continents — Global Practice</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 04 · TRIBUNAL SECRETARY -->
+<div class="section-bg-default">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="section-label">04 — Procedural Support</div>
+      <h2 class="section-title">Tribunal <i>Secretary</i> Services</h2>
+    </div>
+    <p class="section-intro reveal">Drawing on direct experience at the HKIAC Secretariat in Hong Kong, Özgören Law Firm provides independent, discreet procedural support to arbitral tribunals in complex institutional and ad hoc proceedings — strictly within the ethical boundaries of secretary conduct established by the ICC, HKIAC, and other leading institutions.</p>
+    <div class="services-grid">
+      <div class="service-row reveal">
+        <div class="service-num">A</div>
+        <div class="service-content">
+          <span class="service-tag">Institutional &amp; Ad Hoc</span>
+          <h3><a href="/en/tribunal-secretary.html">Administrative Tribunal Secretary</a></h3>
+          <p>Comprehensive procedural secretariat services — maintaining independence, strict confidentiality, and full compliance with applicable institutional guidelines on secretary conduct and the limits of permissible assistance.</p>
+          <ul>
+            <li>Procedural timetable and order management</li>
+            <li>Party and institutional correspondence</li>
+            <li>Document management and tribunal file organisation</li>
+            <li>Hearing logistics and minute-keeping</li>
+          </ul>
+          <a class="service-link" href="/en/tribunal-secretary.html">View tribunal secretary services →</a>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">B</div>
+        <div class="service-content">
+          <span class="service-tag">Research &amp; Hearing Support</span>
+          <h3>Legal Research &amp; Hearing Management</h3>
+          <p>Discreet legal research assistance on specific procedural issues, and full hearing preparation support — from pre-hearing procedural conferences to transcript management and post-hearing submissions coordination.</p>
+          <ul>
+            <li>Comparative law and procedural precedent research</li>
+            <li>Award drafting assistance (at tribunal direction)</li>
+            <li>Pre-hearing conference organisation</li>
+            <li>Transcript, recording and virtual hearing support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 05 · CROSS-BORDER ADVISORY -->
+<div class="section-bg-white">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="section-label">05 — Corporate &amp; Regulatory</div>
+      <h2 class="section-title">Cross-Border <i>Legal Advisory</i></h2>
+    </div>
+    <p class="section-intro reveal">For foreign companies entering the Turkish market — and for Turkish entities operating internationally — Özgören Law Firm provides proactive legal structuring, regulatory risk analysis, sanctions compliance guidance, and ongoing dispute-prevention advisory tailored to each client's operational context.</p>
+    <div class="services-grid">
+      <div class="service-row reveal">
+        <div class="service-num">A</div>
+        <div class="service-content">
+          <span class="service-tag">Market Entry · Turkey</span>
+          <h3><a href="/en/foreign-companies-turkey.html">Foreign Companies Operating in Turkey</a></h3>
+          <p>End-to-end legal guidance for foreign entities establishing operations, entering joint ventures, or conducting trade in Turkey — with a focus on designing sound dispute resolution frameworks and identifying contractual risk from the outset.</p>
+          <ul>
+            <li>Corporate structure and establishment review</li>
+            <li>Turkish regulatory compliance overview</li>
+            <li>Joint venture and shareholder agreement review</li>
+            <li>Dispute resolution clause and governing law design</li>
+          </ul>
+          <a class="service-link" href="/en/foreign-companies-turkey.html">View foreign companies advisory →</a>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">B</div>
+        <div class="service-content">
+          <span class="service-tag">Sanctions &amp; Compliance</span>
+          <h3>Sanctions &amp; Regulatory Risk Advisory</h3>
+          <p>Analysis of EU, US, and UK sanctions exposure, export control compliance, and regulatory risk for companies transacting with Turkish entities or operating in complex cross-border regulatory environments.</p>
+          <ul>
+            <li>EU, US, and UK sanctions screening and analysis</li>
+            <li>Contract clause adaptation for sanctions risk</li>
+            <li>Force majeure and material adverse change</li>
+            <li>Cross-border payment and trade compliance</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">C</div>
+        <div class="service-content">
+          <span class="service-tag">Legal Opinions</span>
+          <h3>Turkish Law Legal Opinions &amp; Expert Reports</h3>
+          <p>Formal legal opinions on questions of Turkish law for use in international arbitration proceedings, due diligence processes, and transaction structuring — delivered in English by a lawyer fluent in both legal systems.</p>
+          <ul>
+            <li>Expert opinions on Turkish arbitration law</li>
+            <li>Foreign law opinions for use in proceedings</li>
+            <li>Enforceability and governing law opinions</li>
+            <li>Due diligence support for cross-border transactions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 06 · CONTRACT & CLAUSE DRAFTING -->
+<div class="section-bg-default">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="section-label">06 — Drafting &amp; Prevention</div>
+      <h2 class="section-title">Contract Drafting &amp; <i>Dispute Prevention</i></h2>
+    </div>
+    <p class="section-intro reveal">A poorly drafted arbitration clause can render an entire dispute resolution mechanism unenforceable. Özgören Law Firm treats dispute-prevention drafting as a core service — advising on clause design as an integral part of transaction structuring, not an afterthought applied once a deal has closed.</p>
+    <div class="services-grid">
+      <div class="service-row reveal">
+        <div class="service-num">A</div>
+        <div class="service-content">
+          <span class="service-tag">Arbitration Clauses</span>
+          <h3>Arbitration Clause Drafting &amp; Review</h3>
+          <p>Bespoke arbitration clause drafting tailored to each transaction — choosing seat, institutional rules, language, number of arbitrators, and governing law to match the specific risk profile and commercial context of each deal.</p>
+          <ul>
+            <li>Pathological clause identification and correction</li>
+            <li>Seat, rules, and language selection</li>
+            <li>Multi-tier dispute resolution clauses</li>
+            <li>Carve-out clauses for interim court relief</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">B</div>
+        <div class="service-content">
+          <span class="service-tag">Commercial Contracts</span>
+          <h3>International Contract Structuring</h3>
+          <p>Structuring and drafting of complex cross-border commercial agreements with a focus on clarity, enforceability across multiple legal systems, and the minimisation of future dispute risk through precise drafting choices.</p>
+          <ul>
+            <li>Joint venture and shareholder agreements</li>
+            <li>Distribution, agency &amp; franchise agreements</li>
+            <li>Construction and infrastructure contracts</li>
+            <li>Energy and natural resources agreements</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">C</div>
+        <div class="service-content">
+          <span class="service-tag">ADR &amp; Mediation</span>
+          <h3>Multi-Tier Dispute Resolution Framework Design</h3>
+          <p>Designing structured escalation mechanisms — combining negotiation, mediation, and arbitration in a tiered framework suited to long-term commercial relationships and international supply chains.</p>
+          <ul>
+            <li>ICC and CEDR mediation clause drafting</li>
+            <li>Expert determination and adjudication clauses</li>
+            <li>Dispute boards for construction contracts (FIDIC)</li>
+            <li>Tiered escalation clause design and review</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 07 · PRE-DISPUTE STRATEGY -->
+<div class="section-bg-white">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="section-label">07 — Early Assessment</div>
+      <h2 class="section-title"><i>Pre-Dispute</i> Strategic Advisory</h2>
+    </div>
+    <p class="section-intro reveal">Identifying legal risks before they become disputes — and structuring the client's contractual and evidentiary position for the strongest possible outcome if litigation ultimately becomes unavoidable. Early engagement almost always results in better outcomes and lower overall costs.</p>
+    <div class="services-grid">
+      <div class="service-row reveal">
+        <div class="service-num">A</div>
+        <div class="service-content">
+          <span class="service-tag">Risk Assessment</span>
+          <h3>Contractual Vulnerability Mapping</h3>
+          <p>Reviewing existing contracts and commercial arrangements to identify dispute risks, drafting weaknesses, limitation traps, and enforcement gaps — before the other side does.</p>
+          <ul>
+            <li>Clause-by-clause legal risk review</li>
+            <li>Limitation period and notice requirement analysis</li>
+            <li>Governing law and jurisdiction audit</li>
+            <li>Cross-border enforcement risk mapping</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">B</div>
+        <div class="service-content">
+          <span class="service-tag">Merits Evaluation</span>
+          <h3>Early Case Assessment &amp; Merits Analysis</h3>
+          <p>An objective, independent assessment of the strengths, weaknesses, and likely costs of potential arbitration proceedings — providing a realistic litigation roadmap before any formal step is taken by either party.</p>
+          <ul>
+            <li>Quantum and liability preliminary analysis</li>
+            <li>Notice compliance and procedural prerequisites</li>
+            <li>Procedural strategy options and risk analysis</li>
+            <li>Settlement leverage and negotiation positioning</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">C</div>
+        <div class="service-content">
+          <span class="service-tag">Evidence Preservation</span>
+          <h3>Evidence Preservation &amp; Document Strategy</h3>
+          <p>Advising clients on evidence preservation from the earliest opportunity — ensuring that document collection, storage, and production comply with arbitral disclosure obligations under the IBA Rules on the Taking of Evidence.</p>
+          <ul>
+            <li>Litigation hold and document preservation advisory</li>
+            <li>IBA Rules on the Taking of Evidence compliance</li>
+            <li>E-disclosure and data management strategy</li>
+            <li>Witness identification and preliminary statements</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 08 · SECTOR-SPECIFIC -->
+<div class="section-bg-default">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="section-label">08 — Sector Focus</div>
+      <h2 class="section-title">Sector-Specific <i>Dispute Experience</i></h2>
+    </div>
+    <p class="section-intro reveal">Cross-border disputes arise in distinct commercial contexts — each with its own regulatory framework, contractual customs, and body of arbitral precedent. The firm brings targeted sector knowledge to every engagement, complemented by a global network of specialist co-counsel where required.</p>
+    <div class="sector-grid reveal">
+      <div class="sector-card">
+        <span class="sector-num">I</span>
+        <h3>Energy &amp; Natural Resources</h3>
+        <p>Investment and commercial disputes from energy regulation, renewable energy incentive changes, and oil &amp; gas contract terminations — including Energy Charter Treaty claims.</p>
+        <ul>
+          <li>Solar and wind energy regulatory disputes</li>
+          <li>ECT Article 10 and expropriation claims</li>
+          <li>Power purchase agreement disputes</li>
+          <li>Oil &amp; gas JOA and PSA conflicts</li>
+        </ul>
+      </div>
+      <div class="sector-card">
+        <span class="sector-num">II</span>
+        <h3>Construction &amp; Infrastructure</h3>
+        <p>Disputes under FIDIC, NEC, and bespoke construction contracts — delay, disruption, variation, and defect claims in major international infrastructure projects.</p>
+        <ul>
+          <li>FIDIC Red, Yellow &amp; Silver Book disputes</li>
+          <li>Delay, disruption &amp; extension of time claims</li>
+          <li>Defects and performance guarantee disputes</li>
+          <li>DAB/DAAB adjudication support</li>
+        </ul>
+      </div>
+      <div class="sector-card">
+        <span class="sector-num">III</span>
+        <h3>M&amp;A &amp; Post-Acquisition</h3>
+        <p>Disputes from cross-border mergers and acquisitions — warranty and indemnity claims, earn-out disagreements, and post-completion account adjustments.</p>
+        <ul>
+          <li>Warranty &amp; indemnity (W&amp;I) arbitration</li>
+          <li>Earn-out and completion accounts disputes</li>
+          <li>Representations and warranties claims</li>
+          <li>Shareholder exit and buy-out disputes</li>
+        </ul>
+      </div>
+      <div class="sector-card">
+        <span class="sector-num">IV</span>
+        <h3>Shipping &amp; International Trade</h3>
+        <p>Disputes from international trade transactions — carriage of goods by sea, commodity contracts, and letters of credit under English and Turkish law.</p>
+        <ul>
+          <li>Charter-party and bill of lading disputes</li>
+          <li>GAFTA/FOSFA commodity arbitration</li>
+          <li>Trade finance and documentary credit disputes</li>
+          <li>Cargo damage and demurrage claims</li>
+        </ul>
+      </div>
+      <div class="sector-card">
+        <span class="sector-num">V</span>
+        <h3>Technology &amp; IP Licensing</h3>
+        <p>Cross-border disputes from technology licensing, software development contracts, joint R&amp;D agreements, and intellectual property ownership conflicts.</p>
+        <ul>
+          <li>Software and SaaS contract disputes</li>
+          <li>Licensing and royalty disagreements</li>
+          <li>IP ownership and technology transfer conflicts</li>
+          <li>R&amp;D collaboration and spin-off disputes</li>
+        </ul>
+      </div>
+      <div class="sector-card">
+        <span class="sector-num">VI</span>
+        <h3>Financial Services &amp; Banking</h3>
+        <p>Cross-border financial disputes — derivative contract claims, loan agreement conflicts, and regulatory enforcement actions with an international dimension.</p>
+        <ul>
+          <li>Derivatives and structured product disputes</li>
+          <li>Cross-border loan and credit facility conflicts</li>
+          <li>Fund investment and subscription agreement disputes</li>
+          <li>Regulatory enforcement challenge support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 09 · HOW WE WORK -->
+<div class="section-bg-white">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="section-label">09 — Our Approach</div>
+      <h2 class="section-title">From First Briefing to <i>Final Award</i></h2>
+    </div>
+    <p class="section-intro reveal">Every engagement follows a consistent methodology — combining an honest early case assessment with decisive advocacy at every subsequent stage. Prevention first; resolution when necessary.</p>
+    <div class="process-grid reveal">
+      <div class="process-step">
+        <span class="process-step-num">01</span>
+        <h3>Initial Assessment</h3>
+        <p>We analyse the dispute, applicable law, and arbitration rules — providing an honest evaluation of merits, costs, and realistic timelines before any commitment is made.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step-num">02</span>
+        <h3>Strategy &amp; Filing</h3>
+        <p>We design the litigation strategy, draft the Request for Arbitration or Defence, and manage tribunal constitution and all procedural timetabling.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step-num">03</span>
+        <h3>Evidence &amp; Hearings</h3>
+        <p>Preparation of written submissions, witness statements, and expert coordination — culminating in focused oral advocacy at the evidentiary hearing.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step-num">04</span>
+        <h3>Award &amp; Enforcement</h3>
+        <p>Post-award strategy including challenge proceedings, recognition, and multi-jurisdictional enforcement — converting the award into a real, tangible outcome.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section-bg-default">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">Frequently Asked <i>Questions</i></h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">Can foreign arbitral awards be enforced in Turkey?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Turkey ratified the 1958 New York Convention in 1992. Foreign arbitral awards are enforceable before Turkish courts through exequatur proceedings — subject to the limited grounds for refusal under Article V of the Convention, including public policy. Özgören Law Firm guides award-holders through the full enforcement process, from filing the exequatur application to asset recovery.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Which arbitral institutions are most commonly used for disputes involving Turkey?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">The ICC Court of Arbitration (Paris) is most frequently used for Turkish cross-border commercial disputes. ICSID is the primary forum for investment treaty claims against the Turkish State. HKIAC, ISTAC (Istanbul), LCIA, and UNCITRAL ad hoc proceedings are also regularly encountered in our practice.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Does the firm represent clients based outside Turkey?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes — our practice is international by design. We advise and represent clients across Europe, Asia, Africa, and North America, and regularly appear in arbitrations seated outside Turkey. We are fluent in English and Turkish, and coordinate with local counsel in other jurisdictions where required.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is a tribunal secretary and why does it matter?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">A tribunal secretary provides independent procedural and administrative support to arbitral tribunals in complex proceedings — managing correspondence, timetables, hearing logistics, and (within strict ethical limits) legal research. Drawing on direct experience at the HKIAC Secretariat, Özgören Law Firm provides this service in full compliance with ICC, HKIAC, and other institutional guidelines on secretary conduct and independence.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How important is the arbitration clause in an international contract?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Critically important. A poorly drafted arbitration clause — sometimes called a "pathological clause" — can render the entire dispute resolution mechanism unenforceable, leaving parties with no agreed forum and costly satellite litigation over jurisdiction. We advise on clause drafting as a core part of transaction structuring, tailored to the governing law, seat of arbitration, and the specific risk profile of each deal.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Does Turkey have bilateral investment treaties that protect foreign investors?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Turkey has concluded over 100 bilateral investment treaties, providing foreign investors with protections against expropriation, denial of fair and equitable treatment, and discrimination — and granting access to international arbitration (typically ICSID or UNCITRAL) to enforce those protections. Turkey is also a signatory to the Energy Charter Treaty. We advise investors on applicable treaty coverage and available claims before any investment is made or any dispute is filed.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA / CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-label reveal">Professional Inquiries</div>
+  <h2 class="contact-title reveal">Available for <i>International</i><br>Mandates &amp; Co-Counsel</h2>
+  <p class="contact-sub reveal">Whether you face an urgent dispute or are structuring a long-term international investment, Özgören Law Firm is available to discuss your matter confidentially.</p>
+  <div class="contact-links reveal">
+    <a href="https://tally.so/r/zxZeDE" class="contact-link primary" target="_blank">Send an Inquiry</a>
+    <a href="mailto:selin@ozgorenlawfirm.com" class="contact-link">Email the Firm</a>
+    <a href="tel:+905431465266" class="contact-link">+90 543 146 52 66</a>
+    <a href="https://www.linkedin.com/in/selinozgoren/" class="contact-link" target="_blank">LinkedIn</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>© 2026 Özgören Law Firm · İzmir, Türkiye</div>
+  <div class="footer-links">
+    <a href="/en/index.html">Home</a>
+    <a href="/en/arbitration.html">Arbitration</a>
+    <a href="/en/blog.html">Knowledge Bank</a>
+    <a href="/en/updates.html">Updates</a>
+    <a href="/legal-notice">Legal Notice</a>
+  </div>
+</footer>
+
+<script>
+  // Lenis Smooth Scroll
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true, smoothTouch: false, touchMultiplier: 2,
+  });
+  function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+
+  // Scroll Reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Language Dropdown
+  const langBtn = document.getElementById('langBtn');
+  const langMenu = document.getElementById('langMenu');
+  if (langBtn) {
+    langBtn.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('open'); });
+    document.addEventListener('click', () => langMenu.classList.remove('open'));
+  }
+
+  // Mobile Menu
+  const hamburger = document.getElementById('hamburger');
+  const menuOverlay = document.getElementById('menuOverlay');
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      menuOverlay.classList.toggle('open');
+      menuOverlay.classList.contains('open') ? lenis.stop() : lenis.start();
+    });
+    document.querySelectorAll('.menu-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        menuOverlay.classList.remove('open');
+        lenis.start();
+      });
+    });
+  }
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
