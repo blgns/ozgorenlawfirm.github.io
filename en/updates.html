@@ -131,17 +131,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .breadcrumb {
-      display: flex; align-items: center; gap: 0.5rem;
-      font-size: 0.7rem; text-transform: uppercase;
-      letter-spacing: 0.07em; color: var(--fg-muted);
-      margin-bottom: 3rem;
-      animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-    }
-    .breadcrumb a { color: var(--fg-muted); text-decoration: none; transition: color 0.2s; }
-    .breadcrumb a:hover { color: var(--fg); }
-    .breadcrumb span { opacity: 0.5; }
-
     .hero-top {
       flex: 1; display: flex; align-items: flex-end; padding-bottom: 3rem;
     }
@@ -464,11 +453,6 @@
 
 <!-- ── HERO ── -->
 <header class="hero">
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="/en/index.html">Home</a>
-    <span>/</span>
-    <span aria-current="page">Office Updates</span>
-  </nav>
   <div class="hero-top">
     <h1 class="hero-h1">Office<br><i>Updates</i></h1>
   </div>
