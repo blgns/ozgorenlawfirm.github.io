@@ -1,750 +1,753 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary Meta -->
-    <title>Office Updates & Announcements — Özgören Law Firm | International Arbitration, İzmir</title>
-    <meta name="description"
-        content="Speaking engagements, arbitrator appointments, partnerships and professional milestones from Özgören Law Firm — specialist international arbitration and investment law practice in İzmir — 2026.">
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-    <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            --bg: #F7F3EE;
-            --fg: #1A1A18;
-            --fg-muted: #6B6558;
-            --border: rgba(184, 149, 90, 0.25);
-            --accent: #EBE1CE;
-            --gold: #B8955A;
-            --font-serif: 'Instrument Serif', serif;
-            --font-sans: 'Inter', sans-serif;
-        }
-
-        html.lenis {
-            height: auto;
-        }
-
-        .lenis.lenis-smooth {
-            scroll-behavior: auto;
-        }
-
-        body {
-            background: var(--bg);
-            color: var(--fg);
-            font-family: var(--font-sans);
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        /* ── NAV ── */
-        nav.main-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem clamp(1.5rem, 4vw, 4rem);
-            background: rgba(247, 243, 238, 0.95);
-            backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border);
-            transition: transform 0.4s ease;
-        }
-
-        .nav-logo img {
-            height: 80px;
-            width: auto;
-            display: block;
-        }
-
-        .hamburger {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 4px;
-            z-index: 1200;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 1.5px;
-            background: var(--fg);
-            transition: 0.3s;
-            transform-origin: center;
-        }
-
-        .hamburger.open span:nth-child(1) {
-            transform: translateY(2.75px) rotate(45deg);
-        }
-
-        .hamburger.open span:nth-child(2) {
-            transform: translateY(-2.75px) rotate(-45deg);
-        }
-
-        .menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--bg);
-            z-index: 900;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 2rem clamp(1.5rem, 4vw, 4rem);
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-        }
-
-        .menu-overlay.open {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .menu-links {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .menu-links a {
-            font-family: var(--font-serif);
-            font-size: clamp(3rem, 6vw, 5rem);
-            color: var(--fg);
-            text-decoration: none;
-            line-height: 1;
-            transform: translateY(20px);
-            transition: transform 0.4s ease, opacity 0.4s ease, color 0.3s ease;
-            opacity: 0;
-        }
-
-        .menu-overlay.open .menu-links a {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .menu-links a:hover {
-            color: var(--gold);
-        }
-
-        /* ── HERO ── */
-        .hero {
-            padding: 12rem clamp(1.5rem, 4vw, 4rem) 6rem;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .breadcrumb {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--fg-muted);
-            margin-bottom: 3rem;
-        }
-
-        .breadcrumb a {
-            color: var(--fg-muted);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .breadcrumb a:hover { color: var(--fg); }
-
-        .post-category {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--gold);
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-
-        .post-category::before {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 1px;
-            background: var(--gold);
-        }
-
-        .hero-h1 {
-            font-family: var(--font-serif);
-            font-size: clamp(3.5rem, 8vw, 6.5rem);
-            line-height: 0.9;
-            letter-spacing: -0.02em;
-            color: var(--fg);
-            margin-bottom: 4rem;
-            max-width: 1100px;
-        }
-
-        .hero-h1 em { font-style: italic; color: var(--gold); }
-
-        .post-meta {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 1rem;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--fg-muted);
-            border-top: 1px solid var(--border);
-            padding-top: 2rem;
-        }
-
-        .meta-dot {
-            width: 4px;
-            height: 4px;
-            background: var(--gold);
-            border-radius: 50%;
-            opacity: 0.5;
-        }
-
-        /* ── FILTER STRIP ── */
-        .filter-strip {
-            position: sticky;
-            top: 113px; /* 80px logo + padding */
-            z-index: 800;
-            background: rgba(247, 243, 238, 0.9);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            padding: 0 clamp(1.5rem, 4vw, 4rem);
-        }
-
-        .filter-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            gap: 2rem;
-            overflow-x: auto;
-            scrollbar-width: none;
-        }
-
-        .filter-inner::-webkit-scrollbar { display: none; }
-
-        .filter-tag {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 1.5rem 0;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--fg-muted);
-            border-bottom: 2px solid transparent;
-            white-space: nowrap;
-            transition: all 0.3s;
-        }
-
-        .filter-tag:hover { color: var(--fg); }
-        .filter-tag.active {
-            color: var(--gold);
-            border-bottom-color: var(--gold);
-            font-weight: 500;
-        }
-
-        /* ── LAYOUT ── */
-        .post-layout {
-            padding: 6rem clamp(1.5rem, 4vw, 4rem);
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) 340px;
-            gap: clamp(2rem, 6vw, 6rem);
-            align-items: start;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* ── UPDATES LIST ── */
-        .updates-container {
-            width: 100%;
-        }
-
-        .year-section {
-            margin-bottom: 6rem;
-        }
-
-        .year-divider {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .year-label {
-            font-family: var(--font-serif);
-            font-size: 5rem;
-            color: var(--border);
-            line-height: 1;
-        }
-
-        .year-line {
-            flex-grow: 1;
-            height: 1px;
-            background: var(--border);
-        }
-
-        .update-item {
-            display: grid;
-            grid-template-columns: 100px 1px 1fr;
-            gap: 3rem;
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--border);
-            transition: background 0.3s;
-        }
-
-        .update-item:hover {
-            background: rgba(184, 149, 90, 0.03);
-        }
-
-        .item-date-col {
-            text-align: right;
-        }
-
-        .item-day {
-            font-family: var(--font-serif);
-            font-size: 3rem;
-            line-height: 1;
-            color: var(--gold);
-            display: block;
-        }
-
-        .item-month {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--fg-muted);
-            display: block;
-            margin-top: 0.5rem;
-        }
-
-        .item-rule {
-            background: var(--border);
-            position: relative;
-        }
-
-        .item-rule::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -4px;
-            width: 9px;
-            height: 9px;
-            background: var(--bg);
-            border: 1px solid var(--gold);
-            border-radius: 50%;
-        }
-
-        .item-body h2 {
-            font-family: var(--font-serif);
-            font-size: 2.2rem;
-            line-height: 1.1;
-            color: var(--fg);
-            margin-bottom: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        .update-item:hover .item-body h2 { color: var(--gold); }
-
-        .item-body p {
-            font-size: 1.05rem;
-            color: var(--fg-muted);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            max-width: 700px;
-        }
-
-        .item-tags {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .item-tag {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--gold);
-            border: 1px solid var(--border);
-            padding: 0.3rem 0.8rem;
-            font-weight: 500;
-        }
-
-        .item-link {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            color: var(--gold);
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: gap 0.3s;
-        }
-
-        .item-link:hover { gap: 1rem; }
-
-        .loading-state {
-            padding: 8rem 0;
-            text-align: center;
-            color: var(--fg-muted);
-            font-family: var(--font-serif);
-            font-size: 2rem;
-            font-style: italic;
-        }
-
-        /* ── SIDEBAR ── */
-        .post-sidebar {
-            position: sticky;
-            top: 200px;
-            display: flex;
-            flex-direction: column;
-            gap: 4rem;
-        }
-
-        .sb-card {
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 3rem;
-        }
-
-        .sb-card-head { margin-bottom: 2rem; }
-
-        .sb-card-head h4 {
-            font-family: var(--font-serif);
-            font-size: 2rem;
-            color: var(--fg);
-        }
-
-        .topic-list { list-style: none; }
-        .topic-list li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(184, 149, 90, 0.1);
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .topic-list li:hover { padding-left: 0.5rem; color: var(--gold); }
-        .topic-list li span:last-child { color: var(--border); font-family: var(--font-serif); font-size: 1.2rem; }
-
-        .newsletter-form { display: flex; flex-direction: column; gap: 1rem; }
-        .nl-field {
-            padding: 1rem;
-            background: var(--accent);
-            border: 1px solid var(--border);
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-            outline: none;
-            color: var(--fg);
-        }
-        .nl-btn {
-            padding: 1rem;
-            background: var(--fg);
-            color: var(--bg);
-            border: none;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .nl-btn:hover { background: var(--gold); }
-
-        .author-row { display: flex; gap: 1.5rem; align-items: center; margin-bottom: 2rem; }
-        .author-initials {
-            width: 60px; height: 60px; border-radius: 50%; border: 1px solid var(--border);
-            display: flex; align-items: center; justify-content: center;
-            font-family: var(--font-serif); font-size: 1.5rem; color: var(--fg);
-        }
-        .author-name-block strong { display: block; font-family: var(--font-serif); font-size: 1.5rem; color: var(--fg); margin-bottom: 0.3rem; }
-        .author-name-block span { font-size: 0.8rem; color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.05em; }
-        .author-bio-text { font-size: 1rem; color: var(--fg-muted); line-height: 1.6; margin-bottom: 2rem; }
-        .author-link {
-            font-size: 0.85rem; text-transform: uppercase; color: var(--gold); text-decoration: none;
-            font-weight: 500; transition: gap 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;
-        }
-        .author-link:hover { gap: 1rem; }
-
-        /* FOOTER */
-        footer { padding: 2rem clamp(1.5rem, 4vw, 4rem); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.05em; border-top: 1px solid var(--border); }
-        footer a { color: var(--fg-muted); text-decoration: none; }
-        footer a:hover { color: var(--fg); }
-
-        /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            .post-layout { grid-template-columns: 1fr; }
-            .post-sidebar { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; position: static; margin-top: 4rem; }
-            .filter-strip { top: 97px; }
-        }
-        @media (max-width: 700px) {
-            .hero { padding-top: 10rem; }
-            .hero-h1 { font-size: 3.5rem; }
-            .year-label { font-size: 3.5rem; }
-            .update-item { grid-template-columns: 1fr; gap: 1.5rem; padding: 2.5rem 0; }
-            .item-date-col { text-align: left; display: flex; align-items: baseline; gap: 1rem; }
-            .item-rule { display: none; }
-            footer { flex-direction: column; gap: 1rem; text-align: center; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Office Updates & Announcements — Özgören Law Firm | International Arbitration, İzmir</title>
+  <meta name="description" content="Speaking engagements, arbitrator appointments, partnerships and professional milestones from Özgören Law Firm — specialist international arbitration and investment law practice in İzmir — 2026.">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F7F3EE;
+      --fg: #1A1A18;
+      --fg-muted: #6B6558;
+      --border: rgba(184, 149, 90, 0.25);
+      --accent: #EBE1CE;
+      --gold: #B8955A;
+      --font-serif: 'Instrument Serif', serif;
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    html.lenis { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto; }
+    .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+    .lenis.lenis-stopped { overflow: hidden; }
+    .lenis.lenis-scrolling iframe { pointer-events: none; }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    ::selection { background: var(--fg); color: var(--bg); }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem clamp(1.5rem, 4vw, 4rem);
+      background: rgba(247, 243, 238, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: transform 0.4s ease;
+    }
+
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 80px; width: auto; display: block; }
+
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+
+    .lang-dropdown { position: relative; }
+    .lang-btn {
+      background: none; border: none;
+      font-family: var(--font-sans); font-size: 0.75rem;
+      color: var(--fg); cursor: pointer; text-transform: uppercase;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .lang-menu {
+      display: none; position: absolute;
+      top: calc(100% + 15px); right: 0;
+      background: var(--bg); border: 1px solid var(--border);
+      padding: 0.5rem 0; min-width: 120px; z-index: 1300;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    }
+    .lang-menu.open { display: block; }
+    .lang-menu a {
+      display: block; padding: 0.5rem 1.5rem;
+      font-size: 0.75rem; text-decoration: none;
+      color: var(--fg-muted); transition: color 0.2s;
+    }
+    .lang-menu a:hover { color: var(--fg); background: var(--accent); }
+
+    .hamburger {
+      display: flex; flex-direction: column; gap: 4px;
+      background: none; border: none; cursor: pointer; padding: 4px; z-index: 1200;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 1.5px;
+      background: var(--fg); transition: 0.3s; transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(2.75px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { transform: translateY(-2.75px) rotate(-45deg); }
+
+    /* ── MENU OVERLAY ── */
+    .menu-overlay {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--bg); z-index: 900;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 2rem clamp(1.5rem, 4vw, 4rem);
+      opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+    }
+    .menu-overlay.open { opacity: 1; pointer-events: auto; }
+    .menu-links { display: flex; flex-direction: column; gap: 2rem; }
+    .menu-links a {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 6vw, 5rem);
+      color: var(--fg); text-decoration: none; line-height: 1;
+      transform: translateY(20px);
+      transition: transform 0.4s ease, opacity 0.4s ease, color 0.3s ease;
+      opacity: 0;
+    }
+    .menu-overlay.open .menu-links a { transform: translateY(0); opacity: 1; }
+    .menu-links a:hover { color: var(--gold); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 55vh;
+      display: flex; flex-direction: column;
+      padding: 8rem clamp(1.5rem, 4vw, 4rem) 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.7rem; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--fg-muted);
+      margin-bottom: 3rem;
+      animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .breadcrumb a { color: var(--fg-muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--fg); }
+    .breadcrumb span { opacity: 0.5; }
+
+    .hero-top {
+      flex: 1; display: flex; align-items: flex-end; padding-bottom: 3rem;
+    }
+    .hero-h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(4rem, 9vw, 9rem);
+      line-height: 0.9; letter-spacing: -0.02em;
+      color: var(--fg); margin: 0; max-width: 90%;
+      animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+    }
+    .hero-h1 i { font-style: italic; color: var(--fg-muted); }
+
+    .hero-bottom {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+      border-top: 1px solid var(--border); padding-top: 2rem;
+      animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+    }
+    .hero-desc-wrap { max-width: 500px; }
+    .hero-sub { font-size: 1.5rem; font-family: var(--font-serif); color: var(--fg); margin-bottom: 1rem; }
+    .hero-desc { font-size: 0.95rem; color: var(--fg-muted); line-height: 1.6; }
+
+    .hero-meta { display: flex; flex-direction: column; justify-content: flex-end; }
+    .hero-stat-row { display: flex; gap: 3rem; }
+    .hero-stat { border-left: 1px solid var(--border); padding-left: 1.5rem; }
+    .hero-stat-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--fg-muted); display: block; margin-bottom: 0.4rem; }
+    .hero-stat-val { font-family: var(--font-serif); font-size: 1.8rem; color: var(--fg); line-height: 1; }
+    .hero-stat-val.gold { color: var(--gold); }
+
+    /* ── FILTER STRIP ── */
+    .filter-strip {
+      position: sticky;
+      top: 113px;
+      z-index: 800;
+      background: rgba(247, 243, 238, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 clamp(1.5rem, 4vw, 4rem);
+    }
+    .filter-inner {
+      display: flex; gap: 0;
+      overflow-x: auto; scrollbar-width: none;
+    }
+    .filter-inner::-webkit-scrollbar { display: none; }
+    .filter-tag {
+      background: none; border: none; border-bottom: 2px solid transparent;
+      cursor: pointer; padding: 1.25rem 1.5rem;
+      font-family: var(--font-sans); font-size: 0.7rem;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--fg-muted); white-space: nowrap;
+      transition: all 0.25s;
+    }
+    .filter-tag:first-child { padding-left: 0; }
+    .filter-tag:hover { color: var(--fg); }
+    .filter-tag.active { color: var(--gold); border-bottom-color: var(--gold); font-weight: 500; }
+
+    /* ── PAGE BODY ── */
+    .page-body {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 0;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 4vw, 4rem);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── MAIN CONTENT ── */
+    .main-col { padding: 5rem 5rem 6rem 0; border-right: 1px solid var(--border); }
+
+    .feed-header {
+      display: flex; justify-content: space-between; align-items: baseline;
+      border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 0;
+    }
+    .feed-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; color: var(--fg); }
+    .feed-count { font-family: var(--font-serif); font-size: 1.5rem; color: var(--fg-muted); }
+
+    /* ── YEAR SECTION ── */
+    .year-section { margin-bottom: 5rem; }
+
+    .year-divider {
+      display: flex; align-items: center; gap: 2rem;
+      padding: 3rem 0 2rem;
+    }
+    .year-label {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 5vw, 5rem);
+      color: var(--border); line-height: 1;
+      flex-shrink: 0;
+    }
+    .year-line { flex-grow: 1; height: 1px; background: var(--border); }
+
+    /* ── UPDATE ITEM ── */
+    .update-item {
+      display: grid;
+      grid-template-columns: 80px 1px 1fr;
+      gap: 3rem;
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.35s, padding 0.35s, margin 0.35s;
+    }
+    .update-item:hover {
+      background: var(--accent);
+      padding-inline: 1rem;
+      margin-inline: -1rem;
+      border-bottom-color: transparent;
+    }
+
+    .item-date-col { display: flex; flex-direction: column; padding-top: 0.3rem; }
+    .item-day {
+      font-family: var(--font-serif); font-size: 2.5rem;
+      line-height: 1; color: var(--gold);
+    }
+    .item-month {
+      font-size: 0.65rem; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--fg-muted); margin-top: 0.5rem;
+    }
+
+    .item-rule {
+      background: var(--border); position: relative; width: 1px;
+    }
+    .item-rule::after {
+      content: '';
+      position: absolute; top: 0; left: -4px;
+      width: 9px; height: 9px;
+      background: var(--bg); border: 1px solid var(--gold);
+      border-radius: 50%;
+      transition: background 0.35s;
+    }
+    .update-item:hover .item-rule::after { background: var(--accent); }
+
+    .item-body {}
+    .item-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+    .item-tag {
+      font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.06em;
+      padding: 0.2rem 0.6rem; border: 1px solid var(--border);
+      border-radius: 100px; color: var(--fg-muted);
+    }
+    .item-body h2 {
+      font-family: var(--font-serif); font-size: 2rem;
+      line-height: 1.1; color: var(--fg);
+      margin-bottom: 1rem; transition: color 0.25s;
+    }
+    .update-item:hover .item-body h2 { color: var(--gold); }
+    .item-body p {
+      font-size: 1rem; color: var(--fg-muted);
+      line-height: 1.65; margin-bottom: 1.5rem; max-width: 560px;
+    }
+    .item-link {
+      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--gold); text-decoration: none; font-weight: 500;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: gap 0.25s;
+    }
+    .item-link:hover { gap: 1rem; }
+
+    .feed-empty {
+      padding: 5rem 0; text-align: center;
+      color: var(--fg-muted); font-size: 0.9rem;
+    }
+    .feed-loading {
+      padding: 5rem 0; text-align: center;
+      font-family: var(--font-serif); font-size: 2rem;
+      font-style: italic; color: var(--fg-muted);
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar-col {
+      padding: 5rem 0 6rem 4rem;
+      display: flex; flex-direction: column; gap: 4rem;
+    }
+
+    .sb-block {}
+    .sb-title {
+      font-family: var(--font-serif); font-size: 1.8rem;
+      color: var(--fg); margin-bottom: 2rem; line-height: 1;
+    }
+
+    .topic-list { list-style: none; }
+    .topic-list li {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.9rem 0; border-bottom: 1px solid var(--border);
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--fg-muted); cursor: pointer;
+      transition: color 0.25s, padding-left 0.25s;
+    }
+    .topic-list li:hover { color: var(--fg); padding-left: 0.5rem; }
+    .topic-list li.active { color: var(--gold); font-weight: 500; }
+    .topic-count {
+      font-family: var(--font-serif); font-size: 1.1rem;
+      color: var(--border); transition: color 0.25s;
+    }
+    .topic-list li:hover .topic-count,
+    .topic-list li.active .topic-count { color: var(--gold); }
+
+    .nl-desc { font-size: 0.9rem; line-height: 1.6; color: var(--fg-muted); margin-bottom: 2rem; }
+    .nl-field {
+      width: 100%; border: none; border-bottom: 1px solid var(--fg);
+      background: transparent; padding: 1rem 0;
+      font-family: var(--font-sans); font-size: 0.95rem;
+      outline: none; color: var(--fg);
+      transition: border-color 0.3s; margin-bottom: 1.5rem;
+    }
+    .nl-field::placeholder { color: var(--fg-muted); }
+    .nl-field:focus { border-bottom-color: var(--gold); }
+    .nl-btn {
+      width: 100%; background: var(--fg); color: var(--bg);
+      border: none; padding: 1rem 2rem;
+      font-family: var(--font-sans); font-size: 0.7rem;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      font-weight: 500; cursor: pointer; transition: background 0.3s;
+    }
+    .nl-btn:hover { background: var(--gold); }
+    .nl-ok { display: none; margin-top: 1rem; color: var(--gold); font-size: 0.8rem; }
+
+    .author-row { display: flex; gap: 1.5rem; align-items: center; margin-bottom: 1.5rem; }
+    .author-initials {
+      width: 48px; height: 48px; border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif); font-size: 1.1rem;
+      color: var(--fg); flex-shrink: 0;
+    }
+    .author-name { font-family: var(--font-serif); font-size: 1.4rem; line-height: 1.1; }
+    .author-role { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-muted); margin-top: 0.2rem; }
+    .author-bio { font-size: 0.9rem; line-height: 1.65; color: var(--fg-muted); margin-bottom: 1.5rem; }
+    .author-link {
+      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--fg); border-bottom: 1px solid var(--border);
+      text-decoration: none; padding-bottom: 1px; transition: border-color 0.2s;
+    }
+    .author-link:hover { border-color: var(--fg); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2rem clamp(1.5rem, 4vw, 4rem);
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem; color: var(--fg-muted);
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    footer a { color: var(--fg-muted); text-decoration: none; }
+    footer a:hover { color: var(--fg); }
+
+    /* ── ANIMATIONS ── */
+    .reveal {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .page-body { grid-template-columns: 1fr; }
+      .main-col { border-right: none; padding-right: 0; }
+      .sidebar-col {
+        border-top: 1px solid var(--border); padding-left: 0; padding-top: 4rem;
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-bottom { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-stat-row { gap: 2rem; }
+      .filter-strip { top: 97px; }
+      .update-item { grid-template-columns: 1fr; gap: 1rem; }
+      .item-date-col { flex-direction: row; align-items: baseline; gap: 0.75rem; }
+      .item-month { margin-top: 0; }
+      .item-rule { display: none; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
 </head>
-
 <body>
 
-    <nav class="main-nav">
-        <a href="/en/index.html" class="nav-logo">
-            <img src="/logo.png" alt="Özgören Law Firm Logo">
-        </a>
-        <div class="nav-right">
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+<!-- ── NAV ── -->
+<nav>
+  <a href="/en/index.html" class="nav-logo">
+    <img src="/logo.png" alt="Özgören Law Firm Logo">
+  </a>
+  <div class="nav-right">
+    <div class="lang-dropdown">
+      <button class="lang-btn" id="langBtn">EN
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+          <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+      </button>
+      <div class="lang-menu" id="langMenu">
+        <a href="/tr/updates-tr.html">Türkçe</a>
+        <a href="/fr/updates-fr.html">Français</a>
+        <a href="/es/updates-es.html">Español</a>
+      </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
 
-    <div class="menu-overlay" id="menuOverlay">
-        <div class="menu-links">
-            <a href="/en/index.html#about">Profile</a>
-            <a href="/en/index.html#practice">Expertise</a>
-            <a href="/en/blog.html">Knowledge Bank</a>
-            <a href="/en/updates.html">Updates</a>
-            <a href="/en/index.html#contact">Contact</a>
+<!-- ── MENU OVERLAY ── -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-links">
+    <a href="/en/index.html">Home</a>
+    <a href="/en/index.html#about">Profile</a>
+    <a href="/en/services/legal-services.html">Services</a>
+    <a href="/en/blog.html">Knowledge Bank</a>
+    <a href="/en/updates.html" style="color: var(--gold);">Updates</a>
+    <a href="/en/index.html#contact">Contact</a>
+  </div>
+</div>
+
+<!-- ── HERO ── -->
+<header class="hero">
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="/en/index.html">Home</a>
+    <span>/</span>
+    <span aria-current="page">Office Updates</span>
+  </nav>
+  <div class="hero-top">
+    <h1 class="hero-h1">Office<br><i>Updates</i></h1>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-desc-wrap">
+      <h2 class="hero-sub">Milestones & Announcements</h2>
+      <p class="hero-desc">Speaking engagements, appointments, partnerships and professional milestones from Özgören Law Firm — international arbitration practice based in İzmir.</p>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-stat-row">
+        <div class="hero-stat">
+          <span class="hero-stat-label">Total Updates</span>
+          <span class="hero-stat-val gold" id="stat-total">—</span>
         </div>
+        <div class="hero-stat">
+          <span class="hero-stat-label">Categories</span>
+          <span class="hero-stat-val" id="stat-cats">—</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-label">Since</span>
+          <span class="hero-stat-val" id="stat-year">—</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── FILTER STRIP ── -->
+<nav class="filter-strip" aria-label="Filter by category">
+  <div class="filter-inner" id="filter-container">
+    <button class="filter-tag active" data-filter="all">All Updates</button>
+  </div>
+</nav>
+
+<!-- ── PAGE BODY ── -->
+<div class="page-body">
+
+  <!-- Main Feed -->
+  <main class="main-col">
+    <div class="feed-header">
+      <span class="feed-label" id="current-filter-label">All Updates</span>
+      <span class="feed-count" id="updates-count">—</span>
+    </div>
+    <div id="updates-list">
+      <div class="feed-loading">Fetching updates…</div>
+    </div>
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="sidebar-col">
+
+    <div class="sb-block reveal">
+      <h2 class="sb-title">Browse Categories</h2>
+      <ul class="topic-list" id="topic-list">
+        <li><span>Loading…</span></li>
+      </ul>
     </div>
 
-    <!-- ✅ DÜZELTİLEN KISIM 1: Breadcrumb tagleri düzgün kapatıldı -->
-    <header class="hero">
-        <nav aria-label="Breadcrumb" class="breadcrumb">
-            <a href="/en/index.html">Home</a>
-            <span class="bc-sep">/</span>
-            <span aria-current="page">Office Updates</span>
-        </nav>
-        
-        <p class="post-category">Milestones & News</p>
-        <h1 class="hero-h1">Professional news from <em>our practice</em></h1>
-        <div class="post-meta">
-            <strong id="hero-count">...</strong>
-            <span>Updates</span>
-            <span class="meta-dot"></span>
-            <span id="hero-year-label">2026</span>
-            <span class="meta-dot"></span>
-            <span>Özgören Law Firm</span>
-        </div>
-    </header>
-
-    <nav class="filter-strip">
-        <div class="filter-inner" id="filter-container">
-            <button class="filter-tag active" data-filter="all">All Updates</button>
-        </div>
-    </nav>
-
-    <!-- ✅ DÜZELTİLEN KISIM 2: Main Layout etiketleri temizlendi -->
-    <div class="post-layout">
-        <main class="updates-container">
-            <div id="updates-list">
-                <div class="loading-state">Fetching updates from practice database...</div>
-            </div>
-        </main>
-
-        <aside class="post-sidebar">
-            <div class="sb-card">
-                <div class="sb-card-head"><h4>Browse Categories</h4></div>
-                <div class="sb-card-body">
-                    <ul class="topic-list" id="sidebar-topics"></ul>
-                </div>
-            </div>
-
-            <div class="sb-card">
-                <div class="sb-card-head"><h4>Stay Informed</h4></div>
-                <div class="sb-card-body">
-                    <p class="author-bio-text" style="margin-bottom: 1.5rem;">Receive office news and institutional milestones directly.</p>
-                    <div class="newsletter-form">
-                        <input type="email" class="nl-field" placeholder="Email address" id="nl-email">
-                        <button class="nl-btn" id="nl-btn">Subscribe</button>
-                    </div>
-                    <p id="nl-msg" style="display:none; font-size: 0.85rem; color: var(--gold); margin-top: 1rem;">Success. You will be notified of new updates.</p>
-                </div>
-            </div>
-
-            <div class="sb-card" style="border-bottom: none;">
-                <div class="sb-card-head"><h4>About the Author</h4></div>
-                <div class="sb-card-body">
-                    <div class="author-row">
-                        <div class="author-initials">SÖ</div>
-                        <div class="author-name-block"><strong>Selin Özgören</strong><span>Arbitration Lawyer</span></div>
-                    </div>
-                    <p class="author-bio-text">LL.M. Bocconi University, LL.B. Ankara University. International arbitration specialist with practical experiences in global law firms, government institution and international organisations across Europe, Asia, Africa, and North America. Based in İzmir.</p>
-                    <a class="author-link" href="/en/index.html#about">Full Profile →</a>
-                </div>
-            </div>
-        </aside>
+    <div class="sb-block reveal">
+      <h2 class="sb-title">Stay Informed</h2>
+      <p class="nl-desc">Receive office news and institutional milestones directly to your inbox.</p>
+      <input class="nl-field" type="email" id="nl-email" placeholder="Your email address" autocomplete="email">
+      <button class="nl-btn" id="nl-btn">Subscribe</button>
+      <p class="nl-ok" id="nl-ok">✓ Success — you will be notified of new updates.</p>
     </div>
 
-    <footer>
-        <div>© <span id="footer-year">2026</span> Özgören Law Firm</div>
-        <div><a href="/legal-notice">Legal Notice</a></div>
-    </footer>
+    <div class="sb-block reveal">
+      <h2 class="sb-title">About the Firm</h2>
+      <div class="author-row">
+        <div class="author-initials">SÖ</div>
+        <div>
+          <div class="author-name">Selin Özgören</div>
+          <div class="author-role">Arbitration Lawyer</div>
+        </div>
+      </div>
+      <p class="author-bio">LL.M. Bocconi University · LL.B. Ankara University. International arbitration specialist with experience at global law firms, HKIAC, and the UNCITRAL Secretariat across Europe, Asia, Africa, and North America. Based in İzmir.</p>
+      <a href="/en/index.html#about" class="author-link">View Full Profile →</a>
+    </div>
 
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
-    <script>
-        // Smooth scroll
-        const lenis = new Lenis({ duration: 1.2, smooth: true })
-        function raf(time) { lenis.raf(time); requestAnimationFrame(raf) }
-        requestAnimationFrame(raf)
+  </aside>
+</div>
 
-        // Mobile menu
-        const hamburger = document.getElementById('hamburger');
-        const menuOverlay = document.getElementById('menuOverlay');
-        if (hamburger && menuOverlay) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('open');
-                menuOverlay.classList.toggle('open');
-                if (menuOverlay.classList.contains('open')) lenis.stop(); else lenis.start();
-            });
-        }
+<!-- ── FOOTER ── -->
+<footer>
+  <div>© <span id="footer-year">2026</span> Özgören Law Firm</div>
+  <div><a href="/legal-notice">Legal Notice</a></div>
+</footer>
 
-        // Fetch data
-        const WORKER_URL = 'https://notion-updates.selinozgoren0.workers.dev';
+<script>
+  // ── LENIS ──
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true,
+  });
+  function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
 
-        async function fetchUpdates() {
-            try {
-                const res = await fetch(WORKER_URL);
-                if (!res.ok) throw new Error("Updates failed to load.");
-                const data = await res.json();
-                renderUpdates(data);
-            } catch (err) {
-                document.getElementById('updates-list').innerHTML = `<div class="loading-state">Error: ${err.message}</div>`;
-            }
-        }
+  // ── REVEAL ──
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
 
-        function renderUpdates(posts) {
-            const list = document.getElementById('updates-list');
-            const sideTopics = document.getElementById('sidebar-topics');
-            const filterContainer = document.getElementById('filter-container');
-            
-            if (!posts.length) {
-                list.innerHTML = '<div class="loading-state">No updates published yet.</div>';
-                return;
-            }
+  function initReveal() {
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  }
+  initReveal();
 
-            document.getElementById('hero-count').textContent = posts.length;
-            const years = [...new Set(posts.map(p => p.date ? new Date(p.date).getFullYear() : '2026'))].sort((a,b) => b-a);
-            document.getElementById('hero-year-label').textContent = years[0] || '2026';
+  // ── LANGUAGE DROPDOWN ──
+  const langBtn = document.getElementById('langBtn');
+  const langMenu = document.getElementById('langMenu');
+  if (langBtn && langMenu) {
+    langBtn.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('open'); });
+    document.addEventListener('click', () => langMenu.classList.remove('open'));
+  }
 
-            const cats = {};
-            posts.forEach(p => { if(p.category) cats[p.category] = (cats[p.category] || 0) + 1; });
+  // ── MOBILE MENU ──
+  const hamburger = document.getElementById('hamburger');
+  const menuOverlay = document.getElementById('menuOverlay');
+  if (hamburger && menuOverlay) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      menuOverlay.classList.toggle('open');
+      menuOverlay.classList.contains('open') ? lenis.stop() : lenis.start();
+    });
+    document.querySelectorAll('.menu-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        menuOverlay.classList.remove('open');
+        lenis.start();
+      });
+    });
+  }
 
-            sideTopics.innerHTML = Object.entries(cats).map(([cat, count]) => `
-                <li data-filter="${cat}"><span>${cat}</span><span>${count}</span></li>
-            `).join('');
+  // ── FOOTER YEAR ──
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
 
-            const currentFilterHtml = filterContainer.innerHTML;
-            filterContainer.innerHTML = currentFilterHtml + Object.keys(cats).map(cat => `
-                <button class="filter-tag" data-filter="${cat}">${cat}</button>
-            `).join('');
+  // ── WORKER ──
+  const WORKER_URL = 'https://notion-updates.selinozgoren0.workers.dev';
 
-            const grouped = {};
-            posts.forEach(p => {
-                const y = p.date ? new Date(p.date).getFullYear() : 'Undated';
-                if(!grouped[y]) grouped[y] = [];
-                grouped[y].push(p);
-            });
+  const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 
-            const html = Object.entries(grouped).sort((a,b) => b[0]-a[0]).map(([year, yPosts]) => `
-                <section class="year-section" data-year="${year}">
-                    <div class="year-divider">
-                        <span class="year-label">${year}</span>
-                        <div class="year-line"></div>
-                    </div>
-                    ${yPosts.map(p => {
-                        const d = new Date(p.date);
-                        const day = String(d.getDate()).padStart(2, '0');
-                        const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-                        const month = months[d.getMonth()];
-                        return `
-                        <article class="update-item" data-category="${p.category || ''}">
-                            <div class="item-date-col"><span class="item-day">${day}</span><span class="item-month">${month}</span></div>
-                            <div class="item-rule"></div>
-                            <div class="item-body">
-                                <div class="item-tags">
-                                    <span class="item-tag">${p.category || 'Update'}</span>
-                                    ${p.tag ? `<span class="item-tag">${p.tag}</span>` : ''}
-                                </div>
-                                <h2>${p.title}</h2>
-                                ${p.body ? `<p>${p.body}</p>` : ''}
-                                ${p.link ? `<a href="${p.link}" class="item-link" target="_blank">View Details →</a>` : ''}
-                            </div>
-                        </article>
-                        `;
-                    }).join('')}
-                </section>
-            `).join('');
+  function formatDate(dateStr) {
+    if (!dateStr) return { day: '—', month: '' };
+    const d = new Date(dateStr);
+    return {
+      day: String(d.getDate()).padStart(2, '0'),
+      month: MONTHS[d.getMonth()],
+    };
+  }
 
-            list.innerHTML = html;
+  function applyFilter(cat) {
+    document.querySelectorAll('.filter-tag').forEach(t => t.classList.toggle('active', t.dataset.filter === cat));
+    document.querySelectorAll('.topic-list li[data-filter]').forEach(li => li.classList.toggle('active', li.dataset.filter === cat));
+    document.getElementById('current-filter-label').textContent = cat === 'all' ? 'All Updates' : cat;
 
-            const tags = document.querySelectorAll('.filter-tag, #sidebar-topics li');
-            tags.forEach(t => {
-                t.addEventListener('click', () => {
-                    const f = t.dataset.filter;
-                    document.querySelectorAll('.filter-tag').forEach(btn => btn.classList.toggle('active', btn.dataset.filter === f));
-                    document.querySelectorAll('.update-item').forEach(item => item.style.display = (f === 'all' || item.dataset.category === f) ? 'grid' : 'none');
-                    document.querySelectorAll('.year-section').forEach(sec => {
-                        const visible = [...sec.querySelectorAll('.update-item')].some(i => i.style.display !== 'none');
-                        sec.style.display = visible ? 'block' : 'none';
-                    });
-                });
-            });
-        }
+    let count = 0;
+    document.querySelectorAll('.update-item').forEach(item => {
+      const show = cat === 'all' || item.dataset.category === cat;
+      item.style.display = show ? 'grid' : 'none';
+      if (show) count++;
+    });
 
-        // Newsletter visual toggle
-        document.getElementById('nl-btn').addEventListener('click', () => {
-            if(document.getElementById('nl-email').value.includes('@')) {
-                document.querySelector('.newsletter-form').style.display = 'none';
-                document.getElementById('nl-msg').style.display = 'block';
-            }
-        });
+    // Hide empty year sections
+    document.querySelectorAll('.year-section').forEach(sec => {
+      const hasVisible = [...sec.querySelectorAll('.update-item')].some(i => i.style.display !== 'none');
+      sec.style.display = hasVisible ? 'block' : 'none';
+    });
 
-        document.getElementById('footer-year').textContent = new Date().getFullYear();
-        fetchUpdates();
-    </script>
+    document.getElementById('updates-count').textContent = count;
+  }
+
+  function renderUpdates(posts) {
+    const list = document.getElementById('updates-list');
+
+    if (!posts || !posts.length) {
+      list.innerHTML = '<div class="feed-empty">No updates published yet.</div>';
+      return;
+    }
+
+    // Stats
+    const cats = {};
+    posts.forEach(p => { if (p.category) cats[p.category] = (cats[p.category] || 0) + 1; });
+    const years = [...new Set(posts.map(p => p.date ? new Date(p.date).getFullYear() : null).filter(Boolean))].sort((a,b) => a-b);
+
+    document.getElementById('stat-total').textContent = posts.length;
+    document.getElementById('stat-cats').textContent = Object.keys(cats).length;
+    document.getElementById('stat-year').textContent = years[0] || '—';
+    document.getElementById('updates-count').textContent = posts.length;
+
+    // Filter strip
+    const filterContainer = document.getElementById('filter-container');
+    filterContainer.innerHTML =
+      `<button class="filter-tag active" data-filter="all">All Updates</button>` +
+      Object.keys(cats).sort().map(cat =>
+        `<button class="filter-tag" data-filter="${cat}">${cat}</button>`
+      ).join('');
+
+    // Sidebar topic list
+    const topicList = document.getElementById('topic-list');
+    topicList.innerHTML =
+      `<li data-filter="all" class="active"><span>All Updates</span><span class="topic-count">${posts.length}</span></li>` +
+      Object.entries(cats).sort((a,b) => b[1] - a[1]).map(([cat, count]) =>
+        `<li data-filter="${cat}"><span>${cat}</span><span class="topic-count">${count}</span></li>`
+      ).join('');
+
+    // Bind filters
+    document.querySelectorAll('.filter-tag, .topic-list li[data-filter]').forEach(btn => {
+      btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+    });
+
+    // Group by year
+    const grouped = {};
+    posts.forEach(p => {
+      const y = p.date ? new Date(p.date).getFullYear() : 'Undated';
+      if (!grouped[y]) grouped[y] = [];
+      grouped[y].push(p);
+    });
+
+    list.innerHTML = Object.entries(grouped)
+      .sort((a, b) => b[0] - a[0])
+      .map(([year, yPosts]) => `
+        <section class="year-section reveal" data-year="${year}">
+          <div class="year-divider">
+            <span class="year-label">${year}</span>
+            <div class="year-line"></div>
+          </div>
+          ${yPosts.map(p => {
+            const { day, month } = formatDate(p.date);
+            return `
+              <article class="update-item" data-category="${p.category || ''}">
+                <div class="item-date-col">
+                  <span class="item-day">${day}</span>
+                  <span class="item-month">${month}</span>
+                </div>
+                <div class="item-rule"></div>
+                <div class="item-body">
+                  <div class="item-tags">
+                    ${p.category ? `<span class="item-tag">${p.category}</span>` : ''}
+                    ${p.tag ? `<span class="item-tag">${p.tag}</span>` : ''}
+                  </div>
+                  <h2>${p.title}</h2>
+                  ${p.body ? `<p>${p.body}</p>` : ''}
+                  ${p.link ? `<a href="${p.link}" class="item-link" target="_blank" rel="noopener">View Details →</a>` : ''}
+                </div>
+              </article>
+            `;
+          }).join('')}
+        </section>
+      `).join('');
+
+    initReveal();
+  }
+
+  async function fetchUpdates() {
+    try {
+      const res = await fetch(WORKER_URL);
+      if (!res.ok) throw new Error('Network error');
+      const data = await res.json();
+      renderUpdates(data);
+    } catch (err) {
+      document.getElementById('updates-list').innerHTML =
+        `<div class="feed-empty">Unable to load updates. Please try again later.</div>`;
+    }
+  }
+
+  // ── NEWSLETTER ──
+  document.getElementById('nl-btn')?.addEventListener('click', () => {
+    const email = document.getElementById('nl-email').value.trim();
+    if (!email || !email.includes('@')) return;
+    document.getElementById('nl-btn').style.display = 'none';
+    document.getElementById('nl-email').style.display = 'none';
+    document.getElementById('nl-ok').style.display = 'block';
+  });
+
+  fetchUpdates();
+</script>
+
 </body>
 </html>
