@@ -325,6 +325,11 @@
       font-size: 1rem; color: var(--fg-muted);
       margin-bottom: 1.5rem; max-width: 560px; line-height: 1.7;
     }
+    .service-content p a {
+      color: var(--fg); text-decoration: underline; text-decoration-color: var(--border);
+      transition: text-decoration-color 0.2s;
+    }
+    .service-content p a:hover { text-decoration-color: var(--gold); }
     .service-content ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
     .service-content li {
       font-size: 0.9rem; color: var(--fg);
@@ -446,26 +451,16 @@
     .contact-link:hover { background: var(--bg); color: var(--fg); }
 
     /* ── FOOTER ── */
-        footer {
-            padding: 2rem clamp(1.5rem, 4vw, 4rem);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--border);
-            font-size: 0.8rem;
-            color: var(--fg-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        footer a {
-            color: var(--fg-muted);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: var(--fg);
-        }
+    footer {
+      padding: 2rem clamp(1.5rem, 4vw, 4rem);
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem; color: var(--fg-muted);
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    footer a { color: var(--fg-muted); text-decoration: none; }
+    footer a:hover { color: var(--fg); }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
 
     /* ── ANIMATIONS ── */
     .reveal {
@@ -546,7 +541,7 @@
   <div class="hero-bottom">
     <div class="hero-desc-wrap">
       <h2 class="hero-sub">Nine practice areas. One integrated approach.</h2>
-      <p class="hero-desc">From <a href="/en/arbitration.html">international commercial arbitration</a> to <a href="/en/enforcement-foreign-judgment-turkey">enforcement of foreign awards in Turkey</a> — Özgören Law Firm provides specialist counsel across every stage of cross-border dispute resolution.</p>
+      <p class="hero-desc">From <a href="/en/services/arbitration.html">international commercial arbitration</a> to <a href="/en/services/enforcement-foreign-judgment-turkey.html">enforcement of foreign awards in Turkey</a> — Özgören Law Firm provides specialist counsel across every stage of cross-border dispute resolution.</p>
     </div>
     <div class="hero-desc-wrap">
       <p class="hero-desc">Based in İzmir and acting globally — in ICC, HKIAC, ICSID, UNCITRAL, and ISTAC proceedings. Fluent in English and Turkish, with experience across Europe, Asia, Africa, and North America.</p>
@@ -561,7 +556,7 @@
       <div class="section-label">01 — Core Practice</div>
       <div class="section-right">
         <h2 class="section-title">International <i>Commercial</i> Arbitration</h2>
-        <p class="section-intro">Full counsel and co-counsel representation in cross-border commercial arbitration proceedings — from the drafting of the Request for Arbitration through to enforcement of the final award. The firm acts in proceedings administered by the ICC, HKIAC, UNCITRAL, LCIA, ISTAC, and in ad hoc proceedings under rules agreed by the parties.</p>
+        <p class="section-intro">Full counsel and co-counsel representation in cross-border commercial arbitration proceedings. For clients requiring a specialized <a href="/en/services/arbitration-lawyer-izmir.html">arbitration lawyer in Izmir</a>, our local presence ensures seamless coordination with Turkish courts.</p>
       </div>
     </div>
     <div class="services-grid">
@@ -569,8 +564,8 @@
         <div class="service-num">A</div>
         <div class="service-content">
           <span class="service-tag">ICC · HKIAC · UNCITRAL · LCIA · ISTAC</span>
-          <h3><a href="/en/arbitration.html">Institutional Arbitration — Counsel &amp; Co-Counsel</a></h3>
-          <p>Complete case management in proceedings before major arbitral institutions — acting as lead counsel or as co-counsel alongside foreign law firms. The firm manages the entire litigation lifecycle with procedural and strategic rigour.</p>
+          <h3><a href="/en/services/arbitration.html">Institutional Arbitration — Counsel &amp; Co-Counsel</a></h3>
+          <p>Complete case management in proceedings before major arbitral institutions. We manage the entire litigation lifecycle with procedural rigour, often coordinating with <a href="/en/services/tribunal-secretary.html">tribunal secretaries</a> to ensure efficiency.</p>
           <ul>
             <li>Request for Arbitration and Answer drafting</li>
             <li>Written submissions, memorials &amp; replies</li>
@@ -579,7 +574,7 @@
             <li>Oral advocacy at the evidentiary hearing</li>
             <li>Post-hearing brief preparation</li>
           </ul>
-          <a class="service-link" href="/en/arbitration.html">View arbitration services →</a>
+          <a class="service-link" href="/en/services/arbitration.html">View arbitration services →</a>
         </div>
       </div>
       <div class="service-row reveal">
@@ -587,7 +582,7 @@
         <div class="service-content">
           <span class="service-tag">Ad Hoc Proceedings</span>
           <h3>UNCITRAL Ad Hoc Arbitration</h3>
-          <p>Strategic guidance and full representation in ad hoc proceedings under UNCITRAL Arbitration Rules — including arbitrator appointment, procedural framework design, and seat selection for disputes involving Turkish parties or Turkish-law governed contracts.</p>
+          <p>Strategic guidance in ad hoc proceedings under UNCITRAL Rules. Our approach combines institutional discipline with the flexibility of ad hoc frameworks for disputes involving Turkish parties.</p>
           <ul>
             <li>Arbitrator selection and appointment strategy</li>
             <li>Procedural order and timetable drafting</li>
@@ -601,7 +596,7 @@
         <div class="service-content">
           <span class="service-tag">Emergency Relief</span>
           <h3>Emergency Arbitration &amp; Interim Measures</h3>
-          <p>Fast-track procedural support for emergency arbitration applications where speed is critical to preserving assets, contractual rights, or commercial relationships — before a full tribunal is constituted.</p>
+          <p>Fast-track procedural support for emergency applications. When immediate relief is needed, we coordinate closely with local courts to ensure the <a href="/en/services/enforcement-foreign-judgment-turkey.html">enforceability of interim measures</a>.</p>
           <ul>
             <li>Emergency arbitrator applications (ICC, HKIAC, ISTAC)</li>
             <li>Asset preservation and freezing orders</li>
@@ -621,7 +616,7 @@
       <div class="section-label">02 — Investment Law</div>
       <div class="section-right">
         <h2 class="section-title">Investment <i>Treaty</i> Arbitration</h2>
-        <p class="section-intro">Turkey is a party to over 100 bilateral investment treaties. Özgören Law Firm advises foreign investors and states on the full spectrum of investment treaty claims — from treaty analysis and pre-claim structuring through to full proceedings before ICSID and UNCITRAL tribunals. The firm's ISDS expertise is grounded in direct experience at the UNCITRAL Secretariat in Vienna.</p>
+        <p class="section-intro">Turkey is a party to over 100 bilateral investment treaties. We advise foreign investors on the full spectrum of treaty claims before ICSID and UNCITRAL tribunals, grounded in direct experience at the UNCITRAL Secretariat in Vienna.</p>
       </div>
     </div>
     <div class="services-grid">
@@ -629,8 +624,8 @@
         <div class="service-num">A</div>
         <div class="service-content">
           <span class="service-tag">ICSID · UNCITRAL</span>
-          <h3><a href="/en/investment-arbitration.html">ICSID &amp; UNCITRAL Investment Arbitration</a></h3>
-          <p>Representation of investors and states in treaty-based investment arbitration — covering expropriation, denial of fair and equitable treatment, full protection and security, and most-favoured-nation claims before international tribunals.</p>
+          <h3><a href="/en/services/investment-arbitration.html">ICSID &amp; UNCITRAL Investment Arbitration</a></h3>
+          <p>Representation in treaty-based arbitration. For foreign entities entering the market, we integrate this expertise into our <a href="/en/services/foreign-companies-turkey.html">corporate advisory for foreign companies</a> to mitigate treaty risks.</p>
           <ul>
             <li>ICSID Convention and Additional Facility proceedings</li>
             <li>UNCITRAL Rules investment arbitration under BITs</li>
@@ -639,7 +634,7 @@
             <li>Quantum and valuation methodology disputes</li>
             <li>Annulment proceedings before ICSID committees</li>
           </ul>
-          <a class="service-link" href="/en/investment-arbitration.html">View investment arbitration →</a>
+          <a class="service-link" href="/en/services/investment-arbitration.html">View investment arbitration →</a>
         </div>
       </div>
       <div class="service-row reveal">
@@ -647,7 +642,7 @@
         <div class="service-content">
           <span class="service-tag">Bilateral Investment Treaties</span>
           <h3>BIT Claims &amp; Treaty Analysis</h3>
-          <p>In-depth analysis of applicable bilateral investment treaties to identify available protections, viable claims against host states, or available defences — covering Turkey's full network of over 100 BITs and the Energy Charter Treaty.</p>
+          <p>In-depth analysis of BITs to identify available protections. This analysis is critical for the <a href="/en/services/dispute-prevention.html">prevention of disputes</a> and the structuring of long-term investments.</p>
           <ul>
             <li>BIT applicability and MFN clause analysis</li>
             <li>Expropriation and regulatory taking claims</li>
@@ -661,7 +656,7 @@
         <div class="service-content">
           <span class="service-tag">ISDS Reform · UNCITRAL WGIII</span>
           <h3>ISDS Reform Advisory</h3>
-          <p>Drawing on Selin Özgören's direct experience at the UNCITRAL Working Group III on ISDS reform — specialist guidance on the evolving investor-state dispute landscape and its implications for investment structuring and treaty strategy.</p>
+          <p>Specialist guidance on the evolving investor-state dispute landscape, drawing on direct involvement in UNCITRAL Working Group III.</p>
           <ul>
             <li>UNCITRAL WGIII developments and treaty implications</li>
             <li>Multilateral Investment Court planning</li>
@@ -681,7 +676,7 @@
       <div class="section-label">03 — Post-Award</div>
       <div class="section-right">
         <h2 class="section-title">Enforcement &amp; <i>Recognition</i> of Foreign Awards</h2>
-        <p class="section-intro">Obtaining an award is only part of the battle. Özgören Law Firm advises clients on enforcement strategy from the outset — identifying assets, anticipating resistance, and converting the award into a real outcome before Turkish courts and across multiple jurisdictions. Turkey ratified the 1958 New York Convention in 1992.</p>
+        <p class="section-intro">Converting an award into a real outcome. We provide strategic guidance from the drafting stage of the <a href="/en/services/arbitration.html">arbitration process</a> to ensure that the final award is enforceable in Turkey.</p>
       </div>
     </div>
     <div class="services-grid">
@@ -689,15 +684,15 @@
         <div class="service-num">A</div>
         <div class="service-content">
           <span class="service-tag">New York Convention · Turkey</span>
-          <h3><a href="/en/enforcement-foreign-judgment-turkey">Enforcement of Foreign Arbitral Awards in Turkey</a></h3>
-          <p>Guiding foreign award-holders through Turkish exequatur proceedings from filing to satisfaction of the award — anticipating and countering Article V objections at every stage of the process.</p>
+          <h3><a href="/en/services/enforcement-foreign-judgment-turkey.html">Enforcement of Foreign Arbitral Awards in Turkey</a></h3>
+          <p>Guiding award-holders through exequatur proceedings. Our expertise ensures that the <a href="/en/services/investment-arbitration.html">investment awards</a> or commercial awards are recognized without procedural delays.</p>
           <ul>
             <li>Exequatur applications before Turkish courts</li>
             <li>Article V defence and counter-argument strategy</li>
             <li>Asset tracing and attachment proceedings</li>
             <li>Multi-jurisdictional enforcement coordination</li>
           </ul>
-          <a class="service-link" href="/en/enforcement-foreign-judgment-turkey">View enforcement services →</a>
+          <a class="service-link" href="/en/services/enforcement-foreign-judgment-turkey.html">View enforcement services →</a>
         </div>
       </div>
       <div class="service-row reveal">
@@ -705,7 +700,7 @@
         <div class="service-content">
           <span class="service-tag">Foreign Court Judgments · MÖHUK</span>
           <h3>Recognition of Foreign Court Judgments in Turkey</h3>
-          <p>Recognition and enforcement of foreign court judgments in Turkey under the International Private and Procedural Law (MÖHUK) — including judgments from EU member states, the United States, the United Kingdom, and other jurisdictions.</p>
+          <p>Recognition and enforcement under MÖHUK for judgments from EU, US, UK, and other jurisdictions, complementing our <a href="/en/services/foreign-companies-turkey.html">advisory for international businesses</a>.</p>
           <ul>
             <li>MÖHUK recognition and enforcement proceedings</li>
             <li>Reciprocity and enforceability analysis</li>
@@ -719,7 +714,7 @@
         <div class="service-content">
           <span class="service-tag">Award Challenges</span>
           <h3>Challenging or Opposing Enforcement</h3>
-          <p>Defending against enforcement proceedings in Turkey — or challenging arbitral awards on procedural and substantive grounds before Turkish courts of appeal, including public policy and due process objections.</p>
+          <p>Defending against enforcement proceedings based on public policy or due process objections, often in connection with <a href="/en/services/arbitration.html">complex commercial disputes</a>.</p>
           <ul>
             <li>Public policy (ordre public) objections</li>
             <li>Due process and jurisdiction challenges</li>
@@ -763,7 +758,7 @@
       <div class="section-label">04 — Procedural Support</div>
       <div class="section-right">
         <h2 class="section-title">Tribunal <i>Secretary</i> Services</h2>
-        <p class="section-intro">Drawing on direct experience at the HKIAC Secretariat in Hong Kong, Özgören Law Firm provides independent, discreet procedural support to arbitral tribunals in complex institutional and ad hoc proceedings — strictly within the ethical boundaries of secretary conduct established by the ICC, HKIAC, and other leading institutions.</p>
+        <p class="section-intro">Independent procedural support to arbitral tribunals. Drawing on HKIAC Secretariat experience, we provide a bridge between the <a href="/en/services/arbitration.html">tribunal and the parties</a> to ensure a smooth process.</p>
       </div>
     </div>
     <div class="services-grid">
@@ -771,15 +766,15 @@
         <div class="service-num">A</div>
         <div class="service-content">
           <span class="service-tag">Institutional &amp; Ad Hoc</span>
-          <h3><a href="/en/tribunal-secretary.html">Administrative Tribunal Secretary</a></h3>
-          <p>Comprehensive procedural secretariat services — maintaining independence, strict confidentiality, and full compliance with applicable institutional guidelines on secretary conduct and the limits of permissible assistance.</p>
+          <h3><a href="/en/services/tribunal-secretary.html">Administrative Tribunal Secretary</a></h3>
+          <p>Comprehensive procedural secretariat services. This neutral role complements our <a href="/en/services/arbitration.html">commercial arbitration</a> practice by providing deep insight into tribunal expectations.</p>
           <ul>
             <li>Procedural timetable and order management</li>
             <li>Party and institutional correspondence</li>
             <li>Document management and tribunal file organisation</li>
             <li>Hearing logistics and minute-keeping</li>
           </ul>
-          <a class="service-link" href="/en/tribunal-secretary.html">View tribunal secretary services →</a>
+          <a class="service-link" href="/en/services/tribunal-secretary.html">View tribunal secretary services →</a>
         </div>
       </div>
       <div class="service-row reveal">
@@ -787,7 +782,7 @@
         <div class="service-content">
           <span class="service-tag">Research &amp; Hearing Support</span>
           <h3>Legal Research &amp; Hearing Management</h3>
-          <p>Discreet legal research assistance on specific procedural issues, and full hearing preparation support — from pre-hearing procedural conferences to transcript management and post-hearing submissions coordination.</p>
+          <p>Discreet research assistance and hearing support, ensuring that the <a href="/en/services/investment-arbitration.html">investment arbitration</a> or commercial proceedings are handled with peak efficiency.</p>
           <ul>
             <li>Comparative law and procedural precedent research</li>
             <li>Award drafting assistance (at tribunal direction)</li>
@@ -807,7 +802,7 @@
       <div class="section-label">05 — Corporate &amp; Regulatory</div>
       <div class="section-right">
         <h2 class="section-title">Cross-Border <i>Legal Advisory</i></h2>
-        <p class="section-intro">For foreign companies entering the Turkish market — and for Turkish entities operating internationally — Özgören Law Firm provides proactive legal structuring, regulatory risk analysis, sanctions compliance guidance, and ongoing dispute-prevention advisory tailored to each client's operational context.</p>
+        <p class="section-intro">Proactive legal structuring for foreign companies entering Turkey. We align corporate setup with a robust <a href="/en/services/dispute-prevention.html">dispute prevention strategy</a> from day one.</p>
       </div>
     </div>
     <div class="services-grid">
@@ -815,15 +810,15 @@
         <div class="service-num">A</div>
         <div class="service-content">
           <span class="service-tag">Market Entry · Turkey</span>
-          <h3><a href="/en/foreign-companies-turkey.html">Foreign Companies Operating in Turkey</a></h3>
-          <p>End-to-end legal guidance for foreign entities establishing operations, entering joint ventures, or conducting trade in Turkey — with a focus on designing sound dispute resolution frameworks and identifying contractual risk from the outset.</p>
+          <h3><a href="/en/services/foreign-companies-turkey.html">Foreign Companies Operating in Turkey</a></h3>
+          <p>End-to-end guidance for foreign entities. We ensure that your company structure is compatible with <a href="/en/services/enforcement-foreign-judgment-turkey.html">future enforcement needs</a> and local regulatory requirements.</p>
           <ul>
             <li>Corporate structure and establishment review</li>
             <li>Turkish regulatory compliance overview</li>
             <li>Joint venture and shareholder agreement review</li>
             <li>Dispute resolution clause and governing law design</li>
           </ul>
-          <a class="service-link" href="/en/foreign-companies-turkey.html">View foreign companies advisory →</a>
+          <a class="service-link" href="/en/services/foreign-companies-turkey.html">View foreign companies advisory →</a>
         </div>
       </div>
       <div class="service-row reveal">
@@ -831,7 +826,7 @@
         <div class="service-content">
           <span class="service-tag">Sanctions &amp; Compliance</span>
           <h3>Sanctions &amp; Regulatory Risk Advisory</h3>
-          <p>Analysis of EU, US, and UK sanctions exposure, export control compliance, and regulatory risk for companies transacting with Turkish entities or operating in complex cross-border regulatory environments.</p>
+          <p>Analysis of EU, US, and UK sanctions exposure, providing a safety net for <a href="/en/services/foreign-companies-turkey.html">international companies</a> transacting with Turkish entities.</p>
           <ul>
             <li>EU, US, and UK sanctions screening and analysis</li>
             <li>Contract clause adaptation for sanctions risk</li>
@@ -845,7 +840,7 @@
         <div class="service-content">
           <span class="service-tag">Legal Opinions</span>
           <h3>Turkish Law Legal Opinions &amp; Expert Reports</h3>
-          <p>Formal legal opinions on questions of Turkish law for use in international arbitration proceedings, due diligence processes, and transaction structuring — delivered in English by a lawyer fluent in both legal systems.</p>
+          <p>Formal opinions on Turkish law for use in <a href="/en/services/arbitration.html">international arbitration</a> or due diligence processes, delivered by a fluent bilingual practitioner.</p>
           <ul>
             <li>Expert opinions on Turkish arbitration law</li>
             <li>Foreign law opinions for use in proceedings</li>
@@ -865,7 +860,7 @@
       <div class="section-label">06 — Drafting &amp; Prevention</div>
       <div class="section-right">
         <h2 class="section-title">Contract Drafting &amp; <i>Dispute Prevention</i></h2>
-        <p class="section-intro">A poorly drafted arbitration clause can render an entire dispute resolution mechanism unenforceable. Özgören Law Firm treats dispute-prevention drafting as a core service — advising on clause design as an integral part of transaction structuring, not an afterthought applied once a deal has closed.</p>
+        <p class="section-intro">Preventing disputes before they arise. Our <a href="/en/services/dispute-prevention.html">dispute prevention services</a> focus on precision drafting to avoid the costly "pathological clauses" that lead to satellite litigation.</p>
       </div>
     </div>
     <div class="services-grid">
@@ -874,7 +869,7 @@
         <div class="service-content">
           <span class="service-tag">Arbitration Clauses</span>
           <h3>Arbitration Clause Drafting &amp; Review</h3>
-          <p>Bespoke arbitration clause drafting tailored to each transaction — choosing seat, institutional rules, language, number of arbitrators, and governing law to match the specific risk profile and commercial context of each deal.</p>
+          <p>Bespoke clauses tailored to the risk profile of the deal. This is the first line of defense in our <a href="/en/services/dispute-prevention.html">dispute prevention framework</a>.</p>
           <ul>
             <li>Pathological clause identification and correction</li>
             <li>Seat, rules, and language selection</li>
@@ -888,7 +883,7 @@
         <div class="service-content">
           <span class="service-tag">Commercial Contracts</span>
           <h3>International Contract Structuring</h3>
-          <p>Structuring and drafting of complex cross-border commercial agreements with a focus on clarity, enforceability across multiple legal systems, and the minimisation of future dispute risk through precise drafting choices.</p>
+          <p>Structuring agreements for enforceability. We ensure that contracts for <a href="/en/services/foreign-companies-turkey.html">foreign companies</a> are robust and minimized for risk.</p>
           <ul>
             <li>Joint venture and shareholder agreements</li>
             <li>Distribution, agency &amp; franchise agreements</li>
@@ -902,7 +897,7 @@
         <div class="service-content">
           <span class="service-tag">ADR &amp; Mediation</span>
           <h3>Multi-Tier Dispute Resolution Framework Design</h3>
-          <p>Designing structured escalation mechanisms — combining negotiation, mediation, and arbitration in a tiered framework suited to long-term commercial relationships and international supply chains.</p>
+          <p>Combining negotiation, mediation, and arbitration. A strategic approach to <a href="/en/services/dispute-prevention.html">preventing full-scale disputes</a> while preserving commercial relationships.</p>
           <ul>
             <li>ICC and CEDR mediation clause drafting</li>
             <li>Expert determination and adjudication clauses</li>
@@ -922,7 +917,7 @@
       <div class="section-label">07 — Early Assessment</div>
       <div class="section-right">
         <h2 class="section-title"><i>Pre-Dispute</i> Strategic Advisory</h2>
-        <p class="section-intro">Identifying legal risks before they become disputes — and structuring the client's contractual and evidentiary position for the strongest possible outcome if litigation ultimately becomes unavoidable. Early engagement almost always results in better outcomes and lower overall costs.</p>
+        <p class="section-intro">Mapping risks before they escalate. Early engagement allows us to structure your position for the strongest possible outcome in <a href="/en/services/arbitration.html">commercial or investment arbitration</a>.</p>
       </div>
     </div>
     <div class="services-grid">
@@ -931,7 +926,7 @@
         <div class="service-content">
           <span class="service-tag">Risk Assessment</span>
           <h3>Contractual Vulnerability Mapping</h3>
-          <p>Reviewing existing contracts and commercial arrangements to identify dispute risks, drafting weaknesses, limitation traps, and enforcement gaps — before the other side does.</p>
+          <p>Identifying drafting weaknesses and enforcement gaps. This is a core component of our <a href="/en/services/dispute-prevention.html">pre-dispute advisory</a>.</p>
           <ul>
             <li>Clause-by-clause legal risk review</li>
             <li>Limitation period and notice requirement analysis</li>
@@ -945,7 +940,7 @@
         <div class="service-content">
           <span class="service-tag">Merits Evaluation</span>
           <h3>Early Case Assessment &amp; Merits Analysis</h3>
-          <p>An objective, independent assessment of the strengths, weaknesses, and likely costs of potential arbitration proceedings — providing a realistic litigation roadmap before any formal step is taken by either party.</p>
+          <p>Objective assessment of strengths and weaknesses before filing a <a href="/en/services/arbitration.html">Request for Arbitration</a>.</p>
           <ul>
             <li>Quantum and liability preliminary analysis</li>
             <li>Notice compliance and procedural prerequisites</li>
@@ -959,7 +954,7 @@
         <div class="service-content">
           <span class="service-tag">Evidence Preservation</span>
           <h3>Evidence Preservation &amp; Document Strategy</h3>
-          <p>Advising clients on evidence preservation from the earliest opportunity — ensuring that document collection, storage, and production comply with arbitral disclosure obligations under the IBA Rules on the Taking of Evidence.</p>
+          <p>Ensuring compliance with IBA Rules on the Taking of Evidence, securing your position for future <a href="/en/services/investment-arbitration.html">investment treaty claims</a>.</p>
           <ul>
             <li>Litigation hold and document preservation advisory</li>
             <li>IBA Rules on the Taking of Evidence compliance</li>
@@ -979,7 +974,7 @@
       <div class="section-label">08 — Sector Focus</div>
       <div class="section-right">
         <h2 class="section-title">Sector-Specific <i>Dispute Experience</i></h2>
-        <p class="section-intro">Cross-border disputes arise in distinct commercial contexts — each with its own regulatory framework, contractual customs, and body of arbitral precedent. The firm brings targeted sector knowledge to every engagement, complemented by a global network of specialist co-counsel where required.</p>
+        <p class="section-intro">Targeted sector knowledge applied to every engagement. Whether it is a <a href="/en/services/investment-arbitration.html">treaty claim in energy</a> or a <a href="/en/services/arbitration.html">FIDIC dispute in construction</a>, we provide context-aware legal counsel.</p>
       </div>
     </div>
     <div class="sector-grid reveal">
