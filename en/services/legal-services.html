@@ -446,16 +446,26 @@
     .contact-link:hover { background: var(--bg); color: var(--fg); }
 
     /* ── FOOTER ── */
-    footer {
-      padding: 2rem clamp(1.5rem, 4vw, 4rem);
-      display: flex; justify-content: space-between; align-items: center;
-      border-top: 1px solid var(--border);
-      font-size: 0.8rem; color: var(--fg-muted);
-      text-transform: uppercase; letter-spacing: 0.05em;
-    }
-    footer a { color: var(--fg-muted); text-decoration: none; }
-    footer a:hover { color: var(--fg); }
-    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+        footer {
+            padding: 2rem clamp(1.5rem, 4vw, 4rem);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+            font-size: 0.8rem;
+            color: var(--fg-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        footer a {
+            color: var(--fg-muted);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--fg);
+        }
 
     /* ── ANIMATIONS ── */
     .reveal {
@@ -1128,17 +1138,10 @@
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
 <footer>
-  <div>© 2026 Özgören Law Firm · İzmir, Türkiye</div>
-  <div class="footer-links">
-    <a href="/en/index.html">Home</a>
-    <a href="/en/arbitration.html">Arbitration</a>
-    <a href="/en/blog.html">Knowledge Bank</a>
-    <a href="/en/updates.html">Updates</a>
-    <a href="/legal-notice">Legal Notice</a>
-  </div>
-</footer>
+        <div class="footer-left">© 2026 Özgören Law Firm</div>
+        <div class="footer-right"><a href="/legal-notice">Legal Notice</a></div>
+    </footer>
 
 <script>
   // Lenis
