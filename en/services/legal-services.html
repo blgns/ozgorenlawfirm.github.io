@@ -156,6 +156,36 @@
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden; line-height: 1.5;
     }
+    /* ── GLOBAL LINK RESET ── */
+a {
+  color: inherit; /* Linkin rengini bulunduğu elementin rengiyle aynı yapar */
+  text-decoration: none; /* Alt çizgiyi kaldırır */
+  transition: color 0.2s ease;
+}
+
+/* Ziyaret edilmiş linklerin mor olmasını engeller */
+a:visited {
+  color: inherit;
+}
+
+/* Genel bir hover efekti (İsteğe bağlı: Altın rengine döner) */
+a:hover {
+  color: var(--gold);
+}
+
+/* Paragraf içindeki linkleri daha belirgin yapmak için */
+p a {
+  color: var(--fg); 
+  text-decoration: underline; 
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s, color 0.2s;
+}
+
+p a:hover {
+  color: var(--gold);
+  text-decoration-color: var(--gold);
+}
     ::selection { background: var(--fg); color: var(--bg); }
 
     /* ── NAV ── */
